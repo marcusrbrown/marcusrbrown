@@ -1,3 +1,5 @@
-# igetgames
+# :octocat: igetgames (Marcus R. Brown)
 
-> My GitHub profile README and Pages website.
+## 👋🏽
+
+Hi! My name is Marcus R. Brown, welcome to my GitHub profile. I am a father of five and reside in Chandler, AZ.
