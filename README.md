@@ -1,5 +1,6 @@
-# :octocat: igetgames (Marcus R. Brown)
+👋🏽
+==
 
-## 👋🏽
+Hi! My name is Marcus R. Brown, I am a father of five and a software developmer.
 
-Hi! My name is Marcus R. Brown, welcome to my GitHub profile. I am a father of five and reside in Chandler, AZ.
+You've landed on my GitHub profile.
