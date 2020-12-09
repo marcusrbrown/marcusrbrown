@@ -1,6 +1,7 @@
-# The MIT License ([MIT])
+The MIT License ([MIT])
+=======================
 
-> Copyright (c) 2020 Marcus R. Brown <<typedec@marcusrbrown.com>>
+> Copyright (c) 2020 Marcus R. Brown <<contact@marcusrbrown.com>>
 
 ```txt
 Permission is hereby granted, free of charge, to any person obtaining a copy of
