@@ -8,7 +8,7 @@
 >   _I contribute to many projects: [adding features][], [participating in bounties][], and [fixing bugs][]._
 > - #### Fund my _gratis_ work
 >   _I love building [tools][] and [gadgets][] that others can benefit from._
-> - #### Unlock a  _force multiplier_ that activates when I in turn sponsor developers that inspire me and build the things that I :heart:
+> - #### Unlock a _force multiplier_ that activates when I in turn sponsor developers that inspire me and build the things that I :heart:
 >   _🚀_
 <!-- markdownlint-restore -->
 
