@@ -17,7 +17,7 @@
 [fixing bugs]: https://github.com/DavidAnson/vscode-markdownlint/pull/141 "Lint visible documents on activation"
 
 [tools]: https://github.com/typedec/typedec "I'm really excited about this one !"
-[gadgets]: https://github.com/igetgames/sparkle "Who doesn't like playgrounds?!"
+[gadgets]: https://github.com/marcusrbrown/sparkle "Who doesn't like playgrounds?!"
 
 ### 🗣️ About Me
 

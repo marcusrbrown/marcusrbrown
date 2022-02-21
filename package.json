@@ -1,9 +1,9 @@
 {
-  "name": "igetgames",
+  "name": "marcusrbrown",
   "version": "0.0.0",
   "description": "My GitHub profile README and Pages site tools.",
-  "repository": "https://github.com/igetgames/igetgames",
-  "author": "Marcus R. Brown <me@igetgam.es>",
+  "repository": "https://github.com/marcusrbrown/marcusrbrown",
+  "author": "Marcus R. Brown <contact@marcusrbrown.com>",
   "license": "MIT",
   "private": true,
   "devDependencies": {
