@@ -7,6 +7,6 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "markdownlint": "0.26.1"
+    "markdownlint": "0.26.2"
   }
 }
