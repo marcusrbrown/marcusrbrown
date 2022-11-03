@@ -1,2 +1,6 @@
 # Extend default settings for all of my personal repositories defined in .github/settings.yml
 _extends: .github
+
+repository:
+  squash_merge_commit_title: COMMIT_OR_PR_TITLE
+  squash_merge_commit_message: BLANK
