@@ -4,3 +4,4 @@ _extends: .github
 repository:
   squash_merge_commit_title: COMMIT_OR_PR_TITLE
   squash_merge_commit_message: BLANK
+  description: My GitHub public profile README.
