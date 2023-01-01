@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [main, 'renovate/**']
+  pull_request:
+    types: [opened, reopened, synchronize]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-$${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+env:
+  FORCE_COLOR: 3
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b # v3.2.0
+    - name: Setup Node.js ${{ env.NODE_VERSION }}
+      uses: actions/setup-node@8c91899e586c5b171469028077307d293428b516 # tag=v3.5.1
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+      env:
+        NODE_VERSION: 18.12.1 # renovate: datasource=node depName=node
+    - name: Cache Yarn packages
+      uses: actions/cache@4723a57e26efda3a62cbde1812113b730952852d # v3.2.2
+      with:
+        path: '**/node_modules'
+        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+    - name: Install dependencies
+      run: yarn install --frozen-lockfile
+    - name: Lint
+      run: yarn lint
+    - name: Run tests
+      run: yarn test

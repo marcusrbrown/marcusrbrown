@@ -6,6 +6,10 @@
   "author": "Marcus R. Brown <contact@marcusrbrown.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "lint": "npx markdownlint-cli2 .",
+    "test": "exit 0"
+  },
   "devDependencies": {
     "markdownlint": "0.27.0"
   }
