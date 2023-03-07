@@ -25,7 +25,7 @@ jobs:
       with:
         node-version: ${{ env.NODE_VERSION }}
       env:
-        NODE_VERSION: 18.14.2 # renovate: datasource=node depName=node
+        NODE_VERSION: 18.15.0 # renovate: datasource=node depName=node
     - name: Cache Yarn packages
       uses: actions/cache@69d9d449aced6a2ede0bc19182fadc3a0a42d2b0 # v3.2.6
       with:
