@@ -11,6 +11,6 @@
     "test": "exit 0"
   },
   "devDependencies": {
-    "markdownlint": "0.28.1"
+    "markdownlint": "0.28.2"
   }
 }
