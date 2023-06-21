@@ -1,0 +1,7 @@
+config:
+  extends: ./node_modules/markdownlint/style/cirosantilli.json
+  line-length: false
+
+globs:
+  - '**/*.md'
+  - '!node_modules'
