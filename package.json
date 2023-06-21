@@ -7,11 +7,13 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "lint": "npx markdownlint-cli2 .",
+    "lint": "markdownlint-cli2",
+    "lint:fix": "markdownlint-cli2 --fix",
     "test": "exit 0"
   },
   "devDependencies": {
-    "markdownlint": "0.29.0"
+    "markdownlint": "0.29.0",
+    "markdownlint-cli2": "^0.8.1"
   },
   "packageManager": "yarn@3.6.0"
 }
