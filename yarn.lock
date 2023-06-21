@@ -161,7 +161,7 @@ __metadata:
   resolution: "marcusrbrown@workspace:."
   dependencies:
     markdownlint: 0.29.0
-    markdownlint-cli2: ^0.8.1
+    markdownlint-cli2: 0.8.1
   languageName: unknown
   linkType: soft
 
@@ -189,7 +189,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"markdownlint-cli2@npm:^0.8.1":
+"markdownlint-cli2@npm:0.8.1":
   version: 0.8.1
   resolution: "markdownlint-cli2@npm:0.8.1"
   dependencies:
