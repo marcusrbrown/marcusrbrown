@@ -1,0 +1,51 @@
+name: Update GitHub Profile
+
+'on':
+  pull_request:
+    paths:
+      - 'templates/**'
+  push:
+    branches: [main]
+    paths:
+      - 'templates/**'
+  schedule:
+    - cron: '0 */1 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  markscribe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.5.3
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Setup Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c # v3.6.0
+        with:
+          cache: yarn
+          node-version: ${{ env.NODE_VERSION }}
+        env:
+          NODE_VERSION: 18.16.1 # renovate: datasource=node depName=node
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - uses: muesli/readme-scribe@d2f6ab32d6b9f5b59941fe782d6c7e6499a37fe4
+        env:
+          GITHUB_TOKEN: ${{ secrets.README_SCRIBE_GH_TOKEN }}
+        with:
+          template: 'templates/README.tpl.md'
+          writeTo: 'README.md'
+
+      - name: Lint and fix
+        run: yarn lint:fix
+
+      - uses: stefanzweifel/git-auto-commit-action@v4.16.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          commit_message: 'build: update README.md'

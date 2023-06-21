@@ -21,13 +21,11 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## 👨🏽‍💻 Current Work
 
-- [marcusrbrown/panthe.ai](https://github.com/marcusrbrown/panthe.ai) -  (1 week ago)
-- [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) -  (1 week ago)
-- [marcusrbrown/create-.](https://github.com/marcusrbrown/create-.) - `npm init .` (2 weeks ago)
-- [marcusrbrown/grommet-playground](https://github.com/marcusrbrown/grommet-playground) - Playground for Grommet components (2 months ago)
-- [marcusrbrown/translate-app](https://github.com/marcusrbrown/translate-app) - My coursework for &#34;Modern React and Redux&#34; by @StephenGrider (2 months ago)
-- [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -  (2 months ago)
-- [marcusrbrown/sparkle](https://github.com/marcusrbrown/sparkle) - TypeScript Playground (3 months ago)
+<!-- markdownlint-disable -->
+{{range recentContributions 7}}
+- [{{.Repo.Name}}]({{.Repo.URL}}) - {{.Repo.Description}} ({{humanize .OccurredAt}})
+{{- end}}
+<!-- markdownlint-restore -->
 
 ## 🏗️ Work-in-Progress
 
@@ -37,13 +35,11 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## ⭐ Recent Stars
 
-- [AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer) - Specify what you want it to build, the AI asks for clarification, and then builds it. (1 day ago)
-- [noahshinn024/reflexion](https://github.com/noahshinn024/reflexion) - Reflexion: Language Agents with Verbal Reinforcement Learning (1 day ago)
-- [e-johnstonn/FableForge](https://github.com/e-johnstonn/FableForge) - Generate a picture book from a single prompt using OpenAI function calling, replicate, and Deep Lake (3 days ago)
-- [jerryjliu/llama_index](https://github.com/jerryjliu/llama_index) - LlamaIndex (GPT Index) is a data framework for your LLM applications (3 days ago)
-- [twilio-labs/paste](https://github.com/twilio-labs/paste) - Paste is a design system for designing and building consistent experiences at Twilio. (4 days ago)
-- [Pan-ML/panml](https://github.com/Pan-ML/panml) - PanML is a high level generative AI/ML development and analysis library designed for ease of use and fast experimentation. (4 days ago)
-- [vishnumenon/lightrail](https://github.com/vishnumenon/lightrail) -  (4 days ago)
+<!-- markdownlint-disable -->
+{{range recentStars 7}}
+- [{{.Repo.Name}}]({{.Repo.URL}}) - {{.Repo.Description}} ({{humanize .StarredAt}})
+{{- end}}
+<!-- markdownlint-restore -->
 
 ---
 <img align='center' width='54%' alt='GitHub stats for @marcusrbrown' src='https://github-readme-stats.vercel.app/api?username=marcusrbrown&show_icons=true&theme=dark&include_all_commits=true&count_private=true'>
