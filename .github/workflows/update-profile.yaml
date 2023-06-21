@@ -35,4 +35,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           commit_message: 'build: update README.md'
-          commit_options: '--signoff'
