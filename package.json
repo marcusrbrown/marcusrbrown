@@ -1,13 +1,13 @@
 {
   "name": "marcusrbrown",
   "version": "0.0.0",
-  "description": "My GitHub profile README and Pages site tools.",
+  "description": "My GitHub public profile README.",
   "repository": "https://github.com/marcusrbrown/marcusrbrown",
   "author": "Marcus R. Brown <contact@marcusrbrown.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "lint": "npx markdownlint-cli2 .",
+    "lint": "yarn dlx markdownlint-cli2 .",
     "test": "exit 0"
   },
   "devDependencies": {

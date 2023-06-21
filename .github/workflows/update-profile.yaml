@@ -1,31 +1,38 @@
-name: Update README
+name: Update GitHub Profile
 
 'on':
+  pull_request:
+    paths:
+      - 'templates/**'
   push:
     branches: [main]
+    paths:
+      - 'templates/**'
   schedule:
     - cron: '0 */1 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   markscribe:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v3.5.3
+        with:
+          ref: ${{ github.head_ref }}
 
-      - uses: muesli/readme-scribe@master
+      - uses: muesli/readme-scribe@d2f6ab32d6b9f5b59941fe782d6c7e6499a37fe4
         env:
           GITHUB_TOKEN: ${{ secrets.README_SCRIBE_GH_TOKEN }}
         with:
-          template: 'templates/README.md.tpl'
+          template: 'templates/README.tpl.md'
           writeTo: 'README.md'
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - uses: stefanzweifel/git-auto-commit-action@v4.16.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          commit_message: Update generated README
-          branch: main
-          commit_user_name: readme-scribe 🤖
-          commit_user_email: actions@github.com
-          commit_author: readme-scribe 🤖 <actions@github.com>
+          commit_message: 'build: update README.md'
+          commit_options: '--signoff'
