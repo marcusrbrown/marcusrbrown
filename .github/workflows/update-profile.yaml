@@ -5,11 +5,10 @@ name: Update GitHub Profile
     paths:
       - 'templates/**'
   push:
-    branches: [main]
     paths:
       - 'templates/**'
-  schedule:
-    - cron: '0 */1 * * *'
+#  schedule:
+#    - cron: '0 */1 * * *'
   workflow_dispatch:
 
 permissions:
