@@ -3,24 +3,34 @@ name: Update GitHub Profile
 'on':
   pull_request:
     paths:
+      - '.github/workflows/update-profile.yaml'
       - 'templates/**'
   push:
     paths:
+      - '.github/workflows/update-profile.yaml'
       - 'templates/**'
-#  schedule:
-#    - cron: '0 */1 * * *'
+  schedule:
+    - cron: '0 */1 * * *'
   workflow_dispatch:
 
-permissions:
-  contents: write
+permissions: {}
 
 jobs:
   markscribe:
     runs-on: ubuntu-latest
     steps:
+      - name: Get Wokrflow Application Token
+        id: get-workflow-app-token
+        uses: peter-murray/workflow-application-token-action@8e1ba3bf1619726336414f1014e37f17fbadf1db # v2.1.0
+        with:
+          application_id: ${{ secrets.APPLICATION_ID }}
+          application_private_key: ${{ secrets.APPLICATION_PRIVATE_KEY }}
+          permissions: 'contents:write, pull_requests:write, workflows:write'
+
       - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
         with:
           ref: ${{ github.head_ref }}
+          token: ${{ steps.get-workflow-app-token.outputs.token }}
 
       - name: Setup Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c # v3.6.0
@@ -45,7 +55,6 @@ jobs:
 
       - uses: stefanzweifel/git-auto-commit-action@3ea6ae190baf489ba007f7c92608f33ce20ef04a # v4.16.0
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ steps.get-workflow-app-token.outputs.token }}
         with:
           commit_message: 'build: update README.md'
-          commit_options: '--verbose'
