@@ -21,13 +21,13 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## 👨🏽‍💻 Current Work
 
-- [marcusrbrown/panthe.ai](https://github.com/marcusrbrown/panthe.ai) -  (1 week ago)
-- [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) -  (1 week ago)
-- [marcusrbrown/create-.](https://github.com/marcusrbrown/create-.) - `npm init .` (2 weeks ago)
+- [marcusrbrown/botbuilder-js-simple](https://github.com/marcusrbrown/botbuilder-js-simple) - Simple bot for exploring the Microsoft Bot Framework and Bot Builder SDK. (1 day ago)
+- [marcusrbrown/.github](https://github.com/marcusrbrown/.github) - GitHub defaults (1 day ago)
+- [marcusrbrown/panthe.ai](https://github.com/marcusrbrown/panthe.ai) -  (2 weeks ago)
+- [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) -  (2 weeks ago)
+- [marcusrbrown/create-.](https://github.com/marcusrbrown/create-.) - `npm init .` (3 weeks ago)
 - [marcusrbrown/grommet-playground](https://github.com/marcusrbrown/grommet-playground) - Playground for Grommet components (2 months ago)
 - [marcusrbrown/translate-app](https://github.com/marcusrbrown/translate-app) - My coursework for &#34;Modern React and Redux&#34; by @StephenGrider (2 months ago)
-- [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -  (2 months ago)
-- [marcusrbrown/sparkle](https://github.com/marcusrbrown/sparkle) - TypeScript Playground (3 months ago)
 
 ## 🏗️ Work-in-Progress
 
@@ -37,13 +37,13 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## ⭐ Recent Stars
 
-- [AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer) - Specify what you want it to build, the AI asks for clarification, and then builds it. (1 day ago)
-- [noahshinn024/reflexion](https://github.com/noahshinn024/reflexion) - Reflexion: Language Agents with Verbal Reinforcement Learning (1 day ago)
-- [e-johnstonn/FableForge](https://github.com/e-johnstonn/FableForge) - Generate a picture book from a single prompt using OpenAI function calling, replicate, and Deep Lake (3 days ago)
-- [jerryjliu/llama_index](https://github.com/jerryjliu/llama_index) - LlamaIndex (GPT Index) is a data framework for your LLM applications (3 days ago)
-- [twilio-labs/paste](https://github.com/twilio-labs/paste) - Paste is a design system for designing and building consistent experiences at Twilio. (4 days ago)
-- [Pan-ML/panml](https://github.com/Pan-ML/panml) - PanML is a high level generative AI/ML development and analysis library designed for ease of use and fast experimentation. (4 days ago)
-- [vishnumenon/lightrail](https://github.com/vishnumenon/lightrail) -  (4 days ago)
+- [stoe/gh-report](https://github.com/stoe/gh-report) - gh cli extension to generate account/organization/enterprise reports (today)
+- [PetrosiliusPatter/ingooutgo](https://github.com/PetrosiliusPatter/ingooutgo) -  (today)
+- [emilwidlund/nodl](https://github.com/emilwidlund/nodl) - A framework for computational node graphs. (today)
+- [pmndrs/suspend-react](https://github.com/pmndrs/suspend-react) - 🚥 Async/await for React components (1 day ago)
+- [AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer) - Specify what you want it to build, the AI asks for clarification, and then builds it. (5 days ago)
+- [noahshinn024/reflexion](https://github.com/noahshinn024/reflexion) - Reflexion: Language Agents with Verbal Reinforcement Learning (5 days ago)
+- [e-johnstonn/FableForge](https://github.com/e-johnstonn/FableForge) - Generate a picture book from a single prompt using OpenAI function calling, replicate, and Deep Lake (1 week ago)
 
 ---
 <img align='center' width='54%' alt='GitHub stats for @marcusrbrown' src='https://github-readme-stats.vercel.app/api?username=marcusrbrown&show_icons=true&theme=dark&include_all_commits=true&count_private=true'>

@@ -1,13 +1,10 @@
 name: CI
 
-on:
+'on':
   push:
     branches: [main, 'renovate/**']
-    paths-ignore:
-      - 'templates/**'
   pull_request:
-    paths-ignore:
-      - 'templates/**'
+    branches: [main]
     types: [opened, reopened, synchronize]
   workflow_dispatch:
 
