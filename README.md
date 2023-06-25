@@ -37,13 +37,13 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## ⭐ Recent Stars
 
+- [EndBug/add-and-commit](https://github.com/EndBug/add-and-commit) - :octocat: Automatically commit changes made in your workflow run directly to your repo (today)
 - [stoe/gh-report](https://github.com/stoe/gh-report) - gh cli extension to generate account/organization/enterprise reports (today)
 - [PetrosiliusPatter/ingooutgo](https://github.com/PetrosiliusPatter/ingooutgo) -  (today)
 - [emilwidlund/nodl](https://github.com/emilwidlund/nodl) - A framework for computational node graphs. (today)
 - [pmndrs/suspend-react](https://github.com/pmndrs/suspend-react) - 🚥 Async/await for React components (1 day ago)
 - [AntonOsika/gpt-engineer](https://github.com/AntonOsika/gpt-engineer) - Specify what you want it to build, the AI asks for clarification, and then builds it. (5 days ago)
 - [noahshinn024/reflexion](https://github.com/noahshinn024/reflexion) - Reflexion: Language Agents with Verbal Reinforcement Learning (5 days ago)
-- [e-johnstonn/FableForge](https://github.com/e-johnstonn/FableForge) - Generate a picture book from a single prompt using OpenAI function calling, replicate, and Deep Lake (1 week ago)
 
 ---
 <img align='center' width='54%' alt='GitHub stats for @marcusrbrown' src='https://github-readme-stats.vercel.app/api?username=marcusrbrown&show_icons=true&theme=dark&include_all_commits=true&count_private=true'>
