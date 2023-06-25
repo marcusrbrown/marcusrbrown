@@ -64,7 +64,6 @@ jobs:
           author_email: '137683033+mrbro-bot[bot]@users.noreply.github.com'
           committer_name: 'MrBro Bot'
           committer_email: '137683033+mrbro-bot[bot]@users.noreply.github.com'
-          commit: '--signoff'
           message: 'build: update README.md'
 
       # Create a pull request when triggered from a push, schedule, or workflow_dispatch event
@@ -73,6 +72,7 @@ jobs:
         if: github.ref == 'refs/heads/main'
         with:
           assignees: 'marcusrbrown'
+          author: 'mrbro-bot[bot] <137683033+mrbro-bot[bot]@users.noreply.github.com>'
           body: |
             This is an automated pull request to update the README.md file and assets used in my GitHub profile.
             Please review the changes and merge this pull request if you approve.
@@ -83,6 +83,5 @@ jobs:
           branch: 'build/update-readme'
           commit-message: 'build: update README.md'
           committer: 'MrBro Bot <137683033+mrbro-bot[bot]@users.noreply.github.com>'
-          signoff: true
           title: 'build: update README.md'
           token: ${{ steps.get-workflow-app-token.outputs.token }}
