@@ -4,10 +4,10 @@ _extends: .github
 repository:
   description: My GitHub public profile README.
 
-  topics:
-    - github
-    - readme-profile
-    - profile-readme
-    - awesome-readme
-    - typescript
-    - markdown
+  topics: >-
+    github,
+    readme-profile,
+    profile-readme,
+    awesome-readme,
+    typescript,
+    markdown
