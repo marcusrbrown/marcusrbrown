@@ -37,13 +37,13 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## ⭐ Recent Stars
 
+- [ykdojo/kaguya](https://github.com/ykdojo/kaguya) - A ChatGPT plugin that allows you to load and edit your local files in a controlled way, as well as run any Python, JavaScript, and bash script. (today)
+- [embedchain/embedchain](https://github.com/embedchain/embedchain) - Framework to easily create LLM powered bots over any dataset. (today)
 - [ggerganov/llama.cpp](https://github.com/ggerganov/llama.cpp) - Port of Facebook&#39;s LLaMA model in C/C&#43;&#43; (today)
 - [pkuliyi2015/multidiffusion-upscaler-for-automatic1111](https://github.com/pkuliyi2015/multidiffusion-upscaler-for-automatic1111) - Tiled Diffusion and VAE optimize, licensed under CC BY-NC-SA 4.0 (2 days ago)
 - [optiv/blemon](https://github.com/optiv/blemon) - Universal BLE Monitoring with Frida (or Objection) (2 days ago)
 - [EndBug/add-and-commit](https://github.com/EndBug/add-and-commit) - :octocat: Automatically commit changes made in your workflow run directly to your repo (2 days ago)
 - [stoe/gh-report](https://github.com/stoe/gh-report) - gh cli extension to generate account/organization/enterprise reports (2 days ago)
-- [PetrosiliusPatter/ingooutgo](https://github.com/PetrosiliusPatter/ingooutgo) -  (2 days ago)
-- [emilwidlund/nodl](https://github.com/emilwidlund/nodl) - A framework for computational node graphs. (2 days ago)
 
 ---
 <img align='center' width='54%' alt='GitHub stats for @marcusrbrown' src='https://github-readme-stats.vercel.app/api?username=marcusrbrown&show_icons=true&theme=dark&include_all_commits=true&count_private=true'>
