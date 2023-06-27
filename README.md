@@ -21,8 +21,8 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## 👨🏽‍💻 Current Work
 
-- [marcusrbrown/botbuilder-js-simple](https://github.com/marcusrbrown/botbuilder-js-simple) - Simple bot for exploring the Microsoft Bot Framework and Bot Builder SDK. (2 days ago)
-- [marcusrbrown/.github](https://github.com/marcusrbrown/.github) - GitHub defaults (2 days ago)
+- [marcusrbrown/botbuilder-js-simple](https://github.com/marcusrbrown/botbuilder-js-simple) - Simple bot for exploring the Microsoft Bot Framework and Bot Builder SDK. (3 days ago)
+- [marcusrbrown/.github](https://github.com/marcusrbrown/.github) - GitHub defaults (3 days ago)
 - [marcusrbrown/panthe.ai](https://github.com/marcusrbrown/panthe.ai) -  (2 weeks ago)
 - [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) -  (2 weeks ago)
 - [marcusrbrown/create-.](https://github.com/marcusrbrown/create-.) - `npm init .` (3 weeks ago)
@@ -37,13 +37,13 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## ⭐ Recent Stars
 
-- [pkuliyi2015/multidiffusion-upscaler-for-automatic1111](https://github.com/pkuliyi2015/multidiffusion-upscaler-for-automatic1111) - Tiled Diffusion and VAE optimize, licensed under CC BY-NC-SA 4.0 (1 day ago)
-- [optiv/blemon](https://github.com/optiv/blemon) - Universal BLE Monitoring with Frida (or Objection) (1 day ago)
-- [EndBug/add-and-commit](https://github.com/EndBug/add-and-commit) - :octocat: Automatically commit changes made in your workflow run directly to your repo (1 day ago)
-- [stoe/gh-report](https://github.com/stoe/gh-report) - gh cli extension to generate account/organization/enterprise reports (1 day ago)
-- [PetrosiliusPatter/ingooutgo](https://github.com/PetrosiliusPatter/ingooutgo) -  (1 day ago)
-- [emilwidlund/nodl](https://github.com/emilwidlund/nodl) - A framework for computational node graphs. (1 day ago)
-- [pmndrs/suspend-react](https://github.com/pmndrs/suspend-react) - 🚥 Async/await for React components (2 days ago)
+- [ggerganov/llama.cpp](https://github.com/ggerganov/llama.cpp) - Port of Facebook&#39;s LLaMA model in C/C&#43;&#43; (today)
+- [pkuliyi2015/multidiffusion-upscaler-for-automatic1111](https://github.com/pkuliyi2015/multidiffusion-upscaler-for-automatic1111) - Tiled Diffusion and VAE optimize, licensed under CC BY-NC-SA 4.0 (2 days ago)
+- [optiv/blemon](https://github.com/optiv/blemon) - Universal BLE Monitoring with Frida (or Objection) (2 days ago)
+- [EndBug/add-and-commit](https://github.com/EndBug/add-and-commit) - :octocat: Automatically commit changes made in your workflow run directly to your repo (2 days ago)
+- [stoe/gh-report](https://github.com/stoe/gh-report) - gh cli extension to generate account/organization/enterprise reports (2 days ago)
+- [PetrosiliusPatter/ingooutgo](https://github.com/PetrosiliusPatter/ingooutgo) -  (2 days ago)
+- [emilwidlund/nodl](https://github.com/emilwidlund/nodl) - A framework for computational node graphs. (2 days ago)
 
 ---
 <img align='center' width='54%' alt='GitHub stats for @marcusrbrown' src='https://github-readme-stats.vercel.app/api?username=marcusrbrown&show_icons=true&theme=dark&include_all_commits=true&count_private=true'>
