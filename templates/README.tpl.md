@@ -19,19 +19,19 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 [twitter]: https://twitter.com/mrossbrown "@mrossbrown | Twitter"
 [linkedin]: https://www.linkedin.com/in/marcusrbrown "@marcusrbrown | LinkedIn"
 
-## 👨🏽‍💻 Current Work
+## 🏗️ Work-in-Progress
+
+- 🤖 [Copiloting](https://github.com/marcusrbrown/copiloting): A set of TypeScript building blocks for creating AI assistants and chatbots.
+- 🧪 [some-expect](https://github.com/marcusrbrown/some-expect): A universal `expect()` function supporting Jest, Chai, and Vitest testing frameworks.
+- 🏠 [esphome-life](https://github.com/marcusrbrown/esphome-life): My [ESPHome](https://esphome.io/) projects and device configurations.
+
+## 👨🏽‍💻 Recent Contributions
 
 <!-- markdownlint-disable -->
 {{range recentContributions 7}}
 - [{{.Repo.Name}}]({{.Repo.URL}}) - {{.Repo.Description}} ({{humanize .OccurredAt}})
 {{- end}}
 <!-- markdownlint-restore -->
-
-## 🏗️ Work-in-Progress
-
-- 🤖 [Copiloting](https://github.com/marcusrbrown/copiloting): A set of TypeScript building blocks for creating AI assistants and chatbots.
-- 🧪 [some-expect](https://github.com/marcusrbrown/some-expect): A universal `expect()` function supporting Jest, Chai, and Vitest testing frameworks.
-- 🏠 [esphome-life](https://github.com/marcusrbrown/esphome-life): My [ESPHome](https://esphome.io/) projects and device configurations.
 
 ## ⭐ Recent Stars
 
