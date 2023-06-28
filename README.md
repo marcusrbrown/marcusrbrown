@@ -19,21 +19,21 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 [twitter]: https://twitter.com/mrossbrown "@mrossbrown | Twitter"
 [linkedin]: https://www.linkedin.com/in/marcusrbrown "@marcusrbrown | LinkedIn"
 
-## 👨🏽‍💻 Current Work
-
-- [marcusrbrown/botbuilder-js-simple](https://github.com/marcusrbrown/botbuilder-js-simple) - Simple bot for exploring the Microsoft Bot Framework and Bot Builder SDK. (4 days ago)
-- [marcusrbrown/.github](https://github.com/marcusrbrown/.github) - GitHub defaults (4 days ago)
-- [marcusrbrown/panthe.ai](https://github.com/marcusrbrown/panthe.ai) -  (2 weeks ago)
-- [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) -  (2 weeks ago)
-- [marcusrbrown/create-.](https://github.com/marcusrbrown/create-.) - `npm init .` (3 weeks ago)
-- [marcusrbrown/grommet-playground](https://github.com/marcusrbrown/grommet-playground) - Playground for Grommet components (2 months ago)
-- [marcusrbrown/translate-app](https://github.com/marcusrbrown/translate-app) - My coursework for &#34;Modern React and Redux&#34; by @StephenGrider (2 months ago)
-
 ## 🏗️ Work-in-Progress
 
 - 🤖 [Copiloting](https://github.com/marcusrbrown/copiloting): A set of TypeScript building blocks for creating AI assistants and chatbots.
 - 🧪 [some-expect](https://github.com/marcusrbrown/some-expect): A universal `expect()` function supporting Jest, Chai, and Vitest testing frameworks.
 - 🏠 [esphome-life](https://github.com/marcusrbrown/esphome-life): My [ESPHome](https://esphome.io/) projects and device configurations.
+
+## 👨🏽‍💻 Recent Contributions
+
+- [fro-bot/.github](https://github.com/fro-bot/.github) -  (today)
+- [marcusrbrown/.github](https://github.com/marcusrbrown/.github) - GitHub defaults (4 days ago)
+- [marcusrbrown/botbuilder-js-simple](https://github.com/marcusrbrown/botbuilder-js-simple) - Simple bot for exploring the Microsoft Bot Framework and Bot Builder SDK. (4 days ago)
+- [marcusrbrown/panthe.ai](https://github.com/marcusrbrown/panthe.ai) -  (2 weeks ago)
+- [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) -  (2 weeks ago)
+- [marcusrbrown/create-.](https://github.com/marcusrbrown/create-.) - `npm init .` (3 weeks ago)
+- [marcusrbrown/grommet-playground](https://github.com/marcusrbrown/grommet-playground) - Playground for Grommet components (2 months ago)
 
 ## ⭐ Recent Stars
 
