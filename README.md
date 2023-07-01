@@ -27,8 +27,8 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## 👨🏽‍💻 Recent Contributions
 
+- [fro-bot/.github](https://github.com/fro-bot/.github) -  (1 day ago)
 - [marcusrbrown/grommet-playground](https://github.com/marcusrbrown/grommet-playground) - Playground for Grommet components (2 days ago)
-- [fro-bot/.github](https://github.com/fro-bot/.github) -  (3 days ago)
 - [marcusrbrown/botbuilder-js-simple](https://github.com/marcusrbrown/botbuilder-js-simple) - Simple bot for exploring the Microsoft Bot Framework and Bot Builder SDK. (1 week ago)
 - [marcusrbrown/.github](https://github.com/marcusrbrown/.github) - GitHub defaults (1 week ago)
 - [marcusrbrown/panthe.ai](https://github.com/marcusrbrown/panthe.ai) -  (3 weeks ago)
