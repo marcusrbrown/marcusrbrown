@@ -27,8 +27,8 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## 👨🏽‍💻 Recent Contributions
 
-- [fro-bot/.github](https://github.com/fro-bot/.github) -  (1 day ago)
-- [marcusrbrown/grommet-playground](https://github.com/marcusrbrown/grommet-playground) - Playground for Grommet components (3 days ago)
+- [fro-bot/.github](https://github.com/fro-bot/.github) -  (2 days ago)
+- [marcusrbrown/grommet-playground](https://github.com/marcusrbrown/grommet-playground) - Playground for Grommet components (4 days ago)
 - [marcusrbrown/botbuilder-js-simple](https://github.com/marcusrbrown/botbuilder-js-simple) - Simple bot for exploring the Microsoft Bot Framework and Bot Builder SDK. (1 week ago)
 - [marcusrbrown/.github](https://github.com/marcusrbrown/.github) - GitHub defaults (1 week ago)
 - [marcusrbrown/panthe.ai](https://github.com/marcusrbrown/panthe.ai) -  (3 weeks ago)
@@ -37,12 +37,12 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## ⭐ Recent Stars
 
-- [ngrok/kubernetes-ingress-controller](https://github.com/ngrok/kubernetes-ingress-controller) - The official ngrok Ingress Controller for Kubernetes (1 day ago)
-- [styled-components/styled-components](https://github.com/styled-components/styled-components) - Visual primitives for the component age. Use the best bits of ES6 and CSS to style your apps without stress 💅 (2 days ago)
-- [chatscope/chat-ui-kit-react](https://github.com/chatscope/chat-ui-kit-react) - Build your own chat UI with React components in few minutes. Chat UI Kit from chatscope is an open source UI toolkit for developing web chat applications. (3 days ago)
-- [ykdojo/kaguya](https://github.com/ykdojo/kaguya) - A ChatGPT plugin that allows you to load and edit your local files in a controlled way, as well as run any Python, JavaScript, and bash script. (5 days ago)
-- [embedchain/embedchain](https://github.com/embedchain/embedchain) - Framework to easily create LLM powered bots over any dataset. (5 days ago)
-- [ggerganov/llama.cpp](https://github.com/ggerganov/llama.cpp) - Port of Facebook&#39;s LLaMA model in C/C&#43;&#43; (5 days ago)
+- [ngrok/kubernetes-ingress-controller](https://github.com/ngrok/kubernetes-ingress-controller) - The official ngrok Ingress Controller for Kubernetes (2 days ago)
+- [styled-components/styled-components](https://github.com/styled-components/styled-components) - Visual primitives for the component age. Use the best bits of ES6 and CSS to style your apps without stress 💅 (3 days ago)
+- [chatscope/chat-ui-kit-react](https://github.com/chatscope/chat-ui-kit-react) - Build your own chat UI with React components in few minutes. Chat UI Kit from chatscope is an open source UI toolkit for developing web chat applications. (4 days ago)
+- [ykdojo/kaguya](https://github.com/ykdojo/kaguya) - A ChatGPT plugin that allows you to load and edit your local files in a controlled way, as well as run any Python, JavaScript, and bash script. (6 days ago)
+- [embedchain/embedchain](https://github.com/embedchain/embedchain) - Framework to easily create LLM powered bots over any dataset. (6 days ago)
+- [ggerganov/llama.cpp](https://github.com/ggerganov/llama.cpp) - Port of Facebook&#39;s LLaMA model in C/C&#43;&#43; (6 days ago)
 - [pkuliyi2015/multidiffusion-upscaler-for-automatic1111](https://github.com/pkuliyi2015/multidiffusion-upscaler-for-automatic1111) - Tiled Diffusion and VAE optimize, licensed under CC BY-NC-SA 4.0 (1 week ago)
 
 ---
