@@ -37,13 +37,13 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## ⭐ Recent Stars
 
+- [polarsource/polar](https://github.com/polarsource/polar) - Polar gives open source maintainers a better and funded backlog based on what drives the most impact within their community. (today)
 - [PoomSmart/MGKeys](https://github.com/PoomSmart/MGKeys) - MobileGestalt Keys (De)obfuscation. (1 day ago)
 - [ryannair05/ApolloAPI](https://github.com/ryannair05/ApolloAPI) - Use a custom API for Apollo (1 day ago)
 - [aeharding/wefwef](https://github.com/aeharding/wefwef) - wefwef — a mobile-first Lemmy web client (2 days ago)
 - [kenesparta/fibonacci-wasm](https://github.com/kenesparta/fibonacci-wasm) - WASM &amp; Rust en Docker [Docker Init Ayacucho] (2 days ago)
 - [ngrok/kubernetes-ingress-controller](https://github.com/ngrok/kubernetes-ingress-controller) - The official ngrok Ingress Controller for Kubernetes (4 days ago)
 - [styled-components/styled-components](https://github.com/styled-components/styled-components) - Visual primitives for the component age. Use the best bits of ES6 and CSS to style your apps without stress 💅 (5 days ago)
-- [chatscope/chat-ui-kit-react](https://github.com/chatscope/chat-ui-kit-react) - Build your own chat UI with React components in few minutes. Chat UI Kit from chatscope is an open source UI toolkit for developing web chat applications. (6 days ago)
 
 ---
 <img align='center' width='54%' alt='GitHub stats for @marcusrbrown' src='https://github-readme-stats.vercel.app/api?username=marcusrbrown&show_icons=true&theme=dark&include_all_commits=true&count_private=true'>
