@@ -27,13 +27,13 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## 👨🏽‍💻 Recent Contributions
 
+- [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -  (today)
 - [fro-bot/.github](https://github.com/fro-bot/.github) -  (2 days ago)
 - [marcusrbrown/tokentoilet](https://github.com/marcusrbrown/tokentoilet) -  (3 days ago)
 - [marcusrbrown/grommet-playground](https://github.com/marcusrbrown/grommet-playground) - Playground for Grommet components (1 week ago)
-- [marcusrbrown/botbuilder-js-simple](https://github.com/marcusrbrown/botbuilder-js-simple) - Simple bot for exploring the Microsoft Bot Framework and Bot Builder SDK. (1 week ago)
 - [marcusrbrown/.github](https://github.com/marcusrbrown/.github) - GitHub defaults (1 week ago)
+- [marcusrbrown/botbuilder-js-simple](https://github.com/marcusrbrown/botbuilder-js-simple) - Simple bot for exploring the Microsoft Bot Framework and Bot Builder SDK. (1 week ago)
 - [marcusrbrown/panthe.ai](https://github.com/marcusrbrown/panthe.ai) -  (3 weeks ago)
-- [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) -  (4 weeks ago)
 
 ## ⭐ Recent Stars
 
