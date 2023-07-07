@@ -27,23 +27,23 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## 👨🏽‍💻 Recent Contributions
 
-- [fro-bot/.github](https://github.com/fro-bot/.github) -  (1 day ago)
-- [marcusrbrown/tokentoilet](https://github.com/marcusrbrown/tokentoilet) -  (2 days ago)
+- [fro-bot/.github](https://github.com/fro-bot/.github) -  (2 days ago)
+- [marcusrbrown/tokentoilet](https://github.com/marcusrbrown/tokentoilet) -  (3 days ago)
 - [marcusrbrown/grommet-playground](https://github.com/marcusrbrown/grommet-playground) - Playground for Grommet components (1 week ago)
 - [marcusrbrown/botbuilder-js-simple](https://github.com/marcusrbrown/botbuilder-js-simple) - Simple bot for exploring the Microsoft Bot Framework and Bot Builder SDK. (1 week ago)
 - [marcusrbrown/.github](https://github.com/marcusrbrown/.github) - GitHub defaults (1 week ago)
 - [marcusrbrown/panthe.ai](https://github.com/marcusrbrown/panthe.ai) -  (3 weeks ago)
-- [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) -  (3 weeks ago)
+- [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) -  (4 weeks ago)
 
 ## ⭐ Recent Stars
 
-- [polarsource/polar](https://github.com/polarsource/polar) - Polar gives open source maintainers a better and funded backlog based on what drives the most impact within their community. (1 day ago)
-- [PoomSmart/MGKeys](https://github.com/PoomSmart/MGKeys) - MobileGestalt Keys (De)obfuscation. (2 days ago)
-- [ryannair05/ApolloAPI](https://github.com/ryannair05/ApolloAPI) - Use a custom API for Apollo (2 days ago)
-- [aeharding/wefwef](https://github.com/aeharding/wefwef) - wefwef — a mobile-first Lemmy web client (3 days ago)
-- [kenesparta/fibonacci-wasm](https://github.com/kenesparta/fibonacci-wasm) - WASM &amp; Rust en Docker [Docker Init Ayacucho] (3 days ago)
-- [ngrok/kubernetes-ingress-controller](https://github.com/ngrok/kubernetes-ingress-controller) - The official ngrok Ingress Controller for Kubernetes (5 days ago)
-- [styled-components/styled-components](https://github.com/styled-components/styled-components) - Visual primitives for the component age. Use the best bits of ES6 and CSS to style your apps without stress 💅 (6 days ago)
+- [chaoticgd/ghidra-emotionengine-reloaded](https://github.com/chaoticgd/ghidra-emotionengine-reloaded) -  An extension for Ghidra that adds support for the PlayStation 2.  (today)
+- [cesena/ghidra2dwarf](https://github.com/cesena/ghidra2dwarf) - 🐉 Export ghidra decompiled code to dwarf sections inside ELF binary (today)
+- [degrigis/awesome-angr](https://github.com/degrigis/awesome-angr) - A collection of resources/tools and analyses for the angr binary analysis framework. (today)
+- [angr/angr](https://github.com/angr/angr) - A powerful and user-friendly binary analysis platform! (today)
+- [decompiler-explorer/decompiler-explorer](https://github.com/decompiler-explorer/decompiler-explorer) - Decompiler Explorer! Compare tools on the forefront of static analysis, now in your web browser! (today)
+- [20urc3/Sekiryu](https://github.com/20urc3/Sekiryu) - Comprehensive toolkit for Ghidra headless. (today)
+- [al3xtjames/ghidra-firmware-utils](https://github.com/al3xtjames/ghidra-firmware-utils) - Ghidra utilities for analyzing PC firmware (today)
 
 ---
 <img align='center' width='54%' alt='GitHub stats for @marcusrbrown' src='https://github-readme-stats.vercel.app/api?username=marcusrbrown&show_icons=true&theme=dark&include_all_commits=true&count_private=true'>
