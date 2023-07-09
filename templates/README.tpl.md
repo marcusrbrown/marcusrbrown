@@ -29,7 +29,7 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 <!-- markdownlint-disable -->
 {{range recentContributions 7}}
-- [{{.Repo.Name}}]({{.Repo.URL}}) - {{.Repo.Description}} ({{humanize .OccurredAt}})
+- [{{.Repo.Name}}]({{.Repo.URL}}) - {{.Repo.Description}}
 {{- end}}
 <!-- markdownlint-restore -->
 
@@ -37,7 +37,7 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 <!-- markdownlint-disable -->
 {{range recentStars 7}}
-- [{{.Repo.Name}}]({{.Repo.URL}}) - {{.Repo.Description}} ({{humanize .StarredAt}})
+- [{{.Repo.Name}}]({{.Repo.URL}}) - {{.Repo.Description}}
 {{- end}}
 <!-- markdownlint-restore -->
 
