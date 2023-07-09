@@ -27,23 +27,23 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## 👨🏽‍💻 Recent Contributions
 
-- [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -  (today)
-- [fro-bot/.github](https://github.com/fro-bot/.github) -  (2 days ago)
-- [marcusrbrown/tokentoilet](https://github.com/marcusrbrown/tokentoilet) -  (3 days ago)
-- [marcusrbrown/grommet-playground](https://github.com/marcusrbrown/grommet-playground) - Playground for Grommet components (1 week ago)
-- [marcusrbrown/.github](https://github.com/marcusrbrown/.github) - GitHub defaults (1 week ago)
-- [marcusrbrown/botbuilder-js-simple](https://github.com/marcusrbrown/botbuilder-js-simple) - Simple bot for exploring the Microsoft Bot Framework and Bot Builder SDK. (1 week ago)
-- [marcusrbrown/panthe.ai](https://github.com/marcusrbrown/panthe.ai) -  (3 weeks ago)
+- [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -
+- [fro-bot/.github](https://github.com/fro-bot/.github) -
+- [marcusrbrown/tokentoilet](https://github.com/marcusrbrown/tokentoilet) -
+- [marcusrbrown/grommet-playground](https://github.com/marcusrbrown/grommet-playground) - Playground for Grommet components
+- [marcusrbrown/.github](https://github.com/marcusrbrown/.github) - GitHub defaults
+- [marcusrbrown/botbuilder-js-simple](https://github.com/marcusrbrown/botbuilder-js-simple) - Simple bot for exploring the Microsoft Bot Framework and Bot Builder SDK.
+- [marcusrbrown/panthe.ai](https://github.com/marcusrbrown/panthe.ai) -
 
 ## ⭐ Recent Stars
 
-- [chaoticgd/ghidra-emotionengine-reloaded](https://github.com/chaoticgd/ghidra-emotionengine-reloaded) -  An extension for Ghidra that adds support for the PlayStation 2.  (today)
-- [cesena/ghidra2dwarf](https://github.com/cesena/ghidra2dwarf) - 🐉 Export ghidra decompiled code to dwarf sections inside ELF binary (today)
-- [degrigis/awesome-angr](https://github.com/degrigis/awesome-angr) - A collection of resources/tools and analyses for the angr binary analysis framework. (today)
-- [angr/angr](https://github.com/angr/angr) - A powerful and user-friendly binary analysis platform! (today)
-- [decompiler-explorer/decompiler-explorer](https://github.com/decompiler-explorer/decompiler-explorer) - Decompiler Explorer! Compare tools on the forefront of static analysis, now in your web browser! (today)
-- [20urc3/Sekiryu](https://github.com/20urc3/Sekiryu) - Comprehensive toolkit for Ghidra headless. (today)
-- [al3xtjames/ghidra-firmware-utils](https://github.com/al3xtjames/ghidra-firmware-utils) - Ghidra utilities for analyzing PC firmware (today)
+- [chaoticgd/ghidra-emotionengine-reloaded](https://github.com/chaoticgd/ghidra-emotionengine-reloaded) -  An extension for Ghidra that adds support for the PlayStation 2.
+- [cesena/ghidra2dwarf](https://github.com/cesena/ghidra2dwarf) - 🐉 Export ghidra decompiled code to dwarf sections inside ELF binary
+- [degrigis/awesome-angr](https://github.com/degrigis/awesome-angr) - A collection of resources/tools and analyses for the angr binary analysis framework.
+- [angr/angr](https://github.com/angr/angr) - A powerful and user-friendly binary analysis platform!
+- [decompiler-explorer/decompiler-explorer](https://github.com/decompiler-explorer/decompiler-explorer) - Decompiler Explorer! Compare tools on the forefront of static analysis, now in your web browser!
+- [20urc3/Sekiryu](https://github.com/20urc3/Sekiryu) - Comprehensive toolkit for Ghidra headless.
+- [al3xtjames/ghidra-firmware-utils](https://github.com/al3xtjames/ghidra-firmware-utils) - Ghidra utilities for analyzing PC firmware
 
 ---
 <img align='center' width='54%' alt='GitHub stats for @marcusrbrown' src='https://github-readme-stats.vercel.app/api?username=marcusrbrown&show_icons=true&theme=dark&include_all_commits=true&count_private=true'>
