@@ -37,13 +37,13 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## ⭐ Recent Stars
 
+- [catppuccin/vscode-icons](https://github.com/catppuccin/vscode-icons) - 🦊 Soothing pastel theme for VSCode/VSCodium icons
+- [catppuccin/vscode](https://github.com/catppuccin/vscode) - 🦌 Soothing pastel theme for VSCode/VSCodium
+- [mfin/proxmox-build-template](https://github.com/mfin/proxmox-build-template) - Build a cloud-init enabled Ubuntu VM template on Proxmox
 - [bjw-s/hass-config](https://github.com/bjw-s/hass-config) -
 - [bjw-s/esphome-config](https://github.com/bjw-s/esphome-config) - My ESPHome configs.
 - [chaoticgd/ghidra-emotionengine-reloaded](https://github.com/chaoticgd/ghidra-emotionengine-reloaded) -  An extension for Ghidra that adds support for the PlayStation 2.
 - [cesena/ghidra2dwarf](https://github.com/cesena/ghidra2dwarf) - 🐉 Export ghidra decompiled code to dwarf sections inside ELF binary
-- [degrigis/awesome-angr](https://github.com/degrigis/awesome-angr) - A collection of resources/tools and analyses for the angr binary analysis framework.
-- [angr/angr](https://github.com/angr/angr) - A powerful and user-friendly binary analysis platform!
-- [decompiler-explorer/decompiler-explorer](https://github.com/decompiler-explorer/decompiler-explorer) - Decompiler Explorer! Compare tools on the forefront of static analysis, now in your web browser!
 
 ---
 <img align='center' width='54%' alt='GitHub stats for @marcusrbrown' src='https://github-readme-stats.vercel.app/api?username=marcusrbrown&show_icons=true&theme=dark&include_all_commits=true&count_private=true'>
