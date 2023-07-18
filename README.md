@@ -39,7 +39,7 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 - [landonr/esphome-devices](https://github.com/landonr/esphome-devices) - lando&#39;s esphome devices
 - [libretiny-eu/esphome-hass-addon](https://github.com/libretiny-eu/esphome-hass-addon) - LibreTuya ESPHome Home Assistant Add-on
-- [shadcn/ui](https://github.com/shadcn/ui) - Beautifully designed components built with Radix UI and Tailwind CSS.
+- [shadcn-ui/ui](https://github.com/shadcn-ui/ui) - Beautifully designed components built with Radix UI and Tailwind CSS.
 - [tranek/GASDocumentation](https://github.com/tranek/GASDocumentation) - My understanding of Unreal Engine 5&#39;s GameplayAbilitySystem plugin with a simple multiplayer sample project.
 - [Tencent/puerts](https://github.com/Tencent/puerts) - 普洱TS！Write your game with TypeScript in UE or Unity. PuerTS can be pronounced as pu-erh TS
 - [jclehner/nmrpflash](https://github.com/jclehner/nmrpflash) - Netgear Unbrick Utility
