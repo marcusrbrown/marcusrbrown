@@ -37,13 +37,13 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## ⭐ Recent Stars
 
+- [ground7/unraid-animated-svgs](https://github.com/ground7/unraid-animated-svgs) - Animated SVGs to Help Organize Your Self-Hosted Apps
 - [sunfounder/pironman](https://github.com/sunfounder/pironman) -
 - [openthread/ot-nrf528xx](https://github.com/openthread/ot-nrf528xx) - OpenThread on Nordic nRF528xx examples.
 - [guillaumekln/faster-whisper](https://github.com/guillaumekln/faster-whisper) - Faster Whisper transcription with CTranslate2
 - [jpoehnelt/secrets-sync-action](https://github.com/jpoehnelt/secrets-sync-action) - A Github Action that can sync secrets from one repository to many others.
 - [landonr/esphome-devices](https://github.com/landonr/esphome-devices) - lando&#39;s esphome devices
 - [libretiny-eu/esphome-hass-addon](https://github.com/libretiny-eu/esphome-hass-addon) - LibreTuya ESPHome Home Assistant Add-on
-- [shadcn-ui/ui](https://github.com/shadcn-ui/ui) - Beautifully designed components built with Radix UI and Tailwind CSS.
 
 ---
 <img align='center' width='54%' alt='GitHub stats for @marcusrbrown' src='https://github-readme-stats.vercel.app/api?username=marcusrbrown&show_icons=true&theme=dark&include_all_commits=true&count_private=true'>
