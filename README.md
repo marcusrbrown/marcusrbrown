@@ -27,23 +27,23 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## 👨🏽‍💻 Recent Contributions
 
+- [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) -
 - [marcusrbrown/zsh-vscode](https://github.com/marcusrbrown/zsh-vscode) - zsh plugin for Visual Studio Code
 - [fro-bot/.github](https://github.com/fro-bot/.github) -
 - [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -
-- [marcusrbrown/some-expect](https://github.com/marcusrbrown/some-expect) -
-- [marcusrbrown/translate-app](https://github.com/marcusrbrown/translate-app) - My coursework for &#34;Modern React and Redux&#34; by @StephenGrider
 - [marcusrbrown/botbuilder-js-simple](https://github.com/marcusrbrown/botbuilder-js-simple) - Simple bot for exploring the Microsoft Bot Framework and Bot Builder SDK.
-- [marcusrbrown/jscodeshift-demo](https://github.com/marcusrbrown/jscodeshift-demo) - Demonstrate the use of jscodeshift
+- [marcusrbrown/translate-app](https://github.com/marcusrbrown/translate-app) - My coursework for &#34;Modern React and Redux&#34; by @StephenGrider
+- [marcusrbrown/some-expect](https://github.com/marcusrbrown/some-expect) -
 
 ## ⭐ Recent Stars
 
+- [sunfounder/pironman](https://github.com/sunfounder/pironman) -
 - [openthread/ot-nrf528xx](https://github.com/openthread/ot-nrf528xx) - OpenThread on Nordic nRF528xx examples.
 - [guillaumekln/faster-whisper](https://github.com/guillaumekln/faster-whisper) - Faster Whisper transcription with CTranslate2
 - [jpoehnelt/secrets-sync-action](https://github.com/jpoehnelt/secrets-sync-action) - A Github Action that can sync secrets from one repository to many others.
 - [landonr/esphome-devices](https://github.com/landonr/esphome-devices) - lando&#39;s esphome devices
 - [libretiny-eu/esphome-hass-addon](https://github.com/libretiny-eu/esphome-hass-addon) - LibreTuya ESPHome Home Assistant Add-on
 - [shadcn-ui/ui](https://github.com/shadcn-ui/ui) - Beautifully designed components built with Radix UI and Tailwind CSS.
-- [tranek/GASDocumentation](https://github.com/tranek/GASDocumentation) - My understanding of Unreal Engine 5&#39;s GameplayAbilitySystem plugin with a simple multiplayer sample project.
 
 ---
 <img align='center' width='54%' alt='GitHub stats for @marcusrbrown' src='https://github-readme-stats.vercel.app/api?username=marcusrbrown&show_icons=true&theme=dark&include_all_commits=true&count_private=true'>
