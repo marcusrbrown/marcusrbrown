@@ -37,13 +37,13 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## ⭐ Recent Stars
 
+- [Stability-AI/StableStudio](https://github.com/Stability-AI/StableStudio) - Community interface for generative AI
+- [Screenly/Anthias](https://github.com/Screenly/Anthias) - The world&#39;s most popular open source digital signage project.
+- [ESPresense/ESPresense-companion](https://github.com/ESPresense/ESPresense-companion) - HA Addon / Container that attempts to solve indoor position (x,y,z) with multiple ESPresense stations using trilateralization
+- [tinygrad/tinygrad](https://github.com/tinygrad/tinygrad) - You like pytorch? You like micrograd? You love tinygrad! ❤️
 - [andrewjfreyer/monitor](https://github.com/andrewjfreyer/monitor) - Distributed advertisement-based BTLE presence detection reported via mqtt
 - [ground7/unraid-animated-svgs](https://github.com/ground7/unraid-animated-svgs) - Animated SVGs to Help Organize Your Self-Hosted Apps
 - [sunfounder/pironman](https://github.com/sunfounder/pironman) -
-- [openthread/ot-nrf528xx](https://github.com/openthread/ot-nrf528xx) - OpenThread on Nordic nRF528xx examples.
-- [guillaumekln/faster-whisper](https://github.com/guillaumekln/faster-whisper) - Faster Whisper transcription with CTranslate2
-- [jpoehnelt/secrets-sync-action](https://github.com/jpoehnelt/secrets-sync-action) - A Github Action that can sync secrets from one repository to many others.
-- [landonr/esphome-devices](https://github.com/landonr/esphome-devices) - lando&#39;s esphome devices
 
 ---
 <img align='center' width='54%' alt='GitHub stats for @marcusrbrown' src='https://github-readme-stats.vercel.app/api?username=marcusrbrown&show_icons=true&theme=dark&include_all_commits=true&count_private=true'>
