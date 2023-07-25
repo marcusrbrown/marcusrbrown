@@ -27,23 +27,23 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## 👨🏽‍💻 Recent Contributions
 
+- [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) -
 - [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) -
 - [marcusrbrown/zsh-vscode](https://github.com/marcusrbrown/zsh-vscode) - zsh plugin for Visual Studio Code
 - [fro-bot/.github](https://github.com/fro-bot/.github) -
 - [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -
-- [marcusrbrown/botbuilder-js-simple](https://github.com/marcusrbrown/botbuilder-js-simple) - Simple bot for exploring the Microsoft Bot Framework and Bot Builder SDK.
-- [marcusrbrown/translate-app](https://github.com/marcusrbrown/translate-app) - My coursework for &#34;Modern React and Redux&#34; by @StephenGrider
 - [marcusrbrown/some-expect](https://github.com/marcusrbrown/some-expect) -
+- [marcusrbrown/botbuilder-js-simple](https://github.com/marcusrbrown/botbuilder-js-simple) - Simple bot for exploring the Microsoft Bot Framework and Bot Builder SDK.
 
 ## ⭐ Recent Stars
 
+- [andrewjfreyer/monitor](https://github.com/andrewjfreyer/monitor) - Distributed advertisement-based BTLE presence detection reported via mqtt
 - [ground7/unraid-animated-svgs](https://github.com/ground7/unraid-animated-svgs) - Animated SVGs to Help Organize Your Self-Hosted Apps
 - [sunfounder/pironman](https://github.com/sunfounder/pironman) -
 - [openthread/ot-nrf528xx](https://github.com/openthread/ot-nrf528xx) - OpenThread on Nordic nRF528xx examples.
 - [guillaumekln/faster-whisper](https://github.com/guillaumekln/faster-whisper) - Faster Whisper transcription with CTranslate2
 - [jpoehnelt/secrets-sync-action](https://github.com/jpoehnelt/secrets-sync-action) - A Github Action that can sync secrets from one repository to many others.
 - [landonr/esphome-devices](https://github.com/landonr/esphome-devices) - lando&#39;s esphome devices
-- [libretiny-eu/esphome-hass-addon](https://github.com/libretiny-eu/esphome-hass-addon) - LibreTuya ESPHome Home Assistant Add-on
 
 ---
 <img align='center' width='54%' alt='GitHub stats for @marcusrbrown' src='https://github-readme-stats.vercel.app/api?username=marcusrbrown&show_icons=true&theme=dark&include_all_commits=true&count_private=true'>
