@@ -28,12 +28,12 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 ## 👨🏽‍💻 Recent Contributions
 
 - [fro-bot/.github](https://github.com/fro-bot/.github) -
+- [marcusrbrown/.github](https://github.com/marcusrbrown/.github) - GitHub defaults
 - [marcusrbrown/some-expect](https://github.com/marcusrbrown/some-expect) -
 - [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -
 - [marcusrbrown/botbuilder-js-simple](https://github.com/marcusrbrown/botbuilder-js-simple) - Simple bot for exploring the Microsoft Bot Framework and Bot Builder SDK.
 - [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) -
 - [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) -
-- [marcusrbrown/zsh-vscode](https://github.com/marcusrbrown/zsh-vscode) - zsh plugin for Visual Studio Code
 
 ## ⭐ Recent Stars
 
