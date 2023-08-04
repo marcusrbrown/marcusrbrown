@@ -28,8 +28,8 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 ## 👨🏽‍💻 Recent Contributions
 
 - [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) -
-- [fro-bot/.github](https://github.com/fro-bot/.github) -
 - [marcusrbrown/.github](https://github.com/marcusrbrown/.github) - GitHub defaults
+- [fro-bot/.github](https://github.com/fro-bot/.github) -
 - [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -
 - [marcusrbrown/botbuilder-js-simple](https://github.com/marcusrbrown/botbuilder-js-simple) - Simple bot for exploring the Microsoft Bot Framework and Bot Builder SDK.
 - [marcusrbrown/some-expect](https://github.com/marcusrbrown/some-expect) -
