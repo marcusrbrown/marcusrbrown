@@ -27,23 +27,23 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## 👨🏽‍💻 Recent Contributions
 
-- [marcusrbrown/.github](https://github.com/marcusrbrown/.github) - GitHub defaults
+- [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) -
 - [fro-bot/.github](https://github.com/fro-bot/.github) -
+- [marcusrbrown/.github](https://github.com/marcusrbrown/.github) - GitHub defaults
 - [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -
 - [marcusrbrown/botbuilder-js-simple](https://github.com/marcusrbrown/botbuilder-js-simple) - Simple bot for exploring the Microsoft Bot Framework and Bot Builder SDK.
 - [marcusrbrown/some-expect](https://github.com/marcusrbrown/some-expect) -
-- [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) -
 - [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) -
 
 ## ⭐ Recent Stars
 
+- [ajaymnk/open-electronics](https://github.com/ajaymnk/open-electronics) - 📚 💻 Great Resources for Electronics Enthusiasts
+- [delftopenhardware/awesome-open-hardware](https://github.com/delftopenhardware/awesome-open-hardware) - 🛠Helpful items for making open source hardware projects.
 - [tronikos/opower](https://github.com/tronikos/opower) - A Python library for getting historical and forecasted usage/cost from utilities that use opower.com such as PG&amp;E
 - [martinbaillie/vault-plugin-secrets-github](https://github.com/martinbaillie/vault-plugin-secrets-github) - Create ephemeral, finely-scoped @github access tokens using @hashicorp Vault.
 - [comerford/ue4-runtime](https://github.com/comerford/ue4-runtime) - Container images for running packaged Unreal Engine projects via the NVIDIA Container Toolkit
 - [mikeroyal/Unreal-Engine-Guide](https://github.com/mikeroyal/Unreal-Engine-Guide) - Unreal Engine 5 Guide. Learn to develop games for Windows, Linux, macOS, iOS, Android, Xbox Series X|S, PlayStation  5, Nintendo Switch.
 - [vela-games/circleci-ue5-game](https://github.com/vela-games/circleci-ue5-game) - Example game for CircleCI Build
-- [junrushao/llm-perf-bench](https://github.com/junrushao/llm-perf-bench) -
-- [mlc-ai/mlc-llm](https://github.com/mlc-ai/mlc-llm) - Enable everyone to develop, optimize and deploy AI models natively on everyone&#39;s devices.
 
 ---
 <img align='center' width='54%' alt='GitHub stats for @marcusrbrown' src='https://github-readme-stats.vercel.app/api?username=marcusrbrown&show_icons=true&theme=dark&include_all_commits=true&count_private=true'>
