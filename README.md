@@ -37,13 +37,13 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## ⭐ Recent Stars
 
+- [hmmbob/HomeAssistantConfig](https://github.com/hmmbob/HomeAssistantConfig) - My Home Assistant configuration. More info at <www.home-assistant.io> or in the readme below.
+- [bluemaex/home-assistant-config](https://github.com/bluemaex/home-assistant-config) - 🏠 Home Assistant configuration &amp; Documentation for the maexhome
+- [bluemaex/home-assistant-addons](https://github.com/bluemaex/home-assistant-addons) - bluemaex&#39;s Add-ons for Home Assistant
 - [ajaymnk/open-electronics](https://github.com/ajaymnk/open-electronics) - 📚 💻 Great Resources for Electronics Enthusiasts
 - [delftopenhardware/awesome-open-hardware](https://github.com/delftopenhardware/awesome-open-hardware) - 🛠Helpful items for making open source hardware projects.
 - [tronikos/opower](https://github.com/tronikos/opower) - A Python library for getting historical and forecasted usage/cost from utilities that use opower.com such as PG&amp;E
 - [martinbaillie/vault-plugin-secrets-github](https://github.com/martinbaillie/vault-plugin-secrets-github) - Create ephemeral, finely-scoped @github access tokens using @hashicorp Vault.
-- [comerford/ue4-runtime](https://github.com/comerford/ue4-runtime) - Container images for running packaged Unreal Engine projects via the NVIDIA Container Toolkit
-- [mikeroyal/Unreal-Engine-Guide](https://github.com/mikeroyal/Unreal-Engine-Guide) - Unreal Engine 5 Guide. Learn to develop games for Windows, Linux, macOS, iOS, Android, Xbox Series X|S, PlayStation  5, Nintendo Switch.
-- [vela-games/circleci-ue5-game](https://github.com/vela-games/circleci-ue5-game) - Example game for CircleCI Build
 
 ---
 <img align='center' width='54%' alt='GitHub stats for @marcusrbrown' src='https://github-readme-stats.vercel.app/api?username=marcusrbrown&show_icons=true&theme=dark&include_all_commits=true&count_private=true'>
