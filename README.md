@@ -27,9 +27,9 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## 👨🏽‍💻 Recent Contributions
 
-- [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) -
-- [marcusrbrown/.github](https://github.com/marcusrbrown/.github) - GitHub defaults
 - [fro-bot/.github](https://github.com/fro-bot/.github) -
+- [marcusrbrown/.github](https://github.com/marcusrbrown/.github) - GitHub defaults
+- [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) -
 - [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -
 - [marcusrbrown/botbuilder-js-simple](https://github.com/marcusrbrown/botbuilder-js-simple) - Simple bot for exploring the Microsoft Bot Framework and Bot Builder SDK.
 - [marcusrbrown/some-expect](https://github.com/marcusrbrown/some-expect) -
@@ -37,13 +37,13 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## ⭐ Recent Stars
 
-- [hmmbob/HomeAssistantConfig](https://github.com/hmmbob/HomeAssistantConfig) - My Home Assistant configuration. More info at <www.home-assistant.io> or in the readme below.
-- [bluemaex/home-assistant-config](https://github.com/bluemaex/home-assistant-config) - 🏠 Home Assistant configuration &amp; Documentation for the maexhome
-- [bluemaex/home-assistant-addons](https://github.com/bluemaex/home-assistant-addons) - bluemaex&#39;s Add-ons for Home Assistant
-- [ajaymnk/open-electronics](https://github.com/ajaymnk/open-electronics) - 📚 💻 Great Resources for Electronics Enthusiasts
-- [delftopenhardware/awesome-open-hardware](https://github.com/delftopenhardware/awesome-open-hardware) - 🛠Helpful items for making open source hardware projects.
-- [tronikos/opower](https://github.com/tronikos/opower) - A Python library for getting historical and forecasted usage/cost from utilities that use opower.com such as PG&amp;E
-- [martinbaillie/vault-plugin-secrets-github](https://github.com/martinbaillie/vault-plugin-secrets-github) - Create ephemeral, finely-scoped @github access tokens using @hashicorp Vault.
+- [avidit/hassio-addons](https://github.com/avidit/hassio-addons) - Hass.io addons
+- [TheTimeWalker/wallpanel-android](https://github.com/TheTimeWalker/wallpanel-android) - WallPanel is an Android application for Web Based Dashboards and Home Automation Platforms
+- [vmstan/gravity-sync](https://github.com/vmstan/gravity-sync) - 💫 The easy way to synchronize the DNS configuration of two Pi-hole 5.x instances.
+- [Apocrathia/home-assistant-addons](https://github.com/Apocrathia/home-assistant-addons) - My add-ons for Hass.io
+- [CakeCrusher/openplugin](https://github.com/CakeCrusher/openplugin) - Seamlessly integrate with OpenAI&#39;s ChatGPT plugins via API (or client), offering the same powerful functionality as the ChatGPT api &#43; plugins!
+- [niro1987/homeassistant-config](https://github.com/niro1987/homeassistant-config) - My Home Assistant configuration. Inspired by Frenck
+- [metbril/home-assistant-config](https://github.com/metbril/home-assistant-config) - 🏠 My Home Assistant configuration
 
 ---
 <img align='center' width='54%' alt='GitHub stats for @marcusrbrown' src='https://github-readme-stats.vercel.app/api?username=marcusrbrown&show_icons=true&theme=dark&include_all_commits=true&count_private=true'>
