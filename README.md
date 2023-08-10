@@ -37,13 +37,13 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## ⭐ Recent Stars
 
+- [suzuki-shunsuke/ci-info-action](https://github.com/suzuki-shunsuke/ci-info-action) - GitHub Actiions for ci-info
+- [suzuki-shunsuke/renovate-config](https://github.com/suzuki-shunsuke/renovate-config) -
+- [suzuki-shunsuke/renovate-issue-action](https://github.com/suzuki-shunsuke/renovate-issue-action) - Create, update, and close GitHub Issues with GitHub Actions according to Renovate Pull Requests
+- [johnste/finicky](https://github.com/johnste/finicky) - A macOS app for customizing which browser to start
 - [nextui-org/nextui](https://github.com/nextui-org/nextui) - 🚀   Beautiful, fast and modern React UI library.
 - [geekan/MetaGPT](https://github.com/geekan/MetaGPT) - 🌟 The Multi-Agent Framework: Given one line Requirement, return PRD, Design, Tasks, Repo
 - [Froyok/froyok-perforce](https://github.com/Froyok/froyok-perforce) - Custom version of Perforce server based on Docker. Tweaked to work with Unreal Engine 4.
-- [OLIMEX/ESP32-POE](https://github.com/OLIMEX/ESP32-POE) - ESP32 IoT development board with 100Mb Ethernet and 802.3 Power Over Ethernet (POE)
-- [jcwillox/hass-auto-backup](https://github.com/jcwillox/hass-auto-backup) - 🗃️ Improved Backup Service for Home Assistant that can Automatically Remove Backups and Supports Generational Backup Schemes.
-- [jrozner/esp-image-ida](https://github.com/jrozner/esp-image-ida) - Loader for esp-idf application images for IDA Pro
-- [espressif/vscode-esp-idf-extension](https://github.com/espressif/vscode-esp-idf-extension) - Visual Studio Code extension for ESP-IDF projects
 
 ---
 <img align='center' width='54%' alt='GitHub stats for @marcusrbrown' src='https://github-readme-stats.vercel.app/api?username=marcusrbrown&show_icons=true&theme=dark&include_all_commits=true&count_private=true'>
