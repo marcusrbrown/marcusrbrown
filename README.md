@@ -37,13 +37,13 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## ⭐ Recent Stars
 
-- [suzuki-shunsuke/ci-info-action](https://github.com/suzuki-shunsuke/ci-info-action) - GitHub Actiions for ci-info
-- [suzuki-shunsuke/renovate-config](https://github.com/suzuki-shunsuke/renovate-config) -
-- [suzuki-shunsuke/renovate-issue-action](https://github.com/suzuki-shunsuke/renovate-issue-action) - Create, update, and close GitHub Issues with GitHub Actions according to Renovate Pull Requests
-- [johnste/finicky](https://github.com/johnste/finicky) - A macOS app for customizing which browser to start
-- [nextui-org/nextui](https://github.com/nextui-org/nextui) - 🚀   Beautiful, fast and modern React UI library.
-- [geekan/MetaGPT](https://github.com/geekan/MetaGPT) - 🌟 The Multi-Agent Framework: Given one line Requirement, return PRD, Design, Tasks, Repo
-- [Froyok/froyok-perforce](https://github.com/Froyok/froyok-perforce) - Custom version of Perforce server based on Docker. Tweaked to work with Unreal Engine 4.
+- [googanhiem/gords-ha-addons](https://github.com/googanhiem/gords-ha-addons) - Gords Home Assistant add-on repository
+- [iphong/lib-esp-rc](https://github.com/iphong/lib-esp-rc) -
+- [thanks4opensource/buck50](https://github.com/thanks4opensource/buck50) - STM32F103 logic analyzer and more
+- [NabuCasa/universal-silabs-flasher](https://github.com/NabuCasa/universal-silabs-flasher) - Flashes Silicon Labs radios running EmberZNet or CPC multi-pan firmware
+- [tube0013/esphome-stream-server-v2](https://github.com/tube0013/esphome-stream-server-v2) - Custom Component for ESPHome enabling Serial over TCP
+- [Dilbert66/esphome-dsckeybus](https://github.com/Dilbert66/esphome-dsckeybus) - Esphome custom configuration for interfacing to a DSC POWERSERIES alarm system
+- [j5lien/esphome-idasen-desk-controller](https://github.com/j5lien/esphome-idasen-desk-controller) - ESPHome component for Ikea Idasen desk control
 
 ---
 <img align='center' width='54%' alt='GitHub stats for @marcusrbrown' src='https://github-readme-stats.vercel.app/api?username=marcusrbrown&show_icons=true&theme=dark&include_all_commits=true&count_private=true'>
