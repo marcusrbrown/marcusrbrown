@@ -37,13 +37,13 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## ⭐ Recent Stars
 
-- [googanhiem/gords-ha-addons](https://github.com/googanhiem/gords-ha-addons) - Gords Home Assistant add-on repository
-- [iphong/lib-esp-rc](https://github.com/iphong/lib-esp-rc) -
-- [thanks4opensource/buck50](https://github.com/thanks4opensource/buck50) - STM32F103 logic analyzer and more
-- [NabuCasa/universal-silabs-flasher](https://github.com/NabuCasa/universal-silabs-flasher) - Flashes Silicon Labs radios running EmberZNet or CPC multi-pan firmware
-- [tube0013/esphome-stream-server-v2](https://github.com/tube0013/esphome-stream-server-v2) - Custom Component for ESPHome enabling Serial over TCP
-- [Dilbert66/esphome-dsckeybus](https://github.com/Dilbert66/esphome-dsckeybus) - Esphome custom configuration for interfacing to a DSC POWERSERIES alarm system
-- [j5lien/esphome-idasen-desk-controller](https://github.com/j5lien/esphome-idasen-desk-controller) - ESPHome component for Ikea Idasen desk control
+- [gknepper/Smart-Plug---CE---HPPA11SW](https://github.com/gknepper/Smart-Plug---CE---HPPA11SW) - My notes about hacking the Home Depot&#39;s Smart Plug Comercial Electric model HPPA11SW
+- [MattWestb/blackmagic-espidf](https://github.com/MattWestb/blackmagic-espidf) - BlackMagic Probe hosted on esp IDF sdk (for esp8266) with UART on telnet port and HTTP using xterm.js
+- [walmis/blackmagic-espidf](https://github.com/walmis/blackmagic-espidf) - Blackmagic Wireless SWD Debug probe hosted on esp-idf SDK (for ESP8266) with UART on Telnet port and HTTP using xterm.js
+- [flipperdevices/blackmagic](https://github.com/flipperdevices/blackmagic) - In application debugger for ARM Cortex microcontrollers.
+- [blackmagic-debug/blackmagic](https://github.com/blackmagic-debug/blackmagic) - In application debugger for ARM Cortex microcontrollers.
+- [flipperdevices/blackmagic-esp32-s2](https://github.com/flipperdevices/blackmagic-esp32-s2) -
+- [NordicSemiconductor/bluetooth-numbers-database](https://github.com/NordicSemiconductor/bluetooth-numbers-database) - An up-to-date listing of all the various Bluetooth Specification-related elements that are defined by our industry (Company IDs, Service UUIDs, Characteristic UUIDs and Descriptor UUIDs), that you can use instead of rolling your own.
 
 ---
 <img align='center' width='54%' alt='GitHub stats for @marcusrbrown' src='https://github-readme-stats.vercel.app/api?username=marcusrbrown&show_icons=true&theme=dark&include_all_commits=true&count_private=true'>
