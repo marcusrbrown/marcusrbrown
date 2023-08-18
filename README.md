@@ -37,13 +37,13 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## ⭐ Recent Stars
 
+- [mshumer/gpt-prompt-engineer](https://github.com/mshumer/gpt-prompt-engineer) -
+- [a16z-infra/companion-app](https://github.com/a16z-infra/companion-app) - AI companions with memory: a lightweight stack to create and host your own AI companions
+- [hmarr/debug-tools](https://github.com/hmarr/debug-tools) - 🔧 Docker image with useful debugging tools
 - [fort-health/tap-healthie](https://github.com/fort-health/tap-healthie) - A Singer tap for healthie
 - [pomdtr/sunbeam](https://github.com/pomdtr/sunbeam) - Generate powerful TUIs from simple scripts written in any language.
 - [koenvervloesem/humble-explorer](https://github.com/koenvervloesem/humble-explorer) - Cross-platform, command-line and human-friendly Bluetooth Low Energy scanner
 - [koenvervloesem/bluetooth-numbers](https://github.com/koenvervloesem/bluetooth-numbers) - An up-to-date listing of all the various Bluetooth Specification-related elements (Company IDs, Service UUIDs, Characteristic UUIDs and Descriptor UUIDs), that you can use in your Python projects instead of rolling your own.
-- [davidusb-geek/emhass-add-on](https://github.com/davidusb-geek/emhass-add-on) - The Home Assistant Add-on for EMHASS: Energy Management Optimization for Home Assistant
-- [davidusb-geek/emhass](https://github.com/davidusb-geek/emhass) - emhass: Energy Management for Home Assistant, is a Python module designed to optimize your home energy interfacing with Home Assistant.
-- [sle118/squeezelite-esp32](https://github.com/sle118/squeezelite-esp32) - ESP32 Music streaming based on Squeezelite, with support for multi-room sync, AirPlay, Bluetooth, Hardware buttons, display and more
 
 ---
 <img align='center' width='54%' alt='GitHub stats for @marcusrbrown' src='https://github-readme-stats.vercel.app/api?username=marcusrbrown&show_icons=true&theme=dark&include_all_commits=true&count_private=true'>
