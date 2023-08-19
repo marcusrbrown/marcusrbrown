@@ -27,7 +27,7 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## 👨🏽‍💻 Recent Contributions
 
-- [marcusrbrown/esphome-life](https://github.com/marcusrbrown/esphome-life) - Projects and configuration for my ESPHome devices
+- [marcusrbrown/esphome.life](https://github.com/marcusrbrown/esphome.life) - Projects and configuration for my ESPHome devices
 - [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) -
 - [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -
 - [fro-bot/.github](https://github.com/fro-bot/.github) -
@@ -37,13 +37,13 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 
 ## ⭐ Recent Stars
 
+- [unjs/changelogen](https://github.com/unjs/changelogen) - 💅 Beautiful Changelogs using Conventional Commits
+- [coderabbitai/ai-pr-reviewer](https://github.com/coderabbitai/ai-pr-reviewer) - AI-based Pull Request Summarizer and Reviewer with Chat Capabilities.
 - [mshumer/gpt-prompt-engineer](https://github.com/mshumer/gpt-prompt-engineer) -
 - [a16z-infra/companion-app](https://github.com/a16z-infra/companion-app) - AI companions with memory: a lightweight stack to create and host your own AI companions
 - [hmarr/debug-tools](https://github.com/hmarr/debug-tools) - 🔧 Docker image with useful debugging tools
 - [fort-health/tap-healthie](https://github.com/fort-health/tap-healthie) - A Singer tap for healthie
 - [pomdtr/sunbeam](https://github.com/pomdtr/sunbeam) - Generate powerful TUIs from simple scripts written in any language.
-- [koenvervloesem/humble-explorer](https://github.com/koenvervloesem/humble-explorer) - Cross-platform, command-line and human-friendly Bluetooth Low Energy scanner
-- [koenvervloesem/bluetooth-numbers](https://github.com/koenvervloesem/bluetooth-numbers) - An up-to-date listing of all the various Bluetooth Specification-related elements (Company IDs, Service UUIDs, Characteristic UUIDs and Descriptor UUIDs), that you can use in your Python projects instead of rolling your own.
 
 ---
 <img align='center' width='54%' alt='GitHub stats for @marcusrbrown' src='https://github-readme-stats.vercel.app/api?username=marcusrbrown&show_icons=true&theme=dark&include_all_commits=true&count_private=true'>
