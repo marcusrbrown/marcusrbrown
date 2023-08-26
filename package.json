@@ -15,5 +15,5 @@
     "markdownlint": "0.30.0",
     "markdownlint-cli2": "0.9.2"
   },
-  "packageManager": "yarn@3.6.2"
+  "packageManager": "yarn@3.6.3"
 }
