@@ -27,8 +27,6 @@
 
 I live in <span title="also, 🌵">☀ Arizona</span> with my five wonderful children. I've been passionate about Open Source software since I taught myself programming as a kid. If I see something broke, I fix it, that's how I've always been.
 
-I am employed full-time at @americanexpress. <span title="I enjoy the culture at Amex that confronts bias and inequality, champions diversity, and contributes to Open Source." >I contribute to the organization's GitHub repositories and also work on internal projects that I hope to open source.</span>
-
 ### 🙇🏽 Thank You
 
 I appreciate your sponsorship! Thank you for helping me to realize my goals and remain active in the community.
