@@ -28,7 +28,9 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 ## 👨🏽‍💻 Recent Contributions
 
 <!-- markdownlint-disable -->
+
 {{range recentContributions 7}}
+
 - [{{.Repo.Name}}]({{.Repo.URL}}) - {{.Repo.Description}}
 {{- end}}
 <!-- markdownlint-restore -->
@@ -36,11 +38,14 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 ## ⭐ Recent Stars
 
 <!-- markdownlint-disable -->
+
 {{range recentStars 7}}
+
 - [{{.Repo.Name}}]({{.Repo.URL}}) - {{.Repo.Description}}
 {{- end}}
 <!-- markdownlint-restore -->
 
 ---
+
 <img align='center' width='54%' alt='GitHub stats for @marcusrbrown' src='https://github-readme-stats.vercel.app/api?username=marcusrbrown&show_icons=true&theme=dark&include_all_commits=true&count_private=true'>
 <img align='center' width='41%' alt='Languages most used by @marcusrbrown' src='https://github-readme-stats.vercel.app/api/top-langs/?username=marcusrbrown&layout=compact&theme=dark&include_all_commits=true&count_private=true'>

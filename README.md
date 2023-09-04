@@ -46,5 +46,6 @@ Want to collaborate or chat? Feel free to reach out to me on [LinkedIn][linkedin
 - [a16z-infra/companion-app](https://github.com/a16z-infra/companion-app) - AI companions with memory: a lightweight stack to create and host your own AI companions
 
 ---
+
 <img align='center' width='54%' alt='GitHub stats for @marcusrbrown' src='https://github-readme-stats.vercel.app/api?username=marcusrbrown&show_icons=true&theme=dark&include_all_commits=true&count_private=true'>
 <img align='center' width='41%' alt='Languages most used by @marcusrbrown' src='https://github-readme-stats.vercel.app/api/top-langs/?username=marcusrbrown&layout=compact&theme=dark&include_all_commits=true&count_private=true'>
