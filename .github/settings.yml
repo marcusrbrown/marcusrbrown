@@ -1,7 +1,8 @@
 # Extend default settings for all of my personal repositories defined in .github/settings.yml
-_extends: .github
+_extends: .github:common-settings.yaml
 
 repository:
+  name: marcusrbrown
   description: My GitHub public profile README.
 
   topics: >-
@@ -11,3 +12,14 @@ repository:
     awesome-readme,
     typescript,
     markdown
+
+branches:
+  - name: main
+    protection:
+      required_status_checks:
+        strict: true
+        contexts: ['Test']
+      enforce_admins: true
+      required_pull_request_reviews: null
+      restrictions: null
+      required_linear_history: true
