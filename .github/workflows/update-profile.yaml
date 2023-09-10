@@ -1,3 +1,4 @@
+---
 # Update markdown files and assets used in my GitHub profile
 name: Update GitHub Profile
 
@@ -14,6 +15,10 @@ name: Update GitHub Profile
   schedule:
     - cron: '0 */1 * * *'
   workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
+  cancel-in-progress: true
 
 permissions: {}
 
@@ -52,8 +57,11 @@ jobs:
           template: 'templates/README.tpl.md'
           writeTo: 'README.md'
 
-      - name: Lint and fix
+      - name: Fix linting errors
         run: yarn lint:fix
+
+      - name: Format files
+        run: yarn format
 
       # Commit changes to the branch when triggered from a pull request
       - name: Commit changes to HEAD
