@@ -1,3 +1,4 @@
+---
 # Update markdown files and assets used in my GitHub profile
 name: Update GitHub Profile
 
@@ -14,6 +15,10 @@ name: Update GitHub Profile
   schedule:
     - cron: '0 */1 * * *'
   workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
+  cancel-in-progress: true
 
 permissions: {}
 
@@ -52,8 +57,11 @@ jobs:
           template: 'templates/README.tpl.md'
           writeTo: 'README.md'
 
-      - name: Lint and fix
+      - name: Fix linting errors
         run: yarn lint:fix
+
+      - name: Format files
+        run: yarn format
 
       # Commit changes to the branch when triggered from a pull request
       - name: Commit changes to HEAD
@@ -77,9 +85,10 @@ jobs:
             This is an automated pull request to update the README.md file and assets used in my GitHub profile.
             Please review the changes and merge this pull request if you approve.
 
-            > _This pull request was automatically created by [create-pull-request][1]._
+            > _This pull request was automatically created by [create-pull-request][1] ([#${{ github.run_id }}][2])._
 
             [1]: https://github.com/peter-evans/create-pull-request 'Create Pull Request action on GitHub'
+            [2]: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }} 'Workflow run on GitHub'
           branch: 'build/update-readme'
           commit-message: 'build: update README.md'
           committer: 'MrBro Bot <137683033+mrbro-bot[bot]@users.noreply.github.com>'
