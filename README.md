@@ -34,10 +34,10 @@
 
 ## ⭐ Recent Stars
 
+- [eps1lon/actions-label-merge-conflict](https://github.com/eps1lon/actions-label-merge-conflict) - GitHub action that adds a label once a PR has merge conflicts
 - [stashapp/stash](https://github.com/stashapp/stash) - An organizer for your porn, written in Go. Documentation: <https://docs.stashapp.cc>
 - [mikeroyal/Self-Hosting-Guide](https://github.com/mikeroyal/Self-Hosting-Guide) - Self-Hosting Guide. Learn all about locally hosting (on premises &amp; private web servers) and managing software applications by yourself or your organization. Including Cloud, LLMs, WireGuard, Automation, Home Assistant, and Networking.
 - [hiikezoe/web-ext-webpack-plugin](https://github.com/hiikezoe/web-ext-webpack-plugin) - A webpack plugin for web-ext
 - [langfuse/langfuse](https://github.com/langfuse/langfuse) - Open source observability and analytics for LLM applications
 - [tiagocoutinho/modbus-proxy](https://github.com/tiagocoutinho/modbus-proxy) - Connect multiple clients to modbus devices
 - [adonno/tagreader](https://github.com/adonno/tagreader) - Simple to build/use NFC tag reader, specially created for Home Assistant
-- [unjs/changelogen](https://github.com/unjs/changelogen) - 💅 Beautiful Changelogs using Conventional Commits
