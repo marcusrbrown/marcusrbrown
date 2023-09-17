@@ -26,10 +26,10 @@
 
 - [marcusrbrown/.dotfiles](https://github.com/marcusrbrown/.dotfiles) - Used to keep my configuration files synchronized across machines.
 - [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) -
-- [marcusrbrown/esphome.life](https://github.com/marcusrbrown/esphome.life) - Projects and configuration for my ESPHome devices
 - [fro-bot/.github](https://github.com/fro-bot/.github) - GitHub defaults and community health files for @fro-bot.
-- [marcusrbrown/.github](https://github.com/marcusrbrown/.github) - GitHub defaults
+- [marcusrbrown/esphome.life](https://github.com/marcusrbrown/esphome.life) - Projects and configuration for my ESPHome devices
 - [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -
+- [marcusrbrown/.github](https://github.com/marcusrbrown/.github) - GitHub defaults
 - [marcusrbrown/some-expect](https://github.com/marcusrbrown/some-expect) -
 
 ## ⭐ Recent Stars
