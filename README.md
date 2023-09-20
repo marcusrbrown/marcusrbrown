@@ -34,10 +34,10 @@
 
 ## ⭐ Recent Stars
 
+- [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) - My Home Assistant configuration
+- [fro-bot/.github](https://github.com/fro-bot/.github) - GitHub defaults and community health files for @fro-bot.
 - [Androidacy/MagiskModuleManager](https://github.com/Androidacy/MagiskModuleManager) - Previously known as Fox&#39;s Magisk Module Manager (FoxMMM), this app helps users find, install &#34;Magisk Modules&#34; - powerful little zips/apps for your device that plug into the Magisk framework.
 - [sdex/ActivityManager](https://github.com/sdex/ActivityManager) - Launch any application activity
 - [00-Evan/shattered-pixel-dungeon](https://github.com/00-Evan/shattered-pixel-dungeon) - Shattered Pixel Dungeon is an open-source traditional roguelike dungeon crawler with randomized levels and enemies, and hundreds of items to collect and use. Its based on the source code of Pixel Dungeon, by Watabou.
 - [Semper-Viventem/MetaRadar](https://github.com/Semper-Viventem/MetaRadar) - The app for BLE ether monitoring tracks your environment, finds some devices, makes relations between devices around you, and tracks devices&#39; movements.
 - [cyneprepou4uk/BZK-6502-Disassembler](https://github.com/cyneprepou4uk/BZK-6502-Disassembler) - Create a disassembly of a NES game
-- [stek29/homebrew-idevice](https://github.com/stek29/homebrew-idevice) -
-- [eps1lon/actions-label-merge-conflict](https://github.com/eps1lon/actions-label-merge-conflict) - GitHub action that adds a label once a PR has merge conflicts
