@@ -34,10 +34,10 @@
 
 ## ⭐ Recent Stars
 
+- [bes-dev/stable_diffusion.openvino](https://github.com/bes-dev/stable_diffusion.openvino) -
 - [tensorchord/Awesome-LLMOps](https://github.com/tensorchord/Awesome-LLMOps) - An awesome &amp; curated list of best LLMOps tools for developers
 - [crowbarmaster/GHactions](https://github.com/crowbarmaster/GHactions) - A Collection of GitHub Actions
 - [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) - My Home Assistant configuration
 - [fro-bot/.github](https://github.com/fro-bot/.github) - GitHub defaults and community health files for @fro-bot.
 - [Androidacy/MagiskModuleManager](https://github.com/Androidacy/MagiskModuleManager) - Previously known as Fox&#39;s Magisk Module Manager (FoxMMM), this app helps users find, install &#34;Magisk Modules&#34; - powerful little zips/apps for your device that plug into the Magisk framework.
 - [sdex/ActivityManager](https://github.com/sdex/ActivityManager) - Launch any application activity
-- [00-Evan/shattered-pixel-dungeon](https://github.com/00-Evan/shattered-pixel-dungeon) - Shattered Pixel Dungeon is an open-source traditional roguelike dungeon crawler with randomized levels and enemies, and hundreds of items to collect and use. Its based on the source code of Pixel Dungeon, by Watabou.
