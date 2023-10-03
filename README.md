@@ -24,8 +24,8 @@
 
 ## 👨🏽‍💻 Recent Contributions
 
-- [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) - My Home Assistant configuration
 - [marcusrbrown/.github](https://github.com/marcusrbrown/.github) - GitHub defaults
+- [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) - My Home Assistant configuration
 - [fro-bot/.github](https://github.com/fro-bot/.github) - GitHub defaults and community health files for @fro-bot.
 - [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -
 - [marcusrbrown/.dotfiles](https://github.com/marcusrbrown/.dotfiles) - Used to keep my configuration files synchronized across machines.
@@ -34,10 +34,10 @@
 
 ## ⭐ Recent Stars
 
+- [Disassembler0/Win10-Initial-Setup-Script](https://github.com/Disassembler0/Win10-Initial-Setup-Script) - PowerShell script for automation of routine tasks done after fresh installations of Windows 10 / Server 2016 / Server 2019
 - [ludeeus/container](https://github.com/ludeeus/container) - Custom containers for various usecases
 - [boblemaire/IoTaWatt](https://github.com/boblemaire/IoTaWatt) - IoTaWatt Open WiFi Electric Energy Monitor
 - [bes-dev/stable_diffusion.openvino](https://github.com/bes-dev/stable_diffusion.openvino) -
 - [tensorchord/Awesome-LLMOps](https://github.com/tensorchord/Awesome-LLMOps) - An awesome &amp; curated list of best LLMOps tools for developers
 - [crowbarmaster/GHactions](https://github.com/crowbarmaster/GHactions) - A Collection of GitHub Actions
 - [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) - My Home Assistant configuration
-- [fro-bot/.github](https://github.com/fro-bot/.github) - GitHub defaults and community health files for @fro-bot.
