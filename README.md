@@ -34,10 +34,10 @@
 
 ## ⭐ Recent Stars
 
-- [rust-cross/cargo-zigbuild](https://github.com/rust-cross/cargo-zigbuild) - Compile Cargo project with zig as linker
-- [step-security/wait-for-secrets](https://github.com/step-security/wait-for-secrets) - Publish from GitHub Actions using multi-factor authentication
-- [ossf/scorecard-action](https://github.com/ossf/scorecard-action) - Official GitHub Action for OpenSSF Scorecard.
-- [milvus-io/milvus](https://github.com/milvus-io/milvus) - A cloud-native vector database, storage for next generation AI applications
-- [mit-han-lab/streaming-llm](https://github.com/mit-han-lab/streaming-llm) - Efficient Streaming Language Models with Attention Sinks
-- [Disassembler0/Win10-Initial-Setup-Script](https://github.com/Disassembler0/Win10-Initial-Setup-Script) - PowerShell script for automation of routine tasks done after fresh installations of Windows 10 / Server 2016 / Server 2019
-- [ludeeus/container](https://github.com/ludeeus/container) - Custom containers for various usecases
+- [MunifTanjim/zed](https://github.com/MunifTanjim/zed) - ZSH Plugin Manager
+- [MunifTanjim/express-zod-openapi](https://github.com/MunifTanjim/express-zod-openapi) - Express &#43; Zod &#43; OpenAPI
+- [MunifTanjim/scripts.sh](https://github.com/MunifTanjim/scripts.sh) - Handy Shell Scripts
+- [gopasspw/gopass](https://github.com/gopasspw/gopass) - The slightly more awesome standard unix password manager for teams
+- [tummychow/git-absorb](https://github.com/tummychow/git-absorb) - git commit --fixup, but automatic
+- [Schniz/fnm](https://github.com/Schniz/fnm) - 🚀 Fast and simple Node.js version manager, built in Rust
+- [nmakel/solaredge_setapp](https://github.com/nmakel/solaredge_setapp) - SolarEdge SetApp protocol buffers parser library
