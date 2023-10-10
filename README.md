@@ -24,9 +24,9 @@
 
 ## 👨🏽‍💻 Recent Contributions
 
+- [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) - My Home Assistant configuration
 - [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -
 - [marcusrbrown/.github](https://github.com/marcusrbrown/.github) - GitHub defaults
-- [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) - My Home Assistant configuration
 - [fro-bot/.github](https://github.com/fro-bot/.github) - GitHub defaults and community health files for @fro-bot.
 - [marcusrbrown/.dotfiles](https://github.com/marcusrbrown/.dotfiles) - Used to keep my configuration files synchronized across machines.
 - [marcusrbrown/tokentoilet](https://github.com/marcusrbrown/tokentoilet) - Chump and dump
