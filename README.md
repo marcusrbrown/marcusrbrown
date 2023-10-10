@@ -34,10 +34,10 @@
 
 ## ⭐ Recent Stars
 
+- [int128/typescript-actions-monorepo](https://github.com/int128/typescript-actions-monorepo) - Template of monorepo for GitHub Actions written in TypeScript
+- [int128/dotfiles](https://github.com/int128/dotfiles) - Dot files of my environment
+- [int128/update-generated-files-action](https://github.com/int128/update-generated-files-action) - Push commit to pull request for auto-fix in GitHub Actions
 - [solidjs-community/solid-primitives](https://github.com/solidjs-community/solid-primitives) - A library of high-quality primitives that extend SolidJS reactivity.
 - [MunifTanjim/zed](https://github.com/MunifTanjim/zed) - ZSH Plugin Manager
 - [MunifTanjim/express-zod-openapi](https://github.com/MunifTanjim/express-zod-openapi) - Express &#43; Zod &#43; OpenAPI
 - [MunifTanjim/scripts.sh](https://github.com/MunifTanjim/scripts.sh) - Handy Shell Scripts
-- [gopasspw/gopass](https://github.com/gopasspw/gopass) - The slightly more awesome standard unix password manager for teams
-- [tummychow/git-absorb](https://github.com/tummychow/git-absorb) - git commit --fixup, but automatic
-- [Schniz/fnm](https://github.com/Schniz/fnm) - 🚀 Fast and simple Node.js version manager, built in Rust
