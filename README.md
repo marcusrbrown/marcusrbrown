@@ -24,13 +24,13 @@
 
 ## 👨🏽‍💻 Recent Contributions
 
+- [marcusrbrown/esphome.life](https://github.com/marcusrbrown/esphome.life) - Projects and configuration for my ESPHome devices
 - [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) - My Home Assistant configuration
 - [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -
 - [marcusrbrown/.github](https://github.com/marcusrbrown/.github) - GitHub defaults
-- [fro-bot/.github](https://github.com/fro-bot/.github) - GitHub defaults and community health files for @fro-bot.
 - [marcusrbrown/.dotfiles](https://github.com/marcusrbrown/.dotfiles) - Used to keep my configuration files synchronized across machines.
 - [marcusrbrown/tokentoilet](https://github.com/marcusrbrown/tokentoilet) - Chump and dump
-- [marcusrbrown/esphome.life](https://github.com/marcusrbrown/esphome.life) - Projects and configuration for my ESPHome devices
+- [fro-bot/.github](https://github.com/fro-bot/.github) - GitHub defaults and community health files for @fro-bot.
 
 ## ⭐ Recent Stars
 
