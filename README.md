@@ -24,20 +24,20 @@
 
 ## 👨🏽‍💻 Recent Contributions
 
-- [marcusrbrown/esphome.life](https://github.com/marcusrbrown/esphome.life) - Projects and configuration for my ESPHome devices
 - [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) - My Home Assistant configuration
+- [marcusrbrown/.dotfiles](https://github.com/marcusrbrown/.dotfiles) - Used to keep my configuration files synchronized across machines.
+- [marcusrbrown/esphome.life](https://github.com/marcusrbrown/esphome.life) - Projects and configuration for my ESPHome devices
 - [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -
 - [marcusrbrown/.github](https://github.com/marcusrbrown/.github) - GitHub defaults
-- [marcusrbrown/.dotfiles](https://github.com/marcusrbrown/.dotfiles) - Used to keep my configuration files synchronized across machines.
 - [marcusrbrown/tokentoilet](https://github.com/marcusrbrown/tokentoilet) - Chump and dump
 - [fro-bot/.github](https://github.com/fro-bot/.github) - GitHub defaults and community health files for @fro-bot.
 
 ## ⭐ Recent Stars
 
+- [opa334/Dopamine](https://github.com/opa334/Dopamine) - Dopamine is a semi-untethered permasigned jailbreak for iOS 15
+- [kok3shidoll/ra1npoc](https://github.com/kok3shidoll/ra1npoc) - A tool for re-jailbreak devices jailbroken by checkra1n/odysseyra1n on iOS/iPadOS/macOS platforms. (opensource pongo loader)
+- [0xilis/Unsigncuts](https://github.com/0xilis/Unsigncuts) - Import unsigned shortcut files
+- [dstufft/ebert](https://github.com/dstufft/ebert) -
+- [0xType/0xProto](https://github.com/0xType/0xProto) - Free and Open-source font for programming
 - [int128/typescript-actions-monorepo](https://github.com/int128/typescript-actions-monorepo) - Template of monorepo for GitHub Actions written in TypeScript
 - [int128/dotfiles](https://github.com/int128/dotfiles) - Dot files of my environment
-- [int128/update-generated-files-action](https://github.com/int128/update-generated-files-action) - Push commit to pull request for auto-fix in GitHub Actions
-- [solidjs-community/solid-primitives](https://github.com/solidjs-community/solid-primitives) - A library of high-quality primitives that extend SolidJS reactivity.
-- [MunifTanjim/zed](https://github.com/MunifTanjim/zed) - ZSH Plugin Manager
-- [MunifTanjim/express-zod-openapi](https://github.com/MunifTanjim/express-zod-openapi) - Express &#43; Zod &#43; OpenAPI
-- [MunifTanjim/scripts.sh](https://github.com/MunifTanjim/scripts.sh) - Handy Shell Scripts
