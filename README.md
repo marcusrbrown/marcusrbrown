@@ -34,10 +34,10 @@
 
 ## ⭐ Recent Stars
 
+- [promptfoo/promptfoo](https://github.com/promptfoo/promptfoo) - Test your prompts. Evaluate and compare LLM outputs, catch regressions, and improve prompt quality.
 - [opa334/Dopamine](https://github.com/opa334/Dopamine) - Dopamine is a semi-untethered permasigned jailbreak for iOS 15
 - [kok3shidoll/ra1npoc](https://github.com/kok3shidoll/ra1npoc) - A tool for re-jailbreak devices jailbroken by checkra1n/odysseyra1n on iOS/iPadOS/macOS platforms. (opensource pongo loader)
 - [0xilis/Unsigncuts](https://github.com/0xilis/Unsigncuts) - Import unsigned shortcut files
 - [dstufft/ebert](https://github.com/dstufft/ebert) -
 - [0xType/0xProto](https://github.com/0xType/0xProto) - Free and Open-source font for programming
 - [int128/typescript-actions-monorepo](https://github.com/int128/typescript-actions-monorepo) - Template of monorepo for GitHub Actions written in TypeScript
-- [int128/dotfiles](https://github.com/int128/dotfiles) - Dot files of my environment
