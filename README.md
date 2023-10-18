@@ -34,10 +34,10 @@
 
 ## ⭐ Recent Stars
 
+- [sindresorhus/Defaults](https://github.com/sindresorhus/Defaults) - 💾 Swifty and modern UserDefaults
 - [typeorm/typeorm](https://github.com/typeorm/typeorm) - ORM for TypeScript and JavaScript. Supports MySQL, PostgreSQL, MariaDB, SQLite, MS SQL Server, Oracle, SAP Hana, WebSQL databases. Works in NodeJS, Browser, Ionic, Cordova and Electron platforms.
 - [promptfoo/promptfoo](https://github.com/promptfoo/promptfoo) - Test your prompts. Evaluate and compare LLM outputs, catch regressions, and improve prompt quality.
 - [opa334/Dopamine](https://github.com/opa334/Dopamine) - Dopamine is a semi-untethered permasigned jailbreak for iOS 15
 - [kok3shidoll/ra1npoc](https://github.com/kok3shidoll/ra1npoc) - A tool for re-jailbreak devices jailbroken by checkra1n/odysseyra1n on iOS/iPadOS/macOS platforms. (opensource pongo loader)
 - [0xilis/Unsigncuts](https://github.com/0xilis/Unsigncuts) - Import unsigned shortcut files
 - [dstufft/ebert](https://github.com/dstufft/ebert) -
-- [0xType/0xProto](https://github.com/0xType/0xProto) - Free and Open-source font for programming
