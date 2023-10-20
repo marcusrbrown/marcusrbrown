@@ -34,10 +34,10 @@
 
 ## ⭐ Recent Stars
 
+- [zackradisic/tyvm](https://github.com/zackradisic/tyvm) - An experimental bytecode interpreter for type-level Typescript
+- [mojicians/awesome-mojo](https://github.com/mojicians/awesome-mojo) - A curated list of awesome Mojo 🔥 frameworks, libraries, software and resources
+- [NVIDIA/NeMo-Guardrails](https://github.com/NVIDIA/NeMo-Guardrails) - NeMo Guardrails is an open-source toolkit for easily adding programmable guardrails to LLM-based conversational systems.
+- [guardrails-ai/guardrails](https://github.com/guardrails-ai/guardrails) - Adding guardrails to large language models.
 - [sindresorhus/Defaults](https://github.com/sindresorhus/Defaults) - 💾 Swifty and modern UserDefaults
 - [typeorm/typeorm](https://github.com/typeorm/typeorm) - ORM for TypeScript and JavaScript. Supports MySQL, PostgreSQL, MariaDB, SQLite, MS SQL Server, Oracle, SAP Hana, WebSQL databases. Works in NodeJS, Browser, Ionic, Cordova and Electron platforms.
 - [promptfoo/promptfoo](https://github.com/promptfoo/promptfoo) - Test your prompts. Evaluate and compare LLM outputs, catch regressions, and improve prompt quality.
-- [opa334/Dopamine](https://github.com/opa334/Dopamine) - Dopamine is a semi-untethered permasigned jailbreak for iOS 15
-- [kok3shidoll/ra1npoc](https://github.com/kok3shidoll/ra1npoc) - A tool for re-jailbreak devices jailbroken by checkra1n/odysseyra1n on iOS/iPadOS/macOS platforms. (opensource pongo loader)
-- [0xilis/Unsigncuts](https://github.com/0xilis/Unsigncuts) - Import unsigned shortcut files
-- [dstufft/ebert](https://github.com/dstufft/ebert) -
