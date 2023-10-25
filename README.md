@@ -34,10 +34,10 @@
 
 ## ⭐ Recent Stars
 
+- [errata-ai/vale](https://github.com/errata-ai/vale) - :pencil: A markup-aware linter for prose built with speed and extensibility in mind.
+- [ratgdo/esphome-ratgdo](https://github.com/ratgdo/esphome-ratgdo) - ratgdo for ESPHome
 - [IceWhaleTech/CasaOS](https://github.com/IceWhaleTech/CasaOS) - CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.
 - [anderspitman/SirTunnel](https://github.com/anderspitman/SirTunnel) - Minimal, self-hosted, 0-config alternative to ngrok. Caddy&#43;OpenSSH&#43;50 lines of Python.
 - [hashicorp/vscode-terraform](https://github.com/hashicorp/vscode-terraform) - HashiCorp Terraform VSCode extension
 - [anderspitman/awesome-tunneling](https://github.com/anderspitman/awesome-tunneling) - List of ngrok alternatives and other ngrok-like tunneling software and services. Focus on self-hosting.
 - [Homebrew/actions](https://github.com/Homebrew/actions) - :rocket: Homebrew&#39;s GitHub Actions
-- [zackradisic/tyvm](https://github.com/zackradisic/tyvm) - An experimental bytecode interpreter for type-level Typescript
-- [mojicians/awesome-mojo](https://github.com/mojicians/awesome-mojo) - A curated list of awesome Mojo 🔥 frameworks, libraries, software and resources
