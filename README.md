@@ -34,10 +34,10 @@
 
 ## ⭐ Recent Stars
 
+- [VarunGumma/guidance](https://github.com/VarunGumma/guidance) - A guidance language for controlling large language models.
 - [UpDryTwist/dlink-dchs150-hass](https://github.com/UpDryTwist/dlink-dchs150-hass) - Home Assistant custom component to support the mostly-defunct D-Link DCH-S150 motion detector
 - [carleeno/elevenlabs_tts](https://github.com/carleeno/elevenlabs_tts) - Custom TTS Integration using ElevenLabs API
 - [angular/dev-infra](https://github.com/angular/dev-infra) - Angular Development Infrastructure
 - [crxjs/chrome-extension-tools](https://github.com/crxjs/chrome-extension-tools) - Bundling Chrome Extensions can be pretty complex. It doesn&#39;t have to be.
 - [taishi-i/awesome-ChatGPT-repositories](https://github.com/taishi-i/awesome-ChatGPT-repositories) - A curated list of resources dedicated to open source GitHub repositories related to ChatGPT
 - [sahava/GoogleTagManagerTemplates](https://github.com/sahava/GoogleTagManagerTemplates) - Custom templates for Google Tag Manager
-- [ReagentX/imessage-exporter](https://github.com/ReagentX/imessage-exporter) - Export iMessage data &#43; run iMessage Diagnostics
