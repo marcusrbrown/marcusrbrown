@@ -24,20 +24,20 @@
 
 ## 👨🏽‍💻 Recent Contributions
 
+- [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) -
 - [fro-bot/.github](https://github.com/fro-bot/.github) - GitHub defaults and community health files for @fro-bot.
 - [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -
 - [marcusrbrown/.dotfiles](https://github.com/marcusrbrown/.dotfiles) - Used to keep my configuration files synchronized across machines.
 - [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) - My Home Assistant configuration
 - [marcusrbrown/esphome.life](https://github.com/marcusrbrown/esphome.life) - Projects and configuration for my ESPHome devices
 - [marcusrbrown/.github](https://github.com/marcusrbrown/.github) - GitHub defaults
-- [marcusrbrown/tokentoilet](https://github.com/marcusrbrown/tokentoilet) - Chump and dump
 
 ## ⭐ Recent Stars
 
-- [VarunGumma/guidance](https://github.com/VarunGumma/guidance) - A guidance language for controlling large language models.
-- [UpDryTwist/dlink-dchs150-hass](https://github.com/UpDryTwist/dlink-dchs150-hass) - Home Assistant custom component to support the mostly-defunct D-Link DCH-S150 motion detector
-- [carleeno/elevenlabs_tts](https://github.com/carleeno/elevenlabs_tts) - Custom TTS Integration using ElevenLabs API
-- [angular/dev-infra](https://github.com/angular/dev-infra) - Angular Development Infrastructure
-- [crxjs/chrome-extension-tools](https://github.com/crxjs/chrome-extension-tools) - Bundling Chrome Extensions can be pretty complex. It doesn&#39;t have to be.
-- [taishi-i/awesome-ChatGPT-repositories](https://github.com/taishi-i/awesome-ChatGPT-repositories) - A curated list of resources dedicated to open source GitHub repositories related to ChatGPT
-- [sahava/GoogleTagManagerTemplates](https://github.com/sahava/GoogleTagManagerTemplates) - Custom templates for Google Tag Manager
+- [scaffold-eth/scaffold-eth-2](https://github.com/scaffold-eth/scaffold-eth-2) - Open source forkable Ethereum dev stack
+- [AbdBarho/stable-diffusion-webui-docker](https://github.com/AbdBarho/stable-diffusion-webui-docker) - Easy Docker setup for Stable Diffusion with user-friendly UI
+- [preactjs/signals](https://github.com/preactjs/signals) - Manage state with style in every framework
+- [devcontainers/feature-starter](https://github.com/devcontainers/feature-starter) - A bootstrap repo for self-authoring Dev Container Features
+- [appleboy/CodeGPT](https://github.com/appleboy/CodeGPT) - A CLI written in Go language that writes git commit messages or do a code review brief for you using ChatGPT AI (gpt-4, gpt-3.5-turbo model) and automatically installs a git prepare-commit-msg hook.
+- [appleboy/ssh-action](https://github.com/appleboy/ssh-action) - GitHub Actions for executing remote ssh commands.
+- [linuxserver/docker-swag](https://github.com/linuxserver/docker-swag) - Nginx webserver and reverse proxy with php support and a built-in Certbot (Let&#39;s Encrypt) client. It also contains fail2ban for intrusion prevention.
