@@ -34,10 +34,10 @@
 
 ## ⭐ Recent Stars
 
+- [marella/chatdocs](https://github.com/marella/chatdocs) - Chat with your documents offline using AI.
+- [jean-david-ruvini/textzoom](https://github.com/jean-david-ruvini/textzoom) - Zooming in and out of text like an image with ChatGPT, Langchain and Gradio
+- [rahulnyk/research_agent](https://github.com/rahulnyk/research_agent) -
+- [ossirytk/llama-cpp-chat-memory](https://github.com/ossirytk/llama-cpp-chat-memory) -
+- [ddavness/power-mailinabox](https://github.com/ddavness/power-mailinabox) - A Mail-in-a-Box with extra capabilities and more customizability. Not just for power users!
 - [scaffold-eth/scaffold-eth-2](https://github.com/scaffold-eth/scaffold-eth-2) - Open source forkable Ethereum dev stack
 - [AbdBarho/stable-diffusion-webui-docker](https://github.com/AbdBarho/stable-diffusion-webui-docker) - Easy Docker setup for Stable Diffusion with user-friendly UI
-- [preactjs/signals](https://github.com/preactjs/signals) - Manage state with style in every framework
-- [devcontainers/feature-starter](https://github.com/devcontainers/feature-starter) - A bootstrap repo for self-authoring Dev Container Features
-- [appleboy/CodeGPT](https://github.com/appleboy/CodeGPT) - A CLI written in Go language that writes git commit messages or do a code review brief for you using ChatGPT AI (gpt-4, gpt-3.5-turbo model) and automatically installs a git prepare-commit-msg hook.
-- [appleboy/ssh-action](https://github.com/appleboy/ssh-action) - GitHub Actions for executing remote ssh commands.
-- [linuxserver/docker-swag](https://github.com/linuxserver/docker-swag) - Nginx webserver and reverse proxy with php support and a built-in Certbot (Let&#39;s Encrypt) client. It also contains fail2ban for intrusion prevention.
