@@ -24,8 +24,8 @@
 
 ## 👨🏽‍💻 Recent Contributions
 
-- [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) -
 - [fro-bot/.github](https://github.com/fro-bot/.github) - GitHub defaults and community health files for @fro-bot.
+- [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) -
 - [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -
 - [marcusrbrown/.dotfiles](https://github.com/marcusrbrown/.dotfiles) - Used to keep my configuration files synchronized across machines.
 - [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) - My Home Assistant configuration
@@ -37,7 +37,7 @@
 - [marella/chatdocs](https://github.com/marella/chatdocs) - Chat with your documents offline using AI.
 - [jean-david-ruvini/textzoom](https://github.com/jean-david-ruvini/textzoom) - Zooming in and out of text like an image with ChatGPT, Langchain and Gradio
 - [rahulnyk/research_agent](https://github.com/rahulnyk/research_agent) -
-- [ossirytk/llama-cpp-chat-memory](https://github.com/ossirytk/llama-cpp-chat-memory) -
+- [ossirytk/llama-cpp-chat-memory](https://github.com/ossirytk/llama-cpp-chat-memory) - Local character AI chatbot with chroma vector store memory
 - [ddavness/power-mailinabox](https://github.com/ddavness/power-mailinabox) - A Mail-in-a-Box with extra capabilities and more customizability. Not just for power users!
 - [scaffold-eth/scaffold-eth-2](https://github.com/scaffold-eth/scaffold-eth-2) - Open source forkable Ethereum dev stack
 - [AbdBarho/stable-diffusion-webui-docker](https://github.com/AbdBarho/stable-diffusion-webui-docker) - Easy Docker setup for Stable Diffusion with user-friendly UI
