@@ -34,10 +34,10 @@
 
 ## ⭐ Recent Stars
 
+- [yuanchuan/codepen-prefill](https://github.com/yuanchuan/codepen-prefill) - Create new pen from local HTML/JS/CSS files with ease
 - [marella/chatdocs](https://github.com/marella/chatdocs) - Chat with your documents offline using AI.
 - [jean-david-ruvini/textzoom](https://github.com/jean-david-ruvini/textzoom) - Zooming in and out of text like an image with ChatGPT, Langchain and Gradio
 - [rahulnyk/research_agent](https://github.com/rahulnyk/research_agent) -
 - [ossirytk/llama-cpp-chat-memory](https://github.com/ossirytk/llama-cpp-chat-memory) - Local character AI chatbot with chroma vector store memory
 - [ddavness/power-mailinabox](https://github.com/ddavness/power-mailinabox) - A Mail-in-a-Box with extra capabilities and more customizability. Not just for power users!
 - [scaffold-eth/scaffold-eth-2](https://github.com/scaffold-eth/scaffold-eth-2) - Open source forkable Ethereum dev stack
-- [AbdBarho/stable-diffusion-webui-docker](https://github.com/AbdBarho/stable-diffusion-webui-docker) - Easy Docker setup for Stable Diffusion with user-friendly UI
