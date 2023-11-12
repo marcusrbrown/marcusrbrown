@@ -24,20 +24,20 @@
 
 ## 👨🏽‍💻 Recent Contributions
 
+- [ai-boost/Awesome-GPTs](https://github.com/ai-boost/Awesome-GPTs) - Curated list of awesome GPTs 👍.
 - [fro-bot/.github](https://github.com/fro-bot/.github) - GitHub defaults and community health files for @fro-bot.
 - [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) -
 - [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -
 - [marcusrbrown/.dotfiles](https://github.com/marcusrbrown/.dotfiles) - Used to keep my configuration files synchronized across machines.
 - [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) - My Home Assistant configuration
 - [marcusrbrown/esphome.life](https://github.com/marcusrbrown/esphome.life) - Projects and configuration for my ESPHome devices
-- [marcusrbrown/.github](https://github.com/marcusrbrown/.github) - GitHub defaults
 
 ## ⭐ Recent Stars
 
+- [coqui-ai/TTS](https://github.com/coqui-ai/TTS) - 🐸💬 - a deep learning toolkit for Text-to-Speech, battle-tested in research and production
+- [neuml/txtai](https://github.com/neuml/txtai) - 💡 All-in-one open-source embeddings database for semantic search, LLM orchestration and language model workflows
+- [ai-boost/Awesome-GPTs](https://github.com/ai-boost/Awesome-GPTs) - Curated list of awesome GPTs 👍.
 - [yuanchuan/codepen-prefill](https://github.com/yuanchuan/codepen-prefill) - Create new pen from local HTML/JS/CSS files with ease
 - [marella/chatdocs](https://github.com/marella/chatdocs) - Chat with your documents offline using AI.
 - [jean-david-ruvini/textzoom](https://github.com/jean-david-ruvini/textzoom) - Zooming in and out of text like an image with ChatGPT, Langchain and Gradio
 - [rahulnyk/research_agent](https://github.com/rahulnyk/research_agent) -
-- [ossirytk/llama-cpp-chat-memory](https://github.com/ossirytk/llama-cpp-chat-memory) - Local character AI chatbot with chroma vector store memory
-- [ddavness/power-mailinabox](https://github.com/ddavness/power-mailinabox) - A Mail-in-a-Box with extra capabilities and more customizability. Not just for power users!
-- [scaffold-eth/scaffold-eth-2](https://github.com/scaffold-eth/scaffold-eth-2) - Open source forkable Ethereum dev stack
