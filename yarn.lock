@@ -160,7 +160,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "marcusrbrown@workspace:."
   dependencies:
-    markdownlint: "npm:0.31.1"
+    markdownlint: "npm:0.32.0"
     markdownlint-cli2: "npm:0.10.0"
     prettier: "npm:3.1.0"
   languageName: unknown
@@ -178,6 +178,21 @@ __metadata:
   bin:
     markdown-it: bin/markdown-it.js
   checksum: 3e21f9782cc5c7af55d0c822b1d938fb918ad3397653dee746a33ad6a245fb31068fcc5f719e66ebc579d01dd47ea9e3e019c398650e592d7ce5e613147f4f1d
+  languageName: node
+  linkType: hard
+
+"markdown-it@npm:13.0.2":
+  version: 13.0.2
+  resolution: "markdown-it@npm:13.0.2"
+  dependencies:
+    argparse: "npm:^2.0.1"
+    entities: "npm:~3.0.1"
+    linkify-it: "npm:^4.0.1"
+    mdurl: "npm:^1.0.1"
+    uc.micro: "npm:^1.0.5"
+  bin:
+    markdown-it: bin/markdown-it.js
+  checksum: 4fe0c41bc4c318c2901dc2923470c259cab137a4ab870001038877b942c9cc65072923e2d957f785de69a9da27c55657bd531607ccfd258246bd72a8deb8c2ee
   languageName: node
   linkType: hard
 
@@ -222,6 +237,16 @@ __metadata:
     markdown-it: "npm:13.0.1"
     markdownlint-micromark: "npm:0.1.7"
   checksum: ac032bcbe290217b44e5a98a629737b505fb148bbaf7fc74570d9e713837f003b6b7d8dc49aa1e049142c43266ea92461f332da61429afa86f123a00ffc891cc
+  languageName: node
+  linkType: hard
+
+"markdownlint@npm:0.32.0":
+  version: 0.32.0
+  resolution: "markdownlint@npm:0.32.0"
+  dependencies:
+    markdown-it: "npm:13.0.2"
+    markdownlint-micromark: "npm:0.1.7"
+  checksum: 0561cf53669c937c3b0eb13f3edf69b1b25f8f8d11292b1f35420c6e56045040484cb8dcfc7a06dbdb637dbc296b7ebd37219cb05dfc27380049e141422baa73
   languageName: node
   linkType: hard
 
