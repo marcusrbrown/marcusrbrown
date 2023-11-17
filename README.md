@@ -34,10 +34,10 @@
 
 ## ⭐ Recent Stars
 
+- [daveshap/OpenAI_Agent_Swarm](https://github.com/daveshap/OpenAI_Agent_Swarm) - HAAS = Hierarchical Autonomous Agent Swarm - &#34;Resistance is futile!&#34;
+- [KillianLucas/open-interpreter](https://github.com/KillianLucas/open-interpreter) - OpenAI&#39;s Code Interpreter in your terminal, running locally
 - [coqui-ai/TTS](https://github.com/coqui-ai/TTS) - 🐸💬 - a deep learning toolkit for Text-to-Speech, battle-tested in research and production
 - [neuml/txtai](https://github.com/neuml/txtai) - 💡 All-in-one open-source embeddings database for semantic search, LLM orchestration and language model workflows
 - [ai-boost/Awesome-GPTs](https://github.com/ai-boost/Awesome-GPTs) - Curated list of awesome GPTs 👍.
 - [yuanchuan/codepen-prefill](https://github.com/yuanchuan/codepen-prefill) - Create new pen from local HTML/JS/CSS files with ease
 - [marella/chatdocs](https://github.com/marella/chatdocs) - Chat with your documents offline using AI.
-- [jean-david-ruvini/textzoom](https://github.com/jean-david-ruvini/textzoom) - Zooming in and out of text like an image with ChatGPT, Langchain and Gradio
-- [rahulnyk/research_agent](https://github.com/rahulnyk/research_agent) -
