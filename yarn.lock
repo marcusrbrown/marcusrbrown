@@ -160,7 +160,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "marcusrbrown@workspace:."
   dependencies:
-    markdownlint: "npm:0.32.0"
+    markdownlint: "npm:0.32.1"
     markdownlint-cli2: "npm:0.10.0"
     prettier: "npm:3.1.0"
   languageName: unknown
@@ -240,13 +240,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"markdownlint@npm:0.32.0":
-  version: 0.32.0
-  resolution: "markdownlint@npm:0.32.0"
+"markdownlint@npm:0.32.1":
+  version: 0.32.1
+  resolution: "markdownlint@npm:0.32.1"
   dependencies:
     markdown-it: "npm:13.0.2"
     markdownlint-micromark: "npm:0.1.7"
-  checksum: 0561cf53669c937c3b0eb13f3edf69b1b25f8f8d11292b1f35420c6e56045040484cb8dcfc7a06dbdb637dbc296b7ebd37219cb05dfc27380049e141422baa73
+  checksum: be2fbb409daaab8916deefafcc4d4d1a3e7dad6d602c03f4bd14cfb762b41de335da181bae11340a1db57b74844cfbb3bcafe05d92a69c5f809b689d8c1bd4b2
   languageName: node
   linkType: hard
 
