@@ -34,10 +34,10 @@
 
 ## ⭐ Recent Stars
 
+- [INTI-CMNB/KiBot](https://github.com/INTI-CMNB/KiBot) - KiCad automation utility
+- [INTI-CMNB/kicad-ci-test-spora](https://github.com/INTI-CMNB/kicad-ci-test-spora) - This is a CI/CD test for KiCad using KiBot and other tools. As example we took the Spora project and applied the concepts.
+- [sporaio/spora-board](https://github.com/sporaio/spora-board) - Spora main board
+- [Kaldek/rat-ratgdo](https://github.com/Kaldek/rat-ratgdo) - Open source schematics for ratgdo PCB
 - [microsoft/generative-ai-for-beginners](https://github.com/microsoft/generative-ai-for-beginners) - 12 Lessons, Get Started Building with Generative AI 🔗 <https://microsoft.github.io/generative-ai-for-beginners/>
 - [thejustinwalsh/sh-raylib](https://github.com/thejustinwalsh/sh-raylib) - raylib bindings for static hermes
 - [chatscope/use-chat](https://github.com/chatscope/use-chat) - React hook for state management in chat applications.
-- [trigaten/Learn_Prompting](https://github.com/trigaten/Learn_Prompting) - Prompt Engineering, Generative AI, and LLM Guide by Learn Prompting | Join our discord for the largest Prompt Engineering learning community
-- [griptape-ai/griptape](https://github.com/griptape-ai/griptape) - Modular Python framework for AI agents and workflows with chain-of-thought reasoning, tools, and memory. Griptape is an enterprise grade alternative to LangChain.
-- [microsoft/autogen](https://github.com/microsoft/autogen) - Enable Next-Gen Large Language Model Applications. Join our Discord: <https://discord.gg/pAbnFJrkgZ>
-- [daveshap/OpenAI_Agent_Swarm](https://github.com/daveshap/OpenAI_Agent_Swarm) - HAAS = Hierarchical Autonomous Agent Swarm - &#34;Resistance is futile!&#34;
