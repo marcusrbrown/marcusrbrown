@@ -34,10 +34,10 @@
 
 ## ⭐ Recent Stars
 
+- [platers/obsidian-linter](https://github.com/platers/obsidian-linter) - An Obsidian plugin that formats and styles your notes with a focus on configurability and extensibility.
 - [Decron/Whitebox-Code-GPT](https://github.com/Decron/Whitebox-Code-GPT) - Repository of instructions for Programming-specific GPT models
 - [INTI-CMNB/KiBot](https://github.com/INTI-CMNB/KiBot) - KiCad automation utility
 - [INTI-CMNB/kicad-ci-test-spora](https://github.com/INTI-CMNB/kicad-ci-test-spora) - This is a CI/CD test for KiCad using KiBot and other tools. As example we took the Spora project and applied the concepts.
 - [sporaio/spora-board](https://github.com/sporaio/spora-board) - Spora main board
 - [Kaldek/rat-ratgdo](https://github.com/Kaldek/rat-ratgdo) - Open source schematics for ratgdo PCB
 - [microsoft/generative-ai-for-beginners](https://github.com/microsoft/generative-ai-for-beginners) - 12 Lessons, Get Started Building with Generative AI 🔗 <https://microsoft.github.io/generative-ai-for-beginners/>
-- [thejustinwalsh/sh-raylib](https://github.com/thejustinwalsh/sh-raylib) - raylib bindings for static hermes
