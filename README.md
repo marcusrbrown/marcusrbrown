@@ -24,20 +24,20 @@
 
 ## 👨🏽‍💻 Recent Contributions
 
+- [marcusrbrown/gpt](https://github.com/marcusrbrown/gpt) - Prompts, notebooks, and tools for generative pre-trained transformers.
+- [marcusrbrown/.dotfiles](https://github.com/marcusrbrown/.dotfiles) - Used to keep my configuration files synchronized across machines.
 - [ai-boost/Awesome-GPTs](https://github.com/ai-boost/Awesome-GPTs) - Curated list of awesome GPTs 👍.
 - [fro-bot/.github](https://github.com/fro-bot/.github) - GitHub defaults and community health files for @fro-bot.
 - [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) -
 - [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -
-- [marcusrbrown/.dotfiles](https://github.com/marcusrbrown/.dotfiles) - Used to keep my configuration files synchronized across machines.
 - [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) - My Home Assistant configuration
-- [marcusrbrown/esphome.life](https://github.com/marcusrbrown/esphome.life) - Projects and configuration for my ESPHome devices
 
 ## ⭐ Recent Stars
 
-- [workos/authkit](https://github.com/workos/authkit) -
+- [crxjs/vite-4-react](https://github.com/crxjs/vite-4-react) - Example of CRXJS with Vite 4 and React
+- [workos/authkit](https://github.com/workos/authkit) - The world&#39;s best login box powered by WorkOS and Radix.
 - [kepano/obsidian-minimal-settings](https://github.com/kepano/obsidian-minimal-settings) - Settings plugin to control colors and fonts in Minimal Theme
 - [GoogleChromeLabs/comlink](https://github.com/GoogleChromeLabs/comlink) - Comlink makes WebWorkers enjoyable.
 - [platers/obsidian-linter](https://github.com/platers/obsidian-linter) - An Obsidian plugin that formats and styles your notes with a focus on configurability and extensibility.
 - [Decron/Whitebox-Code-GPT](https://github.com/Decron/Whitebox-Code-GPT) - Repository of instructions for Programming-specific GPT models
 - [INTI-CMNB/KiBot](https://github.com/INTI-CMNB/KiBot) - KiCad automation utility
-- [INTI-CMNB/kicad-ci-test-spora](https://github.com/INTI-CMNB/kicad-ci-test-spora) - This is a CI/CD test for KiCad using KiBot and other tools. As example we took the Spora project and applied the concepts.
