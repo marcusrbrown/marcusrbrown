@@ -25,19 +25,19 @@
 ## 👨🏽‍💻 Recent Contributions
 
 - [marcusrbrown/gpt](https://github.com/marcusrbrown/gpt) - Prompts, notebooks, and tools for generative pre-trained transformers.
+- [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -
 - [marcusrbrown/.dotfiles](https://github.com/marcusrbrown/.dotfiles) - Used to keep my configuration files synchronized across machines.
 - [ai-boost/Awesome-GPTs](https://github.com/ai-boost/Awesome-GPTs) - Curated list of awesome GPTs 👍.
 - [fro-bot/.github](https://github.com/fro-bot/.github) - GitHub defaults and community health files for @fro-bot.
 - [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) -
-- [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -
 - [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) - My Home Assistant configuration
 
 ## ⭐ Recent Stars
 
+- [modelscope/modelscope](https://github.com/modelscope/modelscope) - ModelScope: bring the notion of Model-as-a-Service to life.
+- [HappyCerberus/devenv-trunk](https://github.com/HappyCerberus/devenv-trunk) - Docker image with bleeding edge C&#43;&#43; development environment.
+- [christiannaths/redacted-font](https://github.com/christiannaths/redacted-font) - Keep your wireframes free of distracting Lorem Ipsum.
+- [libretro/libretro-super](https://github.com/libretro/libretro-super) - Super repo for other libretro projects. Fetches, builds and installs.
+- [theonlydude/RandomMetroidSolver](https://github.com/theonlydude/RandomMetroidSolver) - VARIA Randomizer, Solver and Tracker for Super Metroid
+- [gulopine/steel](https://github.com/gulopine/steel) - A Python framework for describing binary file formats
 - [crxjs/vite-4-react](https://github.com/crxjs/vite-4-react) - Example of CRXJS with Vite 4 and React
-- [workos/authkit](https://github.com/workos/authkit) - The world&#39;s best login box powered by WorkOS and Radix.
-- [kepano/obsidian-minimal-settings](https://github.com/kepano/obsidian-minimal-settings) - Settings plugin to control colors and fonts in Minimal Theme
-- [GoogleChromeLabs/comlink](https://github.com/GoogleChromeLabs/comlink) - Comlink makes WebWorkers enjoyable.
-- [platers/obsidian-linter](https://github.com/platers/obsidian-linter) - An Obsidian plugin that formats and styles your notes with a focus on configurability and extensibility.
-- [Decron/Whitebox-Code-GPT](https://github.com/Decron/Whitebox-Code-GPT) - Repository of instructions for Programming-specific GPT models
-- [INTI-CMNB/KiBot](https://github.com/INTI-CMNB/KiBot) - KiCad automation utility
