@@ -24,20 +24,20 @@
 
 ## 👨🏽‍💻 Recent Contributions
 
-- [marcusrbrown/gpt](https://github.com/marcusrbrown/gpt) - Prompts, notebooks, and tools for generative pre-trained transformers.
 - [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -
+- [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) -
+- [marcusrbrown/gpt](https://github.com/marcusrbrown/gpt) - Prompts, notebooks, and tools for generative pre-trained transformers.
 - [marcusrbrown/.dotfiles](https://github.com/marcusrbrown/.dotfiles) - Used to keep my configuration files synchronized across machines.
 - [ai-boost/Awesome-GPTs](https://github.com/ai-boost/Awesome-GPTs) - Curated list of awesome GPTs 👍.
 - [fro-bot/.github](https://github.com/fro-bot/.github) - GitHub defaults and community health files for @fro-bot.
-- [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) -
 - [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) - My Home Assistant configuration
 
 ## ⭐ Recent Stars
 
+- [DovAmir/awesome-design-patterns](https://github.com/DovAmir/awesome-design-patterns) - A curated list of software and architecture related design patterns.
+- [swaggyP36000/TrollStore-IPAs](https://github.com/swaggyP36000/TrollStore-IPAs) - A collection of IPA files from many different sources, for TrollStore!
+- [Bodmer/TFT_eSPI](https://github.com/Bodmer/TFT_eSPI) - Arduino and PlatformIO IDE compatible TFT library optimised for the Raspberry Pi Pico (RP2040), STM32, ESP8266 and ESP32 that supports different driver chips
 - [modelscope/modelscope](https://github.com/modelscope/modelscope) - ModelScope: bring the notion of Model-as-a-Service to life.
 - [HappyCerberus/devenv-trunk](https://github.com/HappyCerberus/devenv-trunk) - Docker image with bleeding edge C&#43;&#43; development environment.
 - [christiannaths/redacted-font](https://github.com/christiannaths/redacted-font) - Keep your wireframes free of distracting Lorem Ipsum.
 - [libretro/libretro-super](https://github.com/libretro/libretro-super) - Super repo for other libretro projects. Fetches, builds and installs.
-- [theonlydude/RandomMetroidSolver](https://github.com/theonlydude/RandomMetroidSolver) - VARIA Randomizer, Solver and Tracker for Super Metroid
-- [gulopine/steel](https://github.com/gulopine/steel) - A Python framework for describing binary file formats
-- [crxjs/vite-4-react](https://github.com/crxjs/vite-4-react) - Example of CRXJS with Vite 4 and React
