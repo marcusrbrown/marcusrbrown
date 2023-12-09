@@ -25,19 +25,19 @@
 ## 👨🏽‍💻 Recent Contributions
 
 - [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) -
-- [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -
-- [marcusrbrown/gpt](https://github.com/marcusrbrown/gpt) - Prompts, notebooks, and tools for generative pre-trained transformers.
 - [marcusrbrown/.dotfiles](https://github.com/marcusrbrown/.dotfiles) - Used to keep my configuration files synchronized across machines.
+- [marcusrbrown/gpt](https://github.com/marcusrbrown/gpt) - Prompts, notebooks, and tools for generative pre-trained transformers.
+- [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -
 - [ai-boost/Awesome-GPTs](https://github.com/ai-boost/Awesome-GPTs) - Curated list of awesome GPTs 👍.
 - [fro-bot/.github](https://github.com/fro-bot/.github) - GitHub defaults and community health files for @fro-bot.
 - [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) - My Home Assistant configuration
 
 ## ⭐ Recent Stars
 
+- [mistralai/megablocks-public](https://github.com/mistralai/megablocks-public) -
+- [thejustinwalsh/raylib-gamejam-template](https://github.com/thejustinwalsh/raylib-gamejam-template) - Minimalist raylib cpp template with ci github actions
+- [labring/FastGPT](https://github.com/labring/FastGPT) - FastGPT is a knowledge-based QA system built on the LLM, offers out-of-the-box data processing and model invocation capabilities, allows for workflow orchestration through Flow visualization!
 - [unifiedjs/beep-boop-beta](https://github.com/unifiedjs/beep-boop-beta) - nothing to see here
 - [unifiedjs/unified](https://github.com/unifiedjs/unified) - ☔️ interface for parsing, inspecting, transforming, and serializing content through syntax trees
 - [vfile/vfile](https://github.com/vfile/vfile) - Virtual file format for text processing used in @unifiedjs
 - [pydantic/FastUI](https://github.com/pydantic/FastUI) - Build better UIs faster.
-- [Yidadaa/ChatGPT-Next-Web](https://github.com/Yidadaa/ChatGPT-Next-Web) - A well-designed cross-platform ChatGPT UI (Web / PWA / Linux / Win / MacOS). 一键拥有你自己的跨平台 ChatGPT 应用。
-- [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) - Enhanced ChatGPT Clone: Features OpenAI, GPT-4 Vision, Bing, Anthropic, OpenRouter, PaLM 2, AI model switching, message search, langchain, DALL-E-3, ChatGPT Plugins, OpenAI Functions, Secure Multi-User System, Presets, completely open-source for self-hosting. More features in development
-- [jackyzha0/quartz](https://github.com/jackyzha0/quartz) - 🌱 a fast, batteries-included static-site generator that transforms Markdown content into fully functional websites
