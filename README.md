@@ -24,9 +24,9 @@
 
 ## 👨🏽‍💻 Recent Contributions
 
+- [marcusrbrown/gpt](https://github.com/marcusrbrown/gpt) - Prompts, notebooks, and tools for generative pre-trained transformers.
 - [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) -
 - [marcusrbrown/.dotfiles](https://github.com/marcusrbrown/.dotfiles) - Used to keep my configuration files synchronized across machines.
-- [marcusrbrown/gpt](https://github.com/marcusrbrown/gpt) - Prompts, notebooks, and tools for generative pre-trained transformers.
 - [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -
 - [ai-boost/Awesome-GPTs](https://github.com/ai-boost/Awesome-GPTs) - Curated list of awesome GPTs 👍.
 - [fro-bot/.github](https://github.com/fro-bot/.github) - GitHub defaults and community health files for @fro-bot.
@@ -34,10 +34,10 @@
 
 ## ⭐ Recent Stars
 
+- [pacocoursey/cmdk](https://github.com/pacocoursey/cmdk) - Fast, unstyled command menu React component.
+- [drizzle-team/drizzle-orm](https://github.com/drizzle-team/drizzle-orm) - TypeScript ORM that feels like writing SQL.
+- [raunofreiberg/interfaces](https://github.com/raunofreiberg/interfaces) - A non-exhaustive list of details that make a good web interface.
+- [notlmn/awesome-icons](https://github.com/notlmn/awesome-icons) - A curated list of awesome downloadable SVG/PNG/Font icon projects
+- [lucide-icons/lucide](https://github.com/lucide-icons/lucide) - Beautiful &amp; consistent icon toolkit made by the community. Open-source project and a fork of Feather Icons.
+- [MichaelYuhe/ai-group-tabs](https://github.com/MichaelYuhe/ai-group-tabs) - A Chrome extension helps you group your tabs with AI.
 - [mistralai/megablocks-public](https://github.com/mistralai/megablocks-public) -
-- [thejustinwalsh/raylib-gamejam-template](https://github.com/thejustinwalsh/raylib-gamejam-template) - Minimalist raylib cpp template with ci github actions
-- [labring/FastGPT](https://github.com/labring/FastGPT) - FastGPT is a knowledge-based QA system built on the LLM, offers out-of-the-box data processing and model invocation capabilities, allows for workflow orchestration through Flow visualization!
-- [unifiedjs/beep-boop-beta](https://github.com/unifiedjs/beep-boop-beta) - nothing to see here
-- [unifiedjs/unified](https://github.com/unifiedjs/unified) - ☔️ interface for parsing, inspecting, transforming, and serializing content through syntax trees
-- [vfile/vfile](https://github.com/vfile/vfile) - Virtual file format for text processing used in @unifiedjs
-- [pydantic/FastUI](https://github.com/pydantic/FastUI) - Build better UIs faster.
