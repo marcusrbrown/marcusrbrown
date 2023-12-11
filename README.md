@@ -34,10 +34,10 @@
 
 ## ⭐ Recent Stars
 
+- [progrium/gh-pages-auth](https://github.com/progrium/gh-pages-auth) - Set up GitHub Pages and Auth0 authentication with minimal effort
 - [pacocoursey/cmdk](https://github.com/pacocoursey/cmdk) - Fast, unstyled command menu React component.
 - [drizzle-team/drizzle-orm](https://github.com/drizzle-team/drizzle-orm) - TypeScript ORM that feels like writing SQL.
 - [raunofreiberg/interfaces](https://github.com/raunofreiberg/interfaces) - A non-exhaustive list of details that make a good web interface.
 - [notlmn/awesome-icons](https://github.com/notlmn/awesome-icons) - A curated list of awesome downloadable SVG/PNG/Font icon projects
 - [lucide-icons/lucide](https://github.com/lucide-icons/lucide) - Beautiful &amp; consistent icon toolkit made by the community. Open-source project and a fork of Feather Icons.
 - [MichaelYuhe/ai-group-tabs](https://github.com/MichaelYuhe/ai-group-tabs) - A Chrome extension helps you group your tabs with AI.
-- [mistralai/megablocks-public](https://github.com/mistralai/megablocks-public) -
