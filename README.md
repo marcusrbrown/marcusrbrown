@@ -24,13 +24,13 @@
 
 ## 👨🏽‍💻 Recent Contributions
 
+- [marcusrbrown/sparkle](https://github.com/marcusrbrown/sparkle) - TypeScript Playground
 - [marcusrbrown/gpt](https://github.com/marcusrbrown/gpt) - Prompts, notebooks, and tools for generative pre-trained transformers.
 - [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) -
 - [marcusrbrown/.dotfiles](https://github.com/marcusrbrown/.dotfiles) - Used to keep my configuration files synchronized across machines.
 - [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -
 - [ai-boost/Awesome-GPTs](https://github.com/ai-boost/Awesome-GPTs) - Curated list of awesome GPTs 👍.
 - [fro-bot/.github](https://github.com/fro-bot/.github) - GitHub defaults and community health files for @fro-bot.
-- [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) - My Home Assistant configuration
 
 ## ⭐ Recent Stars
 
