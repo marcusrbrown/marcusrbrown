@@ -25,11 +25,11 @@
 ## 👨🏽‍💻 Recent Contributions
 
 - [marcusrbrown/tokentoilet](https://github.com/marcusrbrown/tokentoilet) - Chump and dump
+- [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) -
 - [marcusrbrown/some-expect](https://github.com/marcusrbrown/some-expect) -
 - [marcusrbrown/gpt](https://github.com/marcusrbrown/gpt) - Prompts, notebooks, and tools for generative pre-trained transformers.
 - [marcusrbrown/sparkle](https://github.com/marcusrbrown/sparkle) - TypeScript Playground
 - [marcusrbrown/.dotfiles](https://github.com/marcusrbrown/.dotfiles) - Used to keep my configuration files synchronized across machines.
-- [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) -
 - [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -
 
 ## ⭐ Recent Stars
