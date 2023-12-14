@@ -34,10 +34,10 @@
 
 ## ⭐ Recent Stars
 
+- [antfu/bumpp](https://github.com/antfu/bumpp) - Interactive CLI that bumps your version numbers and more
+- [HiDeoo/hideoo](https://github.com/HiDeoo/hideoo) - HiDeoo&#39;s profile README
+- [HiDeoo/changelogithub-action](https://github.com/HiDeoo/changelogithub-action) - GitHub Action to generate changelog for GitHub releases from Conventional Commits.
 - [vite-pwa/vite-plugin-pwa](https://github.com/vite-pwa/vite-plugin-pwa) - Zero-config PWA for Vite
 - [nachoaldamav/ultra](https://github.com/nachoaldamav/ultra) - JavaScript package manager
 - [pheralb/superkey](https://github.com/pheralb/superkey) - 🪄 A stylized command menu for React. Built with headlessUI.
 - [pheralb/react-symbols](https://github.com/pheralb/react-symbols) - ✨ Symbols VSCode Icon Theme by Miguel Solorio, for React.
-- [pheralb/svgl](https://github.com/pheralb/svgl) - 🧩 A beautiful library with SVG logos. Built with Sveltekit &amp; Tailwind CSS.
-- [tailwindlabs/prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss) - A Prettier plugin for Tailwind CSS that automatically sorts classes based on our recommended class order.
-- [progrium/gh-pages-auth](https://github.com/progrium/gh-pages-auth) - Set up GitHub Pages and Auth0 authentication with minimal effort
