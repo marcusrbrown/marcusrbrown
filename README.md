@@ -24,7 +24,7 @@
 
 ## 👨🏽‍💻 Recent Contributions
 
-- [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) - Shareable Renovate configuration presets for common package ecosystems. Specific customizations for my personal repositories are in the personal preset.
+- [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) - Shareable Renovate configuration presets for my personal GitHub repositories.
 - [marcusrbrown/gpt](https://github.com/marcusrbrown/gpt) - Prompts, notebooks, and tools for generative pre-trained transformers.
 - [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) - A collection of building blocks for creating AI agents and chatbots.
 - [marcusrbrown/tokentoilet](https://github.com/marcusrbrown/tokentoilet) - Chump and dump
