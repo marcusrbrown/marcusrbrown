@@ -24,20 +24,20 @@
 
 ## 👨🏽‍💻 Recent Contributions
 
-- [marcusrbrown/tokentoilet](https://github.com/marcusrbrown/tokentoilet) - Chump and dump
+- [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) - Shareable Renovate configuration presets for common package ecosystems. Specific customizations for my personal repositories are in the personal preset.
 - [marcusrbrown/gpt](https://github.com/marcusrbrown/gpt) - Prompts, notebooks, and tools for generative pre-trained transformers.
-- [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) -
-- [marcusrbrown/some-expect](https://github.com/marcusrbrown/some-expect) -
+- [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) - A collection of building blocks for creating AI agents and chatbots.
+- [marcusrbrown/tokentoilet](https://github.com/marcusrbrown/tokentoilet) - Chump and dump
+- [marcusrbrown/some-expect](https://github.com/marcusrbrown/some-expect) - A universal expect() function supporting Jest, Chai, and Vitest testing frameworks.
 - [marcusrbrown/sparkle](https://github.com/marcusrbrown/sparkle) - TypeScript Playground
 - [marcusrbrown/.dotfiles](https://github.com/marcusrbrown/.dotfiles) - Used to keep my configuration files synchronized across machines.
-- [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) -
 
 ## ⭐ Recent Stars
 
-- [antfu/bumpp](https://github.com/antfu/bumpp) - Interactive CLI that bumps your version numbers and more
-- [HiDeoo/hideoo](https://github.com/HiDeoo/hideoo) - HiDeoo&#39;s profile README
-- [HiDeoo/changelogithub-action](https://github.com/HiDeoo/changelogithub-action) - GitHub Action to generate changelog for GitHub releases from Conventional Commits.
-- [vite-pwa/vite-plugin-pwa](https://github.com/vite-pwa/vite-plugin-pwa) - Zero-config PWA for Vite
-- [nachoaldamav/ultra](https://github.com/nachoaldamav/ultra) - JavaScript package manager
-- [pheralb/superkey](https://github.com/pheralb/superkey) - 🪄 A stylized command menu for React. Built with headlessUI.
-- [pheralb/react-symbols](https://github.com/pheralb/react-symbols) - ✨ Symbols VSCode Icon Theme by Miguel Solorio, for React.
+- [JonasDoesThings/plavatar](https://github.com/JonasDoesThings/plavatar) - placeholder &#43; avatar = plavatar - a go library
+- [hay-kot/recipes-api](https://github.com/hay-kot/recipes-api) - Standalone API for parsing Recipes from websites and using Natural Language Processing to parse ingredients
+- [hay-kot/homebox](https://github.com/hay-kot/homebox) - Homebox is the inventory and organization system built for the Home User
+- [msokalski/asciicker](https://github.com/msokalski/asciicker) - 3D ASCII game concept
+- [AnubisNekhet/discordppuccin](https://github.com/AnubisNekhet/discordppuccin) - 🎮 Soothing pastel theme for Discord
+- [Comfy-Themes/Spicetify](https://github.com/Comfy-Themes/Spicetify) - Stay comfy while listening to music
+- [spencerwooo/substats](https://github.com/spencerwooo/substats) - ( ｀д′) how many followers do i have? how many!
