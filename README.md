@@ -24,13 +24,13 @@
 
 ## 👨🏽‍💻 Recent Contributions
 
+- [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) - My Home Assistant configuration
 - [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) - Shareable Renovate configuration presets for my personal GitHub repositories.
+- [marcusrbrown/.github](https://github.com/marcusrbrown/.github) - GitHub defaults
 - [marcusrbrown/gpt](https://github.com/marcusrbrown/gpt) - Prompts, notebooks, and tools for generative pre-trained transformers.
 - [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) - A collection of building blocks for creating AI agents and chatbots.
 - [marcusrbrown/tokentoilet](https://github.com/marcusrbrown/tokentoilet) - Chump and dump
 - [marcusrbrown/some-expect](https://github.com/marcusrbrown/some-expect) - A universal expect() function supporting Jest, Chai, and Vitest testing frameworks.
-- [marcusrbrown/sparkle](https://github.com/marcusrbrown/sparkle) - TypeScript Playground
-- [marcusrbrown/.dotfiles](https://github.com/marcusrbrown/.dotfiles) - Used to keep my configuration files synchronized across machines.
 
 ## ⭐ Recent Stars
 
