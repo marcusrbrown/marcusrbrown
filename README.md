@@ -24,13 +24,13 @@
 
 ## 👨🏽‍💻 Recent Contributions
 
+- [marcusrbrown/tokentoilet](https://github.com/marcusrbrown/tokentoilet) - Chump and dump
 - [fro-bot/.github](https://github.com/fro-bot/.github) - GitHub defaults and community health files for @fro-bot.
 - [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) - My Home Assistant configuration
-- [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) - Shareable Renovate configuration presets for my personal GitHub repositories.
 - [marcusrbrown/.github](https://github.com/marcusrbrown/.github) - GitHub defaults
+- [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) - Shareable Renovate configuration presets for my personal GitHub repositories.
 - [marcusrbrown/gpt](https://github.com/marcusrbrown/gpt) - Prompts, notebooks, and tools for generative pre-trained transformers.
 - [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) - A collection of building blocks for creating AI agents and chatbots.
-- [marcusrbrown/tokentoilet](https://github.com/marcusrbrown/tokentoilet) - Chump and dump
 
 ## ⭐ Recent Stars
 
