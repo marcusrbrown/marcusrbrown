@@ -34,10 +34,10 @@
 
 ## ⭐ Recent Stars
 
-- [JonasDoesThings/plavatar](https://github.com/JonasDoesThings/plavatar) - placeholder &#43; avatar = plavatar - a go library
-- [hay-kot/recipes-api](https://github.com/hay-kot/recipes-api) - Standalone API for parsing Recipes from websites and using Natural Language Processing to parse ingredients
-- [hay-kot/homebox](https://github.com/hay-kot/homebox) - Homebox is the inventory and organization system built for the Home User
-- [msokalski/asciicker](https://github.com/msokalski/asciicker) - 3D ASCII game concept
-- [AnubisNekhet/discordppuccin](https://github.com/AnubisNekhet/discordppuccin) - 🎮 Soothing pastel theme for Discord
-- [Comfy-Themes/Spicetify](https://github.com/Comfy-Themes/Spicetify) - Stay comfy while listening to music
-- [spencerwooo/substats](https://github.com/spencerwooo/substats) - ( ｀д′) how many followers do i have? how many!
+- [godly-devotion/MochiDiffusion](https://github.com/godly-devotion/MochiDiffusion) - Run Stable Diffusion on Mac natively
+- [zthxxx/slides](https://github.com/zthxxx/slides) - Some personal slides
+- [zthxxx/tsconfig](https://github.com/zthxxx/tsconfig) - zthxxx&#39;s base tsconfig
+- [zthxxx/react-dev-inspector](https://github.com/zthxxx/react-dev-inspector) - jump to local IDE code directly from browser React component by just a simple click
+- [fliu2476/gh-hosts](https://github.com/fliu2476/gh-hosts) - Automatically update GitHub hosts on Mac
+- [honojs/hono](https://github.com/honojs/hono) - Fast, Lightweight, Web-standards
+- [linexjlin/GPTs](https://github.com/linexjlin/GPTs) - leaked prompts of GPTs
