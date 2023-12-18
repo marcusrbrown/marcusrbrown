@@ -34,10 +34,10 @@
 
 ## ⭐ Recent Stars
 
+- [thinkingjimmy/Learning-Prompt](https://github.com/thinkingjimmy/Learning-Prompt) - Free prompt engineering online course. ChatGPT and Midjourney tutorials are now included!
+- [dust-tt/dust](https://github.com/dust-tt/dust) - Amplify your team&#39;s potential with customizable and secure AI assistants.
 - [wei/socialify](https://github.com/wei/socialify) - 💞 Socialify your project. 🌐 Share with the world!
 - [vercel/satori](https://github.com/vercel/satori) - Enlightened library to convert HTML and CSS to SVG
 - [godly-devotion/MochiDiffusion](https://github.com/godly-devotion/MochiDiffusion) - Run Stable Diffusion on Mac natively
 - [zthxxx/slides](https://github.com/zthxxx/slides) - Some personal slides
 - [zthxxx/tsconfig](https://github.com/zthxxx/tsconfig) - zthxxx&#39;s base tsconfig
-- [zthxxx/react-dev-inspector](https://github.com/zthxxx/react-dev-inspector) - jump to local IDE code directly from browser React component by just a simple click
-- [fliu2476/gh-hosts](https://github.com/fliu2476/gh-hosts) - Automatically update GitHub hosts on Mac
