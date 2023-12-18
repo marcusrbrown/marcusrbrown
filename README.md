@@ -26,18 +26,18 @@
 
 - [marcusrbrown/tokentoilet](https://github.com/marcusrbrown/tokentoilet) - Chump and dump
 - [fro-bot/.github](https://github.com/fro-bot/.github) - GitHub defaults and community health files for @fro-bot.
+- [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) - Shareable Renovate configuration presets for my personal GitHub repositories.
 - [marcusrbrown/ha-config](https://github.com/marcusrbrown/ha-config) - My Home Assistant configuration
 - [marcusrbrown/.github](https://github.com/marcusrbrown/.github) - GitHub defaults
-- [marcusrbrown/renovate-config](https://github.com/marcusrbrown/renovate-config) - Shareable Renovate configuration presets for my personal GitHub repositories.
 - [marcusrbrown/gpt](https://github.com/marcusrbrown/gpt) - Prompts, notebooks, and tools for generative pre-trained transformers.
 - [marcusrbrown/copiloting](https://github.com/marcusrbrown/copiloting) - A collection of building blocks for creating AI agents and chatbots.
 
 ## ⭐ Recent Stars
 
+- [NginxProxyManager/nginx-proxy-manager](https://github.com/NginxProxyManager/nginx-proxy-manager) - Docker container for managing Nginx proxy hosts with a simple, powerful interface
 - [thinkingjimmy/Learning-Prompt](https://github.com/thinkingjimmy/Learning-Prompt) - Free prompt engineering online course. ChatGPT and Midjourney tutorials are now included!
 - [dust-tt/dust](https://github.com/dust-tt/dust) - Amplify your team&#39;s potential with customizable and secure AI assistants.
 - [wei/socialify](https://github.com/wei/socialify) - 💞 Socialify your project. 🌐 Share with the world!
 - [vercel/satori](https://github.com/vercel/satori) - Enlightened library to convert HTML and CSS to SVG
 - [godly-devotion/MochiDiffusion](https://github.com/godly-devotion/MochiDiffusion) - Run Stable Diffusion on Mac natively
 - [zthxxx/slides](https://github.com/zthxxx/slides) - Some personal slides
-- [zthxxx/tsconfig](https://github.com/zthxxx/tsconfig) - zthxxx&#39;s base tsconfig
