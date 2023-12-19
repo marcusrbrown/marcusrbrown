@@ -34,10 +34,10 @@
 
 ## ⭐ Recent Stars
 
+- [PrincewillIroka/login-with-github](https://github.com/PrincewillIroka/login-with-github) - An app that implements &#34;Login with GitHub&#34; functionality in React JS
 - [vercel/style-guide](https://github.com/vercel/style-guide) - Vercel&#39;s engineering style guide
 - [NginxProxyManager/nginx-proxy-manager](https://github.com/NginxProxyManager/nginx-proxy-manager) - Docker container for managing Nginx proxy hosts with a simple, powerful interface
 - [thinkingjimmy/Learning-Prompt](https://github.com/thinkingjimmy/Learning-Prompt) - Free prompt engineering online course. ChatGPT and Midjourney tutorials are now included!
 - [dust-tt/dust](https://github.com/dust-tt/dust) - Amplify your team&#39;s potential with customizable and secure AI assistants.
 - [wei/socialify](https://github.com/wei/socialify) - 💞 Socialify your project. 🌐 Share with the world!
 - [vercel/satori](https://github.com/vercel/satori) - Enlightened library to convert HTML and CSS to SVG
-- [godly-devotion/MochiDiffusion](https://github.com/godly-devotion/MochiDiffusion) - Run Stable Diffusion on Mac natively
