@@ -16,7 +16,7 @@
   "devDependencies": {
     "markdownlint": "0.33.0",
     "markdownlint-cli2": "0.12.1",
-    "prettier": "3.2.4"
+    "prettier": "3.2.5"
   },
   "packageManager": "yarn@4.1.0"
 }
