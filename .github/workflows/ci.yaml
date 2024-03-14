@@ -1,18 +1,16 @@
 name: CI
 
 'on':
-  push:
-    branches: [main]
   pull_request:
-    types: [opened, synchronize]
+  push:
   workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
 
-env:
-  FORCE_COLOR: 3
+permissions:
+  contents: read
 
 jobs:
   test:
@@ -20,16 +18,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
-      - name: Setup Node.js ${{ env.NODE_VERSION }}
+      - name: Setup Node.js
         uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4.0.2
         with:
-          cache: yarn
-          node-version: ${{ env.NODE_VERSION }}
-        env:
-          NODE_VERSION: 20.11.1 # renovate: datasource=node depName=node
+          cache: 'pnpm'
+          node-version-file: '.node-version'
+      - name: Enable Corepack
+        run: corepack enable && pnpm --version
       - name: Install dependencies
-        run: yarn install --immutable
+        run: pnpm install --frozen-lockfile
       - name: Lint
-        run: yarn lint
+        run: pnpm lint
       - name: Check formatting
-        run: yarn check-format
+        run: pnpm check-format

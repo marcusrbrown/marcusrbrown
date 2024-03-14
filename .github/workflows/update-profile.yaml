@@ -13,7 +13,7 @@ name: Update GitHub Profile
       - '.github/workflows/update-profile.yaml'
       - 'templates/**'
   schedule:
-    - cron: '0 */1 * * *'
+    - cron: '0 */1 * * *' # Every hour
   workflow_dispatch:
 
 concurrency:
@@ -39,16 +39,14 @@ jobs:
           ref: ${{ github.head_ref }}
           token: ${{ steps.get-workflow-app-token.outputs.token }}
 
-      - name: Setup Node.js ${{ env.NODE_VERSION }}
+      - name: Setup Node.js
         uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4.0.2
         with:
-          cache: yarn
-          node-version: ${{ env.NODE_VERSION }}
-        env:
-          NODE_VERSION: 20.11.1 # renovate: datasource=node depName=node
+          cache: 'pnpm'
+          node-version-file: '.node-version'
 
       - name: Install dependencies
-        run: yarn install --immutable
+        run: pnpm install --frozen-lockfile
 
       - uses: muesli/readme-scribe@d2f6ab32d6b9f5b59941fe782d6c7e6499a37fe4
         env:
@@ -58,10 +56,10 @@ jobs:
           writeTo: 'README.md'
 
       - name: Fix linting errors
-        run: yarn lint:fix
+        run: pnpm fix
 
       - name: Format files
-        run: yarn format
+        run: pnpm format
 
       # Commit changes to the branch when triggered from a pull request
       - name: Commit changes to HEAD
@@ -70,7 +68,7 @@ jobs:
         with:
           author_name: 'mrbro-bot[bot]'
           author_email: '137683033+mrbro-bot[bot]@users.noreply.github.com'
-          committer_name: 'MrBro Bot'
+          committer_name: 'mrbro-bot[bot]'
           committer_email: '137683033+mrbro-bot[bot]@users.noreply.github.com'
           message: 'build: update README.md'
 
@@ -91,6 +89,6 @@ jobs:
             [2]: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }} 'Workflow run on GitHub'
           branch: 'build/update-readme'
           commit-message: 'build: update README.md'
-          committer: 'MrBro Bot <137683033+mrbro-bot[bot]@users.noreply.github.com>'
+          committer: 'mrbro-bot[bot] <137683033+mrbro-bot[bot]@users.noreply.github.com>'
           title: 'build: update README.md'
           token: ${{ steps.get-workflow-app-token.outputs.token }}
