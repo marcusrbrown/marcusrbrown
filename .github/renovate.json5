@@ -2,7 +2,12 @@
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
   extends: ['github>marcusrbrown/renovate-config#v2'],
   postUpgradeTasks: {
-    commands: ['npm install -g pnpm@8', 'pnpm install --frozen-lockfile', 'git checkout -- .npmrc', 'pnpm run format'],
+    commands: [
+      'npm install -g pnpm@8',
+      'pnpm install --frozen-lockfile',
+      'git checkout -- .npmrc || true',
+      'pnpm run format',
+    ],
     executionMode: 'branch',
   },
 }
