@@ -6,6 +6,7 @@
       'npm install -g pnpm@8',
       'pnpm install --frozen-lockfile',
       'git checkout -- .npmrc || true',
+      'pnpm run fix',
       'pnpm run format',
     ],
     executionMode: 'branch',

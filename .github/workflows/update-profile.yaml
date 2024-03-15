@@ -4,26 +4,64 @@ name: Update GitHub Profile
 
 'on':
   pull_request:
-    paths:
-      - '.github/workflows/update-profile.yaml'
-      - 'templates/**'
   push:
     branches: [main]
-    paths:
-      - '.github/workflows/update-profile.yaml'
-      - 'templates/**'
   schedule:
     - cron: '0 */1 * * *' # Every hour
   workflow_dispatch:
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
+  group: ${{ github.workflow }}-${{ github.event.number || github.ref }}
   cancel-in-progress: true
 
-permissions: {}
+permissions:
+  contents: read
 
 jobs:
+  prepare:
+    name: Prepare
+    outputs:
+      changes: ${{ steps.filter.outputs.changes }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        if: github.event_name == 'pull_request'
+        uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Filter changed files
+        id: filter
+        if: github.event_name == 'pull_request'
+        uses: dorny/paths-filter@de90cc6fb38fc0963ad72b210f1f284cd68cea36 # v3.0.2
+        with:
+          filters: |
+            changes:
+              - '.github/workflows/update-profile.yaml'
+              - 'templates/**'
+
   markscribe:
+    name: Markscribe
+    needs: [prepare]
+    if: github.event_name != 'pull_request' || needs.prepare.outputs.changes == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Update README
+        uses: muesli/readme-scribe@d2f6ab32d6b9f5b59941fe782d6c7e6499a37fe4
+        env:
+          GITHUB_TOKEN: ${{ secrets.README_SCRIBE_GH_TOKEN }}
+        with:
+          template: 'templates/README.tpl.md'
+          writeTo: 'README.md'
+
+  finalize:
+    name: Finalize
+    needs: [markscribe]
     runs-on: ubuntu-latest
     steps:
       - name: Get Wokrflow Application Token
@@ -41,7 +79,7 @@ jobs:
           token: ${{ steps.get-workflow-app-token.outputs.token }}
 
       - name: Enable Corepack
-        run: corepack enable && pnpm --version
+        run: corepack enable && echo pnpm v$(pnpm --version)
 
       - name: Setup Node.js
         uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4.0.2
@@ -51,13 +89,6 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-
-      - uses: muesli/readme-scribe@d2f6ab32d6b9f5b59941fe782d6c7e6499a37fe4
-        env:
-          GITHUB_TOKEN: ${{ secrets.README_SCRIBE_GH_TOKEN }}
-        with:
-          template: 'templates/README.tpl.md'
-          writeTo: 'README.md'
 
       - name: Fix linting errors
         run: pnpm fix
