@@ -1,5 +1,5 @@
 * text=auto
 
-.yarn/releases/* linguist-vendored
-.yarn/plugins/* linguist-vendored
-.yarn/sdks/* linguist-vendored
+*.json text linguist-language=JSON-with-comments
+
+pnpm-lock.yaml -diff linguist-generated=true

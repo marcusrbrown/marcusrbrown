@@ -1,3 +1,4 @@
 node_modules
+pnpm-lock.yaml
 .yarn
 templates/README.tpl.md
