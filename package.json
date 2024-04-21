@@ -1,11 +1,11 @@
 {
   "name": "marcusrbrown",
   "version": "0.0.0",
-  "description": "My GitHub public profile README.",
+  "description": "My GitHub public profile README and tool configurations.",
   "repository": "https://github.com/marcusrbrown/marcusrbrown",
   "author": "Marcus R. Brown <contact@marcusrbrown.com>",
   "license": "MIT",
-  "private": true,
+  "type": "module",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "check-format": "prettier --check .",
@@ -20,5 +20,9 @@
     "markdownlint-cli2": "0.12.1",
     "prettier": "3.2.5"
   },
-  "packageManager": "pnpm@8.15.4+sha256.cea6d0bdf2de3a0549582da3983c70c92ffc577ff4410cbf190817ddc35137c2"
+  "packageManager": "pnpm@8.15.4+sha256.cea6d0bdf2de3a0549582da3983c70c92ffc577ff4410cbf190817ddc35137c2",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
 }
