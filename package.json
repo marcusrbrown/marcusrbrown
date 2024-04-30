@@ -20,7 +20,7 @@
     "markdownlint-cli2": "0.12.1",
     "prettier": "3.2.5"
   },
-  "packageManager": "pnpm@8.15.7",
+  "packageManager": "pnpm@8.15.8",
   "publishConfig": {
     "access": "public",
     "provenance": true
