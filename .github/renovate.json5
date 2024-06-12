@@ -5,7 +5,7 @@
   platformAutomerge: false,
   postUpgradeTasks: {
     commands: [
-      'npm install -g pnpm@8.15.8',
+      'npm install -g pnpm@9.3.0',
       'pnpm install --frozen-lockfile',
       'git checkout -- .npmrc || true',
       'pnpm run fix',
