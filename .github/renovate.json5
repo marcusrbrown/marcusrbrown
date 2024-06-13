@@ -4,13 +4,7 @@
   automergeType: 'pr',
   platformAutomerge: false,
   postUpgradeTasks: {
-    commands: [
-      'npm install -g pnpm@9.3.0',
-      'pnpm install --frozen-lockfile',
-      'git checkout -- .npmrc || true',
-      'pnpm run fix',
-      'pnpm run format',
-    ],
+    commands: ['npm install -g pnpm@9.3.0', 'pnpm install', 'pnpm run fix', 'pnpm run format'],
     executionMode: 'branch',
   },
   prCreation: 'immediate',
