@@ -27,4 +27,4 @@ jobs:
     secrets: inherit
     uses: marcusrbrown/.github/.github/workflows/renovate.yaml@main
     with:
-      print-config: ${{ inputs.print-config }}
+      print-config: ${{ inputs.print-config || false }}
