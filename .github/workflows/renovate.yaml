@@ -9,7 +9,6 @@ name: Renovate
     types: [edited]
   push:
     branches: ['**']
-    tags-ignore: ['**']
   workflow_dispatch:
     inputs:
       print-config:
@@ -17,6 +16,10 @@ name: Renovate
         required: false
         type: boolean
         default: false
+  workflow_run:
+    branches: [main]
+    types: [completed]
+    workflows: [Main]
 
 jobs:
   renovate:
