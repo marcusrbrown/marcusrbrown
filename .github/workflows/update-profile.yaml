@@ -4,10 +4,11 @@ name: Update GitHub Profile
 
 'on':
   pull_request:
+    branches: [main]
   push:
     branches: [main]
   schedule:
-    - cron: '0 */1 * * *' # Every hour
+    - cron: '0 */6 * * *' # Every 6 hours
   workflow_dispatch:
 
 concurrency:
@@ -60,21 +61,23 @@ jobs:
           writeTo: 'README.md'
 
   finalize:
+    # Run this job even when the markscribe job is skipped
+    if: always() && (needs.markscribe.result != 'skipped')
     name: Finalize
     needs: [markscribe]
     runs-on: ubuntu-latest
     steps:
-      - name: Get Wokrflow Application Token
-        id: get-workflow-app-token
-        uses: peter-murray/workflow-application-token-action@dc0413987a085fa17d19df9e47d4677cf81ffef3 # v3.0.0
+      - id: get-workflow-app-token
+        name: Get Workflow Application Token
+        uses: actions/create-github-app-token@5d869da34e18e7287c1daad50e0b8ea0f506ce69 # v1.11.0
         with:
-          application_id: ${{ secrets.APPLICATION_ID }}
-          application_private_key: ${{ secrets.APPLICATION_PRIVATE_KEY }}
-          permissions: 'contents:write, pull_requests:write'
+          app-id: ${{ secrets.APPLICATION_ID }}
+          private-key: ${{ secrets.APPLICATION_PRIVATE_KEY }}
 
       - name: Checkout
         uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
         with:
+          persist-credentials: false
           ref: ${{ github.head_ref }}
           token: ${{ steps.get-workflow-app-token.outputs.token }}
 
