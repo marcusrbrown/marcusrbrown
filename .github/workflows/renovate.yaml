@@ -16,6 +16,10 @@ name: Renovate
         required: false
         type: boolean
         default: false
+  workflow_run:
+    branches: [main]
+    types: [completed]
+    workflows: [Main]
 
 jobs:
   renovate:
@@ -23,4 +27,4 @@ jobs:
     secrets: inherit
     uses: marcusrbrown/.github/.github/workflows/renovate.yaml@main
     with:
-      print-config: ${{ inputs.print-config || github.event_name == 'push' }}
+      print-config: ${{ inputs.print-config }}
