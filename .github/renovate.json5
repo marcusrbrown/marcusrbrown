@@ -1,10 +1,14 @@
 {
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
-  extends: ['github>marcusrbrown/renovate-config#v2'],
+  extends: [
+    'github>marcusrbrown/renovate-config#v2',
+    'github>sanity-io/renovate-config:semantic-commit-type',
+    'npm:unpublishSafe',
+  ],
   automergeType: 'pr',
   platformAutomerge: false,
   postUpgradeTasks: {
-    commands: ['npm install -g pnpm@9.7.0', 'pnpm install', 'pnpm run fix', 'pnpm run format'],
+    commands: ['pnpm install --frozen-lockfile --ignore-scripts', 'pnpm run fix', 'pnpm run format'],
     executionMode: 'branch',
   },
   prCreation: 'immediate',
