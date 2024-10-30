@@ -18,7 +18,7 @@ branches:
     protection:
       required_status_checks:
         strict: false
-        contexts: ['Test', 'Renovate / Renovate', 'Update GitHub Profile / Finalize']
+        contexts: ['CI', 'Renovate / Renovate', 'Prepare', 'Markscribe', 'Finalize']
       enforce_admins: true
       required_pull_request_reviews: null
       restrictions: null
