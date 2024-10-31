@@ -41,30 +41,11 @@ jobs:
               - '.github/workflows/update-profile.yaml'
               - 'templates/**'
 
-  markscribe:
-    name: Markscribe
-    needs: [prepare]
-    if: github.event_name != 'pull_request' || needs.prepare.outputs.changes == 'true'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-        with:
-          ref: ${{ github.head_ref }}
-
-      - name: Update README
-        uses: muesli/readme-scribe@d2f6ab32d6b9f5b59941fe782d6c7e6499a37fe4
-        env:
-          GITHUB_TOKEN: ${{ secrets.README_SCRIBE_GH_TOKEN }}
-        with:
-          template: 'templates/README.tpl.md'
-          writeTo: 'README.md'
-
   finalize:
     # Run this job even when the markscribe job is skipped
-    if: always() && (needs.markscribe.result != 'skipped')
+    if: github.event_name != 'pull_request' || needs.prepare.outputs.changes == 'true'
     name: Finalize
-    needs: [markscribe]
+    needs: [prepare]
     runs-on: ubuntu-latest
     steps:
       - id: get-workflow-app-token
@@ -77,7 +58,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
-          persist-credentials: false
           ref: ${{ github.head_ref }}
           token: ${{ steps.get-workflow-app-token.outputs.token }}
 
@@ -92,6 +72,14 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
+      - name: Update README
+        uses: muesli/readme-scribe@d2f6ab32d6b9f5b59941fe782d6c7e6499a37fe4
+        env:
+          GITHUB_TOKEN: ${{ secrets.README_SCRIBE_GH_TOKEN }}
+        with:
+          template: 'templates/README.tpl.md'
+          writeTo: 'README.md'
 
       - name: Fix linting errors
         run: pnpm fix
