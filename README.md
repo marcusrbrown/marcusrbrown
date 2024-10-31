@@ -8,14 +8,14 @@
   <img align='center' width='51.5%' alt='GitHub stats for @marcusrbrown' src='https://github-readme-stats.vercel.app/api?username=marcusrbrown&show_icons=true&theme=dark&include_all_commits=true&count_private=true'>
 </p>
 
-<br>
+&nbsp;
+
 <div align='center'>
 
-[![GitHub Sponsors](https://img.shields.io/github/sponsors/marcusrbrown?style=for-the-badge&logo=github-sponsors)
-][gh-sponsors] [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin)][linkedin]
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/marcusrbrown?style=for-the-badge&logo=github-sponsors)][gh-sponsors] [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin)][linkedin]
 
 </div>
-<br>
+&nbsp;
 
 [gh-sponsors]: https://github.com/sponsors/marcusrbrown "@marcusrbrown | GitHub Sponsors"
 [linkedin]: https://www.linkedin.com/in/marcusrbrown "@marcusrbrown | LinkedIn"
