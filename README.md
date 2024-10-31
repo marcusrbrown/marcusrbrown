@@ -11,8 +11,7 @@
 <br>
 <div align='center'>
 
-[![GitHub Sponsors](https://img.shields.io/github/sponsors/marcusrbrown?style=for-the-badge&logo=github-sponsors)
-][gh-sponsors] [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin)][linkedin]
+[![GitHubSponsors](https://img.shields.io/github/sponsors/marcusrbrown?style=for-the-badge&logo=github-sponsors)][gh-sponsors] [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin)][linkedin]
 
 </div>
 <br>
