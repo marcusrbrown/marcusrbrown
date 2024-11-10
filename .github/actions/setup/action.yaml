@@ -9,7 +9,7 @@ runs:
       name: Configure cache
       env:
         # This must be updated if the pnpm store path changes
-        PNPM_SETUP_STORE_PATH: ${{ env.HOME }}/setup-pnpm/node_modules/.bin/store/v3
+        PNPM_SETUP_STORE_PATH: ~/setup-pnpm/node_modules/.bin/store/v3
       run: |
         pnpm_store_path="$PNPM_SETUP_STORE_PATH"
         if [ `which pnpm` ]; then
