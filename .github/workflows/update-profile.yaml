@@ -4,7 +4,6 @@ name: Update GitHub Profile
 
 'on':
   pull_request:
-    branches: [main]
   push:
     branches: [main]
   schedule:
@@ -61,17 +60,8 @@ jobs:
           ref: ${{ github.head_ref }}
           token: ${{ steps.get-workflow-app-token.outputs.token }}
 
-      - name: Enable Corepack
-        run: corepack enable && echo pnpm v$(pnpm --version)
-
-      - name: Setup Node.js
-        uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
-        with:
-          cache: 'pnpm'
-          node-version-file: '.node-version'
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+      - name: Setup project
+        uses: ./.github/actions/setup
 
       - name: Update README
         uses: muesli/readme-scribe@d2f6ab32d6b9f5b59941fe782d6c7e6499a37fe4
