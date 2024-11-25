@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "markdownlint": "0.36.1",
-    "markdownlint-cli2": "0.14.0",
+    "markdownlint-cli2": "0.15.0",
     "prettier": "3.3.3"
   },
   "packageManager": "pnpm@9.14.2",
