@@ -18,7 +18,7 @@
   "devDependencies": {
     "markdownlint": "0.36.1",
     "markdownlint-cli2": "0.15.0",
-    "prettier": "3.3.3"
+    "prettier": "3.4.0"
   },
   "packageManager": "pnpm@9.14.2",
   "publishConfig": {
