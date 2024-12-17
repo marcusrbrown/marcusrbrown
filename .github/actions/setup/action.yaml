@@ -40,4 +40,4 @@ runs:
         run_install: |
           - args: [--frozen-lockfile, --ignore-scripts, --prefer-offline, --loglevel, error]
 
-  using: 'composite'
+  using: composite
