@@ -23,6 +23,7 @@ on:
 
 jobs:
   renovate:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     name: Renovate
     secrets: inherit
     uses: marcusrbrown/.github/.github/workflows/renovate.yaml@main
