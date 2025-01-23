@@ -20,8 +20,8 @@
   },
   "prettier": "@bfra.me/prettier-config/120-proof",
   "devDependencies": {
-    "@bfra.me/eslint-config": "0.16.1",
-    "@bfra.me/prettier-config": "^0.14.0",
+    "@bfra.me/eslint-config": "0.16.3",
+    "@bfra.me/prettier-config": "^0.15.0",
     "@bfra.me/tsconfig": "^0.9.6",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
