@@ -14,7 +14,7 @@
     "preinstall": "npx only-allow pnpm",
     "lint": "markdownlint-cli2",
     "lint:fix": "pnpm run lint:fix:markdown && pnpm run lint:fix:eslint",
-    "lint:fix:eslint": "eslint --fix --flag unstable_config_lookup_from_file --flag unstable_ts_config .",
+    "lint:fix:eslint": "eslint --fix --flag unstable_config_lookup_from_file .",
     "lint:fix:markdown": "markdownlint-cli2 --fix",
     "test": "exit 0"
   },
