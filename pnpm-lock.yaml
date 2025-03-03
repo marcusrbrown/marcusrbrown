@@ -229,6 +229,10 @@ packages:
     resolution: {integrity: sha512-OdQr6BNBzwRjNEXMQyaGyZzgg7wzjYKfX2ZBV3E04hUCBDv3GQCHiz9RpqdUIiVrMgJGkXm3tcEh4vFSHreS2Q==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
+  '@typescript-eslint/scope-manager@8.25.0':
+    resolution: {integrity: sha512-6PPeiKIGbgStEyt4NNXa2ru5pMzQ8OYKO1hX1z53HMomrmiSB+R5FmChgQAP1ro8jMtNawz+TRQo/cSXrauTpg==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
   '@typescript-eslint/type-utils@8.24.1':
     resolution: {integrity: sha512-/Do9fmNgCsQ+K4rCz0STI7lYB4phTtEXqqCAs3gZW0pnK7lWNkvWd5iW545GSmApm4AzmQXmSqXPO565B4WVrw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -240,8 +244,18 @@ packages:
     resolution: {integrity: sha512-9kqJ+2DkUXiuhoiYIUvIYjGcwle8pcPpdlfkemGvTObzgmYfJ5d0Qm6jwb4NBXP9W1I5tss0VIAnWFumz3mC5A==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
+  '@typescript-eslint/types@8.25.0':
+    resolution: {integrity: sha512-+vUe0Zb4tkNgznQwicsvLUJgZIRs6ITeWSCclX1q85pR1iOiaj+4uZJIUp//Z27QWu5Cseiw3O3AR8hVpax7Aw==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
   '@typescript-eslint/typescript-estree@8.24.1':
     resolution: {integrity: sha512-UPyy4MJ/0RE648DSKQe9g0VDSehPINiejjA6ElqnFaFIhI6ZEiZAkUI0D5MCk0bQcTf/LVqZStvQ6K4lPn/BRg==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    peerDependencies:
+      typescript: '>=4.8.4 <5.8.0'
+
+  '@typescript-eslint/typescript-estree@8.25.0':
+    resolution: {integrity: sha512-ZPaiAKEZ6Blt/TPAx5Ot0EIB/yGtLI2EsGoY6F7XKklfMxYQyvtL+gT/UCqkMzO0BVFHLDlzvFqQzurYahxv9Q==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       typescript: '>=4.8.4 <5.8.0'
@@ -253,8 +267,19 @@ packages:
       eslint: ^8.57.0 || ^9.0.0
       typescript: '>=4.8.4 <5.8.0'
 
+  '@typescript-eslint/utils@8.25.0':
+    resolution: {integrity: sha512-syqRbrEv0J1wywiLsK60XzHnQe/kRViI3zwFALrNEgnntn1l24Ra2KvOAWwWbWZ1lBZxZljPDGOq967dsl6fkA==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    peerDependencies:
+      eslint: ^8.57.0 || ^9.0.0
+      typescript: '>=4.8.4 <5.8.0'
+
   '@typescript-eslint/visitor-keys@8.24.1':
     resolution: {integrity: sha512-EwVHlp5l+2vp8CoqJm9KikPZgi3gbdZAtabKT9KPShGeOcJhsv4Zdo3oc8T8I0uKEmYoU4ItyxbptjF08enaxg==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@typescript-eslint/visitor-keys@8.25.0':
+    resolution: {integrity: sha512-kCYXKAum9CecGVHGij7muybDfTS2sD3t0L4bJsEZLkyrXUImiCTq1M3LG2SRtOhiHFwMR9wAFplpT6XHYjTkwQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   acorn-jsx@5.3.2:
@@ -310,8 +335,8 @@ packages:
     resolution: {integrity: sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==}
     engines: {node: '>=6'}
 
-  caniuse-lite@1.0.30001700:
-    resolution: {integrity: sha512-2S6XIXwaE7K7erT8dY+kLQcpa5ms63XlRkMkReXjle+kf6c5g38vyMl+Z5y8dSxOFDhcFe+nxnn261PLxBSQsQ==}
+  caniuse-lite@1.0.30001701:
+    resolution: {integrity: sha512-faRs/AW3jA9nTwmJBSO1PQ6L/EOgsB5HMQQq4iCu5zhPgVVgO/pZRHlmatwijZKetFw8/Pr4q6dEN8sJuq8qTw==}
 
   ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
@@ -358,8 +383,8 @@ packages:
   confbox@0.1.8:
     resolution: {integrity: sha512-RMtmw0iFkeR4YV+fUOSucriAQNb9g8zFR52MWCtl+cCZOFRNL6zeB395vPzFhEjjn4fMxXudmELnl/KF/WrK6w==}
 
-  core-js-compat@3.40.0:
-    resolution: {integrity: sha512-0XEDpr5y5mijvw8Lbc6E5AkjrHfp7eEoPlu36SWeAbcL8fn1G1ANe8DBlo2XoNN89oVpxWwOjYIPVzR4ZvsKCQ==}
+  core-js-compat@3.41.0:
+    resolution: {integrity: sha512-RFsU9LySVue9RTwdDVX/T0e2Y6jRYWXERKElIjpuEOEnxaXffI0X7RUwVzfYLfzuLXSNJDYoRYUAmRUcyln20A==}
 
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
@@ -399,8 +424,8 @@ packages:
     resolution: {integrity: sha512-yS+Q5i3hBf7GBkd4KG8a7eBNNWNGLTaEwwYWUijIYM7zrlYDM0BFXHjjPWlWZ1Rg7UaddZeIDmi9jF3HmqiQ2w==}
     engines: {node: '>=6.0.0'}
 
-  electron-to-chromium@1.5.103:
-    resolution: {integrity: sha512-P6+XzIkfndgsrjROJWfSvVEgNHtPgbhVyTkwLjUM2HU/h7pZRORgaTlHqfAikqxKmdJMLW8fftrdGWbd/Ds0FA==}
+  electron-to-chromium@1.5.109:
+    resolution: {integrity: sha512-AidaH9JETVRr9DIPGfp1kAarm/W6hRJTPuCnkF+2MqhF4KaAgRIcBc8nvjk+YMXZhwfISof/7WG29eS4iGxQLQ==}
 
   enhanced-resolve@5.18.1:
     resolution: {integrity: sha512-ZSW3ma5GkcQBIpwZTSRAI8N71Uuwgs93IezB7mf7R60tC8ZbJideoDNKjHn2O9KIlx6rkGTTEk1xUCK2E1Y2Yg==}
@@ -631,8 +656,8 @@ packages:
   fast-uri@3.0.6:
     resolution: {integrity: sha512-Atfo14OibSv5wAp4VWNsFYE1AchQRTv9cBGWET4pZWHzYshFSS9NQI6I57rdKn9croWVMbYFbLhJ+yJvmZIIHw==}
 
-  fastq@1.19.0:
-    resolution: {integrity: sha512-7SFSRCNjBQIZH/xZR3iy5iQYR8aGBE0h3VG6/cwlbrpdciNYBMotQav8c1XI3HjHH+NikUpP53nPdlZSdWmFzA==}
+  fastq@1.19.1:
+    resolution: {integrity: sha512-GwLTyxkCXjXbxqIhTsMI2Nui8huMPtnxg7krajPJAjnEG/iiOS7i+zCtWGZR9G0NBKbXKh6X9m9UIsYX/N6vvQ==}
 
   file-entry-cache@8.0.0:
     resolution: {integrity: sha512-XXTUwCvisa5oacNGRP9SfNtYBNAMi+RPwBFmblZEF7N7swHYQS6/Zfk7SRwx4D5j3CH211YNRco1DEMNVfZCnQ==}
@@ -642,8 +667,8 @@ packages:
     resolution: {integrity: sha512-YsGpe3WHLK8ZYi4tWDg2Jy3ebRz2rXowDxnld4bkQB00cc/1Zw9AWnC0i9ztDJitivtQvaI9KaLyKrc+hBW0yg==}
     engines: {node: '>=8'}
 
-  find-up-simple@1.0.0:
-    resolution: {integrity: sha512-q7Us7kcjj2VMePAa02hDAF6d+MzsdsAWEwYyOpwUtlerRBkOEPBCRZrAV4XfcSN8fHAgaD0hP7miwoay6DCprw==}
+  find-up-simple@1.0.1:
+    resolution: {integrity: sha512-afd4O7zpqHeRyg4PfDQsXmlDe2PfdHtJt6Akt8jOWaApLOZk5JXs6VMR29lz03pRe9mpykrRCYIYxaJYcfpncQ==}
     engines: {node: '>=18'}
 
   find-up@4.1.0:
@@ -919,8 +944,8 @@ packages:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
 
-  micromark-core-commonmark@2.0.2:
-    resolution: {integrity: sha512-FKjQKbxd1cibWMM1P9N+H8TwlgGgSkWZMmfuVucLCHaYqeSvJ0hFeHsIa65pA2nYbes0f8LDHPMrd9X7Ujxg9w==}
+  micromark-core-commonmark@2.0.3:
+    resolution: {integrity: sha512-RDBrHEMSxVFLg6xvnXmb1Ayr2WzLAWjeSATAoxwKYJV94TeNavgoIdA0a9ytzDSVzBy2YKFK+emCPOEibLeCrg==}
 
   micromark-extension-directive@3.0.2:
     resolution: {integrity: sha512-wjcXHgk+PPdmvR58Le9d7zQYWy+vKEU9Se44p2CrCDPiLr2FMyiT4Fyb5UFKFC66wGB3kPlgD7q3TnoqPS7SZA==}
@@ -1000,8 +1025,8 @@ packages:
   micromark-util-sanitize-uri@2.0.1:
     resolution: {integrity: sha512-9N9IomZ/YuGGZZmQec1MbgxtlgougxTodVwDzzEouPKo3qFWvymFHWcnDi2vzV1ff6kas9ucW+o3yzJK9YB1AQ==}
 
-  micromark-util-subtokenize@2.0.4:
-    resolution: {integrity: sha512-N6hXjrin2GTJDe3MVjf5FuXpm12PGm80BrUAeub9XFXca8JZbP+oIwY4LJSVwFUCL1IPm/WwSVUN7goFHmSGGQ==}
+  micromark-util-subtokenize@2.1.0:
+    resolution: {integrity: sha512-XQLu552iSctvnEcgXw6+Sx75GflAPNED1qx7eBJ+wydBb2KCbRZe+NwvIEEMM83uml1+2WSXpBAcp9IUCgCYWA==}
 
   micromark-util-symbol@2.0.1:
     resolution: {integrity: sha512-vs5t8Apaud9N28kgCrRUdEed4UJ+wWNvicHLPxCa9ENlYuAY31M0ETy5y1vA33YoNPDFTghEbnh6efaE8h4x0Q==}
@@ -1009,8 +1034,14 @@ packages:
   micromark-util-types@2.0.1:
     resolution: {integrity: sha512-534m2WhVTddrcKVepwmVEVnUAmtrx9bfIjNoQHRqfnvdaHQiFytEhJoTgpWJvDEXCO5gLTQh3wYC1PgOJA4NSQ==}
 
+  micromark-util-types@2.0.2:
+    resolution: {integrity: sha512-Yw0ECSpJoViF1qTU4DC6NwtC4aWGt1EkzaQB8KPPyCRR8z9TWeV0HbEFGTO+ZY1wB22zmxnJqhPyTpOVCpeHTA==}
+
   micromark@4.0.1:
     resolution: {integrity: sha512-eBPdkcoCNvYcxQOAKAlceo5SNdzZWfF+FcSupREAzdAh9rRmE239CEQAiTwIgblwnoM8zzj35sZ5ZwvSEOF6Kw==}
+
+  micromark@4.0.2:
+    resolution: {integrity: sha512-zpe98Q6kvavpCr1NPVSCMebCKfD7CA2NqZ+rykeNhONIJBpc1tFKt9hucLGwha3jNTNI8lHpctWJWoimVF4PfA==}
 
   micromatch@4.0.8:
     resolution: {integrity: sha512-PXwfBhYu0hBCPw8Dn0E+WDYb7af3dSLVWKi3HGv84IdF4TyFoC0ysxFd0Goxw7nSv4T/PzEJQxsYsEiFCKo2BA==}
@@ -1192,8 +1223,8 @@ packages:
     engines: {node: '>= 0.4'}
     hasBin: true
 
-  reusify@1.0.4:
-    resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
+  reusify@1.1.0:
+    resolution: {integrity: sha512-g6QUff04oZpHs0eG5p83rFLhHeV00ug/Yf9nZM6fLeUrPguBTkTQOdpAWWspMh55TZfVQDPaN3NQJfbVRAxdIw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
 
   run-parallel@1.2.0:
@@ -1342,8 +1373,8 @@ packages:
   unist-util-visit@5.0.0:
     resolution: {integrity: sha512-MR04uvD+07cwl/yhVuVWAtw+3GOR/knlL55Nd/wAdblk27GCVt3lqpTivy/tkJcZoNPzTwS1Y+KMojlLDhoTzg==}
 
-  update-browserslist-db@1.1.2:
-    resolution: {integrity: sha512-PPypAm5qvlD7XMZC3BujecnaOxwhrtoFR+Dqkk5Aa/6DssiH0ibKoketaj9w8LP7Bont1rYeoV5plxD7RTEPRg==}
+  update-browserslist-db@1.1.3:
+    resolution: {integrity: sha512-UxhIZQ+QInVdunkDAaiazvvT/+fXL5Osr0JZlJulepYu6Jd7qJtDZjlur0emRlT71EN3ScPoE7gvsuIKKNavKw==}
     hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
@@ -1363,8 +1394,8 @@ packages:
     resolution: {integrity: sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==}
     engines: {node: '>=0.10.0'}
 
-  yaml-eslint-parser@1.2.3:
-    resolution: {integrity: sha512-4wZWvE398hCP7O8n3nXKu/vdq1HcH01ixYlCREaJL5NUMwQ0g3MaGFUBNSlmBtKmhbtVG/Cm6lyYmSVTEVil8A==}
+  yaml-eslint-parser@1.3.0:
+    resolution: {integrity: sha512-E/+VitOorXSLiAqtTd7Yqax0/pAS3xaYMP+AUUJGOK1OZG3rhcj9fcJOM5HJ2VrP1FrStVCWr1muTfQCdj4tAA==}
     engines: {node: ^14.17.0 || >=16.0.0}
 
   yaml@2.7.0:
@@ -1440,7 +1471,7 @@ snapshots:
     dependencies:
       '@types/eslint': 9.6.1
       '@types/estree': 1.0.6
-      '@typescript-eslint/types': 8.24.1
+      '@typescript-eslint/types': 8.25.0
       comment-parser: 1.4.1
       esquery: 1.6.0
       jsdoc-type-pratt-parser: 4.1.0
@@ -1534,7 +1565,7 @@ snapshots:
   '@nodelib/fs.walk@1.2.8':
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
-      fastq: 1.19.0
+      fastq: 1.19.1
 
   '@pkgr/core@0.1.1': {}
 
@@ -1603,6 +1634,11 @@ snapshots:
       '@typescript-eslint/types': 8.24.1
       '@typescript-eslint/visitor-keys': 8.24.1
 
+  '@typescript-eslint/scope-manager@8.25.0':
+    dependencies:
+      '@typescript-eslint/types': 8.25.0
+      '@typescript-eslint/visitor-keys': 8.25.0
+
   '@typescript-eslint/type-utils@8.24.1(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3)':
     dependencies:
       '@typescript-eslint/typescript-estree': 8.24.1(typescript@5.7.3)
@@ -1616,10 +1652,26 @@ snapshots:
 
   '@typescript-eslint/types@8.24.1': {}
 
+  '@typescript-eslint/types@8.25.0': {}
+
   '@typescript-eslint/typescript-estree@8.24.1(typescript@5.7.3)':
     dependencies:
       '@typescript-eslint/types': 8.24.1
       '@typescript-eslint/visitor-keys': 8.24.1
+      debug: 4.4.0
+      fast-glob: 3.3.3
+      is-glob: 4.0.3
+      minimatch: 9.0.5
+      semver: 7.7.1
+      ts-api-utils: 2.0.1(typescript@5.7.3)
+      typescript: 5.7.3
+    transitivePeerDependencies:
+      - supports-color
+
+  '@typescript-eslint/typescript-estree@8.25.0(typescript@5.7.3)':
+    dependencies:
+      '@typescript-eslint/types': 8.25.0
+      '@typescript-eslint/visitor-keys': 8.25.0
       debug: 4.4.0
       fast-glob: 3.3.3
       is-glob: 4.0.3
@@ -1641,9 +1693,25 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@typescript-eslint/utils@8.25.0(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3)':
+    dependencies:
+      '@eslint-community/eslint-utils': 4.4.1(eslint@9.21.0(jiti@2.4.2))
+      '@typescript-eslint/scope-manager': 8.25.0
+      '@typescript-eslint/types': 8.25.0
+      '@typescript-eslint/typescript-estree': 8.25.0(typescript@5.7.3)
+      eslint: 9.21.0(jiti@2.4.2)
+      typescript: 5.7.3
+    transitivePeerDependencies:
+      - supports-color
+
   '@typescript-eslint/visitor-keys@8.24.1':
     dependencies:
       '@typescript-eslint/types': 8.24.1
+      eslint-visitor-keys: 4.2.0
+
+  '@typescript-eslint/visitor-keys@8.25.0':
+    dependencies:
+      '@typescript-eslint/types': 8.25.0
       eslint-visitor-keys: 4.2.0
 
   acorn-jsx@5.3.2(acorn@8.14.0):
@@ -1691,16 +1759,16 @@ snapshots:
 
   browserslist@4.24.4:
     dependencies:
-      caniuse-lite: 1.0.30001700
-      electron-to-chromium: 1.5.103
+      caniuse-lite: 1.0.30001701
+      electron-to-chromium: 1.5.109
       node-releases: 2.0.19
-      update-browserslist-db: 1.1.2(browserslist@4.24.4)
+      update-browserslist-db: 1.1.3(browserslist@4.24.4)
 
   builtin-modules@3.3.0: {}
 
   callsites@3.1.0: {}
 
-  caniuse-lite@1.0.30001700: {}
+  caniuse-lite@1.0.30001701: {}
 
   ccount@2.0.1: {}
 
@@ -1735,7 +1803,7 @@ snapshots:
 
   confbox@0.1.8: {}
 
-  core-js-compat@3.40.0:
+  core-js-compat@3.41.0:
     dependencies:
       browserslist: 4.24.4
 
@@ -1769,7 +1837,7 @@ snapshots:
     dependencies:
       esutils: 2.0.3
 
-  electron-to-chromium@1.5.103: {}
+  electron-to-chromium@1.5.109: {}
 
   enhanced-resolve@5.18.1:
     dependencies:
@@ -1844,8 +1912,8 @@ snapshots:
   eslint-plugin-import-x@4.6.1(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3):
     dependencies:
       '@types/doctrine': 0.0.9
-      '@typescript-eslint/scope-manager': 8.24.1
-      '@typescript-eslint/utils': 8.24.1(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3)
+      '@typescript-eslint/scope-manager': 8.25.0
+      '@typescript-eslint/utils': 8.25.0(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3)
       debug: 4.4.0
       doctrine: 3.0.0
       enhanced-resolve: 5.18.1
@@ -1892,7 +1960,7 @@ snapshots:
       synckit: 0.9.2
       toml-eslint-parser: 0.10.0
       tunnel-agent: 0.6.0
-      yaml-eslint-parser: 1.2.3
+      yaml-eslint-parser: 1.3.0
     transitivePeerDependencies:
       - '@eslint/json'
       - supports-color
@@ -1925,8 +1993,8 @@ snapshots:
 
   eslint-plugin-perfectionist@4.9.0(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3):
     dependencies:
-      '@typescript-eslint/types': 8.24.1
-      '@typescript-eslint/utils': 8.24.1(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3)
+      '@typescript-eslint/types': 8.25.0
+      '@typescript-eslint/utils': 8.25.0(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3)
       eslint: 9.21.0(jiti@2.4.2)
       natural-orderby: 5.0.0
     transitivePeerDependencies:
@@ -1970,7 +2038,7 @@ snapshots:
       '@eslint-community/eslint-utils': 4.4.1(eslint@9.21.0(jiti@2.4.2))
       ci-info: 4.1.0
       clean-regexp: 1.0.0
-      core-js-compat: 3.40.0
+      core-js-compat: 3.41.0
       eslint: 9.21.0(jiti@2.4.2)
       esquery: 1.6.0
       globals: 15.15.0
@@ -1997,7 +2065,7 @@ snapshots:
       eslint-compat-utils: 0.6.4(eslint@9.21.0(jiti@2.4.2))
       lodash: 4.17.21
       natural-compare: 1.4.0
-      yaml-eslint-parser: 1.2.3
+      yaml-eslint-parser: 1.3.0
     transitivePeerDependencies:
       - supports-color
 
@@ -2093,9 +2161,9 @@ snapshots:
 
   fast-uri@3.0.6: {}
 
-  fastq@1.19.0:
+  fastq@1.19.1:
     dependencies:
-      reusify: 1.0.4
+      reusify: 1.1.0
 
   file-entry-cache@8.0.0:
     dependencies:
@@ -2105,7 +2173,7 @@ snapshots:
     dependencies:
       to-regex-range: 5.0.1
 
-  find-up-simple@1.0.0: {}
+  find-up-simple@1.0.1: {}
 
   find-up@4.1.0:
     dependencies:
@@ -2340,12 +2408,12 @@ snapshots:
       decode-named-character-reference: 1.0.2
       devlop: 1.1.0
       mdast-util-to-string: 4.0.0
-      micromark: 4.0.1
+      micromark: 4.0.2
       micromark-util-decode-numeric-character-reference: 2.0.2
       micromark-util-decode-string: 2.0.1
       micromark-util-normalize-identifier: 2.0.1
       micromark-util-symbol: 2.0.1
-      micromark-util-types: 2.0.1
+      micromark-util-types: 2.0.2
       unist-util-stringify-position: 4.0.0
     transitivePeerDependencies:
       - supports-color
@@ -2432,7 +2500,7 @@ snapshots:
 
   merge2@1.4.1: {}
 
-  micromark-core-commonmark@2.0.2:
+  micromark-core-commonmark@2.0.3:
     dependencies:
       decode-named-character-reference: 1.0.2
       devlop: 1.1.0
@@ -2447,9 +2515,9 @@ snapshots:
       micromark-util-html-tag-name: 2.0.1
       micromark-util-normalize-identifier: 2.0.1
       micromark-util-resolve-all: 2.0.1
-      micromark-util-subtokenize: 2.0.4
+      micromark-util-subtokenize: 2.1.0
       micromark-util-symbol: 2.0.1
-      micromark-util-types: 2.0.1
+      micromark-util-types: 2.0.2
 
   micromark-extension-directive@3.0.2:
     dependencies:
@@ -2458,7 +2526,7 @@ snapshots:
       micromark-factory-whitespace: 2.0.1
       micromark-util-character: 2.1.1
       micromark-util-symbol: 2.0.1
-      micromark-util-types: 2.0.1
+      micromark-util-types: 2.0.2
       parse-entities: 4.0.2
 
   micromark-extension-gfm-autolink-literal@2.1.0:
@@ -2466,18 +2534,18 @@ snapshots:
       micromark-util-character: 2.1.1
       micromark-util-sanitize-uri: 2.0.1
       micromark-util-symbol: 2.0.1
-      micromark-util-types: 2.0.1
+      micromark-util-types: 2.0.2
 
   micromark-extension-gfm-footnote@2.1.0:
     dependencies:
       devlop: 1.1.0
-      micromark-core-commonmark: 2.0.2
+      micromark-core-commonmark: 2.0.3
       micromark-factory-space: 2.0.1
       micromark-util-character: 2.1.1
       micromark-util-normalize-identifier: 2.0.1
       micromark-util-sanitize-uri: 2.0.1
       micromark-util-symbol: 2.0.1
-      micromark-util-types: 2.0.1
+      micromark-util-types: 2.0.2
 
   micromark-extension-gfm-strikethrough@2.1.0:
     dependencies:
@@ -2486,7 +2554,7 @@ snapshots:
       micromark-util-classify-character: 2.0.1
       micromark-util-resolve-all: 2.0.1
       micromark-util-symbol: 2.0.1
-      micromark-util-types: 2.0.1
+      micromark-util-types: 2.0.2
 
   micromark-extension-gfm-table@2.1.0:
     dependencies:
@@ -2494,7 +2562,7 @@ snapshots:
       micromark-factory-space: 2.0.1
       micromark-util-character: 2.1.1
       micromark-util-symbol: 2.0.1
-      micromark-util-types: 2.0.1
+      micromark-util-types: 2.0.2
 
   micromark-extension-gfm-table@2.1.1:
     dependencies:
@@ -2502,11 +2570,11 @@ snapshots:
       micromark-factory-space: 2.0.1
       micromark-util-character: 2.1.1
       micromark-util-symbol: 2.0.1
-      micromark-util-types: 2.0.1
+      micromark-util-types: 2.0.2
 
   micromark-extension-gfm-tagfilter@2.0.0:
     dependencies:
-      micromark-util-types: 2.0.1
+      micromark-util-types: 2.0.2
 
   micromark-extension-gfm-task-list-item@2.1.0:
     dependencies:
@@ -2514,7 +2582,7 @@ snapshots:
       micromark-factory-space: 2.0.1
       micromark-util-character: 2.1.1
       micromark-util-symbol: 2.0.1
-      micromark-util-types: 2.0.1
+      micromark-util-types: 2.0.2
 
   micromark-extension-gfm@3.0.0:
     dependencies:
@@ -2525,7 +2593,7 @@ snapshots:
       micromark-extension-gfm-tagfilter: 2.0.0
       micromark-extension-gfm-task-list-item: 2.1.0
       micromark-util-combine-extensions: 2.0.1
-      micromark-util-types: 2.0.1
+      micromark-util-types: 2.0.2
 
   micromark-extension-math@3.1.0:
     dependencies:
@@ -2535,44 +2603,44 @@ snapshots:
       micromark-factory-space: 2.0.1
       micromark-util-character: 2.1.1
       micromark-util-symbol: 2.0.1
-      micromark-util-types: 2.0.1
+      micromark-util-types: 2.0.2
 
   micromark-factory-destination@2.0.1:
     dependencies:
       micromark-util-character: 2.1.1
       micromark-util-symbol: 2.0.1
-      micromark-util-types: 2.0.1
+      micromark-util-types: 2.0.2
 
   micromark-factory-label@2.0.1:
     dependencies:
       devlop: 1.1.0
       micromark-util-character: 2.1.1
       micromark-util-symbol: 2.0.1
-      micromark-util-types: 2.0.1
+      micromark-util-types: 2.0.2
 
   micromark-factory-space@2.0.1:
     dependencies:
       micromark-util-character: 2.1.1
-      micromark-util-types: 2.0.1
+      micromark-util-types: 2.0.2
 
   micromark-factory-title@2.0.1:
     dependencies:
       micromark-factory-space: 2.0.1
       micromark-util-character: 2.1.1
       micromark-util-symbol: 2.0.1
-      micromark-util-types: 2.0.1
+      micromark-util-types: 2.0.2
 
   micromark-factory-whitespace@2.0.1:
     dependencies:
       micromark-factory-space: 2.0.1
       micromark-util-character: 2.1.1
       micromark-util-symbol: 2.0.1
-      micromark-util-types: 2.0.1
+      micromark-util-types: 2.0.2
 
   micromark-util-character@2.1.1:
     dependencies:
       micromark-util-symbol: 2.0.1
-      micromark-util-types: 2.0.1
+      micromark-util-types: 2.0.2
 
   micromark-util-chunked@2.0.1:
     dependencies:
@@ -2582,12 +2650,12 @@ snapshots:
     dependencies:
       micromark-util-character: 2.1.1
       micromark-util-symbol: 2.0.1
-      micromark-util-types: 2.0.1
+      micromark-util-types: 2.0.2
 
   micromark-util-combine-extensions@2.0.1:
     dependencies:
       micromark-util-chunked: 2.0.1
-      micromark-util-types: 2.0.1
+      micromark-util-types: 2.0.2
 
   micromark-util-decode-numeric-character-reference@2.0.2:
     dependencies:
@@ -2610,7 +2678,7 @@ snapshots:
 
   micromark-util-resolve-all@2.0.1:
     dependencies:
-      micromark-util-types: 2.0.1
+      micromark-util-types: 2.0.2
 
   micromark-util-sanitize-uri@2.0.1:
     dependencies:
@@ -2618,16 +2686,18 @@ snapshots:
       micromark-util-encode: 2.0.1
       micromark-util-symbol: 2.0.1
 
-  micromark-util-subtokenize@2.0.4:
+  micromark-util-subtokenize@2.1.0:
     dependencies:
       devlop: 1.1.0
       micromark-util-chunked: 2.0.1
       micromark-util-symbol: 2.0.1
-      micromark-util-types: 2.0.1
+      micromark-util-types: 2.0.2
 
   micromark-util-symbol@2.0.1: {}
 
   micromark-util-types@2.0.1: {}
+
+  micromark-util-types@2.0.2: {}
 
   micromark@4.0.1:
     dependencies:
@@ -2635,7 +2705,7 @@ snapshots:
       debug: 4.4.0
       decode-named-character-reference: 1.0.2
       devlop: 1.1.0
-      micromark-core-commonmark: 2.0.2
+      micromark-core-commonmark: 2.0.3
       micromark-factory-space: 2.0.1
       micromark-util-character: 2.1.1
       micromark-util-chunked: 2.0.1
@@ -2645,9 +2715,31 @@ snapshots:
       micromark-util-normalize-identifier: 2.0.1
       micromark-util-resolve-all: 2.0.1
       micromark-util-sanitize-uri: 2.0.1
-      micromark-util-subtokenize: 2.0.4
+      micromark-util-subtokenize: 2.1.0
       micromark-util-symbol: 2.0.1
-      micromark-util-types: 2.0.1
+      micromark-util-types: 2.0.2
+    transitivePeerDependencies:
+      - supports-color
+
+  micromark@4.0.2:
+    dependencies:
+      '@types/debug': 4.1.12
+      debug: 4.4.0
+      decode-named-character-reference: 1.0.2
+      devlop: 1.1.0
+      micromark-core-commonmark: 2.0.3
+      micromark-factory-space: 2.0.1
+      micromark-util-character: 2.1.1
+      micromark-util-chunked: 2.0.1
+      micromark-util-combine-extensions: 2.0.1
+      micromark-util-decode-numeric-character-reference: 2.0.2
+      micromark-util-encode: 2.0.1
+      micromark-util-normalize-identifier: 2.0.1
+      micromark-util-resolve-all: 2.0.1
+      micromark-util-sanitize-uri: 2.0.1
+      micromark-util-subtokenize: 2.1.0
+      micromark-util-symbol: 2.0.1
+      micromark-util-types: 2.0.2
     transitivePeerDependencies:
       - supports-color
 
@@ -2763,7 +2855,7 @@ snapshots:
 
   pkg-dir@8.0.0:
     dependencies:
-      find-up-simple: 1.0.0
+      find-up-simple: 1.0.1
 
   pkg-types@1.3.1:
     dependencies:
@@ -2827,7 +2919,7 @@ snapshots:
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
-  reusify@1.0.4: {}
+  reusify@1.1.0: {}
 
   run-parallel@1.2.0:
     dependencies:
@@ -2962,7 +3054,7 @@ snapshots:
       unist-util-is: 6.0.0
       unist-util-visit-parents: 6.0.1
 
-  update-browserslist-db@1.1.2(browserslist@4.24.4):
+  update-browserslist-db@1.1.3(browserslist@4.24.4):
     dependencies:
       browserslist: 4.24.4
       escalade: 3.2.0
@@ -2983,10 +3075,9 @@ snapshots:
 
   word-wrap@1.2.5: {}
 
-  yaml-eslint-parser@1.2.3:
+  yaml-eslint-parser@1.3.0:
     dependencies:
       eslint-visitor-keys: 3.4.3
-      lodash: 4.17.21
       yaml: 2.7.0
 
   yaml@2.7.0: {}
