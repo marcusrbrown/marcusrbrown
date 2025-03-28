@@ -23,9 +23,6 @@ importers:
       eslint-plugin-prettier:
         specifier: ^5.2.1
         version: 5.2.4(@types/eslint@9.6.1)(eslint-config-prettier@9.1.0(eslint@9.23.0(jiti@2.4.2)))(eslint@9.23.0(jiti@2.4.2))(prettier@3.5.3)
-      jiti:
-        specifier: ^2.4.1
-        version: 2.4.2
       markdownlint:
         specifier: 0.37.2
         version: 0.37.2

@@ -17,5 +17,6 @@
     commands: ['pnpm run bootstrap', 'pnpm run fix'],
     executionMode: 'branch',
   },
-  prCreation: 'immediate',
+  prCreation: 'not-pending',
+  rebaseWhen: 'behind-base-branch',
 }

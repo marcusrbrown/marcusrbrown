@@ -1,6 +1,4 @@
 {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true,
     "cSpell.words": [
         "chatbots",
         "cirosantilli",
@@ -10,5 +8,42 @@
         "markdownlint",
         "octocat",
         "tokentoilet"
+    ],
+
+    "editor.acceptSuggestionOnCommitCharacter": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit",
+        "source.organizeImports": "never"
+    },
+    "editor.formatOnSave": false,
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+    "editor.suggestSelection": "first",
+
+    "eslint.options": {
+        "flags": ["unstable_config_lookup_from_file"]
+    },
+
+    // Silent the stylistic rules in you IDE, but still auto fix them
+    "eslint.rules.customizations": [{"rule": "prettier/prettier", "severity": "off", "fixable": true}],
+
+    "eslint.runtime": "node",
+
+    // Enable eslint for all supported languages
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "vue",
+        "html",
+        "markdown",
+        "json",
+        "json5",
+        "jsonc",
+        "yaml",
+        "toml",
+        "xml"
     ]
 }
