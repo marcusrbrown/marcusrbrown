@@ -9,7 +9,7 @@
   "scripts": {
     "bootstrap": "pnpm install --prefer-offline --loglevel error",
     "check-format": "prettier --check .",
-    "fix": "pnpm run format && pnpm run lint:fix",
+    "fix": "pnpm run lint:fix",
     "format": "prettier --write .",
     "preinstall": "npx only-allow pnpm",
     "lint": "markdownlint-cli2",
@@ -25,7 +25,6 @@
     "@bfra.me/tsconfig": "^0.9.6",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
-    "jiti": "^2.4.1",
     "markdownlint": "0.37.2",
     "markdownlint-cli2": "0.16.0",
     "prettier": "3.5.3"
