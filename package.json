@@ -7,7 +7,7 @@
   "author": "Marcus R. Brown <contact@marcusrbrown.com>",
   "type": "module",
   "scripts": {
-    "bootstrap": "pnpm install --prefer-offline --loglevel error",
+    "bootstrap": "pnpm install --prefer-offline --loglevel warn",
     "check-format": "prettier --check .",
     "fix": "pnpm run lint:fix",
     "format": "prettier --write .",
