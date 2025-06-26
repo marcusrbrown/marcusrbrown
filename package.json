@@ -28,7 +28,7 @@
     "jiti": "2.1.2",
     "markdownlint": "0.38.0",
     "markdownlint-cli2": "0.18.1",
-    "prettier": "3.5.3"
+    "prettier": "3.6.0"
   },
   "packageManager": "pnpm@10.12.2",
   "publishConfig": {
