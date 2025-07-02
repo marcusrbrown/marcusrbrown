@@ -3,7 +3,7 @@
   extends: [
     'npm:unpublishSafe',
     'github>sanity-io/renovate-config:semantic-commit-type',
-    'github>marcusrbrown/renovate-config#4.0.0',
+    'github>marcusrbrown/renovate-config#4.0.1',
   ],
   automergeType: 'pr',
   packageRules: [
