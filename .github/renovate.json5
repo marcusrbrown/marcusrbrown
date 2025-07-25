@@ -1,22 +1,14 @@
 {
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
-  extends: [
-    'npm:unpublishSafe',
-    'github>sanity-io/renovate-config:semantic-commit-type',
-    'github>marcusrbrown/renovate-config#4.1.1',
-  ],
-  automergeType: 'pr',
+  extends: ['github>marcusrbrown/renovate-config#4.2.0', 'github>sanity-io/renovate-config:semantic-commit-type'],
   packageRules: [
     {
       matchPackageNames: ['markdownlint', 'markdownlint-cli2'],
       groupName: 'markdownlint',
     },
   ],
-  platformAutomerge: false,
   postUpgradeTasks: {
     commands: ['pnpm run bootstrap', 'pnpm run fix'],
     executionMode: 'branch',
   },
-  prCreation: 'not-pending',
-  rebaseWhen: 'behind-base-branch',
 }
