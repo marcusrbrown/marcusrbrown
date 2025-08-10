@@ -1,0 +1,24 @@
+# Marcus R. Brown GitHub Profile
+
+> Personal GitHub profile repository containing Marcus R. Brown's professional introduction, technical skills showcase, sponsorship information, and development tool configurations.
+
+This repository serves as Marcus R. Brown's GitHub profile page, displaying his technical expertise, professional background, and contribution to the open source community. It includes badges for technologies he works with, sponsorship opportunities, and the development tooling used to maintain the profile.
+
+## Profile
+
+- [Main Profile README](README.md): Primary GitHub profile page with stats, contact information, and professional introduction
+- [Technical Badges](BADGES.md): Collection of technology badges showcasing skills in TypeScript, Raspberry Pi, Svelte, GitHub Actions, and more
+
+## Sponsorship
+
+- [Sponsor Information](SPONSORME.md): Details about GitHub sponsorship opportunities and support for Marcus's open source contributions
+
+## Development
+
+- [Project Configuration](package.json): Package configuration describing the repository as "My GitHub public profile README and tool configurations"
+- [License](LICENSE.md): MIT license for the repository
+
+## Optional
+
+- [README Template](templates/README.tpl.md): Template file used for generating the main README.md
+- [ESLint Configuration](eslint.config.ts): Development tool configuration for code linting

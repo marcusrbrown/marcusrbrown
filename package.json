@@ -8,14 +8,12 @@
   "type": "module",
   "scripts": {
     "bootstrap": "pnpm install --prefer-offline --loglevel warn",
-    "check-format": "prettier --check .",
-    "fix": "pnpm run lint:fix",
+    "fix": "pnpm run fix:markdown && pnpm run fix:eslint",
     "format": "prettier --write .",
     "preinstall": "npx only-allow pnpm",
     "lint": "markdownlint-cli2 && eslint --flag unstable_config_lookup_from_file .",
-    "lint:fix": "pnpm run lint:fix:markdown && pnpm run lint:fix:eslint",
-    "lint:fix:eslint": "eslint --fix --flag unstable_config_lookup_from_file .",
-    "lint:fix:markdown": "markdownlint-cli2 --fix",
+    "fix:eslint": "eslint --fix --flag unstable_config_lookup_from_file .",
+    "fix:markdown": "markdownlint-cli2 --fix",
     "test": "exit 0"
   },
   "prettier": "@bfra.me/prettier-config/120-proof",
@@ -34,13 +32,5 @@
   "publishConfig": {
     "access": "public",
     "provenance": true
-  },
-  "pnpm": {
-    "overrides": {
-      "jiti": "<2.2.0"
-    },
-    "onlyBuiltDependencies": [
-      "unrs-resolver"
-    ]
   }
 }
