@@ -21,10 +21,6 @@
     },
     "editor.suggestSelection": "first",
 
-    "eslint.options": {
-        "flags": ["unstable_config_lookup_from_file"]
-    },
-
     // Silent the stylistic rules in you IDE, but still auto fix them
     "eslint.rules.customizations": [{"rule": "prettier/prettier", "severity": "off", "fixable": true}],
 
@@ -45,5 +41,9 @@
         "yaml",
         "toml",
         "xml"
-    ]
+    ],
+
+    "markdown.validate.referenceLinks.enabled": "ignore",
+
+    "prettier.enable": false
 }
