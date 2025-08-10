@@ -9,12 +9,24 @@
   "scripts": {
     "bootstrap": "pnpm install --prefer-offline --loglevel warn",
     "fix": "pnpm run fix:markdown && pnpm run fix:eslint",
+    "fix:eslint": "eslint --fix .",
+    "fix:markdown": "markdownlint-cli2 --fix",
     "format": "prettier --write .",
     "preinstall": "npx only-allow pnpm",
-    "lint": "markdownlint-cli2 && eslint --flag unstable_config_lookup_from_file .",
-    "fix:eslint": "eslint --fix --flag unstable_config_lookup_from_file .",
-    "fix:markdown": "markdownlint-cli2 --fix",
+    "lint": "markdownlint-cli2 && eslint .",
+    "prepare": "simple-git-hooks",
     "test": "exit 0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec lint-staged"
+  },
+  "lint-staged": {
+    "*.{ts,js,jsx,tsx,css,md,json,yaml,yml}": [
+      "pnpm run fix:eslint"
+    ],
+    "package.json": [
+      "pnpx sort-package-json"
+    ]
   },
   "prettier": "@bfra.me/prettier-config/120-proof",
   "devDependencies": {
@@ -24,9 +36,11 @@
     "eslint-config-prettier": "^10.0.0",
     "eslint-plugin-prettier": "^5.2.1",
     "jiti": "2.1.2",
+    "lint-staged": "16.1.5",
     "markdownlint": "0.38.0",
     "markdownlint-cli2": "0.18.1",
-    "prettier": "3.6.2"
+    "prettier": "3.6.2",
+    "simple-git-hooks": "2.13.1"
   },
   "packageManager": "pnpm@10.14.0",
   "publishConfig": {
