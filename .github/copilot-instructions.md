@@ -31,9 +31,24 @@ This is Marcus R. Brown's GitHub profile repository that automatically updates h
 - **Sponsorship content**: `SPONSORME.md` contains GitHub sponsorship pitch with specific formatting
 - **AI integration**: `.ai/**` directories are excluded from markdown linting for AI tooling compatibility
 
+## GitHub Sponsors Integration
+
+- **Sponsor data fetching**: `scripts/fetch-sponsors-data.ts` implements comprehensive GitHub Sponsors API integration
+- **Testing command**: Use `GITHUB_TOKEN=$(gh auth token) pnpm sponsors:fetch` for testing (requires `gh` CLI)
+- **Caching system**: Sponsor data is cached in `.cache/sponsors-data.json` to reduce API calls (5-minute default)
+- **Tier classification**: Automatically classifies sponsors into bronze/silver/gold/platinum/diamond tiers
+- **Funding goals**: Tracks progress against predefined funding targets with percentage calculations
+- **Impact metrics**: Generates comprehensive statistics including total funding, sponsor counts, and tier breakdowns
+- **Error handling**: Robust retry logic with exponential backoff and graceful fallback to cached data
+- **CLI modes**: Supports `--verbose` for detailed JSON output and `--force-refresh` to bypass cache
+
 ## File Structure
 
 - `templates/`: Contains template files for generating profile content
+- `scripts/`: TypeScript automation scripts for sponsor data processing and profile updates
+- `types/`: TypeScript type definitions for sponsor data structures
+- `utils/`: Shared utilities including GitHub API client
+- `.cache/`: Generated sponsor data cache (gitignored)
 - `.github/actions/setup/`: Custom pnpm setup action with optimized caching
 - **External dependencies**: Most configurations live in external packages, keep this pattern
 
