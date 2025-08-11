@@ -1,0 +1,16 @@
+{
+  "extends": "@bfra.me/tsconfig",
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["scripts/**/*", "utils/**/*", "types/**/*", "eslint.config.ts"],
+  "exclude": ["node_modules", "dist"]
+}
