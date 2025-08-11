@@ -11,10 +11,11 @@
     "fix": "pnpm run fix:markdown && pnpm run fix:eslint",
     "fix:eslint": "eslint --fix .",
     "fix:markdown": "markdownlint-cli2 --fix",
-    "format": "prettier --write .",
     "preinstall": "npx only-allow pnpm",
-    "lint": "markdownlint-cli2 && eslint .",
+    "lint": "markdownlint-cli2 && tsc --noEmit && eslint .",
     "prepare": "simple-git-hooks",
+    "sponsors:fetch": "tsx scripts/fetch-sponsors-data.ts",
+    "sponsors:update": "tsx scripts/update-sponsors.ts",
     "test": "exit 0"
   },
   "simple-git-hooks": {
@@ -29,10 +30,16 @@
     ]
   },
   "prettier": "@bfra.me/prettier-config/120-proof",
+  "dependencies": {
+    "@octokit/graphql": "^9.0.1",
+    "@octokit/rest": "^22.0.0",
+    "@octokit/types": "^14.1.0"
+  },
   "devDependencies": {
     "@bfra.me/eslint-config": "0.25.2",
     "@bfra.me/prettier-config": "^0.16.0",
     "@bfra.me/tsconfig": "^0.11.0",
+    "@types/node": "^22.0.0",
     "eslint-config-prettier": "^10.0.0",
     "eslint-plugin-prettier": "^5.2.1",
     "jiti": "2.1.2",
@@ -40,7 +47,8 @@
     "markdownlint": "0.38.0",
     "markdownlint-cli2": "0.18.1",
     "prettier": "3.6.2",
-    "simple-git-hooks": "2.13.1"
+    "simple-git-hooks": "2.13.1",
+    "tsx": "^4.19.2"
   },
   "packageManager": "pnpm@10.14.0",
   "publishConfig": {
