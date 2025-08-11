@@ -3,8 +3,11 @@ import {name} from './package.json'
 
 export default defineConfig({
   name,
-  ignores: ['.ai/', '.github/copilot-instructions.md'],
+  ignores: ['.ai/', '.cache/', '.github/copilot-instructions.md'],
   typescript: {
     tsconfigPath: './tsconfig.json',
+  },
+  rules: {
+    'no-duplicate-imports': ['error', {allowSeparateTypeImports: true}],
   },
 })

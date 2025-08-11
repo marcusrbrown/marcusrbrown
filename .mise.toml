@@ -1,0 +1,8 @@
+[env]
+_.path = [
+    # adds a path relative to the mise.toml, not PWD
+    "./node_modules/.bin",
+]
+
+# GITHUB_TOKEN = { value = '{{ exec(command="gh auth token") }}', redact = true }
+NODE_OPTIONS = '{{ get_env(name="NODE_OPTIONS", default="--trace-warnings") }}'
