@@ -16,7 +16,9 @@
     "prepare": "simple-git-hooks",
     "sponsors:fetch": "tsx scripts/fetch-sponsors-data.ts",
     "sponsors:update": "tsx scripts/update-sponsors.ts",
-    "test": "exit 0"
+    "test": "vitest run",
+    "test:ui": "vitest --ui",
+    "test:watch": "vitest"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm exec lint-staged"
@@ -36,19 +38,21 @@
     "@octokit/types": "^14.1.0"
   },
   "devDependencies": {
-    "@bfra.me/eslint-config": "0.25.3",
-    "@bfra.me/prettier-config": "^0.16.0",
-    "@bfra.me/tsconfig": "^0.11.0",
-    "@types/node": "^22.0.0",
-    "eslint-config-prettier": "^10.0.0",
-    "eslint-plugin-prettier": "^5.2.1",
+    "@bfra.me/eslint-config": "0.26.0",
+    "@bfra.me/prettier-config": "^0.16.1",
+    "@bfra.me/tsconfig": "^0.12.0",
+    "@types/node": "^24.2.1",
+    "@vitest/ui": "3.2.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
     "jiti": "2.1.2",
     "lint-staged": "16.1.5",
     "markdownlint": "0.38.0",
     "markdownlint-cli2": "0.18.1",
     "prettier": "3.6.2",
     "simple-git-hooks": "2.13.1",
-    "tsx": "^4.19.2"
+    "tsx": "^4.20.3",
+    "vitest": "3.2.4"
   },
   "packageManager": "pnpm@10.14.0",
   "publishConfig": {

@@ -54,7 +54,7 @@ const SponsorDataCache = {
       await fs.mkdir(CACHE_DIR, {recursive: true})
 
       const cacheData = await fs.readFile(CACHE_FILE, 'utf-8')
-      const parsedData: SponsorData = JSON.parse(cacheData)
+      const parsedData = JSON.parse(cacheData) as SponsorData
 
       const cacheAge = Date.now() - new Date(parsedData.fetchedAt).getTime()
       if (cacheAge <= maxAgeMs) {
@@ -99,7 +99,7 @@ const SponsorDataCache = {
   async loadBackup(): Promise<SponsorData | null> {
     try {
       const backupData = await fs.readFile(BACKUP_CACHE_FILE, 'utf-8')
-      const parsedData: SponsorData = JSON.parse(backupData)
+      const parsedData = JSON.parse(backupData) as SponsorData
       console.warn('📦 Using backup cache data as fallback')
       return parsedData
     } catch {
@@ -147,7 +147,10 @@ async function withRetry<T>(operation: () => Promise<T>, operationName: string, 
  */
 function classifySponsorTier(monthlyAmountDollars: number): SponsorTier {
   for (const [tier, threshold] of Object.entries(TIER_THRESHOLDS)) {
-    if (monthlyAmountDollars >= threshold.min && (!threshold.max || monthlyAmountDollars <= threshold.max)) {
+    if (
+      monthlyAmountDollars >= threshold.min &&
+      (threshold.max === undefined || monthlyAmountDollars <= threshold.max)
+    ) {
       return tier as SponsorTier
     }
   }
@@ -188,7 +191,7 @@ function processSponsors(
 
       processedSponsors.push({
         login: sponsor.login,
-        displayName: sponsor.name || sponsor.login,
+        displayName: sponsor.name ?? sponsor.login,
         profileUrl: sponsor.url,
         avatarUrl: sponsor.avatarUrl,
         monthlyAmountCents,
@@ -331,7 +334,7 @@ export async function fetchSponsorsData(
     // Extract data from GraphQL response
     const sponsorNodes = sponsorData.sponsors.edges.map(edge => edge.node)
     const totalMonthlyIncomeCents = sponsorData.monthlyEstimatedSponsorsIncomeInCents || 0
-    const availableTiers = sponsorData.sponsorsListing?.tiers?.edges?.map(edge => edge.node) || []
+    const availableTiers = sponsorData.sponsorsListing?.tiers?.edges?.map(edge => edge.node) ?? []
 
     console.warn(
       `📊 Raw data: ${sponsorNodes.length} sponsors, $${totalMonthlyIncomeCents / 100}/month estimated income`,
@@ -404,7 +407,7 @@ async function main() {
       console.log(`  Monthly Income: $${sponsorData.stats.totalMonthlyAmountDollars}`)
       console.log(`  Active Goals: ${sponsorData.goals.filter(g => g.isActive).length}`)
 
-      if (sponsorData.error) {
+      if (sponsorData.error !== undefined && sponsorData.error.length > 0) {
         console.log(`  Error: ${sponsorData.error}`)
       }
 
@@ -429,5 +432,5 @@ async function main() {
 
 // Run if called directly
 if (import.meta.url === `file://${process.argv[1]}`) {
-  main()
+  main().catch(console.error)
 }
