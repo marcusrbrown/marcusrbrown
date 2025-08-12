@@ -42,9 +42,9 @@ GOAL_PROGRESS_BAR
 
 <div align="center">
 
-| **Total Monthly Support**  |    **Active Goals**    |       **Overall Progress**       |
-| :------------------------: | :--------------------: | :------------------------------: |
-| **$TOTAL_MONTHLY_FUNDING** | **ACTIVE_GOALS_COUNT** | **OVERALL_PROGRESS_PERCENTAGE%** |
+| **Total Monthly Support** |    **Active Goals**    |       **Overall Progress**       |
+| :-----------------------: | :--------------------: | :------------------------------: |
+| **TOTAL_MONTHLY_FUNDING** | **ACTIVE_GOALS_COUNT** | **OVERALL_PROGRESS_PERCENTAGE%** |
 
 </div>
 
@@ -98,10 +98,10 @@ _Last updated: LAST_UPDATED_DATE_
 
 | Metric                       |           Value           |
 | :--------------------------- | :-----------------------: |
-| **💰 Total Monthly Support** | **$TOTAL_MONTHLY_AMOUNT** |
+| **💰 Total Monthly Support** | **TOTAL_MONTHLY_AMOUNT**  |
 | **👥 Active Sponsors**       |  **TOTAL_SPONSOR_COUNT**  |
 | **🏆 Highest Tier**          |   **HIGHEST_TIER_NAME**   |
-| **📊 Average Contribution**  | **$AVERAGE_CONTRIBUTION** |
+| **📊 Average Contribution**  | **AVERAGE_CONTRIBUTION**  |
 | **📅 Supporting Since**      | **EARLIEST_SPONSOR_DATE** |
 
 </div>
@@ -110,13 +110,13 @@ _Last updated: LAST_UPDATED_DATE_
 
 <div align="center">
 
-| Tier                      |     Count      |  Monthly Total  |      Percentage      |
-| :------------------------ | :------------: | :-------------: | :------------------: |
-| 💎 **Diamond** ($100+)    | DIAMOND_COUNT  | $DIAMOND_TOTAL  | DIAMOND_PERCENTAGE%  |
-| 🏆 **Platinum** ($25-$99) | PLATINUM_COUNT | $PLATINUM_TOTAL | PLATINUM_PERCENTAGE% |
-| 🥇 **Gold** ($10-$24)     |   GOLD_COUNT   |   $GOLD_TOTAL   |   GOLD_PERCENTAGE%   |
-| 🥈 **Silver** ($5-$9)     |  SILVER_COUNT  |  $SILVER_TOTAL  |  SILVER_PERCENTAGE%  |
-| 🥉 **Bronze** ($1-$4)     |  BRONZE_COUNT  |  $BRONZE_TOTAL  |  BRONZE_PERCENTAGE%  |
+| Tier                      |     Count      | Monthly Total  |      Percentage      |
+| :------------------------ | :------------: | :------------: | :------------------: |
+| 💎 **Diamond** ($100+)    | DIAMOND_COUNT  | DIAMOND_TOTAL  | DIAMOND_PERCENTAGE%  |
+| 🏆 **Platinum** ($25-$99) | PLATINUM_COUNT | PLATINUM_TOTAL | PLATINUM_PERCENTAGE% |
+| 🥇 **Gold** ($10-$24)     |   GOLD_COUNT   |   GOLD_TOTAL   |   GOLD_PERCENTAGE%   |
+| 🥈 **Silver** ($5-$9)     |  SILVER_COUNT  |  SILVER_TOTAL  |  SILVER_PERCENTAGE%  |
+| 🥉 **Bronze** ($1-$4)     |  BRONZE_COUNT  |  BRONZE_TOTAL  |  BRONZE_PERCENTAGE%  |
 
 </div>
 

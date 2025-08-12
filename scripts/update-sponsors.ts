@@ -87,6 +87,8 @@ function generateProgressBar(percentage: number, width = 20): string {
  */
 function formatCurrency(amount: number): string {
   return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
   }).format(amount)
@@ -107,21 +109,22 @@ function formatDate(dateString: string): string {
  * Process funding goals section
  */
 function processFundingGoals(template: string, goals: FundingGoal[], stats: SponsorStats): string {
+  let result = template
+
   if (goals.length === 0) {
-    return template.replaceAll(
+    result = result.replaceAll(
       /<!-- FUNDING_GOAL_ITEM_START -->[\s\S]*?<!-- FUNDING_GOAL_ITEM_END -->/g,
       '*No active funding goals at this time.*',
     )
-  }
+  } else {
+    const goalItems = goals
+      .filter(goal => goal.isActive)
+      .sort((a, b) => a.priority - b.priority)
+      .map(goal => {
+        const currentAmount = (goal.progressPercentage / 100) * goal.targetAmountDollars
+        const progressBar = generateProgressBar(goal.progressPercentage)
 
-  const goalItems = goals
-    .filter(goal => goal.isActive)
-    .sort((a, b) => a.priority - b.priority)
-    .map(goal => {
-      const currentAmount = (goal.progressPercentage / 100) * goal.targetAmountDollars
-      const progressBar = generateProgressBar(goal.progressPercentage)
-
-      return `#### ${goal.title}
+        return `#### ${goal.title}
 
 ${goal.description}
 
@@ -132,12 +135,13 @@ ${progressBar}
 \`\`\`
 
 <div align="right"><small><em>${formatCurrency(currentAmount)} of ${formatCurrency(goal.targetAmountDollars)} monthly goal</em></small></div>`
-    })
-    .join('\n\n')
+      })
+      .join('\n\n')
 
-  let result = template.replaceAll(/<!-- FUNDING_GOAL_ITEM_START -->[\s\S]*?<!-- FUNDING_GOAL_ITEM_END -->/g, goalItems)
+    result = result.replaceAll(/<!-- FUNDING_GOAL_ITEM_START -->[\s\S]*?<!-- FUNDING_GOAL_ITEM_END -->/g, goalItems)
+  }
 
-  // Replace overview placeholders
+  // Always replace overview placeholders regardless of goal count
   const activeGoalsCount = goals.filter(g => g.isActive).length
   const overallProgress = goals.length > 0 ? goals.reduce((sum, g) => sum + g.progressPercentage, 0) / goals.length : 0
 
@@ -155,31 +159,31 @@ ${progressBar}
  */
 function processSponsorRecognition(template: string, sponsors: ProcessedSponsor[], stats: SponsorStats): string {
   const tiers: SponsorTier[] = ['diamond', 'platinum', 'gold', 'silver', 'bronze']
+  let result = template
 
   if (sponsors.length === 0) {
-    return template.replaceAll(
+    result = result.replaceAll(
       /<!-- TIER_SECTION_START -->[\s\S]*?<!-- TIER_SECTION_END -->/g,
       '*No sponsors to display at this time. Be the first to support this project!*',
     )
-  }
+  } else {
+    const tierSections = tiers
+      .filter(tier => stats.tierBreakdown[tier].count > 0)
+      .map(tier => {
+        const tierSponsors = sponsors.filter(s => s.tier === tier && s.isPublic)
+        const config = TIER_CONFIG[tier]
 
-  const tierSections = tiers
-    .filter(tier => stats.tierBreakdown[tier].count > 0)
-    .map(tier => {
-      const tierSponsors = sponsors.filter(s => s.tier === tier && s.isPublic)
-      const config = TIER_CONFIG[tier]
+        if (tierSponsors.length === 0) return ''
 
-      if (tierSponsors.length === 0) return ''
-
-      const sponsorItems = tierSponsors
-        .map(
-          sponsor => `<a href="${sponsor.profileUrl}" title="${sponsor.displayName}">
+        const sponsorItems = tierSponsors
+          .map(
+            sponsor => `<a href="${sponsor.profileUrl}" title="${sponsor.displayName}">
   <img src="${sponsor.avatarUrl}" width="60" height="60" alt="${sponsor.displayName}" style="border-radius: 50%; margin: 5px;">
 </a>`,
-        )
-        .join('\n')
+          )
+          .join('\n')
 
-      return `#### ${config.icon} ${config.name} Sponsors
+        return `#### ${config.icon} ${config.name} Sponsors
 
 <div align="center">
 
@@ -190,11 +194,13 @@ ${sponsorItems}
 <div align="center">
 <small><em>${stats.tierBreakdown[tier].count} supporters contributing ${formatCurrency(config.min)}+ per month</em></small>
 </div>`
-    })
-    .join('\n\n')
+      })
+      .join('\n\n')
 
-  let result = template.replaceAll(/<!-- TIER_SECTION_START -->[\s\S]*?<!-- TIER_SECTION_END -->/g, tierSections)
+    result = result.replaceAll(/<!-- TIER_SECTION_START -->[\s\S]*?<!-- TIER_SECTION_END -->/g, tierSections)
+  }
 
+  // Always replace sponsor count regardless of sponsor presence
   result = result.replaceAll('TOTAL_SPONSOR_COUNT', stats.totalSponsors.toString())
 
   return result
