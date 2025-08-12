@@ -28,13 +28,13 @@ _No active funding goals at this time._
 
 <div align="center">
 
-| **Total Monthly Support**  |    **Active Goals**    |       **Overall Progress**       |
-| :------------------------: | :--------------------: | :------------------------------: |
-| **$TOTAL_MONTHLY_FUNDING** | **ACTIVE_GOALS_COUNT** | **OVERALL_PROGRESS_PERCENTAGE%** |
+| **Total Monthly Support** | **Active Goals** | **Overall Progress** |
+| :-----------------------: | :--------------: | :------------------: |
+|          **$0**           |      **0**       |       **0.0%**       |
 
 </div>
 
-_Last updated: LAST_UPDATED_DATE_
+_Last updated: August 12, 2025_
 
 ## 🙏 Sponsor Recognition
 
