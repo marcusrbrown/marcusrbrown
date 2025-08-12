@@ -8,9 +8,9 @@ import {Octokit} from '@octokit/rest'
  * GitHub API client configuration and utilities
  */
 export class GitHubApiClient {
-  private octokit: Octokit
-  private graphqlClient: typeof graphql
-  private config: SponsorConfig
+  private readonly octokit: Octokit
+  private readonly graphqlClient: typeof graphql
+  private readonly config: SponsorConfig
 
   constructor(config: SponsorConfig) {
     this.config = config
