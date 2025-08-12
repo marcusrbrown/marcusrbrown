@@ -69,7 +69,7 @@ jobs:
       - name: Fetch sponsor data
         run: pnpm sponsors:fetch
         env:
-          GITHUB_TOKEN: ${{ steps.get-workflow-app-token.outputs.token }}
+          GITHUB_TOKEN: ${{ env.GH_SPONSORS_TOKEN }}
         continue-on-error: true
 
       - name: Update SPONSORME.md from template
