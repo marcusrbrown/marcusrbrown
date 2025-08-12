@@ -87,8 +87,6 @@ function generateProgressBar(percentage: number, width = 20): string {
  */
 function formatCurrency(amount: number): string {
   return new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
   }).format(amount)

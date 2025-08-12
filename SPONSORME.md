@@ -26,37 +26,37 @@
 
 Support my daily coding fuel ☕
 
-**Target:** $50/month • **Progress:** 2.0%
+**Target:** 50/month • **Progress:** 2.0%
 
 ```
 ░░░░░░░░░░░░░░░░░░░░ 2.0%
 ```
 
-<div align="right"><small><em>$1 of $50 monthly goal</em></small></div>
+<div align="right"><small><em>1 of 50 monthly goal</em></small></div>
 
 #### Open Source Maintenance
 
 Dedicated time for maintaining and improving open source projects
 
-**Target:** $200/month • **Progress:** 1.0%
+**Target:** 200/month • **Progress:** 1.0%
 
 ```
 ░░░░░░░░░░░░░░░░░░░░ 1.0%
 ```
 
-<div align="right"><small><em>$2 of $200 monthly goal</em></small></div>
+<div align="right"><small><em>2 of 200 monthly goal</em></small></div>
 
 #### Development Tools & Services
 
 Premium tools and cloud services for better development experience
 
-**Target:** $100/month • **Progress:** 1.0%
+**Target:** 100/month • **Progress:** 1.0%
 
 ```
 ░░░░░░░░░░░░░░░░░░░░ 1.0%
 ```
 
-<div align="right"><small><em>$1 of $100 monthly goal</em></small></div>
+<div align="right"><small><em>1 of 100 monthly goal</em></small></div>
 
 ### 📈 Monthly Funding Overview
 
@@ -64,7 +64,7 @@ Premium tools and cloud services for better development experience
 
 | **Total Monthly Support** | **Active Goals** | **Overall Progress** |
 | :-----------------------: | :--------------: | :------------------: |
-|          **$$1**          |      **3**       |       **1.3%**       |
+|          **$1**           |      **3**       |       **1.3%**       |
 
 </div>
 
@@ -85,7 +85,7 @@ _Last updated: August 11, 2025_
 </div>
 
 <div align="center">
-<small><em>1 supporters contributing $1+ per month</em></small>
+<small><em>1 supporters contributing 1+ per month</em></small>
 </div>
 
 ### 🎉 Special Thanks
@@ -112,10 +112,10 @@ _Last updated: August 11, 2025_
 
 | Metric                       |        Value        |
 | :--------------------------- | :-----------------: |
-| **💰 Total Monthly Support** |       **$$1**       |
+| **💰 Total Monthly Support** |       **$1**        |
 | **👥 Active Sponsors**       |        **1**        |
 | **🏆 Highest Tier**          |     **Bronze**      |
-| **📊 Average Contribution**  |       **$$1**       |
+| **📊 Average Contribution**  |       **$1**        |
 | **📅 Supporting Since**      | **August 11, 2025** |
 
 </div>
@@ -126,11 +126,11 @@ _Last updated: August 11, 2025_
 
 | Tier                      | Count | Monthly Total | Percentage |
 | :------------------------ | :---: | :-----------: | :--------: |
-| 💎 **Diamond** ($100+)    |   0   |      $$0      |    0.0%    |
-| 🏆 **Platinum** ($25-$99) |   0   |      $$0      |    0.0%    |
-| 🥇 **Gold** ($10-$24)     |   0   |      $$0      |    0.0%    |
-| 🥈 **Silver** ($5-$9)     |   0   |      $$0      |    0.0%    |
-| 🥉 **Bronze** ($1-$4)     |   1   |      $$1      |   100.0%   |
+| 💎 **Diamond** ($100+)    |   0   |      $0       |    0.0%    |
+| 🏆 **Platinum** ($25-$99) |   0   |      $0       |    0.0%    |
+| 🥇 **Gold** ($10-$24)     |   0   |      $0       |    0.0%    |
+| 🥈 **Silver** ($5-$9)     |   0   |      $0       |    0.0%    |
+| 🥉 **Bronze** ($1-$4)     |   1   |      $1       |   100.0%   |
 
 </div>
 

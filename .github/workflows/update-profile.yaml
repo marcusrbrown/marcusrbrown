@@ -38,6 +38,10 @@ jobs:
             changes:
               - '.github/workflows/update-profile.yaml'
               - 'templates/**'
+              - 'scripts/fetch-sponsors-data.ts'
+              - 'scripts/update-sponsors.ts'
+              - 'types/sponsors.ts'
+              - 'utils/github-api.ts'
 
   finalize:
     # Run this job even when the markscribe job is skipped
@@ -62,6 +66,16 @@ jobs:
       - name: Setup project
         uses: ./.github/actions/setup
 
+      - name: Fetch sponsor data
+        run: pnpm sponsors:fetch
+        env:
+          GITHUB_TOKEN: ${{ steps.get-workflow-app-token.outputs.token }}
+        continue-on-error: true
+
+      - name: Update SPONSORME.md from template
+        run: pnpm sponsors:update
+        continue-on-error: true
+
       - name: Update README
         uses: muesli/readme-scribe@d2f6ab32d6b9f5b59941fe782d6c7e6499a37fe4
         env:
@@ -82,7 +96,7 @@ jobs:
           author_email: '137683033+mrbro-bot[bot]@users.noreply.github.com'
           committer_name: 'mrbro-bot[bot]'
           committer_email: '137683033+mrbro-bot[bot]@users.noreply.github.com'
-          message: 'build: update README.md'
+          message: 'build: update generated profile content'
 
       # Create a pull request when triggered from a push, schedule, or workflow_dispatch event
       - name: Create pull request
@@ -92,7 +106,7 @@ jobs:
           assignees: marcusrbrown
           author: 'mrbro-bot[bot] <137683033+mrbro-bot[bot]@users.noreply.github.com>'
           body: |
-            This is an automated pull request to update the README.md file and assets used in my GitHub profile.
+            This is an automated pull request to update generated profile content and assets used in my GitHub profile.
             Please review the changes and merge this pull request if you approve.
 
             <sup>
@@ -102,8 +116,8 @@ jobs:
             [1]: https://github.com/peter-evans/create-pull-request 'Create Pull Request action on GitHub'
             [2]: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }} 'Workflow run on GitHub'
           branch: build/update-readme
-          commit-message: 'build: update README.md'
+          commit-message: 'build: update generated profile content'
           committer: 'mrbro-bot[bot] <137683033+mrbro-bot[bot]@users.noreply.github.com>'
           sign-commits: true
-          title: 'build: update README.md'
+          title: 'build: update generated profile content'
           token: ${{ steps.get-workflow-app-token.outputs.token }}
