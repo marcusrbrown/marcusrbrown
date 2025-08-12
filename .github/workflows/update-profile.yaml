@@ -73,9 +73,6 @@ jobs:
       - name: Fix linting errors
         run: pnpm fix
 
-      - name: Format files
-        run: pnpm format
-
       # Commit changes to the branch when triggered from a pull request
       - name: Commit changes to HEAD
         uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
