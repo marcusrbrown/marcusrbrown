@@ -1,8 +1,8 @@
 # Marcus R. Brown GitHub Profile
 
-> Personal GitHub profile repository containing Marcus R. Brown's professional introduction, technical skills showcase, sponsorship information, and development tool configurations.
+> Personal GitHub profile repository containing Marcus R. Brown's professional introduction, technical skills showcase, automated sponsorship tracking system, and comprehensive development tool configurations.
 
-This repository serves as Marcus R. Brown's GitHub profile page, displaying his technical expertise, professional background, and contribution to the open source community. It includes badges for technologies he works with, sponsorship opportunities, and the development tooling used to maintain the profile.
+This repository serves as Marcus R. Brown's GitHub profile page, displaying his technical expertise, professional background, and contribution to the open source community. It features automated profile updates, advanced sponsor data processing, badges for technologies he works with, and sophisticated development tooling for maintaining the profile with strict quality standards.
 
 ## Profile
 
@@ -12,13 +12,28 @@ This repository serves as Marcus R. Brown's GitHub profile page, displaying his 
 ## Sponsorship
 
 - [Sponsor Information](SPONSORME.md): Details about GitHub sponsorship opportunities and support for Marcus's open source contributions
+- [Sponsor Data Fetcher](scripts/fetch-sponsors-data.ts): Advanced script for retrieving sponsorship information from GitHub API with tier classification and funding goals tracking
+- [Sponsor Update Script](scripts/update-sponsors.ts): Automation script for updating sponsor content and metrics
 
 ## Development
 
-- [Project Configuration](package.json): Package configuration describing the repository as "My GitHub public profile README and tool configurations"
+- [Copilot Instructions](.github/copilot-instructions.md): Comprehensive GitHub Copilot development guidelines and repository standards
+- [Project Configuration](package.json): Package configuration describing the repository with pnpm workspace setup
+- [Workspace Configuration](pnpm-workspace.yaml): pnpm workspace configuration with package overrides
+- [TypeScript Configuration](tsconfig.json): TypeScript compiler configuration extending external standards
+- [ESLint Configuration](eslint.config.ts): Development tool configuration for code linting extending external packages
 - [License](LICENSE.md): MIT license for the repository
+
+## Templates
+
+- [README Template](templates/README.tpl.md): Template file used for generating the main README.md
+- [Sponsor Template](templates/SPONSORME.tpl.md): Template file used for generating sponsorship content
+
+## Scripts
+
+- [GitHub API Utilities](utils/github-api.ts): Utility functions for interacting with GitHub API
+- [Sponsor Type Definitions](types/sponsors.ts): TypeScript type definitions for sponsor data structures
 
 ## Optional
 
-- [README Template](templates/README.tpl.md): Template file used for generating the main README.md
-- [ESLint Configuration](eslint.config.ts): Development tool configuration for code linting
+- [Prettier Configuration](.prettierignore): Code formatting exclusions and configuration references
