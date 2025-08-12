@@ -36,7 +36,7 @@ const TIER_CONFIG: Record<SponsorTier, {name: string; icon: string; min: number}
 async function loadSponsorData(): Promise<SponsorData> {
   try {
     const cacheData = await fs.readFile(CACHE_PATH, 'utf-8')
-    const sponsorData: SponsorData = JSON.parse(cacheData)
+    const sponsorData = JSON.parse(cacheData) as SponsorData
 
     if (!sponsorData.success) {
       throw new Error(`Sponsor data fetch failed: ${sponsorData.error}`)

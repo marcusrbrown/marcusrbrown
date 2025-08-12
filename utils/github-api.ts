@@ -8,9 +8,9 @@ import {Octokit} from '@octokit/rest'
  * GitHub API client configuration and utilities
  */
 export class GitHubApiClient {
-  private octokit: Octokit
-  private graphqlClient: typeof graphql
-  private config: SponsorConfig
+  private readonly octokit: Octokit
+  private readonly graphqlClient: typeof graphql
+  private readonly config: SponsorConfig
 
   constructor(config: SponsorConfig) {
     this.config = config
@@ -21,7 +21,12 @@ export class GitHubApiClient {
         request: config.timeoutMs,
       },
       throttle: {
-        onRateLimit: (retryAfter: number, options: any, _octokit: Octokit, retryCount: number) => {
+        onRateLimit: (
+          retryAfter: number,
+          options: {method: string; url: string},
+          _octokit: Octokit,
+          retryCount: number,
+        ) => {
           console.warn(
             `Request quota exhausted for request ${options.method} ${options.url}. Retrying after ${retryAfter} seconds. Retry count: ${retryCount}`,
           )
@@ -31,7 +36,7 @@ export class GitHubApiClient {
           }
           return false
         },
-        onSecondaryRateLimit: (retryAfter: number, options: any, _octokit: Octokit) => {
+        onSecondaryRateLimit: (retryAfter: number, options: {method: string; url: string}, _octokit: Octokit) => {
           console.warn(
             `Secondary rate limit hit for request ${options.method} ${options.url}. Retrying after ${retryAfter} seconds.`,
           )
@@ -44,6 +49,26 @@ export class GitHubApiClient {
       headers: {
         authorization: `token ${config.githubToken}`,
       },
+    })
+  }
+
+  /**
+   * Create GitHubApiClient from environment variables
+   */
+  static fromEnvironment(): GitHubApiClient {
+    const githubToken = process.env.GITHUB_TOKEN ?? process.env.GITHUB_SPONSORS_TOKEN ?? ''
+    if (githubToken.length === 0) {
+      throw new Error('GitHub token not found. Please set GITHUB_TOKEN or GITHUB_SPONSORS_TOKEN environment variable.')
+    }
+
+    const username = process.env.GITHUB_USERNAME ?? 'marcusrbrown'
+
+    return new GitHubApiClient({
+      githubToken,
+      username,
+      includePrivate: Boolean(process.env.INCLUDE_PRIVATE_SPONSORS ?? 'false'),
+      cacheDurationMs: Number.parseInt(process.env.CACHE_DURATION_MS ?? '300000', 10), // 5 minutes default
+      timeoutMs: Number.parseInt(process.env.API_TIMEOUT_MS ?? '10000', 10), // 10 seconds default
     })
   }
 
@@ -188,28 +213,6 @@ export class GitHubApiClient {
       throw new Error(`Failed to fetch rate limit: ${error instanceof Error ? error.message : 'Unknown error'}`)
     }
   }
-
-  /**
-   * Create GitHub API client from environment variables
-   */
-  static fromEnvironment(): GitHubApiClient {
-    const githubToken = process.env.GITHUB_TOKEN || process.env.GITHUB_SPONSORS_TOKEN
-    if (!githubToken) {
-      throw new Error('GitHub token not found. Please set GITHUB_TOKEN or GITHUB_SPONSORS_TOKEN environment variable.')
-    }
-
-    const username = process.env.GITHUB_USERNAME || 'marcusrbrown'
-
-    const config: SponsorConfig = {
-      username,
-      githubToken,
-      includePrivate: process.env.INCLUDE_PRIVATE_SPONSORS === 'true',
-      cacheDurationMs: Number.parseInt(process.env.CACHE_DURATION_MS || '300000', 10), // 5 minutes default
-      timeoutMs: Number.parseInt(process.env.API_TIMEOUT_MS || '10000', 10), // 10 seconds default
-    }
-
-    return new GitHubApiClient(config)
-  }
 }
 
 /**
@@ -218,13 +221,13 @@ export class GitHubApiClient {
 export function createGitHubClient(config?: Partial<SponsorConfig>): GitHubApiClient {
   const defaultConfig: SponsorConfig = {
     username: 'marcusrbrown',
-    githubToken: process.env.GITHUB_TOKEN || process.env.GITHUB_SPONSORS_TOKEN || '',
+    githubToken: process.env.GITHUB_TOKEN ?? process.env.GITHUB_SPONSORS_TOKEN ?? '',
     includePrivate: false,
     cacheDurationMs: 300000, // 5 minutes
     timeoutMs: 10000, // 10 seconds
   }
 
-  if (!defaultConfig.githubToken) {
+  if (defaultConfig.githubToken.length === 0) {
     throw new Error('GitHub token is required. Please provide it in config or set GITHUB_TOKEN environment variable.')
   }
 
