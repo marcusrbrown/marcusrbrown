@@ -23,6 +23,15 @@ This is Marcus R. Brown's GitHub profile repository that automatically updates h
 - **Pre-commit hooks**: Automatically run via simple-git-hooks and lint-staged
 - **Lint command**: Runs both markdownlint-cli2 and eslint together
 - **Template system**: README.md is generated from `templates/README.tpl.md` - edit templates, not the main README
+- **Template pipeline**: Templates → Scripts → Generated files (`SPONSORME.tpl.md` → `update-sponsors.ts` → `SPONSORME.md`)
+- **Key scripts**: `pnpm sponsors:fetch` (data collection) → `pnpm sponsors:update` (template processing)
+
+## CLI Script Patterns
+
+- **Common flags**: All scripts support `--verbose` for detailed output and `--help` for usage info
+- **Error handling**: Scripts use consistent retry logic with exponential backoff (3 retries, 1s-10s delay)
+- **Cache-first approach**: Check cache before API calls, graceful fallback to backup cache on failures
+- **Exit codes**: Scripts exit with code 1 on failures, 0 on success for CI/CD integration
 
 ## Profile-Specific Patterns
 
@@ -36,11 +45,13 @@ This is Marcus R. Brown's GitHub profile repository that automatically updates h
 - **Sponsor data fetching**: `scripts/fetch-sponsors-data.ts` implements comprehensive GitHub Sponsors API integration
 - **Testing command**: Use `GITHUB_TOKEN=$(gh auth token) pnpm sponsors:fetch` for testing (requires `gh` CLI)
 - **Caching system**: Sponsor data is cached in `.cache/sponsors-data.json` to reduce API calls (5-minute default)
+- **Multi-layer cache**: Primary cache + backup cache + fallback data for maximum reliability
 - **Tier classification**: Automatically classifies sponsors into bronze/silver/gold/platinum/diamond tiers
 - **Funding goals**: Tracks progress against predefined funding targets with percentage calculations
 - **Impact metrics**: Generates comprehensive statistics including total funding, sponsor counts, and tier breakdowns
 - **Error handling**: Robust retry logic with exponential backoff and graceful fallback to cached data
 - **CLI modes**: Supports `--verbose` for detailed JSON output and `--force-refresh` to bypass cache
+- **Data pipeline**: API fetch → tier processing → stats calculation → cache storage → template processing
 
 ## File Structure
 
@@ -51,6 +62,13 @@ This is Marcus R. Brown's GitHub profile repository that automatically updates h
 - `.cache/`: Generated sponsor data cache (gitignored)
 - `.github/actions/setup/`: Custom pnpm setup action with optimized caching
 - **External dependencies**: Most configurations live in external packages, keep this pattern
+
+## Error Handling Patterns
+
+- **Retry mechanism**: All API calls use `withRetry()` with exponential backoff (1s→3s→9s delays)
+- **Graceful degradation**: Scripts fall back to backup cache, then fallback data on failures
+- **Cache backup strategy**: Primary cache → backup cache → generated fallback with error context
+- **Logging conventions**: Use `console.warn()` for info, `console.error()` for failures with emoji prefixes (✅❌📦🚀)
 
 ## GitHub Actions
 
