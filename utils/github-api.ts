@@ -202,6 +202,28 @@ export class GitHubApiClient {
   }
 
   /**
+   * Fetch user repositories for technology detection
+   */
+  async getUserRepositories(username: string = this.config.username) {
+    try {
+      console.warn(`Fetching repositories for user: ${username}`)
+
+      const response = await this.octokit.rest.repos.listForUser({
+        username,
+        type: 'owner',
+        sort: 'updated',
+        per_page: 100,
+      })
+
+      console.warn(`Successfully fetched ${response.data.length} repositories`)
+      return response.data
+    } catch (error) {
+      console.error(`Error fetching repositories for ${username}:`, error)
+      throw new Error(`Failed to fetch repositories: ${error instanceof Error ? error.message : 'Unknown error'}`)
+    }
+  }
+
+  /**
    * Get rate limit information
    */
   async getRateLimit() {

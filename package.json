@@ -33,6 +33,7 @@
   },
   "prettier": "@bfra.me/prettier-config/120-proof",
   "dependencies": {
+    "@bfra.me/badge-config": "0.1.0",
     "@octokit/graphql": "^9.0.1",
     "@octokit/rest": "^22.0.0",
     "@octokit/types": "^14.1.0"

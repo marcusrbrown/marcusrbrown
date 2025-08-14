@@ -11,6 +11,9 @@ importers:
 
   .:
     dependencies:
+      '@bfra.me/badge-config':
+        specifier: 0.1.0
+        version: 0.1.0
       '@octokit/graphql':
         specifier: ^9.0.1
         version: 9.0.1
@@ -72,6 +75,9 @@ packages:
   '@babel/helper-validator-identifier@7.27.1':
     resolution: {integrity: sha512-D2hP9eA+Sqx1kBZgzxZh0y1trbuU+JoDkiEwqhQ36nodYqJwyEIhPSdMNd7lOm/4io72luTPWH20Yda0xOuUow==}
     engines: {node: '>=6.9.0'}
+
+  '@bfra.me/badge-config@0.1.0':
+    resolution: {integrity: sha512-XH3r514jrb7Pi1BWvNnFHD4dleoYI5zHf01FeBK11g4SRkvAp9oTd9MNrb+tQMZvM8Hzjn4ySb+0ZZFocHNGrg==}
 
   '@bfra.me/eslint-config@0.26.0':
     resolution: {integrity: sha512-I4g8EvzPKA+IapufB6369M1eqddpfnx7bpaUYjd8ph+JNSFj4mC5ovBsZ5ENPR8Vws6VJnH//EssdiGzeTzRsg==}
@@ -2227,6 +2233,8 @@ packages:
 snapshots:
 
   '@babel/helper-validator-identifier@7.27.1': {}
+
+  '@bfra.me/badge-config@0.1.0': {}
 
   '@bfra.me/eslint-config@0.26.0(@typescript-eslint/eslint-plugin@8.39.0(@typescript-eslint/parser@8.39.0(eslint@9.33.0(jiti@2.1.2))(typescript@5.9.2))(eslint@9.33.0(jiti@2.1.2))(typescript@5.9.2))(@typescript-eslint/utils@8.39.1(eslint@9.33.0(jiti@2.1.2))(typescript@5.9.2))(eslint-config-prettier@10.1.8(eslint@9.33.0(jiti@2.1.2)))(eslint-plugin-prettier@5.5.4(eslint-config-prettier@10.1.8(eslint@9.33.0(jiti@2.1.2)))(eslint@9.33.0(jiti@2.1.2))(prettier@3.6.2))(eslint@9.33.0(jiti@2.1.2))(typescript@5.9.2)':
     dependencies:
