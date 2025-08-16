@@ -436,8 +436,7 @@ _Every contribution creates a force multiplier effect supporting the broader dev
 
 ### 🚀 Questions? Let's Connect
 
-**Have questions about sponsorship benefits or want to discuss custom partnership options?**  
-[Open an issue](https://github.com/marcusrbrown/marcusrbrown/issues) or reach out directly through GitHub.
+**Have questions about sponsorship benefits or want to discuss custom partnership options?** [Open an issue](https://github.com/marcusrbrown/marcusrbrown/issues) or reach out directly through GitHub.
 
 <br>
 
