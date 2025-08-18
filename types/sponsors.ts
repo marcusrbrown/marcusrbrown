@@ -101,6 +101,100 @@ export interface SponsorData {
 }
 
 /**
+ * Conversion event types for performance tracking
+ */
+export interface ConversionEvent {
+  /** Event type identifier */
+  type: 'profile_view' | 'sponsor_acquired' | 'sponsor_lost' | 'content_updated' | 'cta_clicked'
+  /** Event timestamp */
+  timestamp: string
+  /** Additional event data */
+  data?: {
+    count?: number
+    value?: number
+    source?: string
+    sponsors?: string[]
+    [key: string]: any
+  }
+}
+
+/**
+ * Conversion metrics for performance analysis
+ */
+export interface ConversionMetrics {
+  /** Analysis period description */
+  period: string
+  /** Period start date */
+  startDate: string
+  /** Period end date */
+  endDate: string
+  /** Conversion rate percentage */
+  conversionRate: number
+  /** Total tracked events */
+  totalEvents: number
+  /** Number of sponsor acquisitions */
+  sponsorAcquisitions: number
+  /** Number of profile views */
+  profileViews: number
+  /** Total new funding acquired */
+  totalNewFunding: number
+  /** Average sponsor contribution value */
+  averageSponsorValue: number
+  /** Growth rate percentage */
+  growthRate: number
+  /** Breakdown of events by type */
+  eventBreakdown: Record<string, number>
+}
+
+/**
+ * Sponsor acquisition tracking data
+ */
+export interface SponsorAcquisitionData {
+  /** Date of data point */
+  date: string
+  /** Total sponsor count */
+  totalSponsors: number
+  /** Number of new sponsors */
+  newSponsorsCount: number
+  /** Number of lost sponsors */
+  lostSponsorsCount: number
+  /** Net change in sponsors */
+  netSponsorChange: number
+  /** Total monthly funding amount */
+  totalMonthlyFunding: number
+  /** Change in funding amount */
+  fundingChange: number
+  /** Details of new sponsors */
+  newSponsors: ProcessedSponsor[]
+  /** Details of lost sponsors */
+  lostSponsors: ProcessedSponsor[]
+}
+
+/**
+ * Performance report for sponsor pitch optimization
+ */
+export interface PerformanceReport {
+  /** Report generation timestamp */
+  generatedAt: string
+  /** Conversion metrics */
+  metrics: ConversionMetrics
+  /** Growth trends */
+  trends: {
+    sponsorGrowth: 'up' | 'down' | 'stable'
+    fundingGrowth: 'up' | 'down' | 'stable'
+  }
+  /** Current state snapshot */
+  currentState: {
+    totalSponsors: number
+    totalFunding: number
+  }
+  /** Content performance analysis */
+  contentPerformance: Record<string, any>
+  /** Optimization recommendations */
+  recommendations: string[]
+}
+
+/**
  * Configuration for sponsor data fetching
  */
 export interface SponsorConfig {

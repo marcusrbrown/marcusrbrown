@@ -5,16 +5,21 @@
  *
  * This script processes the SPONSORME.tpl.md template file and replaces
  * dynamic placeholders with actual sponsor data fetched from GitHub API.
+ * Enhanced for Phase 5 with performance tracking and iterative optimization.
  *
  * Phase 3 Implementation Tasks:
  * - TASK-017: Create scripts/update-sponsors.ts to process template and generate final file
  * - TASK-018: Implement template variable replacement with sponsor data
+ *
+ * Phase 5 Implementation Tasks:
+ * - TASK-028: Develop iterative optimization process for continuous content improvement based on data
  */
 
 import type {FundingGoal, ProcessedSponsor, SponsorData, SponsorStats, SponsorTier} from '@/types/sponsors.ts'
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import process from 'node:process'
+import {ContentPerformanceTracker} from './content-performance-tracking.ts'
 
 // File paths
 const TEMPLATE_PATH = path.join(process.cwd(), 'templates', 'SPONSORME.tpl.md')
@@ -270,11 +275,18 @@ function processImpactMetrics(template: string, sponsors: ProcessedSponsor[], st
 }
 
 /**
- * TASK-018: Main template processing function
+ * TASK-018: Main template processing function with performance tracking
  */
 async function processTemplate(): Promise<void> {
   try {
     console.log('🔄 Starting sponsor template update...')
+
+    // Initialize performance tracker
+    const tracker = new ContentPerformanceTracker()
+    await tracker.initialize()
+
+    // Load previous sponsor data for comparison
+    const previousSponsorData = await loadPreviousSponsorData()
 
     // Load template
     const template = await fs.readFile(TEMPLATE_PATH, 'utf-8')
@@ -282,6 +294,22 @@ async function processTemplate(): Promise<void> {
 
     // Load sponsor data
     const sponsorData = await loadSponsorData()
+
+    // Track sponsor acquisition changes
+    if (previousSponsorData) {
+      const acquisitionData = await tracker.trackSponsorAcquisition(sponsorData, previousSponsorData)
+
+      if (acquisitionData.newSponsorsCount > 0) {
+        console.log(`🎉 New sponsors detected: +${acquisitionData.newSponsorsCount}`)
+        console.log(
+          `💰 Funding change: ${acquisitionData.fundingChange >= 0 ? '+' : ''}$${acquisitionData.fundingChange.toFixed(2)}`,
+        )
+      }
+
+      if (acquisitionData.lostSponsorsCount > 0) {
+        console.log(`⚠️  Lost sponsors: -${acquisitionData.lostSponsorsCount}`)
+      }
+    }
 
     // Process each section
     let result = template
@@ -302,15 +330,85 @@ async function processTemplate(): Promise<void> {
     await fs.writeFile(OUTPUT_PATH, result, 'utf-8')
     console.log(`✅ Generated SPONSORME.md with ${sponsorData.sponsors.length} sponsors`)
 
+    // Record content update event
+    await tracker.recordEvent({
+      type: 'content_updated',
+      data: {
+        totalSponsors: sponsorData.stats.totalSponsors,
+        totalFunding: sponsorData.stats.totalMonthlyAmountDollars,
+        template: 'SPONSORME.tpl.md',
+      },
+    })
+
+    // Save current data as previous for next run
+    await savePreviousSponsorData(sponsorData)
+
     // Success summary
     console.log('\n📊 Update Summary:')
     console.log(`   💰 Total Monthly Support: ${formatCurrency(sponsorData.stats.totalMonthlyAmountDollars)}`)
     console.log(`   👥 Active Sponsors: ${sponsorData.stats.totalSponsors}`)
     console.log(`   🎯 Active Goals: ${sponsorData.goals.filter(g => g.isActive).length}`)
     console.log(`   📅 Last Updated: ${formatDate(sponsorData.stats.lastUpdated)}`)
+
+    // Show performance insights if available
+    await showPerformanceInsights(tracker)
   } catch (error) {
     console.error('❌ Failed to process template:', error)
     process.exit(1)
+  }
+}
+
+/**
+ * Load previous sponsor data for comparison
+ */
+async function loadPreviousSponsorData(): Promise<SponsorData | null> {
+  const previousDataPath = path.join(process.cwd(), '.cache', 'sponsors-data-previous.json')
+
+  try {
+    const data = await fs.readFile(previousDataPath, 'utf-8')
+    return JSON.parse(data) as SponsorData
+  } catch {
+    return null
+  }
+}
+
+/**
+ * Save current sponsor data as previous for next comparison
+ */
+async function savePreviousSponsorData(data: SponsorData): Promise<void> {
+  const previousDataPath = path.join(process.cwd(), '.cache', 'sponsors-data-previous.json')
+
+  try {
+    await fs.writeFile(previousDataPath, JSON.stringify(data, null, 2))
+  } catch (error) {
+    console.warn('⚠️ Failed to save previous sponsor data:', error)
+  }
+}
+
+/**
+ * Show performance insights after template update
+ */
+async function showPerformanceInsights(tracker: ContentPerformanceTracker): Promise<void> {
+  try {
+    const metrics = await tracker.calculateMetrics(7) // Last 7 days
+
+    if (metrics.totalEvents > 0) {
+      console.log('\n📊 Performance Insights (7 days):')
+      console.log(`   Conversion Rate: ${metrics.conversionRate.toFixed(2)}%`)
+      console.log(`   New Sponsors: ${metrics.sponsorAcquisitions}`)
+      console.log(`   Growth Rate: ${metrics.growthRate.toFixed(2)}%`)
+
+      if (metrics.conversionRate < 1) {
+        console.log('💡 Tip: Consider A/B testing different messaging approaches')
+      }
+
+      if (metrics.growthRate < 0) {
+        console.log('⚠️  Alert: Negative growth detected - review recent changes')
+      }
+    }
+  } catch (error) {
+    // Don't fail the main process for performance insights
+    console.warn('⚠️ Could not generate performance insights:', error)
   }
 }
 
