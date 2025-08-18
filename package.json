@@ -9,11 +9,13 @@
   "scripts": {
     "ab-test": "tsx scripts/ab-test-cli.ts",
     "bootstrap": "pnpm install --prefer-offline --loglevel warn",
+    "content:track": "tsx scripts/content-performance-tracking.ts",
     "fix": "pnpm run fix:markdown && pnpm run fix:eslint",
     "fix:eslint": "eslint --fix .",
     "fix:markdown": "markdownlint-cli2 --fix",
     "preinstall": "npx only-allow pnpm",
     "lint": "markdownlint-cli2 && tsc --noEmit && eslint .",
+    "mobile:test": "tsx scripts/mobile-responsiveness-tester.ts",
     "prepare": "simple-git-hooks",
     "sponsors:fetch": "tsx scripts/fetch-sponsors-data.ts",
     "sponsors:update": "tsx scripts/update-sponsors.ts",
