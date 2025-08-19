@@ -1,5 +1,6 @@
 import type {SponsorConfig} from '@/types/sponsors.ts'
 
+import type {RestEndpointMethodTypes} from '@octokit/rest'
 import process from 'node:process'
 import {graphql} from '@octokit/graphql'
 import {Octokit} from '@octokit/rest'
@@ -220,6 +221,66 @@ export class GitHubApiClient {
     } catch (error) {
       console.error(`Error fetching repositories for ${username}:`, error)
       throw new Error(`Failed to fetch repositories: ${error instanceof Error ? error.message : 'Unknown error'}`)
+    }
+  }
+
+  /**
+   * Get language statistics for a repository
+   */
+  async getRepositoryLanguages(owner: string, repo: string): Promise<Record<string, number>> {
+    try {
+      const response = await this.octokit.rest.repos.listLanguages({
+        owner,
+        repo,
+      })
+
+      return response.data
+    } catch (error) {
+      console.error(`Error fetching languages for ${owner}/${repo}:`, error)
+      throw new Error(
+        `Failed to fetch repository languages: ${error instanceof Error ? error.message : 'Unknown error'}`,
+      )
+    }
+  }
+
+  /**
+   * Get repository contents (for structure analysis)
+   */
+  async getRepositoryContents(owner: string, repo: string, path = ''): Promise<{name?: string}[]> {
+    try {
+      const response = await this.octokit.rest.repos.getContent({
+        owner,
+        repo,
+        path,
+      })
+
+      // Handle both single file and directory responses
+      return Array.isArray(response.data) ? response.data : [response.data]
+    } catch {
+      // Return empty array if path doesn't exist or is inaccessible
+      return []
+    }
+  }
+
+  /**
+   * Get repository commits for commit history analysis
+   */
+  async getRepositoryCommits(
+    owner: string,
+    repo: string,
+    maxCommits = 100,
+  ): Promise<RestEndpointMethodTypes['repos']['listCommits']['response']['data']> {
+    try {
+      const response = await this.octokit.rest.repos.listCommits({
+        owner,
+        repo,
+        per_page: Math.min(maxCommits, 100), // GitHub API limit
+      })
+
+      return response.data
+    } catch (error) {
+      console.error(`Error fetching commits for ${owner}/${repo}:`, error)
+      throw new Error(`Failed to fetch repository commits: ${error instanceof Error ? error.message : 'Unknown error'}`)
     }
   }
 
