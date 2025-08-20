@@ -1,11 +1,5 @@
 <!-- markdownlint-disable -->
 
-[![TypeScript badge with logo](https://img.shields.io/badge/-007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)][ts] [![Raspberry Pi badge with logo](https://img.shields.io/badge/-C51A4A.svg?style=for-the-badge&logo=Raspberry-Pi)][rpi] [![Svelte badge with logo](https://img.shields.io/badge/-31A8FF.svg?style=for-the-badge&logo=svelte&logoColor=white)][sv] ![GitHub Actions badge with logo](https://img.shields.io/badge/-2671E5.svg?style=for-the-badge&logo=github%20actions&logoColor=white "GitHub Actions") [![GitHub User's stars](https://img.shields.io/github/sponsors/marcusrbrown?style=for-the-badge&label)][gs] [![GitHub Stars](https://img.shields.io/github/stars/marcusrbrown?affiliations=OWNER%2CCOLLABORATOR&style=for-the-badge&label)][gh-stars]
-
-[ts]: https://www.typescriptlang.org/ "TypeScript: Typed JavaScript at Any Scale."
-[rpi]: https://www.raspberrypi.org/ "Teach, Learn, and Make with Raspberry Pi"
-[sv]: https://svelte.dev/ "Svelte • Cybernetically enhanced web apps"
-[gs]: https://github.com/sponsors/marcusrbrown "Sponsor @marcusrbrown on GitHub"
-[gh-stars]: https://github.com/marcusrbrown/stargazers "See @marcusrbrown stars on GitHub"
+![TypeScript badge](https://img.shields.io/badge/TypeScript-%5E24.2.1-007ACC?style=for-the-badge&logo=typescript) ![JavaScript badge](https://img.shields.io/badge/JavaScript-primary-F7DF1E?style=flat-square&logo=javascript) ![Python badge](https://img.shields.io/badge/Python-primary-3776AB?style=flat-square&logo=python) ![Go badge](https://img.shields.io/badge/Go-primary-00ADD8?style=flat-square&logo=go) ![React badge](https://img.shields.io/badge/React-primary-61DAFB?style=flat-square&logo=react) ![ESLint badge](https://img.shields.io/badge/ESLint-%5E5.5.4-4B32C3?style=flat-square&logo=eslint) ![Docker badge](https://img.shields.io/badge/Docker-primary-2496ED?style=flat-square&logo=docker) ![Prettier badge](https://img.shields.io/badge/Prettier-3.6.2-F7B93E?style=flat-square&logo=prettier)
 
 <!-- markdownlint-restore -->
