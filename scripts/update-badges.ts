@@ -40,6 +40,7 @@ interface CliOptions {
   help: boolean
   forceRefresh: boolean
   dryRun: boolean
+  fetchOnly: boolean
 }
 
 /**
@@ -465,6 +466,7 @@ function parseArguments(): CliOptions {
     help: args.includes('--help'),
     forceRefresh: args.includes('--force-refresh'),
     dryRun: args.includes('--dry-run'),
+    fetchOnly: args.includes('--fetch-only'),
   }
 }
 
@@ -482,6 +484,7 @@ Options:
   --help           Show this help message
   --force-refresh  Force refresh badge data (ignore cache)
   --dry-run        Show what would be generated without writing files
+  --fetch-only     Only fetch and cache badge data, skip template processing
 
 Environment Variables:
   GITHUB_TOKEN     GitHub personal access token (required)
@@ -492,6 +495,7 @@ Examples:
   update-badges.ts --verbose
   update-badges.ts --force-refresh --verbose
   update-badges.ts --dry-run --verbose
+  update-badges.ts --fetch-only --verbose
 `)
 }
 
@@ -516,6 +520,25 @@ async function main(): Promise<void> {
 
     // Load or generate badge data
     const badgeData = await loadBadgeData(options)
+
+    // If fetch-only mode, stop here
+    if (options.fetchOnly) {
+      if (options.verbose) {
+        console.log(`
+📊 Badge Data Fetched:
+   Total Technologies: ${badgeData.stats.totalTechnologies}
+   Generated Badges: ${badgeData.stats.totalBadges}
+   Average Confidence: ${(badgeData.stats.averageConfidence * 100).toFixed(1)}%
+
+📈 Source Coverage:
+   Package.json: ${badgeData.stats.sourcesCoverage.packageJson ? '✅' : '❌'}
+   Repositories: ${badgeData.stats.sourcesCoverage.repositories ? '✅' : '❌'}
+   Commit History: ${badgeData.stats.sourcesCoverage.commitHistory ? '✅' : '❌'}
+        `)
+      }
+      console.log('💾 Badge data fetched and cached successfully!')
+      return
+    }
 
     // Process template
     const output = await processTemplate(badgeData, options)
