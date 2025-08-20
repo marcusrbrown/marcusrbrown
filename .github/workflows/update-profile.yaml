@@ -40,8 +40,11 @@ jobs:
               - 'templates/**'
               - 'scripts/fetch-sponsors-data.ts'
               - 'scripts/update-sponsors.ts'
+              - 'scripts/update-badges.ts'
               - 'types/sponsors.ts'
+              - 'types/badges.ts'
               - 'utils/github-api.ts'
+              - 'utils/badge-*.ts'
 
   finalize:
     # Run this job even when the markscribe job is skipped
@@ -74,6 +77,16 @@ jobs:
 
       - name: Update SPONSORME.md from template
         run: pnpm sponsors:update
+        continue-on-error: true
+
+      - name: Fetch badge data
+        run: pnpm badges:fetch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_SPONSORS_TOKEN }}
+        continue-on-error: true
+
+      - name: Update BADGES.md from template
+        run: pnpm badges:update
         continue-on-error: true
 
       - name: Update README

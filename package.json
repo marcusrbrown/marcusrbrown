@@ -8,6 +8,7 @@
   "type": "module",
   "scripts": {
     "ab-test": "tsx scripts/ab-test-cli.ts",
+    "badges:fetch": "tsx scripts/update-badges.ts --fetch-only",
     "badges:update": "tsx scripts/update-badges.ts",
     "bootstrap": "pnpm install --prefer-offline --loglevel warn",
     "content:track": "tsx scripts/content-performance-tracking.ts",
