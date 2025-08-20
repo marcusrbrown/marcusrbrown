@@ -227,6 +227,34 @@ export class BadgeConfigLoader {
       logo: 'gitlab',
       style: 'flat-square',
     },
+    vscode: {
+      label: 'VS Code',
+      message: '',
+      color: '#007ACC',
+      logo: 'visualstudiocode',
+      style: 'flat-square',
+    },
+    eslint: {
+      label: 'ESLint',
+      message: '',
+      color: '#4B32C3',
+      logo: 'eslint',
+      style: 'flat-square',
+    },
+    prettier: {
+      label: 'Prettier',
+      message: '',
+      color: '#F7B93E',
+      logo: 'prettier',
+      style: 'flat-square',
+    },
+    vitest: {
+      label: 'Vitest',
+      message: '',
+      color: '#6E9F18',
+      logo: 'vitest',
+      style: 'flat-square',
+    },
 
     // Cloud
     aws: {
@@ -252,6 +280,15 @@ export class BadgeConfigLoader {
     },
   }
 
+  private customOverrides: Record<string, Partial<BadgeOptions>> = {}
+
+  /**
+   * Add custom badge configuration overrides
+   */
+  addCustomOverrides(overrides: Record<string, Partial<BadgeOptions>>): void {
+    this.customOverrides = {...this.customOverrides, ...overrides}
+  }
+
   /**
    * Check if a technology is supported for badge generation
    */
@@ -273,7 +310,7 @@ export class BadgeConfigLoader {
     const configs: BadgeConfig[] = []
 
     for (const tech of technologies) {
-      const badgeTemplate = BadgeConfigLoader.TECHNOLOGY_BADGES[tech.name.toLowerCase()]
+      const badgeTemplate = this.getEffectiveBadgeOptions(tech.name)
       if (!badgeTemplate) {
         continue // Skip unknown technologies
       }
@@ -298,6 +335,26 @@ export class BadgeConfigLoader {
     }
 
     return configs
+  }
+
+  /**
+   * Get effective badge options for a technology (with overrides applied)
+   */
+  private getEffectiveBadgeOptions(technologyName: string): BadgeOptions | null {
+    const normalizedName = technologyName.toLowerCase()
+    const baseOptions = BadgeConfigLoader.TECHNOLOGY_BADGES[normalizedName]
+
+    if (!baseOptions) {
+      return null
+    }
+
+    // Apply custom overrides if they exist
+    const overrides = this.customOverrides[normalizedName]
+    if (overrides) {
+      return {...baseOptions, ...overrides}
+    }
+
+    return baseOptions
   }
 
   /**
