@@ -29,6 +29,11 @@ const TEMPLATE_PATH = path.join(process.cwd(), 'templates', 'BADGES.tpl.md')
 const OUTPUT_PATH = path.join(process.cwd(), 'BADGES.md')
 const CACHE_DIR = path.join(process.cwd(), '.cache')
 
+// Retry configuration
+const MAX_RETRIES = 3
+const BASE_DELAY_MS = 1000
+const MAX_DELAY_MS = 10000
+
 // CLI configuration
 interface CliOptions {
   verbose: boolean
@@ -38,12 +43,45 @@ interface CliOptions {
 }
 
 /**
+ * Retry wrapper with exponential backoff
+ */
+async function withRetry<T>(operation: () => Promise<T>, operationName: string, maxRetries = MAX_RETRIES): Promise<T> {
+  let lastError: Error | undefined
+
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      if (attempt > 1) {
+        console.warn(`🔄 ${operationName} (attempt ${attempt}/${maxRetries})`)
+      }
+      return await operation()
+    } catch (error) {
+      lastError = error as Error
+
+      if (attempt === maxRetries) {
+        console.error(`❌ ${operationName} failed after ${maxRetries} attempts:`, lastError.message)
+        throw lastError
+      }
+
+      const delay = Math.min(BASE_DELAY_MS * 2 ** (attempt - 1), MAX_DELAY_MS)
+      console.warn(`⏳ ${operationName} failed (attempt ${attempt}), retrying in ${delay}ms...`)
+      await new Promise(resolve => setTimeout(resolve, delay))
+    }
+  }
+
+  if (lastError) {
+    throw lastError
+  }
+
+  throw new Error(`Unexpected error in withRetry for ${operationName}`)
+}
+
+/**
  * Load badge data from cache or generate new data
  */
 async function loadBadgeData(options: CliOptions): Promise<BadgeDataCache> {
-  try {
-    const cacheManager = new BadgeDataCacheManager()
+  const cacheManager = new BadgeDataCacheManager()
 
+  try {
     // Check if force refresh is requested or cache is invalid
     if (options.forceRefresh) {
       if (options.verbose) {
@@ -54,26 +92,57 @@ async function loadBadgeData(options: CliOptions): Promise<BadgeDataCache> {
       return generatedData
     }
 
-    // Try to load from cache
+    // Layer 1: Try to load from primary cache
+    if (options.verbose) {
+      console.log('🔍 Checking primary cache...')
+    }
+
     const cachedData = await cacheManager.loadFromCache()
     if (cachedData) {
       if (options.verbose) {
-        console.log(`✅ Loaded badge data from cache: ${cachedData.generatedBadges.length} badges`)
+        console.log(`✅ Loaded badge data from primary cache: ${cachedData.generatedBadges.length} badges`)
       }
       return cachedData
     }
 
-    // Cache miss or invalid, generate new data
+    // Layer 2: Try to load from backup cache
     if (options.verbose) {
-      console.log('🔄 Cache invalid, generating new badge data...')
+      console.log('🔍 Primary cache invalid, checking backup cache...')
+    }
+
+    const backupData = await cacheManager.loadFromBackupCache()
+    if (backupData) {
+      if (options.verbose) {
+        console.log(`📦 Loaded badge data from backup cache: ${backupData.generatedBadges.length} badges`)
+      }
+      return backupData
+    }
+
+    // Layer 3: Generate new data as last resort
+    if (options.verbose) {
+      console.log('🔄 No cache available, generating new badge data...')
     }
 
     const newData = await generateBadgeData(options)
     return newData
   } catch (error) {
-    console.warn(`⚠️ Failed to load cached badge data: ${(error as Error).message}`)
-    const fallbackData = await generateBadgeData(options)
-    return fallbackData
+    console.warn(`❌ Failed to load cached badge data: ${(error as Error).message}`)
+
+    // Layer 4: Final fallback - try backup cache once more
+    try {
+      const emergencyData = await cacheManager.loadFromBackupCache()
+      if (emergencyData) {
+        console.warn('🚑 Using emergency backup cache data')
+        return emergencyData
+      }
+    } catch (backupError) {
+      console.warn(`❌ Emergency backup also failed: ${(backupError as Error).message}`)
+    }
+
+    // Layer 5: Absolute fallback - generate minimal fallback data
+    console.warn('🚨 All cache layers failed, generating fallback data...')
+    const automationConfig = await getAutomationConfig()
+    return cacheManager.generateFallbackCache(automationConfig, (error as Error).message)
   }
 }
 
@@ -144,7 +213,7 @@ async function generateBadgeData(options: CliOptions): Promise<BadgeDataCache> {
     }
 
     // Detect technologies from all sources
-    const technologies = await detector.detectTechnologies()
+    const technologies = await withRetry(async () => detector.detectTechnologies(), 'Technology detection')
     if (options.verbose) {
       console.log(`📦 Detected ${technologies.length} technologies`)
     }
@@ -161,7 +230,10 @@ async function generateBadgeData(options: CliOptions): Promise<BadgeDataCache> {
     }
 
     // Generate badge configurations
-    const badgeConfigs = await configLoader.generateBadgeConfigs(filteredTechnologies)
+    const badgeConfigs = await withRetry(
+      async () => configLoader.generateBadgeConfigs(filteredTechnologies),
+      'Badge configuration generation',
+    )
 
     // Generate badges for each configuration
     const generatedBadges: GeneratedBadge[] = []
