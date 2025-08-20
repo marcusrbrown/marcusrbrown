@@ -2,7 +2,7 @@
 
 ## Repository Purpose
 
-This is Marcus R. Brown's GitHub profile repository that automatically updates his profile page every 6 hours via scheduled workflows. It serves both as a professional showcase and a development environment with strict tooling standards.
+This is Marcus R. Brown's GitHub profile repository featuring automated content generation, A/B testing frameworks, badge automation, and sponsorship tracking. It updates every 6 hours via scheduled workflows and serves as both a professional showcase and an advanced development environment with strict quality standards.
 
 ## Package Management
 
@@ -16,22 +16,47 @@ This is Marcus R. Brown's GitHub profile repository that automatically updates h
 - **ESLint**: Simply exports from `@bfra.me/eslint-config` in `eslint.config.ts`
 - **Prettier**: References `@bfra.me/prettier-config/120-proof` in package.json
 - **TypeScript**: Extends `@bfra.me/tsconfig` configurations
+- **Badge configs**: Technology badges use `@bfra.me/badge-config` for external configuration
 
 ## Development Workflow
 
 - **Composite commands**: Use `pnpm fix` which runs both `fix:markdown` and `fix:eslint` in sequence
 - **Pre-commit hooks**: Automatically run via simple-git-hooks and lint-staged
 - **Lint command**: Runs both markdownlint-cli2 and eslint together
-- **Template system**: README.md is generated from `templates/README.tpl.md` - edit templates, not the main README
-- **Template pipeline**: Templates → Scripts → Generated files (`SPONSORME.tpl.md` → `update-sponsors.ts` → `SPONSORME.md`)
-- **Key scripts**: `pnpm sponsors:fetch` (data collection) → `pnpm sponsors:update` (template processing)
+- **Testing**: Use `pnpm test` (Vitest with `@/` alias for root imports)
+- **Template system**: All `.md` files generated from `templates/*.tpl.md` - edit templates, not the generated files
+- **Template pipeline**: Templates → Scripts → Generated files (e.g., `SPONSORME.tpl.md` → `update-sponsors.ts` → `SPONSORME.md`)
+- **Key workflows**: `pnpm sponsors:fetch` → `pnpm sponsors:update` and `pnpm badges:fetch` → `pnpm badges:update`
 
 ## CLI Script Patterns
 
-- **Common flags**: All scripts support `--verbose` for detailed output and `--help` for usage info
-- **Error handling**: Scripts use consistent retry logic with exponential backoff (3 retries, 1s-10s delay)
+- **Standard flags**: All scripts support `--verbose`, `--help`, `--force-refresh`, `--dry-run`, and `--fetch-only` where applicable
+- **Emoji logging**: Use Logger class with emoji prefixes (✅❌📦🚀💡⚠️🔍) for consistent output
+- **Error handling**: Scripts use `withRetry()` with exponential backoff (3 retries, 1s-10s delay)
 - **Cache-first approach**: Check cache before API calls, graceful fallback to backup cache on failures
 - **Exit codes**: Scripts exit with code 1 on failures, 0 on success for CI/CD integration
+- **Path aliasing**: Use `@/` imports for root-relative paths (configured in vitest.config.ts)
+
+## Automation Systems
+
+### Badge Automation
+- **Badge detection**: `BadgeDetector` scans package.json, repos, and commit history for technologies
+- **Badge generation**: `update-badges.ts` processes `BADGES.tpl.md` with detected tech badges
+- **Cache management**: `BadgeDataCacheManager` handles performance optimization and fallbacks
+- **Commands**: `pnpm badges:fetch` (detection only) → `pnpm badges:update` (full generation)
+
+### A/B Testing Framework
+- **Content optimization**: `ABTestingFramework` manages content variant testing
+- **CLI interface**: `pnpm ab-test create-sponsor-test|start|stop|status` for managing tests
+- **Performance tracking**: `content-performance-tracking.ts` monitors conversion metrics
+- **Mobile testing**: `mobile-responsiveness-tester.ts` validates cross-device compatibility
+- **Template variants**: Store test variants in `templates/variants/` directory
+
+### Content Strategy
+- **AI-driven approach**: `.ai/docs/` contains research-backed content frameworks and persona analysis
+- **Professional positioning**: Content strategy matrices for different career stages and roles
+- **Messaging hierarchy**: Value proposition frameworks and emotional story arcs
+- **Template system**: Support for multiple variants (`SPONSORME-benefits.tpl.md`, `SPONSORME-urgency.tpl.md`)
 
 ## Profile-Specific Patterns
 
@@ -39,6 +64,14 @@ This is Marcus R. Brown's GitHub profile repository that automatically updates h
 - **Badge management**: `BADGES.md` contains technology badges using specific shield.io formats
 - **Sponsorship content**: `SPONSORME.md` contains GitHub sponsorship pitch with specific formatting
 - **AI integration**: `.ai/**` directories are excluded from markdown linting for AI tooling compatibility
+- **Template variants**: Support A/B testing with multiple template versions for conversion optimization
+
+## Testing Infrastructure
+
+- **Test runner**: Vitest with `@/` path alias for root imports and Node environment
+- **Test commands**: `pnpm test` (run once), `pnpm test:watch` (watch mode), `pnpm test:ui` (UI interface)
+- **Coverage areas**: Badge automation, GitHub API utilities, logging system, sponsor data processing
+- **File structure**: Tests in `__tests__/` directory matching source file names
 
 ## GitHub Sponsors Integration
 
@@ -68,7 +101,7 @@ This is Marcus R. Brown's GitHub profile repository that automatically updates h
 - **Retry mechanism**: All API calls use `withRetry()` with exponential backoff (1s→3s→9s delays)
 - **Graceful degradation**: Scripts fall back to backup cache, then fallback data on failures
 - **Cache backup strategy**: Primary cache → backup cache → generated fallback with error context
-- **Logging conventions**: Use `console.warn()` for info, `console.error()` for failures with emoji prefixes (✅❌📦🚀)
+- **Logging conventions**: Use Logger class with emoji prefixes (✅❌📦🚀💡⚠️🔍) for consistent output
 
 ## GitHub Actions
 

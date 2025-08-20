@@ -2,7 +2,7 @@
 
 > Personal GitHub profile repository containing Marcus R. Brown's professional introduction, technical skills showcase, automated sponsorship tracking system, and comprehensive development tool configurations.
 
-This repository serves as Marcus R. Brown's GitHub profile page, displaying his technical expertise, professional background, and contribution to the open source community. It features automated profile updates, advanced sponsor data processing, badges for technologies he works with, and sophisticated development tooling for maintaining the profile with strict quality standards.
+This repository serves as Marcus R. Brown's GitHub profile page, displaying his technical expertise, professional background, and contribution to the open source community. It features automated profile updates, advanced sponsor data processing, badge automation for technology skills, A/B testing frameworks for content optimization, and sophisticated development tooling for maintaining the profile with strict quality standards.
 
 ## Profile
 
@@ -15,6 +15,14 @@ This repository serves as Marcus R. Brown's GitHub profile page, displaying his 
 - [Sponsor Data Fetcher](scripts/fetch-sponsors-data.ts): Advanced script for retrieving sponsorship information from GitHub API with tier classification and funding goals tracking
 - [Sponsor Update Script](scripts/update-sponsors.ts): Automation script for updating sponsor content and metrics
 
+## Automation & Testing
+
+- [Badge Update Script](scripts/update-badges.ts): Automation script for maintaining and updating technology badges
+- [A/B Testing CLI](scripts/ab-test-cli.ts): Command-line interface for running content A/B tests
+- [A/B Testing Framework](scripts/ab-testing-framework.ts): Framework for testing different content variations
+- [Content Performance Tracking](scripts/content-performance-tracking.ts): Analytics and performance monitoring for profile content
+- [Mobile Responsiveness Tester](scripts/mobile-responsiveness-tester.ts): Testing tool for mobile device compatibility
+
 ## Development
 
 - [Copilot Instructions](.github/copilot-instructions.md): Comprehensive GitHub Copilot development guidelines and repository standards
@@ -22,18 +30,41 @@ This repository serves as Marcus R. Brown's GitHub profile page, displaying his 
 - [Workspace Configuration](pnpm-workspace.yaml): pnpm workspace configuration with package overrides
 - [TypeScript Configuration](tsconfig.json): TypeScript compiler configuration extending external standards
 - [ESLint Configuration](eslint.config.ts): Development tool configuration for code linting extending external packages
+- [Vitest Configuration](vitest.config.ts): Test runner configuration for unit and integration tests
 - [License](LICENSE.md): MIT license for the repository
 
-## Templates
+## Templates & Content Strategy
 
 - [README Template](templates/README.tpl.md): Template file used for generating the main README.md
 - [Sponsor Template](templates/SPONSORME.tpl.md): Template file used for generating sponsorship content
+- [Badges Template](templates/BADGES.tpl.md): Template file used for generating technology badges content
+- [Sponsor Testimonials Template](templates/sponsor-testimonials.tpl.md): Template for sponsor testimonial content
+- [Benefits Variant Template](templates/variants/SPONSORME-benefits.tpl.md): Sponsorship template focusing on benefits
+- [Urgency Variant Template](templates/variants/SPONSORME-urgency.tpl.md): Sponsorship template with urgency messaging
 
-## Scripts
+## Utilities & Types
 
 - [GitHub API Utilities](utils/github-api.ts): Utility functions for interacting with GitHub API
+- [Logger Utility](utils/logger.ts): Logging utilities for scripts and automation
+- [Badge Cache Manager](utils/badge-cache-manager.ts): Cache management for badge data
+- [Badge Config Loader](utils/badge-config-loader.ts): Configuration loader for badge automation
+- [Badge Detector](utils/badge-detector.ts): Technology detection for badge automation
+- [Shield.io Client](utils/shield-io-client.ts): Client for Shield.io badge service API
 - [Sponsor Type Definitions](types/sponsors.ts): TypeScript type definitions for sponsor data structures
+- [Badge Type Definitions](types/badges.ts): TypeScript type definitions for badge data structures
+
+## Documentation
+
+- [Badge Automation Migration](docs/badge-automation-migration.md): Documentation for badge system migration
+- [Conversion Optimization](docs/conversion-optimization.md): Guide for optimizing profile conversion rates
 
 ## Optional
 
+- [Content Strategy Documentation](.ai/docs/content-strategy.md): AI-driven content strategy research and guidelines
+- [Core Value Propositions](.ai/docs/core-value-propositions.md): Analysis of key value propositions for sponsorship
+- [Sponsor Personas](.ai/docs/sponsor-personas.md): Target audience analysis for sponsorship content
+- [Badge Tests](__tests__/badges.test.ts): Unit tests for badge automation functionality
+- [GitHub API Tests](__tests__/github-api.test.ts): Unit tests for GitHub API utilities
+- [Logger Tests](__tests__/logger.test.ts): Unit tests for logging utilities
+- [Sponsor Tests](__tests__/sponsors.test.ts): Unit tests for sponsor data processing
 - [Prettier Configuration](.prettierignore): Code formatting exclusions and configuration references
