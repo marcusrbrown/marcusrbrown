@@ -390,23 +390,177 @@ async function processTemplate(badgeData: BadgeDataCache, options: CliOptions): 
     // Read template file
     const template = await fs.readFile(TEMPLATE_PATH, 'utf-8')
 
-    // Generate badge content
+    // Generate categorized badge content
+    const categorizedBadges = categorizeBadges(badgeData.generatedBadges)
     const badgeContent = generateBadgeContent(badgeData.generatedBadges)
     const linkReferences = generateLinkReferences(badgeData.generatedBadges)
 
     // Replace template variables
     const output = template
+      .replace('{{{LANGUAGE_BADGES}}}', generateCategoryBadges(categorizedBadges.language))
+      .replace('{{{FRAMEWORK_BADGES}}}', generateCategoryBadges(categorizedBadges.framework))
+      .replace('{{{TOOL_BADGES}}}', generateCategoryBadges(categorizedBadges.tool))
+      .replace('{{{PLATFORM_BADGES}}}', generateCategoryBadges(categorizedBadges.platform))
       .replace('{{{BADGE_CONTENT}}}', badgeContent)
       .replace('{{{LINK_REFERENCES}}}', linkReferences)
 
     if (options.verbose) {
       console.log(`✅ Template processed successfully`)
+      console.log(`📊 Categories populated:`)
+      console.log(`   Languages: ${categorizedBadges.language.length}`)
+      console.log(`   Frameworks: ${categorizedBadges.framework.length}`)
+      console.log(`   Tools: ${categorizedBadges.tool.length}`)
+      console.log(`   Platforms: ${categorizedBadges.platform.length}`)
     }
 
     return output
   } catch (error) {
     throw new Error(`Failed to process template: ${(error as Error).message}`)
   }
+}
+
+/**
+ * Calculate proficiency level based on technology metadata
+ */
+function calculateProficiencyLevel(technology: DetectedTechnology): {
+  level: 'expert' | 'advanced' | 'intermediate' | 'learning'
+  emoji: string
+  years: string
+} {
+  const firstDetected = new Date(technology.firstDetected)
+  const now = new Date()
+  const yearsExperience = (now.getTime() - firstDetected.getTime()) / (1000 * 60 * 60 * 24 * 365)
+
+  // Consider both usage score and years of experience
+  const usageWeight = technology.usageScore * 0.7 // 70% weight on usage
+  const timeWeight = Math.min(yearsExperience / 5, 1) * 0.3 // 30% weight on time, capped at 5 years
+  const combinedScore = usageWeight + timeWeight
+
+  let level: 'expert' | 'advanced' | 'intermediate' | 'learning'
+  let emoji: string
+  let years: string
+
+  if (combinedScore > 0.8 && yearsExperience > 3) {
+    level = 'expert'
+    emoji = '🟢'
+    years = `${Math.round(yearsExperience)}+ years`
+  } else if (combinedScore > 0.6 && yearsExperience > 1.5) {
+    level = 'advanced'
+    emoji = '🔵'
+    years = `${Math.round(yearsExperience)} years`
+  } else if (combinedScore > 0.3 && yearsExperience > 0.5) {
+    level = 'intermediate'
+    emoji = '🟡'
+    years = `${Math.round(yearsExperience * 10) / 10} years`
+  } else {
+    level = 'learning'
+    emoji = '⚪'
+    years = 'Learning'
+  }
+
+  return {level, emoji, years}
+}
+
+/**
+ * Generate enhanced badge with proficiency indicators
+ */
+function generateEnhancedBadge(badge: GeneratedBadge): string {
+  const proficiency = calculateProficiencyLevel(badge.technology)
+
+  // Add proficiency indicator to badge style
+  const enhancedBadge = badge.markdownBadge.replace(
+    /style=([^&]+)/,
+    `style=$1&labelColor=${getProficiencyColor(proficiency.level)}`,
+  )
+
+  return enhancedBadge
+}
+
+/**
+ * Get color for proficiency level
+ */
+function getProficiencyColor(level: 'expert' | 'advanced' | 'intermediate' | 'learning'): string {
+  switch (level) {
+    case 'expert':
+      return '2ea043' // Green
+    case 'advanced':
+      return '0969da' // Blue
+    case 'intermediate':
+      return 'bf8700' // Yellow
+    case 'learning':
+      return '656d76' // Gray
+    default:
+      return '656d76'
+  }
+}
+
+/**
+ * Categorize badges by technology type for enhanced template support
+ */
+function categorizeBadges(badges: GeneratedBadge[]): {
+  language: GeneratedBadge[]
+  framework: GeneratedBadge[]
+  tool: GeneratedBadge[]
+  platform: GeneratedBadge[]
+} {
+  const categorized = {
+    language: [] as GeneratedBadge[],
+    framework: [] as GeneratedBadge[],
+    tool: [] as GeneratedBadge[],
+    platform: [] as GeneratedBadge[],
+  }
+
+  for (const badge of badges) {
+    switch (badge.technology.category) {
+      case 'language':
+        categorized.language.push(badge)
+        break
+      case 'framework':
+      case 'library':
+        categorized.framework.push(badge)
+        break
+      case 'tool':
+      case 'build':
+      case 'ci-cd':
+      case 'testing':
+      case 'deployment':
+      case 'monitoring':
+        categorized.tool.push(badge)
+        break
+      case 'platform':
+      case 'cloud':
+      case 'database':
+        categorized.platform.push(badge)
+        break
+      default:
+        // Default to tools for uncategorized technologies
+        categorized.tool.push(badge)
+    }
+  }
+
+  // Sort each category by usage score (descending)
+  for (const category of Object.values(categorized)) {
+    category.sort((a, b) => b.technology.usageScore - a.technology.usageScore)
+  }
+
+  return categorized
+}
+
+/**
+ * Generate badge content for a specific category
+ */
+function generateCategoryBadges(badges: GeneratedBadge[]): string {
+  if (badges.length === 0) {
+    return '<!-- No badges in this category -->'
+  }
+
+  return badges
+    .map((badge, index) => {
+      const spacing = index === 0 ? '' : ' '
+      const enhancedBadge = generateEnhancedBadge(badge)
+      return `${spacing}${enhancedBadge}`
+    })
+    .join('')
 }
 
 /**
