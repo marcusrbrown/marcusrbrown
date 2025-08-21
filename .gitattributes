@@ -5,3 +5,6 @@
 pnpm-lock.yaml -diff linguist-generated=true
 
 llms.txt text linguist-language=Markdown
+
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
