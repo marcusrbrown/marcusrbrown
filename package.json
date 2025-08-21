@@ -8,6 +8,9 @@
   "type": "module",
   "scripts": {
     "ab-test": "tsx scripts/ab-test-cli.ts",
+    "analytics": "tsx scripts/profile-analytics.ts",
+    "analytics:collect": "tsx scripts/profile-analytics.ts collect",
+    "analytics:report": "tsx scripts/profile-analytics.ts report",
     "badges:fetch": "tsx scripts/update-badges.ts --fetch-only",
     "badges:update": "tsx scripts/update-badges.ts",
     "bootstrap": "pnpm install --prefer-offline --loglevel warn",
