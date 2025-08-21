@@ -39,6 +39,14 @@
 
 <div align="center">
 
+### 🛠️ Technology Stack & Skills
+
+_View my comprehensive [technology stack, proficiency levels, and learning roadmap](BADGES.md)_
+
+</div>
+
+<div align="center">
+
 ### 🚀 Let's Build Something Amazing Together
 
 <table>
