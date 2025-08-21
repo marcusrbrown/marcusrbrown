@@ -51,6 +51,10 @@
 
 *View my comprehensive [technology stack, proficiency levels, and learning roadmap](BADGES.md)*
 
+### 🌟 Professional Portfolio & Highlights
+
+*Explore detailed [project showcase, open source contributions, and professional achievements](HIGHLIGHTS.md)*
+
 </div>
 
 <!-- Call-to-Action Section -->
