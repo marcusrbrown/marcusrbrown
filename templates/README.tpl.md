@@ -44,6 +44,15 @@
 
 </div>
 
+<!-- Technology Showcase Link -->
+<div align="center">
+
+### 🛠️ Technology Stack & Skills
+
+*View my comprehensive [technology stack, proficiency levels, and learning roadmap](BADGES.md)*
+
+</div>
+
 <!-- Call-to-Action Section -->
 <div align="center">
 
