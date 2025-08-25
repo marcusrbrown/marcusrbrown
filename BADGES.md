@@ -26,7 +26,7 @@
 
 <p align="center">
 
-![Prettier badge](https://img.shields.io/badge/Prettier-3.6.2-F7B93E?style=flat-square&labelColor=656d76&logo=prettier) ![Docker badge](https://img.shields.io/badge/Docker-primary-2496ED?style=flat-square&labelColor=656d76&logo=docker)
+![Docker badge](https://img.shields.io/badge/Docker-primary-2496ED?style=flat-square&labelColor=656d76&logo=docker) ![Prettier badge](https://img.shields.io/badge/Prettier-3.6.2-F7B93E?style=flat-square&labelColor=656d76&logo=prettier)
 
 </p>
 
