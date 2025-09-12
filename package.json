@@ -41,13 +41,13 @@
   },
   "prettier": "@bfra.me/prettier-config/120-proof",
   "dependencies": {
-    "@bfra.me/badge-config": "0.1.0",
+    "@bfra.me/badge-config": "0.1.1",
     "@octokit/graphql": "^9.0.1",
     "@octokit/rest": "^22.0.0",
     "@octokit/types": "^14.1.0"
   },
   "devDependencies": {
-    "@bfra.me/eslint-config": "0.28.2",
+    "@bfra.me/eslint-config": "0.28.3",
     "@bfra.me/prettier-config": "^0.16.1",
     "@bfra.me/tsconfig": "^0.12.0",
     "@types/node": "^24.2.1",
