@@ -1,15 +1,15 @@
 {
   "extends": "@bfra.me/tsconfig",
   "compilerOptions": {
-    "moduleResolution": "node",
-    "allowImportingTsExtensions": true,
-    "noEmit": true,
-    "resolveJsonModule": true,
-    "noPropertyAccessFromIndexSignature": false,
     "baseUrl": ".",
+    "moduleResolution": "node",
     "paths": {
       "@/*": ["./*"]
-    }
+    },
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "noEmit": true
   },
   "include": ["scripts/**/*", "utils/**/*", "types/**/*", "eslint.config.ts", "__tests__/**/*", "vitest.config.ts"],
   "exclude": ["node_modules", "dist"]
