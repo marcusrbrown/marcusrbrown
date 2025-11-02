@@ -44,7 +44,7 @@
     "@bfra.me/badge-config": "0.1.1",
     "@octokit/graphql": "^9.0.1",
     "@octokit/rest": "^22.0.0",
-    "@octokit/types": "^14.1.0"
+    "@octokit/types": "^15.0.0"
   },
   "devDependencies": {
     "@bfra.me/eslint-config": "0.35.2",
