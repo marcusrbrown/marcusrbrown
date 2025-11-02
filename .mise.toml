@@ -6,3 +6,6 @@ _.path = [
 
 # GITHUB_TOKEN = { value = '{{ exec(command="gh auth token") }}', redact = true }
 NODE_OPTIONS = '{{ get_env(name="NODE_OPTIONS", default="--trace-warnings") }}'
+
+[tools]
+node = '22.21.1'
