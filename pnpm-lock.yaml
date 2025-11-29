@@ -25,8 +25,8 @@ importers:
         version: 16.0.0
     devDependencies:
       '@bfra.me/eslint-config':
-        specifier: 0.45.0
-        version: 0.45.0(@typescript-eslint/eslint-plugin@8.48.0(@typescript-eslint/parser@8.48.0(eslint@9.39.1(jiti@2.1.2))(typescript@5.9.3))(eslint@9.39.1(jiti@2.1.2))(typescript@5.9.3))(@typescript-eslint/utils@8.48.0(eslint@9.39.1(jiti@2.1.2))(typescript@5.9.3))(eslint-config-prettier@10.1.8(eslint@9.39.1(jiti@2.1.2)))(eslint-plugin-prettier@5.5.4(eslint-config-prettier@10.1.8(eslint@9.39.1(jiti@2.1.2)))(eslint@9.39.1(jiti@2.1.2))(prettier@3.6.2))(eslint@9.39.1(jiti@2.1.2))(typescript@5.9.3)
+        specifier: 0.45.1
+        version: 0.45.1(@typescript-eslint/eslint-plugin@8.48.0(@typescript-eslint/parser@8.48.0(eslint@9.39.1(jiti@2.1.2))(typescript@5.9.3))(eslint@9.39.1(jiti@2.1.2))(typescript@5.9.3))(@typescript-eslint/utils@8.48.0(eslint@9.39.1(jiti@2.1.2))(typescript@5.9.3))(eslint-config-prettier@10.1.8(eslint@9.39.1(jiti@2.1.2)))(eslint-plugin-prettier@5.5.4(eslint-config-prettier@10.1.8(eslint@9.39.1(jiti@2.1.2)))(eslint@9.39.1(jiti@2.1.2))(prettier@3.6.2))(eslint@9.39.1(jiti@2.1.2))(typescript@5.9.3)
       '@bfra.me/prettier-config':
         specifier: ^0.16.1
         version: 0.16.1(prettier@3.6.2)
@@ -79,8 +79,8 @@ packages:
   '@bfra.me/badge-config@0.1.4':
     resolution: {integrity: sha512-2REEWdXq8GfatWgpSHLpOylB8aZn8+C9cPLIx4H5+EO+wFhu4sSPhrBjU7ro97Tim5J5B5gXfLiv45WfmYqgTQ==}
 
-  '@bfra.me/eslint-config@0.45.0':
-    resolution: {integrity: sha512-ALzab7t16XD2oroOxyikumdRiUhTNbuLAk+6/tsKCHml/mgUF90taL6vAr9H3uKR3H2DQAd7eNCSAcmE/tSvOw==}
+  '@bfra.me/eslint-config@0.45.1':
+    resolution: {integrity: sha512-p7WO9HXXUaE06cNDaM2ISG4iCKpxucZWJhXrl+w/uo4cBuI+5D9u+BYucioJaD1gQpNxmoyrm8ZIvPgYs8Edgw==}
     peerDependencies:
       '@eslint-react/eslint-plugin': ^2.0.1
       '@next/eslint-plugin-next': '>=15.5.3'
@@ -1953,11 +1953,11 @@ packages:
     resolution: {integrity: sha512-iOBWFgUX7caIZiuutICxVgX1SdxwAVFFKwt1EvMYYec/NWO5meOJ6K5uQxhrYBdQJne4KxiqZc+KptFOWFSI9w==}
     engines: {node: '>=18'}
 
-  sort-object-keys@1.1.3:
-    resolution: {integrity: sha512-855pvK+VkU7PaKYPc+Jjnmt4EzejQHyhhF33q31qG8x7maDzkeFhAAThdCYay11CISO+qAMwjOBP+fPZe0IPyg==}
+  sort-object-keys@2.0.1:
+    resolution: {integrity: sha512-R89fO+z3x7hiKPXX5P0qim+ge6Y60AjtlW+QQpRozrrNcR1lw9Pkpm5MLB56HoNvdcLHL4wbpq16OcvGpEDJIg==}
 
-  sort-package-json@3.4.0:
-    resolution: {integrity: sha512-97oFRRMM2/Js4oEA9LJhjyMlde+2ewpZQf53pgue27UkbEXfHJnDzHlUxQ/DWUkzqmp7DFwJp8D+wi/TYeQhpA==}
+  sort-package-json@3.5.0:
+    resolution: {integrity: sha512-moY4UtptUuP5sPuu9H9dp8xHNel7eP5/Kz/7+90jTvC0IOiPH2LigtRM/aSFSxreaWoToHUVUpEV4a2tAs2oKQ==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -2242,7 +2242,7 @@ snapshots:
 
   '@bfra.me/badge-config@0.1.4': {}
 
-  '@bfra.me/eslint-config@0.45.0(@typescript-eslint/eslint-plugin@8.48.0(@typescript-eslint/parser@8.48.0(eslint@9.39.1(jiti@2.1.2))(typescript@5.9.3))(eslint@9.39.1(jiti@2.1.2))(typescript@5.9.3))(@typescript-eslint/utils@8.48.0(eslint@9.39.1(jiti@2.1.2))(typescript@5.9.3))(eslint-config-prettier@10.1.8(eslint@9.39.1(jiti@2.1.2)))(eslint-plugin-prettier@5.5.4(eslint-config-prettier@10.1.8(eslint@9.39.1(jiti@2.1.2)))(eslint@9.39.1(jiti@2.1.2))(prettier@3.6.2))(eslint@9.39.1(jiti@2.1.2))(typescript@5.9.3)':
+  '@bfra.me/eslint-config@0.45.1(@typescript-eslint/eslint-plugin@8.48.0(@typescript-eslint/parser@8.48.0(eslint@9.39.1(jiti@2.1.2))(typescript@5.9.3))(eslint@9.39.1(jiti@2.1.2))(typescript@5.9.3))(@typescript-eslint/utils@8.48.0(eslint@9.39.1(jiti@2.1.2))(typescript@5.9.3))(eslint-config-prettier@10.1.8(eslint@9.39.1(jiti@2.1.2)))(eslint-plugin-prettier@5.5.4(eslint-config-prettier@10.1.8(eslint@9.39.1(jiti@2.1.2)))(eslint@9.39.1(jiti@2.1.2))(prettier@3.6.2))(eslint@9.39.1(jiti@2.1.2))(typescript@5.9.3)':
     dependencies:
       '@eslint-community/eslint-plugin-eslint-comments': 4.5.0(eslint@9.39.1(jiti@2.1.2))
       '@eslint/markdown': 7.5.1
@@ -2267,7 +2267,7 @@ snapshots:
       is-in-ci: 2.0.0
       local-pkg: 1.1.2
       package-manager-detector: 1.5.0
-      sort-package-json: 3.4.0
+      sort-package-json: 3.5.0
       typescript-eslint: 8.48.0(eslint@9.39.1(jiti@2.1.2))(typescript@5.9.3)
     optionalDependencies:
       eslint-config-prettier: 10.1.8(eslint@9.39.1(jiti@2.1.2))
@@ -4279,16 +4279,16 @@ snapshots:
       ansi-styles: 6.2.3
       is-fullwidth-code-point: 5.1.0
 
-  sort-object-keys@1.1.3: {}
+  sort-object-keys@2.0.1: {}
 
-  sort-package-json@3.4.0:
+  sort-package-json@3.5.0:
     dependencies:
       detect-indent: 7.0.2
       detect-newline: 4.0.1
       git-hooks-list: 4.1.1
       is-plain-obj: 4.1.0
       semver: 7.7.3
-      sort-object-keys: 1.1.3
+      sort-object-keys: 2.0.1
       tinyglobby: 0.2.15
 
   source-map-js@1.2.1: {}
