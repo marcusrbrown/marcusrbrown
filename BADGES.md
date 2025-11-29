@@ -10,7 +10,7 @@
 
 <p align="center">
 
-![TypeScript badge](https://img.shields.io/badge/TypeScript-%5E24.2.1-007ACC?style=for-the-badge&labelColor=656d76&logo=typescript) ![JavaScript badge](https://img.shields.io/badge/JavaScript-primary-F7DF1E?style=flat-square&labelColor=656d76&logo=javascript) ![Python badge](https://img.shields.io/badge/Python-primary-3776AB?style=flat-square&labelColor=2ea043&logo=python) ![Go badge](https://img.shields.io/badge/Go-primary-00ADD8?style=flat-square&labelColor=0969da&logo=go)
+![TypeScript badge](https://img.shields.io/badge/TypeScript-%5E24.2.1-007ACC?style=for-the-badge&labelColor=656d76&logo=typescript) ![JavaScript badge](https://img.shields.io/badge/JavaScript-primary-F7DF1E?style=flat-square&labelColor=2ea043&logo=javascript) ![Python badge](https://img.shields.io/badge/Python-primary-3776AB?style=flat-square&labelColor=2ea043&logo=python) ![Go badge](https://img.shields.io/badge/Go-primary-00ADD8?style=flat-square&labelColor=0969da&logo=go)
 
 </p>
 
