@@ -322,7 +322,7 @@ _Last updated: November 22, 2025_
 | **🐛 Issues Resolved**    | **500+ across projects**     | **Developer friction reduced**  |
 | **⚡ Automation Created** | **Hours saved weekly**       | **Productivity multiplied**     |
 | **🤝 OSS Contributions**  | **Multi-year consistency**   | **Ecosystem strengthened**      |
-| ** Problem-Solving**      | **Cross-platform expertise** | **Universal developer benefit** |
+| **Problem-Solving**       | **Cross-platform expertise** | **Universal developer benefit** |
 
 </div>
 
