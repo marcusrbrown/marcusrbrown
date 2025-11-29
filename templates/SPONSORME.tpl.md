@@ -518,12 +518,6 @@ _Thank you for considering sponsorship! Every contribution, regardless of size, 
 
 </div>
 
-[adding features]: https://github.com/thejustinwalsh/textproto-grammar/pull/5 "feature: add support for highlighting syntax in Markdown previews"
-[participating in bounties]: https://github.com/status-im/status-react/pull/8985 "Fix sticker pack installation buttons"
-[fixing bugs]: https://github.com/DavidAnson/vscode-markdownlint/pull/141 "Lint visible documents on activation"
-[tools]: https://github.com/typedec/typedec "I'm really excited about this one !"
-[gadgets]: https://github.com/marcusrbrown/sparkle "Who doesn't like playgrounds?!"
-
 ### �‍👩‍👧‍👦 My Story: Family, Purpose, and Building What Matters
 
 #### From Childhood Passion to Family-Driven Mission
