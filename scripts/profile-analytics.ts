@@ -56,17 +56,22 @@ const ProfileMetricsCache = {
       const cacheData = await fs.readFile(CACHE_FILE, 'utf-8')
       const parsedData = JSON.parse(cacheData) as {metrics: ProfileMetrics[]; fetchedAt: string}
 
-      const cacheAge = Date.now() - new Date(parsedData.fetchedAt).getTime()
+      const fetchedAtMs = new Date(parsedData.fetchedAt).getTime()
+      if (Number.isNaN(fetchedAtMs)) {
+        logger.debug('Invalid cache timestamp, treating as expired')
+        return null
+      }
+
+      const cacheAge = Date.now() - fetchedAtMs
       if (cacheAge <= maxAgeMs) {
-        logger.success(
-          `Using cached metrics data (age: ${Math.round(cacheAge / 1000 / 60)} minutes, ${parsedData.metrics.length} records)`,
-        )
+        const ageMinutes = Math.round(cacheAge / 1000 / 60)
+        logger.success(`Using cached metrics data (age: ${ageMinutes} minutes, ${parsedData.metrics.length} records)`)
         return parsedData.metrics
       }
 
-      logger.warn(
-        `Cache expired (age: ${Math.round(cacheAge / 1000 / 60)} minutes, max: ${Math.round(maxAgeMs / 1000 / 60)} minutes)`,
-      )
+      const ageMinutes = Math.round(cacheAge / 1000 / 60)
+      const maxMinutes = Math.round(maxAgeMs / 1000 / 60)
+      logger.warn(`Cache expired (age: ${ageMinutes} minutes, max: ${maxMinutes} minutes)`)
       return null
     } catch (error) {
       logger.debug(`No valid cache found: ${(error as Error).message}`)
@@ -722,6 +727,7 @@ class ProfileAnalytics {
     }
 
     try {
+      await fs.mkdir(this.config.reportDir, {recursive: true})
       const reportFiles = await fs.readdir(this.config.reportDir)
       const cutoffTime = Date.now() - 30 * 24 * 60 * 60 * 1000 // 30 days
       let deletedCount = 0

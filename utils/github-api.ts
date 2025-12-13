@@ -3,7 +3,9 @@ import type {SponsorConfig} from '@/types/sponsors.ts'
 
 import type {RestEndpointMethodTypes} from '@octokit/rest'
 import process from 'node:process'
+import {Logger} from '@/utils/logger.ts'
 import {graphql} from '@octokit/graphql'
+
 import {Octokit} from '@octokit/rest'
 
 /**
@@ -29,17 +31,17 @@ export class GitHubApiClient {
           _octokit: Octokit,
           retryCount: number,
         ) => {
-          console.warn(
+          Logger.getInstance().warn(
             `Request quota exhausted for request ${options.method} ${options.url}. Retrying after ${retryAfter} seconds. Retry count: ${retryCount}`,
           )
           if (retryCount < 3) {
-            console.warn(`Retrying after ${retryAfter} seconds!`)
+            Logger.getInstance().debug(`Retrying after ${retryAfter} seconds!`)
             return true
           }
           return false
         },
         onSecondaryRateLimit: (retryAfter: number, options: {method: string; url: string}, _octokit: Octokit) => {
-          console.warn(
+          Logger.getInstance().warn(
             `Secondary rate limit hit for request ${options.method} ${options.url}. Retrying after ${retryAfter} seconds.`,
           )
           return true
@@ -79,7 +81,7 @@ export class GitHubApiClient {
    */
   async fetchSponsors() {
     try {
-      console.warn(`Fetching sponsors data for user: ${this.config.username}`)
+      Logger.getInstance().debug(`Fetching sponsors data for user: ${this.config.username}`)
 
       const query = `
         query($login: String!) {
@@ -153,10 +155,10 @@ export class GitHubApiClient {
         login: this.config.username,
       })
 
-      console.warn(`Successfully fetched GraphQL sponsors data`)
+      Logger.getInstance().debug(`Successfully fetched GraphQL sponsors data`)
       return response.user
     } catch (error) {
-      console.error('Error fetching sponsors data:', error)
+      Logger.getInstance().error('Error fetching sponsors data:', error as Error)
       throw new Error(`Failed to fetch sponsors: ${error instanceof Error ? error.message : 'Unknown error'}`)
     }
   }
@@ -166,7 +168,7 @@ export class GitHubApiClient {
    */
   async fetchUserProfile(username: string = this.config.username) {
     try {
-      console.warn(`Fetching user profile for: ${username}`)
+      Logger.getInstance().debug(`Fetching user profile for: ${username}`)
 
       const response = await this.octokit.rest.users.getByUsername({
         username,
@@ -174,7 +176,7 @@ export class GitHubApiClient {
 
       return response.data
     } catch (error) {
-      console.error(`Error fetching user profile for ${username}:`, error)
+      Logger.getInstance().error(`Error fetching user profile for ${username}:`, error as Error)
       throw new Error(`Failed to fetch user profile: ${error instanceof Error ? error.message : 'Unknown error'}`)
     }
   }
@@ -184,10 +186,10 @@ export class GitHubApiClient {
    */
   async testConnection() {
     try {
-      console.warn('Testing GitHub API connection...')
+      Logger.getInstance().debug('Testing GitHub API connection...')
 
       const response = await this.octokit.rest.users.getAuthenticated()
-      console.warn(`Successfully authenticated as: ${response.data.login}`)
+      Logger.getInstance().debug(`Successfully authenticated as: ${response.data.login}`)
 
       return {
         success: true,
@@ -195,7 +197,7 @@ export class GitHubApiClient {
         scopes: response.headers['x-oauth-scopes']?.split(', ') || [],
       }
     } catch (error) {
-      console.error('GitHub API connection test failed:', error)
+      Logger.getInstance().error('GitHub API connection test failed:', error as Error)
       return {
         success: false,
         error: error instanceof Error ? error.message : 'Unknown error',
@@ -208,7 +210,7 @@ export class GitHubApiClient {
    */
   async getUserRepositories(username: string = this.config.username) {
     try {
-      console.warn(`Fetching repositories for user: ${username}`)
+      Logger.getInstance().debug(`Fetching repositories for user: ${username}`)
 
       const response = await this.octokit.rest.repos.listForUser({
         username,
@@ -217,10 +219,10 @@ export class GitHubApiClient {
         per_page: 100,
       })
 
-      console.warn(`Successfully fetched ${response.data.length} repositories`)
+      Logger.getInstance().debug(`Successfully fetched ${response.data.length} repositories`)
       return response.data
     } catch (error) {
-      console.error(`Error fetching repositories for ${username}:`, error)
+      Logger.getInstance().error(`Error fetching repositories for ${username}:`, error as Error)
       throw new Error(`Failed to fetch repositories: ${error instanceof Error ? error.message : 'Unknown error'}`)
     }
   }
@@ -237,7 +239,7 @@ export class GitHubApiClient {
 
       return response.data
     } catch (error) {
-      console.error(`Error fetching languages for ${owner}/${repo}:`, error)
+      Logger.getInstance().error(`Error fetching languages for ${owner}/${repo}:`, error as Error)
       throw new Error(
         `Failed to fetch repository languages: ${error instanceof Error ? error.message : 'Unknown error'}`,
       )
@@ -280,7 +282,7 @@ export class GitHubApiClient {
 
       return response.data
     } catch (error) {
-      console.error(`Error fetching commits for ${owner}/${repo}:`, error)
+      Logger.getInstance().error(`Error fetching commits for ${owner}/${repo}:`, error as Error)
       throw new Error(`Failed to fetch repository commits: ${error instanceof Error ? error.message : 'Unknown error'}`)
     }
   }
@@ -293,7 +295,7 @@ export class GitHubApiClient {
       const response = await this.octokit.rest.rateLimit.get()
       return response.data
     } catch (error) {
-      console.error('Error fetching rate limit:', error)
+      Logger.getInstance().error('Error fetching rate limit:', error as Error)
       throw new Error(`Failed to fetch rate limit: ${error instanceof Error ? error.message : 'Unknown error'}`)
     }
   }
@@ -312,7 +314,7 @@ export class GitHubApiClient {
 
       return response.data
     } catch (error) {
-      console.error(`Error fetching views for ${owner}/${repo}:`, error)
+      Logger.getInstance().error(`Error fetching views for ${owner}/${repo}:`, error as Error)
       throw new Error(`Failed to fetch repository views: ${error instanceof Error ? error.message : 'Unknown error'}`)
     }
   }
@@ -331,7 +333,7 @@ export class GitHubApiClient {
 
       return response.data
     } catch (error) {
-      console.error(`Error fetching clones for ${owner}/${repo}:`, error)
+      Logger.getInstance().error(`Error fetching clones for ${owner}/${repo}:`, error as Error)
       throw new Error(`Failed to fetch repository clones: ${error instanceof Error ? error.message : 'Unknown error'}`)
     }
   }
@@ -349,7 +351,7 @@ export class GitHubApiClient {
 
       return response.data
     } catch (error) {
-      console.error(`Error fetching top referrers for ${owner}/${repo}:`, error)
+      Logger.getInstance().error(`Error fetching top referrers for ${owner}/${repo}:`, error as Error)
       throw new Error(`Failed to fetch top referrers: ${error instanceof Error ? error.message : 'Unknown error'}`)
     }
   }
@@ -367,7 +369,7 @@ export class GitHubApiClient {
 
       return response.data
     } catch (error) {
-      console.error(`Error fetching top paths for ${owner}/${repo}:`, error)
+      Logger.getInstance().error(`Error fetching top paths for ${owner}/${repo}:`, error as Error)
       throw new Error(`Failed to fetch top paths: ${error instanceof Error ? error.message : 'Unknown error'}`)
     }
   }
@@ -377,7 +379,7 @@ export class GitHubApiClient {
    */
   async fetchUserContributions(username: string, from: string, to: string): Promise<ContributionsData> {
     try {
-      console.warn(`Fetching contributions for user: ${username} from ${from} to ${to}`)
+      Logger.getInstance().debug(`Fetching contributions for user: ${username} from ${from} to ${to}`)
 
       const query = `
         query($login: String!, $from: DateTime!, $to: DateTime!) {
@@ -415,10 +417,10 @@ export class GitHubApiClient {
         to,
       })
 
-      console.warn(`Successfully fetched contributions data`)
+      Logger.getInstance().debug(`Successfully fetched contributions data`)
       return response.user.contributionsCollection
     } catch (error) {
-      console.error('Error fetching user contributions:', error)
+      Logger.getInstance().error('Error fetching user contributions:', error as Error)
       throw new Error(`Failed to fetch user contributions: ${error instanceof Error ? error.message : 'Unknown error'}`)
     }
   }
@@ -450,7 +452,7 @@ export async function validateSponsorScopes(client: GitHubApiClient): Promise<bo
   try {
     const connectionTest = await client.testConnection()
     if (!connectionTest.success) {
-      console.error('GitHub API connection failed:', connectionTest.error)
+      Logger.getInstance().error(`GitHub API connection failed: ${connectionTest.error}`)
       return false
     }
 
@@ -462,14 +464,16 @@ export async function validateSponsorScopes(client: GitHubApiClient): Promise<bo
     )
 
     if (!hasRequiredScopes) {
-      console.error(`Missing required scopes. Required: ${requiredScopes.join(', ')}, Available: ${scopes.join(', ')}`)
+      Logger.getInstance().error(
+        `Missing required scopes. Required: ${requiredScopes.join(', ')}, Available: ${scopes.join(', ')}`,
+      )
       return false
     }
 
-    console.warn('GitHub token has sufficient scopes for sponsors API')
+    Logger.getInstance().debug('GitHub token has sufficient scopes for sponsors API')
     return true
   } catch (error) {
-    console.error('Error validating scopes:', error)
+    Logger.getInstance().error('Error validating scopes:', error as Error)
     return false
   }
 }
