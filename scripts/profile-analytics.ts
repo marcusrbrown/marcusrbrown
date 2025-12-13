@@ -6,6 +6,14 @@
  * Tracks engagement metrics, profile views, and performance indicators
  * for the GitHub profile README and associated content.
  *
+ * Implementation Status:
+ * - Phase 1 (COMPLETE): GitHub API traffic/contributions methods in utils/github-api.ts
+ * - Phase 2 (COMPLETE): CLI infrastructure with --verbose, --help, --force-refresh, --dry-run flags
+ * - Phase 3 (COMPLETE): withRetry wrapper, GitHub-native analytics integration
+ * - Phase 4 (COMPLETE): Multi-layer cache system (ProfileMetricsCache)
+ * - Phase 5 (COMPLETE): Logger usage, error handling, graceful degradation
+ * - Phase 6 (PENDING): Comprehensive test suite
+ *
  * Features:
  * - Profile view tracking and analytics
  * - GitHub API metrics collection
@@ -21,12 +29,267 @@ import {fileURLToPath} from 'node:url'
 import {GitHubApiClient} from '@/utils/github-api'
 import {Logger} from '@/utils/logger'
 
+const MAX_RETRIES = 3
+const BASE_DELAY_MS = 1000
+const MAX_DELAY_MS = 10000
+
+/**
+ * Cache configuration
+ */
+const CACHE_DIR = path.join(process.cwd(), '.cache')
+const CACHE_FILE = path.join(CACHE_DIR, 'metrics-history.json')
+const BACKUP_CACHE_FILE = path.join(CACHE_DIR, 'metrics-history-backup.json')
+const DEFAULT_CACHE_DURATION_MS = 3600000 // 1 hour
+
+/**
+ * Multi-layer cache system for profile metrics
+ */
+const ProfileMetricsCache = {
+  /**
+   * Load cached metrics data if valid
+   */
+  async load(maxAgeMs: number): Promise<ProfileMetrics[] | null> {
+    const logger = Logger.getInstance()
+    try {
+      await fs.mkdir(CACHE_DIR, {recursive: true})
+
+      const cacheData = await fs.readFile(CACHE_FILE, 'utf-8')
+      const parsedData = JSON.parse(cacheData) as {metrics: ProfileMetrics[]; fetchedAt: string}
+
+      const fetchedAtMs = new Date(parsedData.fetchedAt).getTime()
+      if (Number.isNaN(fetchedAtMs)) {
+        logger.debug('Invalid cache timestamp, treating as expired')
+        return null
+      }
+
+      const cacheAge = Date.now() - fetchedAtMs
+      if (cacheAge <= maxAgeMs) {
+        const ageMinutes = Math.round(cacheAge / 1000 / 60)
+        logger.success(`Using cached metrics data (age: ${ageMinutes} minutes, ${parsedData.metrics.length} records)`)
+        return parsedData.metrics
+      }
+
+      const ageMinutes = Math.round(cacheAge / 1000 / 60)
+      const maxMinutes = Math.round(maxAgeMs / 1000 / 60)
+      logger.warn(`Cache expired (age: ${ageMinutes} minutes, max: ${maxMinutes} minutes)`)
+      return null
+    } catch (error) {
+      logger.debug(`No valid cache found: ${(error as Error).message}`)
+      return null
+    }
+  },
+
+  /**
+   * Save metrics data to cache with backup
+   */
+  async save(metrics: ProfileMetrics[]): Promise<void> {
+    const logger = Logger.getInstance()
+    try {
+      await fs.mkdir(CACHE_DIR, {recursive: true})
+
+      // Create backup of existing cache before overwriting
+      try {
+        await fs.copyFile(CACHE_FILE, BACKUP_CACHE_FILE)
+        logger.debug('Created backup of existing cache')
+      } catch {
+        // No existing cache to backup, not an error
+      }
+
+      const cacheData = {
+        metrics,
+        fetchedAt: new Date().toISOString(),
+      }
+
+      await fs.writeFile(CACHE_FILE, JSON.stringify(cacheData, null, 2), 'utf-8')
+      logger.success('Metrics data cached successfully')
+    } catch (error) {
+      logger.error('Failed to save cache', error as Error)
+    }
+  },
+
+  /**
+   * Load backup cache as fallback
+   */
+  async loadBackup(): Promise<ProfileMetrics[] | null> {
+    const logger = Logger.getInstance()
+    try {
+      const backupData = await fs.readFile(BACKUP_CACHE_FILE, 'utf-8')
+      const parsedData = JSON.parse(backupData) as {metrics: ProfileMetrics[]; fetchedAt: string}
+      logger.warn('Using backup cache data as fallback')
+      return parsedData.metrics
+    } catch {
+      logger.debug('No backup cache available')
+      return null
+    }
+  },
+}
+
+/**
+ * Retry wrapper with exponential backoff
+ */
+async function withRetry<T>(
+  operation: () => Promise<T>,
+  operationName: string,
+  maxRetries: number = MAX_RETRIES,
+): Promise<T> {
+  const logger = Logger.getInstance()
+  let lastError: Error | undefined
+
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      logger.debug(`Attempting ${operationName} (attempt ${attempt}/${maxRetries})`)
+      return await operation()
+    } catch (error) {
+      lastError = error as Error
+      logger.warn(`${operationName} failed (attempt ${attempt}/${maxRetries}): ${lastError.message}`)
+
+      if (attempt < maxRetries) {
+        const delay = Math.min(BASE_DELAY_MS * 2 ** (attempt - 1), MAX_DELAY_MS)
+        logger.debug(`Retrying ${operationName} in ${delay}ms...`)
+        await new Promise(resolve => setTimeout(resolve, delay))
+      }
+    }
+  }
+
+  logger.error(`${operationName} failed after ${maxRetries} attempts`)
+  throw lastError ?? new Error(`${operationName} failed after ${maxRetries} attempts`)
+}
+
+/**
+ * Parse command-line arguments into CliOptions
+ */
+function parseArguments(): CliOptions {
+  const args = process.argv.slice(2)
+  let options: CliOptions = {
+    verbose: false,
+    help: false,
+    forceRefresh: false,
+    dryRun: false,
+    repos: [],
+    period: 365,
+  }
+
+  for (let i = 0; i < args.length; i++) {
+    const arg = args[i]
+    // TypeScript doesn't narrow array access, explicit check required
+    if (arg === undefined) continue
+
+    switch (arg) {
+      case '--verbose':
+      case '-v':
+        options = {...options, verbose: true}
+        break
+      case '--help':
+      case '-h':
+        options = {...options, help: true}
+        break
+      case '--force-refresh':
+      case '-f':
+        options = {...options, forceRefresh: true}
+        break
+      case '--dry-run':
+      case '-d':
+        options = {...options, dryRun: true}
+        break
+      case '--repos':
+      case '-r': {
+        const reposArg = args[++i]
+        if (reposArg !== undefined && !reposArg.startsWith('--')) {
+          options = {...options, repos: reposArg.split(',').map(r => r.trim())}
+        }
+        break
+      }
+      case '--period':
+      case '-p': {
+        const periodArg = args[++i]
+        if (periodArg !== undefined && !periodArg.startsWith('--')) {
+          const periodValue = Number.parseInt(periodArg, 10)
+          if (!Number.isNaN(periodValue) && periodValue > 0) {
+            options = {...options, period: periodValue}
+          }
+        }
+        break
+      }
+      default:
+        break
+    }
+  }
+
+  return options
+}
+
+/**
+ * Display CLI help information
+ */
+function showHelp(): void {
+  const helpText = `
+GitHub Profile Analytics - Track and analyze your GitHub profile metrics
+
+Usage:
+  pnpm run analytics [command] [options]
+  GITHUB_TOKEN=<token> pnpm run analytics [command] [options]
+
+Commands:
+  collect    Collect current profile metrics
+  report     Generate comprehensive analytics report
+  track      Track performance metrics (default)
+
+Options:
+  --verbose, -v           Enable verbose logging output
+  --help, -h              Display this help information
+  --force-refresh, -f     Bypass cache and fetch fresh data
+  --dry-run, -d           Preview actions without making changes
+  --repos, -r <repos>     Comma-separated list of repos for traffic aggregation
+                          Example: --repos "repo1,repo2,repo3"
+                          Default: top 5 repositories by stars
+  --period, -p <days>     Contribution analysis period in days
+                          Example: --period 90
+                          Default: 365 days
+
+Examples:
+  # Basic usage with default command
+  pnpm run analytics
+
+  # Generate detailed report with verbose output
+  pnpm run analytics report --verbose
+
+  # Force refresh and collect metrics for specific repos
+  pnpm run analytics collect --force-refresh --repos "repo1,repo2"
+
+  # Dry-run mode to preview changes
+  pnpm run analytics --dry-run --verbose
+
+  # Analyze contributions for the last 90 days
+  pnpm run analytics report --period 90
+
+Required Permissions:
+  GITHUB_TOKEN environment variable must be set with the following scopes:
+  - read:user              Read user profile information
+  - repo (or read:org)     Access repository traffic data (requires push access)
+  - read:project           Read project data
+
+Note:
+  Traffic API endpoints require push access to repositories. The script will
+  gracefully skip repositories where access is insufficient and continue with
+  available data.
+
+For more information, see: https://docs.github.com/en/rest/metrics/traffic
+`
+
+  const logger = Logger.getInstance()
+  logger.info(helpText)
+}
+
 interface AnalyticsConfig {
   readonly username: string
   readonly apiToken: string | undefined
   readonly cacheDir: string
   readonly reportDir: string
-  readonly trackingPeriod: number // days
+  readonly trackingPeriod: number
+  readonly forceRefresh: boolean
+  readonly dryRun: boolean
+  readonly targetRepos: string[]
+  readonly contributionPeriodDays: number
 }
 
 interface ProfileMetrics {
@@ -87,6 +350,15 @@ interface GitHubRepository {
   readonly private: boolean
 }
 
+interface CliOptions {
+  readonly verbose: boolean
+  readonly help: boolean
+  readonly forceRefresh: boolean
+  readonly dryRun: boolean
+  readonly repos: string[]
+  readonly period: number
+}
+
 class ProfileAnalytics {
   private readonly config: AnalyticsConfig
   private readonly github: GitHubApiClient
@@ -117,11 +389,14 @@ class ProfileAnalytics {
     this.logger.info('📊 Collecting profile metrics...')
 
     try {
-      // Fetch user data
-      const user = await this.github.fetchUserProfile(this.config.username)
+      // Fetch user data with retry
+      const user = await withRetry(async () => this.github.fetchUserProfile(this.config.username), 'fetch user profile')
 
-      // Fetch repositories
-      const repositories = (await this.github.getUserRepositories(this.config.username)) as GitHubRepository[]
+      // Fetch repositories with retry
+      const repositories = (await withRetry(
+        async () => this.github.getUserRepositories(this.config.username),
+        'fetch user repositories',
+      )) as GitHubRepository[]
 
       // Calculate total stars and forks
       const totalStars = repositories.reduce((sum: number, repo: GitHubRepository) => sum + repo.stargazers_count, 0)
@@ -146,9 +421,23 @@ class ProfileAnalytics {
       // Get contribution count (approximate from recent activity)
       const contributions = await this.getContributionCount()
 
+      // Select repositories for traffic aggregation
+      const targetRepos =
+        this.config.targetRepos.length > 0
+          ? this.config.targetRepos
+          : repositories
+              .filter(repo => !repo.private)
+              .sort((a, b) => b.stargazers_count - a.stargazers_count)
+              .slice(0, 5)
+              .map(repo => repo.name)
+
+      this.logger.debug(
+        `Selected ${targetRepos.length} repositories for traffic aggregation: ${targetRepos.join(', ')}`,
+      )
+
       const metrics: ProfileMetrics = {
         timestamp: new Date().toISOString(),
-        profileViews: await this.getProfileViews(),
+        profileViews: await this.aggregateRepositoryViews(targetRepos),
         followers: user.followers,
         following: user.following,
         publicRepos: user.public_repos,
@@ -212,19 +501,35 @@ class ProfileAnalytics {
   }
 
   /**
-   * Get profile view count (integration with external service)
+   * Aggregate profile views across specified repositories using GitHub traffic API
    */
-  private async getProfileViews(): Promise<number> {
-    try {
-      // This would typically integrate with a service like Google Analytics
-      // or a custom tracking solution. For now, we'll use a placeholder.
-      const response = await fetch(`https://api.countapi.xyz/get/marcusrbrown/profile-views`)
-      const data = (await response.json()) as {value?: number}
-      return data.value ?? 0
-    } catch {
-      this.logger.warn('⚠️  Could not fetch profile views')
+  private async aggregateRepositoryViews(repos: string[]): Promise<number> {
+    this.logger.debug(`Aggregating views for ${repos.length} repositories`)
+    let totalViews = 0
+    let successfulRepos = 0
+
+    for (const repo of repos) {
+      try {
+        const views = await withRetry(
+          async () => this.github.getRepositoryViews(this.config.username, repo, 'day'),
+          `fetch views for ${repo}`,
+        )
+        totalViews += views.count
+        successfulRepos++
+        this.logger.debug(`Repository ${repo}: ${views.count} views (${views.uniques} unique)`)
+      } catch (error) {
+        this.logger.warn(`⚠️  Skipping ${repo}: ${(error as Error).message}`)
+        continue
+      }
+    }
+
+    if (successfulRepos === 0) {
+      this.logger.warn('⚠️  Could not fetch views for any repositories')
       return 0
     }
+
+    this.logger.info(`Aggregated ${totalViews} total views from ${successfulRepos}/${repos.length} repositories`)
+    return totalViews
   }
 
   /**
@@ -242,31 +547,57 @@ class ProfileAnalytics {
   }
 
   /**
-   * Get approximate contribution count
+   * Get contribution count using GitHub GraphQL API
    */
   private async getContributionCount(): Promise<number> {
     try {
-      // This is a simplified approach - would typically use GitHub's GraphQL API
-      // for more accurate contribution data. For now, return a placeholder.
-      return 0
-    } catch {
-      this.logger.warn('⚠️  Could not fetch contribution count')
+      const to = new Date()
+      const from = new Date(to.getTime() - this.config.contributionPeriodDays * 24 * 60 * 60 * 1000)
+
+      this.logger.debug(
+        `Fetching contributions from ${from.toISOString()} to ${to.toISOString()} (${this.config.contributionPeriodDays} days)`,
+      )
+
+      const contributions = await withRetry(
+        async () => this.github.fetchUserContributions(this.config.username, from.toISOString(), to.toISOString()),
+        'fetch user contributions',
+      )
+
+      const totalContributions = contributions.contributionCalendar.totalContributions
+      this.logger.debug(`Total contributions: ${totalContributions}`)
+
+      return totalContributions
+    } catch (error) {
+      this.logger.warn(`⚠️  Could not fetch contribution count: ${(error as Error).message}`)
       return 0
     }
   }
 
   /**
-   * Load historical metrics data
+   * Load historical metrics data with multi-layer cache fallback
    */
   private async loadHistoricalData(): Promise<ProfileMetrics[]> {
-    try {
-      const metricsPath = path.join(this.config.cacheDir, 'metrics-history.json')
-      const data = await fs.readFile(metricsPath, 'utf8')
-      return JSON.parse(data) as ProfileMetrics[]
-    } catch {
-      this.logger.info('📝 No historical data found, starting fresh')
+    // Bypass cache if force-refresh is enabled
+    if (this.config.forceRefresh) {
+      this.logger.info('Force refresh enabled - bypassing cache')
       return []
     }
+
+    // Try primary cache
+    const cached = await ProfileMetricsCache.load(DEFAULT_CACHE_DURATION_MS)
+    if (cached !== null) {
+      return cached
+    }
+
+    // Try backup cache as fallback
+    const backup = await ProfileMetricsCache.loadBackup()
+    if (backup !== null) {
+      return backup
+    }
+
+    // No cache available, return empty array
+    this.logger.info('No cached metrics data available, starting fresh')
+    return []
   }
 
   /**
@@ -348,9 +679,15 @@ class ProfileAnalytics {
   }
 
   /**
-   * Save metrics to historical data
+   * Save metrics to historical data using cache system
    */
   private async saveMetrics(metrics: ProfileMetrics): Promise<void> {
+    if (this.config.dryRun) {
+      this.logger.info('Dry-run mode: Would save metrics to cache')
+      this.logger.debug(`Metrics to save: ${JSON.stringify(metrics, null, 2)}`)
+      return
+    }
+
     const historical = await this.loadHistoricalData()
     historical.push(metrics)
 
@@ -358,15 +695,19 @@ class ProfileAnalytics {
     const cutoffDate = new Date(Date.now() - 90 * 24 * 60 * 60 * 1000)
     const filtered = historical.filter(m => new Date(m.timestamp) > cutoffDate)
 
-    const metricsPath = path.join(this.config.cacheDir, 'metrics-history.json')
-    await fs.mkdir(path.dirname(metricsPath), {recursive: true})
-    await fs.writeFile(metricsPath, JSON.stringify(filtered, null, 2))
+    await ProfileMetricsCache.save(filtered)
   }
 
   /**
    * Save analytics report
    */
   private async saveReport(report: AnalyticsReport): Promise<void> {
+    if (this.config.dryRun) {
+      this.logger.info('Dry-run mode: Would save analytics report')
+      this.logger.debug(`Report summary: ${report.summary.followers} followers, ${report.summary.totalStars} stars`)
+      return
+    }
+
     const reportPath = path.join(this.config.reportDir, `analytics-${Date.now()}.json`)
     await fs.mkdir(path.dirname(reportPath), {recursive: true})
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2))
@@ -380,20 +721,37 @@ class ProfileAnalytics {
    * Clean up old data files
    */
   private async cleanupOldData(): Promise<void> {
+    if (this.config.dryRun) {
+      this.logger.info('Dry-run mode: Would clean up old analytics data')
+      return
+    }
+
     try {
+      await fs.mkdir(this.config.reportDir, {recursive: true})
       const reportFiles = await fs.readdir(this.config.reportDir)
       const cutoffTime = Date.now() - 30 * 24 * 60 * 60 * 1000 // 30 days
+      let deletedCount = 0
 
       for (const file of reportFiles) {
         if (file.startsWith('analytics-') && file.endsWith('.json')) {
           const timestamp = Number.parseInt(file.replace('analytics-', '').replace('.json', ''), 10)
           if (timestamp < cutoffTime) {
-            await fs.unlink(path.join(this.config.reportDir, file))
+            try {
+              await fs.unlink(path.join(this.config.reportDir, file))
+              deletedCount++
+              this.logger.debug(`Deleted old file: ${file}`)
+            } catch (error) {
+              this.logger.warn(`Could not delete old file ${file}: ${(error as Error).message}`)
+            }
           }
         }
       }
-    } catch {
-      this.logger.warn('⚠️  Could not clean up old data files')
+
+      if (deletedCount > 0) {
+        this.logger.success(`Cleaned up ${deletedCount} old analytics files`)
+      }
+    } catch (error) {
+      this.logger.warn(`Could not read report directory: ${(error as Error).message}`)
     }
   }
 }
@@ -402,19 +760,45 @@ class ProfileAnalytics {
  * CLI Interface
  */
 async function main() {
+  const options = parseArguments()
+
+  if (options.help) {
+    showHelp()
+    process.exit(0)
+  }
+
+  const logger = Logger.getInstance()
+  logger.setVerbose(options.verbose)
+
+  if (options.verbose) {
+    logger.info('🔧 Running in verbose mode')
+    logger.debug(`CLI Options: ${JSON.stringify(options, null, 2)}`)
+  }
+
+  if (options.dryRun) {
+    logger.info('🔍 Dry-run mode enabled - no files will be modified')
+  }
+
   const config: AnalyticsConfig = {
     username: 'marcusrbrown',
     apiToken: process.env.GITHUB_TOKEN,
     cacheDir: path.join(process.cwd(), '.cache'),
     reportDir: path.join(process.cwd(), '.cache', 'analytics'),
-    trackingPeriod: 30, // 30 days
+    trackingPeriod: 30,
+    forceRefresh: options.forceRefresh,
+    dryRun: options.dryRun,
+    targetRepos: options.repos,
+    contributionPeriodDays: options.period,
   }
 
   const analytics = new ProfileAnalytics(config)
   const command = process.argv[2] ?? 'track'
 
+  // Support flags before commands: `pnpm run analytics --verbose` defaults to 'track'
+  const actualCommand = command.startsWith('--') || command.startsWith('-') ? 'track' : command
+
   try {
-    switch (command) {
+    switch (actualCommand) {
       case 'collect':
         await analytics.collectMetrics()
         break
@@ -426,8 +810,9 @@ async function main() {
         await analytics.trackPerformance()
         break
     }
+    process.exit(0)
   } catch (error) {
-    console.error('Analytics command failed:', error)
+    logger.error('Analytics command failed', error as Error)
     process.exit(1)
   }
 }
@@ -435,7 +820,8 @@ async function main() {
 const isMain = process.argv[1] === fileURLToPath(import.meta.url)
 if (isMain) {
   main().catch(error => {
-    console.error('Failed to run analytics:', error)
+    const logger = Logger.getInstance()
+    logger.error('Failed to run analytics', error as Error)
     process.exit(1)
   })
 }
