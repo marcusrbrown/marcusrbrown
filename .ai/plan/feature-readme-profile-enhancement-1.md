@@ -113,12 +113,12 @@ This plan elevates README.tpl.md to a world-class GitHub profile that showcases 
 
 | Task | Description | Completed | Date |
 |------|-------------|-----------|------|
-| TASK-031 | Design strategic contact section with multiple engagement pathways | | |
-| TASK-032 | Create recruiter-focused section highlighting availability and preferences | | |
-| TASK-033 | Implement collaboration invitation section for potential project partners | | |
-| TASK-034 | Add speaking and consulting availability indicators with booking pathways | | |
-| TASK-035 | Design sponsor integration section complementing existing SPONSORME system | | |
-| TASK-036 | Create newsletter signup or follow encouragement section for ongoing engagement | | |
+| TASK-031 | Enhance contact section in README.tpl.md with multiple engagement pathways and badges | | |
+| TASK-032 | Add professional availability indicators and consultation call-to-action | | |
+| TASK-033 | Create collaboration invitation section linking to featured projects and open issues | | |
+| TASK-034 | Integrate sponsor section with existing SPONSORME.md using markdown links | | |
+| TASK-035 | Add social proof elements (GitHub Sponsors badge, LinkedIn, email contact) | | |
+| TASK-036 | Optimize markdown layout for mobile responsiveness using GitHub-compatible HTML | | |
 
 ### Implementation Phase 7: Integration & Testing
 
@@ -126,12 +126,12 @@ This plan elevates README.tpl.md to a world-class GitHub profile that showcases 
 
 | Task | Description | Completed | Date |
 |------|-------------|-----------|------|
-| TASK-037 | Validate compatibility with readme-scribe workflow and automated update system | | |
-| TASK-038 | Test template processing and dynamic content generation across various scenarios | | |
-| TASK-039 | Optimize loading performance and external service dependency management | | |
-| TASK-040 | Conduct cross-platform testing across mobile, tablet, and desktop GitHub interfaces | | |
-| TASK-041 | Implement analytics tracking for engagement measurement and optimization insights | | |
-| TASK-042 | Create maintenance documentation and update procedures for long-term sustainability | | |
+| TASK-037 | Validate README.tpl.md compatibility with readme-scribe processing in update-profile.yaml workflow | | |
+| TASK-038 | Test template variable replacement and dynamic content rendering with pnpm scripts | | |
+| TASK-039 | Verify HIGHLIGHTS.tpl.md modular integration and cross-linking with main README | | |
+| TASK-040 | Run existing test suite (pnpm test) to ensure no regressions in badge/sponsor systems | | |
+| TASK-041 | Test profile-analytics.ts script integration for engagement tracking | | |
+| TASK-042 | Validate linting compliance with fix:markdown and fix:eslint scripts | | |
 
 ## 3. Alternatives
 
@@ -143,35 +143,35 @@ This plan elevates README.tpl.md to a world-class GitHub profile that showcases 
 
 ## 4. Dependencies
 
-- **DEP-001**: Existing readme-scribe workflow and automated update system
-- **DEP-002**: BADGES.md technology badge system and maintenance procedures
-- **DEP-003**: GitHub API access for statistics and repository information
-- **DEP-004**: External badge and widget services (shields.io, github-readme-stats, etc.)
-- **DEP-005**: Image hosting and asset management for profile visuals
-- **DEP-006**: Professional content and copywriting resources for messaging development
-- **DEP-007**: Performance monitoring tools for engagement tracking and optimization
+- **DEP-001**: readme-scribe GitHub Action integration in `.github/workflows/update-profile.yaml`
+- **DEP-002**: Existing badge automation system (`scripts/update-badges.ts`, `utils/badge-detector.ts`)
+- **DEP-003**: Existing sponsor system (`scripts/update-sponsors.ts`, `utils/github-api.ts`)
+- **DEP-004**: GitHub API access via `GITHUB_TOKEN` and `README_SCRIBE_GH_TOKEN` secrets
+- **DEP-005**: External services: shields.io, github-readme-stats, readme-typing-svg
+- **DEP-006**: Project tooling: pnpm, tsx, vitest, markdownlint-cli2, ESLint
+- **DEP-007**: Profile analytics infrastructure (`scripts/profile-analytics.ts`, `.cache/metrics-history.json`)
 
 ## 5. Files
 
 - **FILE-001**: `templates/README.tpl.md` - Enhanced world-class profile template (focused main page)
 - **FILE-002**: `templates/BADGES.tpl.md` - Expanded technology stack and skill badge system
 - **FILE-008**: `templates/HIGHLIGHTS.tpl.md` - Comprehensive portfolio showcase and detailed project highlights
-- **FILE-003**: `./.ai/docs/profile-design-guide.md` - Design principles and visual guidelines
-- **FILE-004**: `./.ai/docs/content-strategy.md` - Professional positioning and messaging framework
+- **FILE-003**: `./.ai/docs/profile-design-guide.md` - Design principles and visual guidelines (Phase 1)
+- **FILE-004**: `./.ai/docs/content-strategy.md` - Professional positioning and messaging framework (Phase 2)
 - **FILE-005**: `assets/profile-images/` - Profile visuals, logos, and branding elements
-- **FILE-006**: `scripts/profile-analytics.ts` - Engagement tracking and performance measurement
-- **FILE-007**: `docs/maintenance-procedures.md` - Long-term update and optimization guidelines
+- **FILE-006**: `scripts/profile-analytics.ts` - Engagement tracking and performance measurement (existing)
+- **FILE-007**: `.github/workflows/update-profile.yaml` - CI workflow for automated profile updates (existing)
 
 ## 6. Testing
 
-- **TEST-001**: Cross-platform rendering tests across desktop, mobile, and tablet GitHub interfaces
-- **TEST-002**: Template compatibility tests with readme-scribe workflow and processing system
-- **TEST-003**: Performance tests for loading speed and external service dependency management
-- **TEST-004**: Accessibility tests ensuring readability and usability across different viewing contexts
-- **TEST-005**: Engagement tracking validation for analytics and optimization measurement
-- **TEST-006**: Content accuracy tests for dynamic elements and automated update integration
-- **TEST-007**: Visual consistency tests across different GitHub themes and display modes
-- **TEST-008**: Professional presentation tests with target audience feedback validation
+- **TEST-001**: Manual cross-platform rendering validation across desktop, mobile, and tablet GitHub interfaces
+- **TEST-002**: Workflow integration test via GitHub Actions (update-profile.yaml) with template processing
+- **TEST-003**: External service availability tests using pnpm scripts (badges:fetch, sponsors:fetch)
+- **TEST-004**: Markdown linting validation using pnpm lint and fix:markdown scripts
+- **TEST-005**: Profile analytics script execution test using pnpm analytics and analytics:report
+- **TEST-006**: Template variable replacement validation comparing output with expected patterns
+- **TEST-007**: Visual consistency validation across GitHub light/dark themes using preview mode
+- **TEST-008**: Existing Vitest test suite execution (pnpm test) to verify no badge/sponsor regressions
 
 ## 7. Risks & Assumptions
 
