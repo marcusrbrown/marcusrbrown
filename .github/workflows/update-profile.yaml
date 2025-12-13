@@ -89,6 +89,10 @@ jobs:
         run: pnpm badges:update
         continue-on-error: true
 
+      - name: Update HIGHLIGHTS.md from template
+        run: cp templates/HIGHLIGHTS.tpl.md HIGHLIGHTS.md
+        continue-on-error: true
+
       - name: Update README
         uses: muesli/readme-scribe@d2f6ab32d6b9f5b59941fe782d6c7e6499a37fe4
         env:
