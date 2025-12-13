@@ -13,6 +13,19 @@ repository:
     typescript,
     markdown
 
+labels:
+  - name: analytics
+    color: '#1d76db'
+    description: Issues related to analytics and tracking
+
+  - name: cli
+    color: '#d93f0b'
+    description: Issues related to command-line interface tools
+
+  - name: github-api
+    color: '#0052cc'
+    description: Issues related to GitHub API usage
+
 branches:
   - name: main
     protection:
