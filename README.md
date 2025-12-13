@@ -24,7 +24,7 @@
 
 📍 **Phoenix, Arizona** • 🌐 **Remote-friendly** • ✉️ **Available for consulting**
 
-[![GitHub Sponsors](https://img.shields.io/github/sponsors/marcusrbrown?style=for-the-badge&logo=github-sponsors&color=EA4AAA)][gh-sponsors] [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)][linkedin] [![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail)][email] [![Website](https://img.shields.io/badge/Portfolio-Visit-4285F4?style=for-the-badge&logo=google-chrome)][website]
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/marcusrbrown?style=for-the-badge&logo=github-sponsors&color=EA4AAA&label=Sponsor)][gh-sponsors] [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)][linkedin] [![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)][email] [![Website](https://img.shields.io/badge/Portfolio-Visit-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)][website]
 
 </div>
 
@@ -53,28 +53,56 @@ _Explore detailed [project showcase, open source contributions, and professional
 
 ### 🚀 Let's Build Something Amazing Together
 
-<table>
+<table role="presentation">
 <tr>
 <td align="center" width="33%">
   <h4>💼 Looking to Hire?</h4>
-  I'm available for <strong>senior engineering</strong> and <strong>architecture consulting</strong> roles.
+  I'm <strong>available for consulting</strong> in senior engineering, architecture, and DevOps roles.
   <br/><br/>
-  <a href="mailto:marcus@marcusrbrown.com?subject=Opportunity">📧 Get in Touch</a>
+  <a href="mailto:contact@marcusrbrown.com?subject=Consulting%20Opportunity" aria-label="Email Marcus for consulting opportunities">📧 Schedule a Call</a>
 </td>
 <td align="center" width="33%">
   <h4>🤝 Want to Collaborate?</h4>
   Always interested in <strong>open source projects</strong> and <strong>technical partnerships</strong>.
   <br/><br/>
-  <a href="https://github.com/marcusrbrown">👥 View My Work</a>
+  <a href="https://github.com/marcusrbrown?tab=repositories" aria-label="Browse Marcus's repositories">👥 Explore Projects</a> • <a href="https://github.com/marcusrbrown/marcusrbrown/issues" aria-label="Open an issue to discuss collaboration">💬 Open Issue</a>
 </td>
 <td align="center" width="33%">
-  <h4>☕ Support My Work?</h4>
-  If my projects have helped you, consider <strong>sponsoring</strong> my open source work.
+  <h4>💖 Support My Work</h4>
+  If my projects have helped you, consider <strong>sponsoring</strong> my open source contributions.
   <br/><br/>
-  <a href="https://github.com/sponsors/marcusrbrown">💖 Become a Sponsor</a>
+  <a href="https://github.com/sponsors/marcusrbrown" aria-label="Become a GitHub Sponsor">⭐ Become a Sponsor</a> • <a href="SPONSORME.md" aria-label="Learn more about sponsorship benefits">📖 Learn More</a>
 </td>
 </tr>
 </table>
+
+</div>
+
+<div align="center">
+
+### 📬 Get In Touch
+
+<table role="presentation">
+<tr>
+<td align="center" width="33%">
+  <strong>🗓️ Consulting Services</strong><br/>
+  Architecture reviews, DevOps optimization, and technical mentorship<br/>
+  <sub>Available for contracts starting Q1 2026</sub>
+</td>
+<td align="center" width="33%">
+  <strong>🎤 Speaking Engagements</strong><br/>
+  Open source sustainability, developer tooling, automation<br/>
+  <sub>Accepting invitations for conferences and meetups</sub>
+</td>
+<td align="center" width="33%">
+  <strong>✍️ Technical Writing</strong><br/>
+  Guest posts, tutorials, and technical documentation<br/>
+  <sub>Open to collaboration opportunities</sub>
+</td>
+</tr>
+</table>
+
+**Quick Connect:** [Email][email] • [LinkedIn][linkedin]
 
 </div>
 
@@ -82,7 +110,7 @@ _Explore detailed [project showcase, open source contributions, and professional
 
 [gh-sponsors]: https://github.com/sponsors/marcusrbrown "Support Marcus's open source work"
 [linkedin]: https://www.linkedin.com/in/marcusrbrown "Connect with Marcus on LinkedIn"
-[email]: mailto:marcus@marcusrbrown.com "Email Marcus directly"
+[email]: mailto:contact@marcusrbrown.com "Email Marcus directly"
 [website]: https://marcusrbrown.com "Visit Marcus's portfolio website"
 
 <div align="center">
