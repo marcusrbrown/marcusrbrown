@@ -1,3 +1,4 @@
+import type {ContentPath, ContributionsData, Referrer, TrafficClones, TrafficViews} from '@/types/analytics.ts'
 import type {SponsorConfig} from '@/types/sponsors.ts'
 
 import type {RestEndpointMethodTypes} from '@octokit/rest'
@@ -294,6 +295,131 @@ export class GitHubApiClient {
     } catch (error) {
       console.error('Error fetching rate limit:', error)
       throw new Error(`Failed to fetch rate limit: ${error instanceof Error ? error.message : 'Unknown error'}`)
+    }
+  }
+
+  /**
+   * Get repository traffic views for the last 14 days
+   * Requires push access to the repository
+   */
+  async getRepositoryViews(owner: string, repo: string, per: 'day' | 'week' = 'day'): Promise<TrafficViews> {
+    try {
+      const response = await this.octokit.rest.repos.getViews({
+        owner,
+        repo,
+        per,
+      })
+
+      return response.data
+    } catch (error) {
+      console.error(`Error fetching views for ${owner}/${repo}:`, error)
+      throw new Error(`Failed to fetch repository views: ${error instanceof Error ? error.message : 'Unknown error'}`)
+    }
+  }
+
+  /**
+   * Get repository clone statistics for the last 14 days
+   * Requires push access to the repository
+   */
+  async getRepositoryClones(owner: string, repo: string, per: 'day' | 'week' = 'day'): Promise<TrafficClones> {
+    try {
+      const response = await this.octokit.rest.repos.getClones({
+        owner,
+        repo,
+        per,
+      })
+
+      return response.data
+    } catch (error) {
+      console.error(`Error fetching clones for ${owner}/${repo}:`, error)
+      throw new Error(`Failed to fetch repository clones: ${error instanceof Error ? error.message : 'Unknown error'}`)
+    }
+  }
+
+  /**
+   * Get top 10 referrers for repository over the last 14 days
+   * Requires push access to the repository
+   */
+  async getTopReferrers(owner: string, repo: string): Promise<Referrer[]> {
+    try {
+      const response = await this.octokit.rest.repos.getTopReferrers({
+        owner,
+        repo,
+      })
+
+      return response.data
+    } catch (error) {
+      console.error(`Error fetching top referrers for ${owner}/${repo}:`, error)
+      throw new Error(`Failed to fetch top referrers: ${error instanceof Error ? error.message : 'Unknown error'}`)
+    }
+  }
+
+  /**
+   * Get top 10 popular content paths for repository over the last 14 days
+   * Requires push access to the repository
+   */
+  async getTopPaths(owner: string, repo: string): Promise<ContentPath[]> {
+    try {
+      const response = await this.octokit.rest.repos.getTopPaths({
+        owner,
+        repo,
+      })
+
+      return response.data
+    } catch (error) {
+      console.error(`Error fetching top paths for ${owner}/${repo}:`, error)
+      throw new Error(`Failed to fetch top paths: ${error instanceof Error ? error.message : 'Unknown error'}`)
+    }
+  }
+
+  /**
+   * Fetch user contributions data for a specified date range using GraphQL API
+   */
+  async fetchUserContributions(username: string, from: string, to: string): Promise<ContributionsData> {
+    try {
+      console.warn(`Fetching contributions for user: ${username} from ${from} to ${to}`)
+
+      const query = `
+        query($login: String!, $from: DateTime!, $to: DateTime!) {
+          user(login: $login) {
+            contributionsCollection(from: $from, to: $to) {
+              totalCommitContributions
+              totalIssueContributions
+              totalPullRequestContributions
+              totalPullRequestReviewContributions
+              totalRepositoryContributions
+              restrictedContributionsCount
+              contributionCalendar {
+                totalContributions
+                weeks {
+                  firstDay
+                  contributionDays {
+                    contributionCount
+                    date
+                    weekday
+                  }
+                }
+              }
+            }
+          }
+        }
+      `
+
+      const response: {
+        user: {
+          contributionsCollection: ContributionsData
+        }
+      } = await this.graphqlClient(query, {
+        login: username,
+        from,
+        to,
+      })
+
+      console.warn(`Successfully fetched contributions data`)
+      return response.user.contributionsCollection
+    } catch (error) {
+      console.error('Error fetching user contributions:', error)
+      throw new Error(`Failed to fetch user contributions: ${error instanceof Error ? error.message : 'Unknown error'}`)
     }
   }
 }
