@@ -10,8 +10,8 @@
  * - Phase 1 (COMPLETE): GitHub API traffic/contributions methods in utils/github-api.ts
  * - Phase 2 (COMPLETE): CLI infrastructure with --verbose, --help, --force-refresh, --dry-run flags
  * - Phase 3 (COMPLETE): withRetry wrapper, GitHub-native analytics integration
- * - Phase 4 (PENDING): Multi-layer cache system (ProfileMetricsCache)
- * - Phase 5 (PENDING): Logger consistency, graceful degradation
+ * - Phase 4 (COMPLETE): Multi-layer cache system (ProfileMetricsCache)
+ * - Phase 5 (PARTIALLY COMPLETE): Dry-run flag integrated, cleanupOldData enhanced
  * - Phase 6 (PENDING): Comprehensive test suite
  *
  * Features:
@@ -32,6 +32,92 @@ import {Logger} from '@/utils/logger'
 const MAX_RETRIES = 3
 const BASE_DELAY_MS = 1000
 const MAX_DELAY_MS = 10000
+
+/**
+ * Cache configuration
+ */
+const CACHE_DIR = path.join(process.cwd(), '.cache')
+const CACHE_FILE = path.join(CACHE_DIR, 'metrics-history.json')
+const BACKUP_CACHE_FILE = path.join(CACHE_DIR, 'metrics-history-backup.json')
+const DEFAULT_CACHE_DURATION_MS = 3600000 // 1 hour
+
+/**
+ * Multi-layer cache system for profile metrics
+ */
+const ProfileMetricsCache = {
+  /**
+   * Load cached metrics data if valid
+   */
+  async load(maxAgeMs: number): Promise<ProfileMetrics[] | null> {
+    const logger = Logger.getInstance()
+    try {
+      await fs.mkdir(CACHE_DIR, {recursive: true})
+
+      const cacheData = await fs.readFile(CACHE_FILE, 'utf-8')
+      const parsedData = JSON.parse(cacheData) as {metrics: ProfileMetrics[]; fetchedAt: string}
+
+      const cacheAge = Date.now() - new Date(parsedData.fetchedAt).getTime()
+      if (cacheAge <= maxAgeMs) {
+        logger.success(
+          `Using cached metrics data (age: ${Math.round(cacheAge / 1000 / 60)} minutes, ${parsedData.metrics.length} records)`,
+        )
+        return parsedData.metrics
+      }
+
+      logger.warn(
+        `Cache expired (age: ${Math.round(cacheAge / 1000 / 60)} minutes, max: ${Math.round(maxAgeMs / 1000 / 60)} minutes)`,
+      )
+      return null
+    } catch (error) {
+      logger.debug(`No valid cache found: ${(error as Error).message}`)
+      return null
+    }
+  },
+
+  /**
+   * Save metrics data to cache with backup
+   */
+  async save(metrics: ProfileMetrics[]): Promise<void> {
+    const logger = Logger.getInstance()
+    try {
+      await fs.mkdir(CACHE_DIR, {recursive: true})
+
+      // Create backup of existing cache before overwriting
+      try {
+        await fs.copyFile(CACHE_FILE, BACKUP_CACHE_FILE)
+        logger.debug('Created backup of existing cache')
+      } catch {
+        // No existing cache to backup, not an error
+      }
+
+      const cacheData = {
+        metrics,
+        fetchedAt: new Date().toISOString(),
+      }
+
+      await fs.writeFile(CACHE_FILE, JSON.stringify(cacheData, null, 2), 'utf-8')
+      logger.success('Metrics data cached successfully')
+    } catch (error) {
+      logger.error('Failed to save cache', error as Error)
+    }
+  },
+
+  /**
+   * Load backup cache as fallback
+   */
+  async loadBackup(): Promise<ProfileMetrics[] | null> {
+    const logger = Logger.getInstance()
+    try {
+      const backupData = await fs.readFile(BACKUP_CACHE_FILE, 'utf-8')
+      const parsedData = JSON.parse(backupData) as {metrics: ProfileMetrics[]; fetchedAt: string}
+      logger.warn('Using backup cache data as fallback')
+      return parsedData.metrics
+    } catch {
+      logger.debug('No backup cache available')
+      return null
+    }
+  },
+}
 
 /**
  * Retry wrapper with exponential backoff
@@ -483,17 +569,30 @@ class ProfileAnalytics {
   }
 
   /**
-   * Load historical metrics data
+   * Load historical metrics data with multi-layer cache fallback
    */
   private async loadHistoricalData(): Promise<ProfileMetrics[]> {
-    try {
-      const metricsPath = path.join(this.config.cacheDir, 'metrics-history.json')
-      const data = await fs.readFile(metricsPath, 'utf8')
-      return JSON.parse(data) as ProfileMetrics[]
-    } catch {
-      this.logger.info('📝 No historical data found, starting fresh')
+    // Bypass cache if force-refresh is enabled
+    if (this.config.forceRefresh) {
+      this.logger.info('Force refresh enabled - bypassing cache')
       return []
     }
+
+    // Try primary cache
+    const cached = await ProfileMetricsCache.load(DEFAULT_CACHE_DURATION_MS)
+    if (cached !== null) {
+      return cached
+    }
+
+    // Try backup cache as fallback
+    const backup = await ProfileMetricsCache.loadBackup()
+    if (backup !== null) {
+      return backup
+    }
+
+    // No cache available, return empty array
+    this.logger.info('No cached metrics data available, starting fresh')
+    return []
   }
 
   /**
@@ -575,9 +674,15 @@ class ProfileAnalytics {
   }
 
   /**
-   * Save metrics to historical data
+   * Save metrics to historical data using cache system
    */
   private async saveMetrics(metrics: ProfileMetrics): Promise<void> {
+    if (this.config.dryRun) {
+      this.logger.info('Dry-run mode: Would save metrics to cache')
+      this.logger.debug(`Metrics to save: ${JSON.stringify(metrics, null, 2)}`)
+      return
+    }
+
     const historical = await this.loadHistoricalData()
     historical.push(metrics)
 
@@ -585,15 +690,19 @@ class ProfileAnalytics {
     const cutoffDate = new Date(Date.now() - 90 * 24 * 60 * 60 * 1000)
     const filtered = historical.filter(m => new Date(m.timestamp) > cutoffDate)
 
-    const metricsPath = path.join(this.config.cacheDir, 'metrics-history.json')
-    await fs.mkdir(path.dirname(metricsPath), {recursive: true})
-    await fs.writeFile(metricsPath, JSON.stringify(filtered, null, 2))
+    await ProfileMetricsCache.save(filtered)
   }
 
   /**
    * Save analytics report
    */
   private async saveReport(report: AnalyticsReport): Promise<void> {
+    if (this.config.dryRun) {
+      this.logger.info('Dry-run mode: Would save analytics report')
+      this.logger.debug(`Report summary: ${report.summary.followers} followers, ${report.summary.totalStars} stars`)
+      return
+    }
+
     const reportPath = path.join(this.config.reportDir, `analytics-${Date.now()}.json`)
     await fs.mkdir(path.dirname(reportPath), {recursive: true})
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2))
@@ -607,20 +716,36 @@ class ProfileAnalytics {
    * Clean up old data files
    */
   private async cleanupOldData(): Promise<void> {
+    if (this.config.dryRun) {
+      this.logger.info('Dry-run mode: Would clean up old analytics data')
+      return
+    }
+
     try {
       const reportFiles = await fs.readdir(this.config.reportDir)
       const cutoffTime = Date.now() - 30 * 24 * 60 * 60 * 1000 // 30 days
+      let deletedCount = 0
 
       for (const file of reportFiles) {
         if (file.startsWith('analytics-') && file.endsWith('.json')) {
           const timestamp = Number.parseInt(file.replace('analytics-', '').replace('.json', ''), 10)
           if (timestamp < cutoffTime) {
-            await fs.unlink(path.join(this.config.reportDir, file))
+            try {
+              await fs.unlink(path.join(this.config.reportDir, file))
+              deletedCount++
+              this.logger.debug(`Deleted old file: ${file}`)
+            } catch (error) {
+              this.logger.warn(`Could not delete old file ${file}: ${(error as Error).message}`)
+            }
           }
         }
       }
-    } catch {
-      this.logger.warn('⚠️  Could not clean up old data files')
+
+      if (deletedCount > 0) {
+        this.logger.success(`Cleaned up ${deletedCount} old analytics files`)
+      }
+    } catch (error) {
+      this.logger.warn(`Could not read report directory: ${(error as Error).message}`)
     }
   }
 }

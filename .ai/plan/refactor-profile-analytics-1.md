@@ -84,13 +84,13 @@ Refactor [scripts/profile-analytics.ts](../../scripts/profile-analytics.ts) to r
 
 | Task | Description | Completed | Date |
 |------|-------------|-----------|------|
-| TASK-019 | Add `CACHE_FILE` and `BACKUP_CACHE_FILE` constants for `metrics-history.json` and `metrics-history-backup.json` | | |
-| TASK-020 | Implement `ProfileMetricsCache.load(maxAgeMs): Promise<ProfileMetrics[] \| null>` with expiration checking | | |
-| TASK-021 | Implement `ProfileMetricsCache.save(data): Promise<void>` with backup creation before write | | |
-| TASK-022 | Implement `ProfileMetricsCache.loadBackup(): Promise<ProfileMetrics[] \| null>` as fallback | | |
-| TASK-023 | Update `loadHistoricalData()` to use `ProfileMetricsCache.load()` with fallback chain: cache → backup → empty array | | |
-| TASK-024 | Update `saveMetrics()` to use `ProfileMetricsCache.save()` | | |
-| TASK-025 | Add `--force-refresh` flag handling to bypass cache in `loadHistoricalData()` | | |
+| TASK-019 | Add `CACHE_FILE` and `BACKUP_CACHE_FILE` constants for `metrics-history.json` and `metrics-history-backup.json` | ✅ | 2025-12-12 |
+| TASK-020 | Implement `ProfileMetricsCache.load(maxAgeMs): Promise<ProfileMetrics[] \| null>` with expiration checking | ✅ | 2025-12-12 |
+| TASK-021 | Implement `ProfileMetricsCache.save(data): Promise<void>` with backup creation before write | ✅ | 2025-12-12 |
+| TASK-022 | Implement `ProfileMetricsCache.loadBackup(): Promise<ProfileMetrics[] \| null>` as fallback | ✅ | 2025-12-12 |
+| TASK-023 | Update `loadHistoricalData()` to use `ProfileMetricsCache.load()` with fallback chain: cache → backup → empty array | ✅ | 2025-12-12 |
+| TASK-024 | Update `saveMetrics()` to use `ProfileMetricsCache.save()` | ✅ | 2025-12-12 |
+| TASK-025 | Add `--force-refresh` flag handling to bypass cache in `loadHistoricalData()` | ✅ | 2025-12-12 |
 
 ### Implementation Phase 5: Fix Logger Usage and Error Handling
 
@@ -99,10 +99,10 @@ Refactor [scripts/profile-analytics.ts](../../scripts/profile-analytics.ts) to r
 | Task | Description | Completed | Date |
 |------|-------------|-----------|------|
 | TASK-026 | Replace all `console.warn/error/log` calls in `ProfileAnalytics` class with `this.logger.info/warn/error/success/debug` | | |
-| TASK-027 | Update `cleanupOldData()` to log specific errors: "Could not read report directory" vs "Could not delete old file {filename}" instead of generic warning | | |
-| TASK-028 | Add `--dry-run` flag handling to `saveMetrics()`, `saveReport()`, `cleanupOldData()` - log actions without writing files | | |
+| TASK-027 | Update `cleanupOldData()` to log specific errors: "Could not read report directory" vs "Could not delete old file {filename}" instead of generic warning | ✅ | 2025-12-12 |
+| TASK-028 | Add `--dry-run` flag handling to `saveMetrics()`, `saveReport()`, `cleanupOldData()` - log actions without writing files | ✅ | 2025-12-12 |
 | TASK-029 | Update `aggregateRepositoryViews()` to handle repos where user lacks push access - log warning and skip, continue with remaining repos | | |
-| TASK-030 | Ensure `main()` exits with code 0 on success, code 1 on failure | | |
+| TASK-030 | Ensure `main()` exits with code 0 on success, code 1 on failure | ✅ | 2025-12-12 |
 
 ### Implementation Phase 6: Create Comprehensive Test Suite
 
