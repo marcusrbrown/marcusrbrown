@@ -70,13 +70,13 @@ Refactor [scripts/profile-analytics.ts](../../scripts/profile-analytics.ts) to r
 
 | Task | Description | Completed | Date |
 |------|-------------|-----------|------|
-| TASK-012 | Add constants `MAX_RETRIES = 3`, `BASE_DELAY_MS = 1000`, `MAX_DELAY_MS = 10000` | | |
-| TASK-013 | Implement `withRetry<T>(operation, operationName, maxRetries): Promise<T>` with exponential backoff and Logger integration | | |
-| TASK-014 | Replace `getProfileViews()` with `aggregateRepositoryViews(repos: string[]): Promise<number>` that sums traffic across specified repos using `withRetry` | | |
-| TASK-015 | Replace `getContributionCount()` placeholder with implementation using `GitHubApiClient.fetchUserContributions()` wrapped in `withRetry` | | |
-| TASK-016 | Wrap `collectMetrics()` API calls (`fetchUserProfile`, `getUserRepositories`) with `withRetry` | | |
-| TASK-017 | Add `--repos` flag parsing to specify which repositories to aggregate traffic from (default: top 5 by stars) | | |
-| TASK-018 | Add `--period` flag for contribution date range (default: 365 days) | | |
+| TASK-012 | Add constants `MAX_RETRIES = 3`, `BASE_DELAY_MS = 1000`, `MAX_DELAY_MS = 10000` | ✅ | 2025-12-12 |
+| TASK-013 | Implement `withRetry<T>(operation, operationName, maxRetries): Promise<T>` with exponential backoff and Logger integration | ✅ | 2025-12-12 |
+| TASK-014 | Replace `getProfileViews()` with `aggregateRepositoryViews(repos: string[]): Promise<number>` that sums traffic across specified repos using `withRetry` | ✅ | 2025-12-12 |
+| TASK-015 | Replace `getContributionCount()` placeholder with implementation using `GitHubApiClient.fetchUserContributions()` wrapped in `withRetry` | ✅ | 2025-12-12 |
+| TASK-016 | Wrap `collectMetrics()` API calls (`fetchUserProfile`, `getUserRepositories`) with `withRetry` | ✅ | 2025-12-12 |
+| TASK-017 | Add `--repos` flag parsing to specify which repositories to aggregate traffic from (default: top 5 by stars) | ✅ | 2025-12-12 |
+| TASK-018 | Add `--period` flag for contribution date range (default: 365 days) | ✅ | 2025-12-12 |
 
 ### Implementation Phase 4: Establish Multi-Layer Cache System
 

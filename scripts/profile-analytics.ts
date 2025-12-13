@@ -9,7 +9,7 @@
  * Implementation Status:
  * - Phase 1 (COMPLETE): GitHub API traffic/contributions methods in utils/github-api.ts
  * - Phase 2 (COMPLETE): CLI infrastructure with --verbose, --help, --force-refresh, --dry-run flags
- * - Phase 3 (PENDING): withRetry wrapper, GitHub-native analytics integration
+ * - Phase 3 (COMPLETE): withRetry wrapper, GitHub-native analytics integration
  * - Phase 4 (PENDING): Multi-layer cache system (ProfileMetricsCache)
  * - Phase 5 (PENDING): Logger consistency, graceful degradation
  * - Phase 6 (PENDING): Comprehensive test suite
@@ -28,6 +28,41 @@ import process from 'node:process'
 import {fileURLToPath} from 'node:url'
 import {GitHubApiClient} from '@/utils/github-api'
 import {Logger} from '@/utils/logger'
+
+const MAX_RETRIES = 3
+const BASE_DELAY_MS = 1000
+const MAX_DELAY_MS = 10000
+
+/**
+ * Retry wrapper with exponential backoff
+ */
+async function withRetry<T>(
+  operation: () => Promise<T>,
+  operationName: string,
+  maxRetries: number = MAX_RETRIES,
+): Promise<T> {
+  const logger = Logger.getInstance()
+  let lastError: Error | undefined
+
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      logger.debug(`Attempting ${operationName} (attempt ${attempt}/${maxRetries})`)
+      return await operation()
+    } catch (error) {
+      lastError = error as Error
+      logger.warn(`${operationName} failed (attempt ${attempt}/${maxRetries}): ${lastError.message}`)
+
+      if (attempt < maxRetries) {
+        const delay = Math.min(BASE_DELAY_MS * 2 ** (attempt - 1), MAX_DELAY_MS)
+        logger.debug(`Retrying ${operationName} in ${delay}ms...`)
+        await new Promise(resolve => setTimeout(resolve, delay))
+      }
+    }
+  }
+
+  logger.error(`${operationName} failed after ${maxRetries} attempts`)
+  throw lastError ?? new Error(`${operationName} failed after ${maxRetries} attempts`)
+}
 
 /**
  * Parse command-line arguments into CliOptions
@@ -263,11 +298,14 @@ class ProfileAnalytics {
     this.logger.info('📊 Collecting profile metrics...')
 
     try {
-      // Fetch user data
-      const user = await this.github.fetchUserProfile(this.config.username)
+      // Fetch user data with retry
+      const user = await withRetry(async () => this.github.fetchUserProfile(this.config.username), 'fetch user profile')
 
-      // Fetch repositories
-      const repositories = (await this.github.getUserRepositories(this.config.username)) as GitHubRepository[]
+      // Fetch repositories with retry
+      const repositories = (await withRetry(
+        async () => this.github.getUserRepositories(this.config.username),
+        'fetch user repositories',
+      )) as GitHubRepository[]
 
       // Calculate total stars and forks
       const totalStars = repositories.reduce((sum: number, repo: GitHubRepository) => sum + repo.stargazers_count, 0)
@@ -292,9 +330,23 @@ class ProfileAnalytics {
       // Get contribution count (approximate from recent activity)
       const contributions = await this.getContributionCount()
 
+      // Select repositories for traffic aggregation
+      const targetRepos =
+        this.config.targetRepos.length > 0
+          ? this.config.targetRepos
+          : repositories
+              .filter(repo => !repo.private)
+              .sort((a, b) => b.stargazers_count - a.stargazers_count)
+              .slice(0, 5)
+              .map(repo => repo.name)
+
+      this.logger.debug(
+        `Selected ${targetRepos.length} repositories for traffic aggregation: ${targetRepos.join(', ')}`,
+      )
+
       const metrics: ProfileMetrics = {
         timestamp: new Date().toISOString(),
-        profileViews: await this.getProfileViews(),
+        profileViews: await this.aggregateRepositoryViews(targetRepos),
         followers: user.followers,
         following: user.following,
         publicRepos: user.public_repos,
@@ -358,19 +410,35 @@ class ProfileAnalytics {
   }
 
   /**
-   * Get profile view count (integration with external service)
+   * Aggregate profile views across specified repositories using GitHub traffic API
    */
-  private async getProfileViews(): Promise<number> {
-    try {
-      // This would typically integrate with a service like Google Analytics
-      // or a custom tracking solution. For now, we'll use a placeholder.
-      const response = await fetch(`https://api.countapi.xyz/get/marcusrbrown/profile-views`)
-      const data = (await response.json()) as {value?: number}
-      return data.value ?? 0
-    } catch {
-      this.logger.warn('⚠️  Could not fetch profile views')
+  private async aggregateRepositoryViews(repos: string[]): Promise<number> {
+    this.logger.debug(`Aggregating views for ${repos.length} repositories`)
+    let totalViews = 0
+    let successfulRepos = 0
+
+    for (const repo of repos) {
+      try {
+        const views = await withRetry(
+          async () => this.github.getRepositoryViews(this.config.username, repo, 'day'),
+          `fetch views for ${repo}`,
+        )
+        totalViews += views.count
+        successfulRepos++
+        this.logger.debug(`Repository ${repo}: ${views.count} views (${views.uniques} unique)`)
+      } catch (error) {
+        this.logger.warn(`⚠️  Skipping ${repo}: ${(error as Error).message}`)
+        continue
+      }
+    }
+
+    if (successfulRepos === 0) {
+      this.logger.warn('⚠️  Could not fetch views for any repositories')
       return 0
     }
+
+    this.logger.info(`Aggregated ${totalViews} total views from ${successfulRepos}/${repos.length} repositories`)
+    return totalViews
   }
 
   /**
@@ -388,15 +456,28 @@ class ProfileAnalytics {
   }
 
   /**
-   * Get approximate contribution count
+   * Get contribution count using GitHub GraphQL API
    */
   private async getContributionCount(): Promise<number> {
     try {
-      // This is a simplified approach - would typically use GitHub's GraphQL API
-      // for more accurate contribution data. For now, return a placeholder.
-      return 0
-    } catch {
-      this.logger.warn('⚠️  Could not fetch contribution count')
+      const to = new Date()
+      const from = new Date(to.getTime() - this.config.contributionPeriodDays * 24 * 60 * 60 * 1000)
+
+      this.logger.debug(
+        `Fetching contributions from ${from.toISOString()} to ${to.toISOString()} (${this.config.contributionPeriodDays} days)`,
+      )
+
+      const contributions = await withRetry(
+        async () => this.github.fetchUserContributions(this.config.username, from.toISOString(), to.toISOString()),
+        'fetch user contributions',
+      )
+
+      const totalContributions = contributions.contributionCalendar.totalContributions
+      this.logger.debug(`Total contributions: ${totalContributions}`)
+
+      return totalContributions
+    } catch (error) {
+      this.logger.warn(`⚠️  Could not fetch contribution count: ${(error as Error).message}`)
       return 0
     }
   }
