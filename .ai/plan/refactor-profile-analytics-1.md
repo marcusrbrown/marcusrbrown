@@ -58,11 +58,11 @@ Refactor [scripts/profile-analytics.ts](../../scripts/profile-analytics.ts) to r
 
 | Task | Description | Completed | Date |
 |------|-------------|-----------|------|
-| TASK-007 | Add `CliOptions` interface with `verbose`, `help`, `forceRefresh`, `dryRun`, `repos`, `period` properties | | |
-| TASK-008 | Implement `parseArguments(): CliOptions` function to parse `process.argv` | | |
-| TASK-009 | Implement `showHelp(): void` function with usage examples and flag documentation including token scope requirements | | |
-| TASK-010 | Update `main()` to use `parseArguments()`, call `showHelp()` when `--help` flag present | | |
-| TASK-011 | Pass `verbose` option to `Logger.getInstance().setVerbose()` at startup | | |
+| TASK-007 | Add `CliOptions` interface with `verbose`, `help`, `forceRefresh`, `dryRun`, `repos`, `period` properties | ✅ | 2025-12-12 |
+| TASK-008 | Implement `parseArguments(): CliOptions` function to parse `process.argv` | ✅ | 2025-12-12 |
+| TASK-009 | Implement `showHelp(): void` function with usage examples and flag documentation including token scope requirements | ✅ | 2025-12-12 |
+| TASK-010 | Update `main()` to use `parseArguments()`, call `showHelp()` when `--help` flag present | ✅ | 2025-12-12 |
+| TASK-011 | Pass `verbose` option to `Logger.getInstance().setVerbose()` at startup | ✅ | 2025-12-12 |
 
 ### Implementation Phase 3: Implement withRetry and Update Metrics Collection
 

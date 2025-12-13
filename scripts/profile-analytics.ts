@@ -6,6 +6,14 @@
  * Tracks engagement metrics, profile views, and performance indicators
  * for the GitHub profile README and associated content.
  *
+ * Implementation Status:
+ * - Phase 1 (COMPLETE): GitHub API traffic/contributions methods in utils/github-api.ts
+ * - Phase 2 (COMPLETE): CLI infrastructure with --verbose, --help, --force-refresh, --dry-run flags
+ * - Phase 3 (PENDING): withRetry wrapper, GitHub-native analytics integration
+ * - Phase 4 (PENDING): Multi-layer cache system (ProfileMetricsCache)
+ * - Phase 5 (PENDING): Logger consistency, graceful degradation
+ * - Phase 6 (PENDING): Comprehensive test suite
+ *
  * Features:
  * - Profile view tracking and analytics
  * - GitHub API metrics collection
@@ -21,12 +29,141 @@ import {fileURLToPath} from 'node:url'
 import {GitHubApiClient} from '@/utils/github-api'
 import {Logger} from '@/utils/logger'
 
+/**
+ * Parse command-line arguments into CliOptions
+ */
+function parseArguments(): CliOptions {
+  const args = process.argv.slice(2)
+  let options: CliOptions = {
+    verbose: false,
+    help: false,
+    forceRefresh: false,
+    dryRun: false,
+    repos: [],
+    period: 365,
+  }
+
+  for (let i = 0; i < args.length; i++) {
+    const arg = args[i]
+    // TypeScript doesn't narrow array access, explicit check required
+    if (arg === undefined) continue
+
+    switch (arg) {
+      case '--verbose':
+      case '-v':
+        options = {...options, verbose: true}
+        break
+      case '--help':
+      case '-h':
+        options = {...options, help: true}
+        break
+      case '--force-refresh':
+      case '-f':
+        options = {...options, forceRefresh: true}
+        break
+      case '--dry-run':
+      case '-d':
+        options = {...options, dryRun: true}
+        break
+      case '--repos':
+      case '-r': {
+        const reposArg = args[++i]
+        if (reposArg !== undefined && !reposArg.startsWith('--')) {
+          options = {...options, repos: reposArg.split(',').map(r => r.trim())}
+        }
+        break
+      }
+      case '--period':
+      case '-p': {
+        const periodArg = args[++i]
+        if (periodArg !== undefined && !periodArg.startsWith('--')) {
+          const periodValue = Number.parseInt(periodArg, 10)
+          if (!Number.isNaN(periodValue) && periodValue > 0) {
+            options = {...options, period: periodValue}
+          }
+        }
+        break
+      }
+      default:
+        break
+    }
+  }
+
+  return options
+}
+
+/**
+ * Display CLI help information
+ */
+function showHelp(): void {
+  const helpText = `
+GitHub Profile Analytics - Track and analyze your GitHub profile metrics
+
+Usage:
+  pnpm run analytics [command] [options]
+  GITHUB_TOKEN=<token> pnpm run analytics [command] [options]
+
+Commands:
+  collect    Collect current profile metrics
+  report     Generate comprehensive analytics report
+  track      Track performance metrics (default)
+
+Options:
+  --verbose, -v           Enable verbose logging output
+  --help, -h              Display this help information
+  --force-refresh, -f     Bypass cache and fetch fresh data
+  --dry-run, -d           Preview actions without making changes
+  --repos, -r <repos>     Comma-separated list of repos for traffic aggregation
+                          Example: --repos "repo1,repo2,repo3"
+                          Default: top 5 repositories by stars
+  --period, -p <days>     Contribution analysis period in days
+                          Example: --period 90
+                          Default: 365 days
+
+Examples:
+  # Basic usage with default command
+  pnpm run analytics
+
+  # Generate detailed report with verbose output
+  pnpm run analytics report --verbose
+
+  # Force refresh and collect metrics for specific repos
+  pnpm run analytics collect --force-refresh --repos "repo1,repo2"
+
+  # Dry-run mode to preview changes
+  pnpm run analytics --dry-run --verbose
+
+  # Analyze contributions for the last 90 days
+  pnpm run analytics report --period 90
+
+Required Permissions:
+  GITHUB_TOKEN environment variable must be set with the following scopes:
+  - read:user              Read user profile information
+  - repo (or read:org)     Access repository traffic data (requires push access)
+  - read:project           Read project data
+
+Note:
+  Traffic API endpoints require push access to repositories. The script will
+  gracefully skip repositories where access is insufficient and continue with
+  available data.
+
+For more information, see: https://docs.github.com/en/rest/metrics/traffic
+`
+
+  const logger = Logger.getInstance()
+  logger.info(helpText)
+}
+
 interface AnalyticsConfig {
   readonly username: string
   readonly apiToken: string | undefined
   readonly cacheDir: string
   readonly reportDir: string
-  readonly trackingPeriod: number // days
+  readonly trackingPeriod: number
+  readonly forceRefresh: boolean
+  readonly dryRun: boolean
+  readonly targetRepos: string[]
+  readonly contributionPeriodDays: number
 }
 
 interface ProfileMetrics {
@@ -85,6 +222,15 @@ interface GitHubRepository {
   readonly language: string | null
   readonly updated_at: string
   readonly private: boolean
+}
+
+interface CliOptions {
+  readonly verbose: boolean
+  readonly help: boolean
+  readonly forceRefresh: boolean
+  readonly dryRun: boolean
+  readonly repos: string[]
+  readonly period: number
 }
 
 class ProfileAnalytics {
@@ -402,19 +548,45 @@ class ProfileAnalytics {
  * CLI Interface
  */
 async function main() {
+  const options = parseArguments()
+
+  if (options.help) {
+    showHelp()
+    process.exit(0)
+  }
+
+  const logger = Logger.getInstance()
+  logger.setVerbose(options.verbose)
+
+  if (options.verbose) {
+    logger.info('🔧 Running in verbose mode')
+    logger.debug(`CLI Options: ${JSON.stringify(options, null, 2)}`)
+  }
+
+  if (options.dryRun) {
+    logger.info('🔍 Dry-run mode enabled - no files will be modified')
+  }
+
   const config: AnalyticsConfig = {
     username: 'marcusrbrown',
     apiToken: process.env.GITHUB_TOKEN,
     cacheDir: path.join(process.cwd(), '.cache'),
     reportDir: path.join(process.cwd(), '.cache', 'analytics'),
-    trackingPeriod: 30, // 30 days
+    trackingPeriod: 30,
+    forceRefresh: options.forceRefresh,
+    dryRun: options.dryRun,
+    targetRepos: options.repos,
+    contributionPeriodDays: options.period,
   }
 
   const analytics = new ProfileAnalytics(config)
   const command = process.argv[2] ?? 'track'
 
+  // Support flags before commands: `pnpm run analytics --verbose` defaults to 'track'
+  const actualCommand = command.startsWith('--') || command.startsWith('-') ? 'track' : command
+
   try {
-    switch (command) {
+    switch (actualCommand) {
       case 'collect':
         await analytics.collectMetrics()
         break
@@ -426,8 +598,9 @@ async function main() {
         await analytics.trackPerformance()
         break
     }
+    process.exit(0)
   } catch (error) {
-    console.error('Analytics command failed:', error)
+    logger.error('Analytics command failed', error as Error)
     process.exit(1)
   }
 }
@@ -435,7 +608,8 @@ async function main() {
 const isMain = process.argv[1] === fileURLToPath(import.meta.url)
 if (isMain) {
   main().catch(error => {
-    console.error('Failed to run analytics:', error)
+    const logger = Logger.getInstance()
+    logger.error('Failed to run analytics', error as Error)
     process.exit(1)
   })
 }
