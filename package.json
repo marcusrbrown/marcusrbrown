@@ -60,7 +60,7 @@
     "tsx": "^4.20.3",
     "vitest": "4.0.16"
   },
-  "packageManager": "pnpm@10.26.1",
+  "packageManager": "pnpm@10.26.2",
   "publishConfig": {
     "access": "public",
     "provenance": true
