@@ -55,7 +55,7 @@
     "lint-staged": "16.2.7",
     "markdownlint": "0.40.0",
     "markdownlint-cli2": "0.20.0",
-    "prettier": "3.8.0",
+    "prettier": "3.8.1",
     "simple-git-hooks": "2.13.1",
     "tsx": "^4.20.3",
     "vitest": "4.0.17"
