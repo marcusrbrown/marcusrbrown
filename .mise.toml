@@ -8,4 +8,4 @@ _.path = [
 NODE_OPTIONS = '{{ get_env(name="NODE_OPTIONS", default="--trace-warnings") }}'
 
 [tools]
-node = '24.13.0'
+node = '24.13.1'
