@@ -1,16 +1,15 @@
+import type {RestEndpointMethodTypes} from '@octokit/rest'
+
+import {promises as fs} from 'node:fs'
+import {join} from 'node:path'
+import process from 'node:process'
+
 import type {
   DetectedTechnology,
   ExternalBadgeConfig,
   TechnologyDetectionConfig,
   TechnologyPriority,
 } from '@/types/badges.ts'
-
-import type {RestEndpointMethodTypes} from '@octokit/rest'
-import {promises as fs} from 'node:fs'
-import {join} from 'node:path'
-
-import process from 'node:process'
-
 import {TechnologyDetectionError} from '@/types/badges.ts'
 import {GitHubApiClient} from '@/utils/github-api.ts'
 

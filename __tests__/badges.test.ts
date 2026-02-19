@@ -1,6 +1,6 @@
+import {describe, expect, it} from 'vitest'
 import type {DetectedTechnology, TechnologyDetectionConfig} from '@/types/badges.ts'
 import {BadgeDataCacheManager} from '@/utils/badge-cache-manager.ts'
-import {describe, expect, it} from 'vitest'
 
 /**
  * Basic badge system tests to verify core functionality

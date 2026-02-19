@@ -1,5 +1,5 @@
-import {Logger, LogLevel} from '@/utils/logger.js'
 import {describe, expect, it, vi} from 'vitest'
+import {Logger, LogLevel} from '@/utils/logger.js'
 
 describe('Logger Utility', () => {
   it('should create singleton instance', () => {

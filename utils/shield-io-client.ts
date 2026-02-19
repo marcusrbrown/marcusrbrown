@@ -1,5 +1,4 @@
 import type {BadgeConfig, DetectedTechnology, GeneratedBadge} from '@/types/badges.ts'
-
 import {BadgeGenerationError} from '@/types/badges.ts'
 
 /**

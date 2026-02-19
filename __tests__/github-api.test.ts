@@ -1,7 +1,7 @@
 import process from 'node:process'
 
-import {createGitHubClient} from '@/utils/github-api.js'
 import {describe, expect, it} from 'vitest'
+import {createGitHubClient} from '@/utils/github-api.js'
 
 /**
  * Test GitHub API client configuration

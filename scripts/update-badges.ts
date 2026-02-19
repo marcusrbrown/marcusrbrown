@@ -13,12 +13,11 @@
  * - TASK-015: Add support for custom badge configurations and overrides
  */
 
-import type {BadgeAutomationConfig, BadgeDataCache, DetectedTechnology, GeneratedBadge} from '@/types/badges.ts'
 import type {BadgeOptions} from '@bfra.me/badge-config'
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import process from 'node:process'
-
+import type {BadgeAutomationConfig, BadgeDataCache, DetectedTechnology, GeneratedBadge} from '@/types/badges.ts'
 import {BadgeDataCacheManager} from '@/utils/badge-cache-manager.ts'
 import {BadgeConfigLoader} from '@/utils/badge-config-loader.ts'
 import {BadgeDetector} from '@/utils/badge-detector.ts'

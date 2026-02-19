@@ -1,3 +1,6 @@
+import {promises as fs} from 'node:fs'
+import {dirname, join} from 'node:path'
+import process from 'node:process'
 import type {
   BadgeAutomationConfig,
   BadgeDataCache,
@@ -5,10 +8,6 @@ import type {
   DetectedTechnology,
   GeneratedBadge,
 } from '@/types/badges.ts'
-
-import {promises as fs} from 'node:fs'
-import {dirname, join} from 'node:path'
-import process from 'node:process'
 
 /**
  * Cache file paths

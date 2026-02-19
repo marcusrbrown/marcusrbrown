@@ -1,12 +1,11 @@
-import type {ContentPath, ContributionsData, Referrer, TrafficClones, TrafficViews} from '@/types/analytics.ts'
-import type {SponsorConfig} from '@/types/sponsors.ts'
-
 import type {RestEndpointMethodTypes} from '@octokit/rest'
 import process from 'node:process'
-import {Logger} from '@/utils/logger.ts'
-import {graphql} from '@octokit/graphql'
 
+import {graphql} from '@octokit/graphql'
 import {Octokit} from '@octokit/rest'
+import type {ContentPath, ContributionsData, Referrer, TrafficClones, TrafficViews} from '@/types/analytics.ts'
+import type {SponsorConfig} from '@/types/sponsors.ts'
+import {Logger} from '@/utils/logger.ts'
 
 /**
  * GitHub API client configuration and utilities
