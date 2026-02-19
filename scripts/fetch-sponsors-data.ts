@@ -17,6 +17,10 @@
  * - TASK-012: Add comprehensive error handling and retry logic for API failures
  */
 
+import fs from 'node:fs/promises'
+import path from 'node:path'
+import process from 'node:process'
+
 import type {
   FundingGoal,
   GitHubSponsorNode,
@@ -25,10 +29,6 @@ import type {
   SponsorStats,
   SponsorTier,
 } from '@/types/sponsors.ts'
-import fs from 'node:fs/promises'
-import path from 'node:path'
-
-import process from 'node:process'
 import {DEFAULT_FUNDING_GOALS, TIER_THRESHOLDS} from '@/types/sponsors.ts'
 import {GitHubApiClient} from '@/utils/github-api.ts'
 

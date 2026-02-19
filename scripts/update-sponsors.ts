@@ -15,10 +15,10 @@
  * - TASK-028: Develop iterative optimization process for continuous content improvement based on data
  */
 
-import type {FundingGoal, ProcessedSponsor, SponsorData, SponsorStats, SponsorTier} from '@/types/sponsors.ts'
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import process from 'node:process'
+import type {FundingGoal, ProcessedSponsor, SponsorData, SponsorStats, SponsorTier} from '@/types/sponsors.ts'
 import {ContentPerformanceTracker} from './content-performance-tracking.ts'
 
 // File paths

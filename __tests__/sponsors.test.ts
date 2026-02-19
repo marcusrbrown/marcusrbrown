@@ -1,5 +1,5 @@
-import {TIER_THRESHOLDS} from '@/types/sponsors.ts'
 import {describe, expect, it} from 'vitest'
+import {TIER_THRESHOLDS} from '@/types/sponsors.ts'
 
 /**
  * Test sponsor tier classification logic

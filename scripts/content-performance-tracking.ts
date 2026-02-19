@@ -10,6 +10,9 @@
  * Create performance measurement system tracking conversion metrics and sponsor acquisition
  */
 
+import fs from 'node:fs/promises'
+import path from 'node:path'
+import process from 'node:process'
 import type {
   ConversionEvent,
   ConversionMetrics,
@@ -17,9 +20,6 @@ import type {
   SponsorAcquisitionData,
   SponsorData,
 } from '@/types/sponsors.ts'
-import fs from 'node:fs/promises'
-import path from 'node:path'
-import process from 'node:process'
 
 // Performance tracking configuration
 const PERFORMANCE_DIR = path.join(process.cwd(), '.cache', 'performance')
