@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "@bfra.me/eslint-config": "0.50.1",
-    "@bfra.me/prettier-config": "0.16.7",
+    "@bfra.me/prettier-config": "0.16.8",
     "@bfra.me/tsconfig": "^0.12.0",
     "@types/node": "^24.2.1",
     "@vitest/ui": "4.1.5",
