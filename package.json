@@ -48,7 +48,7 @@
     "@bfra.me/prettier-config": "0.16.8",
     "@bfra.me/tsconfig": "0.13.0",
     "@types/node": "24.12.0",
-    "@vitest/ui": "4.1.5",
+    "@vitest/ui": "4.1.6",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "5.5.5",
     "jiti": "2.7.0",
@@ -58,7 +58,7 @@
     "prettier": "3.8.3",
     "simple-git-hooks": "2.13.1",
     "tsx": "4.21.0",
-    "vitest": "4.1.5"
+    "vitest": "4.1.6"
   },
   "packageManager": "pnpm@10.33.4",
   "publishConfig": {
