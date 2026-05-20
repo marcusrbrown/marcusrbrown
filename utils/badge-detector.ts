@@ -686,7 +686,7 @@ export class BadgeDetector {
 
     for (const tech of sortedTechs) {
       const categoryCount = categoryCounts.get(tech.category) ?? 0
-      const maxAllowed = maxPerCategory[tech.category as keyof typeof maxPerCategory] || 1
+      const maxAllowed = maxPerCategory[tech.category] || 1
 
       if (categoryCount < maxAllowed) {
         filteredTechnologies.push(tech)
@@ -768,8 +768,8 @@ export class BadgeDetector {
         deployment: 1,
         monitoring: 1,
       }
-      const aCategoryPriority = categoryOrder[a.category as keyof typeof categoryOrder] || 0
-      const bCategoryPriority = categoryOrder[b.category as keyof typeof categoryOrder] || 0
+      const aCategoryPriority = categoryOrder[a.category] || 0
+      const bCategoryPriority = categoryOrder[b.category] || 0
 
       if (aCategoryPriority !== bCategoryPriority) {
         return bCategoryPriority - aCategoryPriority
