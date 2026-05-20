@@ -44,7 +44,7 @@
     "@octokit/types": "^16.0.0"
   },
   "devDependencies": {
-    "@bfra.me/eslint-config": "0.50.1",
+    "@bfra.me/eslint-config": "0.51.1",
     "@bfra.me/prettier-config": "0.16.9",
     "@bfra.me/tsconfig": "0.13.1",
     "@types/node": "24.12.4",
