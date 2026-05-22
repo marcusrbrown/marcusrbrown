@@ -394,7 +394,7 @@ describe('ProfileMetricsCache', () => {
 
     const result = await ProfileMetricsCache.loadBackup()
     // Type assertion is safe here - we just wrote this data in the test
-    expect(result).toEqual(mockHistoricalMetrics as unknown)
+    expect(result).toEqual(mockHistoricalMetrics)
   })
 
   it('should return null when backup does not exist', async () => {
