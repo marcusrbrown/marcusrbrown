@@ -3,22 +3,22 @@
 <!-- Hero Section with Professional Branding -->
 <div align="center">
 
-<img src="assets/profile-images/headshot-3757.jpg" alt="Marcus R. Brown - Software Architect & Open Source Leader" width="200" height="200" style="border-radius: 50%;" />
+<img src="assets/profile-images/headshot-3757.jpg" alt="Marcus R. Brown - Principal Engineer & Architect" width="200" height="200" style="border-radius: 50%;" />
 
 <br/>
 
-## Software Architect & Open Source Leader
+## Principal Engineer & Architect
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=Building+scalable+solutions+for+15%2B+years;Open+source+maintainer+%26+contributor;Passionate+about+developer+experience;Creating+tools+that+developers+love)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=Shipping+software+since+2004;Open+source+maintainer+%26+contributor;Agent-native+systems+%26+developer+tools;Building+for+leverage%2C+not+headcount)](https://git.io/typing-svg)
 
 </div>
 
 <!-- Professional Summary -->
 <p align="center">
   <em>
-    I'm a seasoned software architect with <strong>15+ years</strong> of experience building scalable solutions and leading engineering teams.<br/>
-    Currently focused on <strong>developer tooling</strong>, <strong>open source</strong>, and <strong>cloud architecture</strong> at scale.<br/>
-    Passionate about creating tools that make developers' lives easier and more productive.
+    Principal engineer and architect with <strong>22 years</strong> in software — from a junior at a game studio in 2004 to helping ship hundreds of projects across dozens of companies.<br/>
+    Currently focused on <strong>agent-native architecture</strong>, <strong>developer tooling</strong>, and <strong>open source</strong>.<br/>
+    Building things that earn their place.
   </em>
 </p>
 
