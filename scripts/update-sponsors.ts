@@ -456,4 +456,4 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   })
 }
 
-export {processTemplate}
+export {loadSponsorData, processTemplate}

@@ -94,7 +94,7 @@ _Explore detailed [project showcase, open source contributions, and professional
 <td align="center" width="33%">
   <strong>🗓️ Consulting Services</strong><br/>
   Architecture reviews, DevOps optimization, and technical mentorship<br/>
-  <sub>Available for contracts starting Q1 2026</sub>
+  <sub>Selectively available for new engagements</sub>
 </td>
 <td align="center" width="33%">
   <strong>🎤 Speaking Engagements</strong><br/>
