@@ -3,11 +3,11 @@
 <!-- Hero Section with Professional Branding -->
 <div align="center">
 
-<img src="assets/profile-images/headshot-3757.jpg" alt="Marcus R. Brown - Software Architect & Open Source Leader" width="200" height="200" style="border-radius: 50%;" />
+<img src="assets/profile-images/headshot-3757.jpg" alt="Marcus R. Brown - Principal Engineer & Architect" width="200" height="200" style="border-radius: 50%;" />
 
 <br/>
 
-## Software Architect & Open Source Leader
+## Principal Engineer & Architect
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=Shipping+software+since+2004;Open+source+maintainer+%26+contributor;Agent-native+systems+%26+developer+tools;Building+for+leverage%2C+not+headcount)](https://git.io/typing-svg)
 
