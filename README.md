@@ -1,5 +1,6 @@
 # 👋🏽 Hi, I'm Marcus R. Brown
 
+<!-- Hero Section with Professional Branding -->
 <div align="center">
 
 <img src="assets/profile-images/headshot-3757.jpg" alt="Marcus R. Brown - Software Architect & Open Source Leader" width="200" height="200" style="border-radius: 50%;" />
@@ -12,6 +13,7 @@
 
 </div>
 
+<!-- Professional Summary -->
 <p align="center">
   <em>
     I'm a seasoned software architect with <strong>15+ years</strong> of experience building scalable solutions and leading engineering teams.<br/>
@@ -20,6 +22,7 @@
   </em>
 </p>
 
+<!-- Contact & Social Proof -->
 <div align="center">
 
 📍 **Phoenix, Arizona** • 🌐 **Remote-friendly** • ✉️ **Available for consulting**
@@ -28,6 +31,7 @@
 
 </div>
 
+<!-- GitHub Stats Section -->
 <div align="center">
 
 ### 📊 GitHub Analytics
@@ -37,6 +41,7 @@
 
 </div>
 
+<!-- Technology Showcase Link -->
 <div align="center">
 
 ### 🛠️ Technology Stack & Skills
@@ -49,6 +54,7 @@ _Explore detailed [project showcase, open source contributions, and professional
 
 </div>
 
+<!-- Call-to-Action Section -->
 <div align="center">
 
 ### 🚀 Let's Build Something Amazing Together
@@ -78,6 +84,7 @@ _Explore detailed [project showcase, open source contributions, and professional
 
 </div>
 
+<!-- Professional Availability & Engagement -->
 <div align="center">
 
 ### 📬 Get In Touch
@@ -107,6 +114,8 @@ _Explore detailed [project showcase, open source contributions, and professional
 </div>
 
 ---
+
+<!-- Links Definition -->
 
 [gh-sponsors]: https://github.com/sponsors/marcusrbrown "Support Marcus's open source work"
 [linkedin]: https://www.linkedin.com/in/marcusrbrown "Connect with Marcus on LinkedIn"
