@@ -1,6 +1,20 @@
-import {describe, expect, it} from 'vitest'
+import {promises as fsMock} from 'node:fs'
+import {beforeEach, describe, expect, it, vi} from 'vitest'
 import type {DetectedTechnology, TechnologyDetectionConfig} from '@/types/badges.ts'
 import {BadgeDataCacheManager} from '@/utils/badge-cache-manager.ts'
+
+// vi.mock is hoisted by vitest's transform — runs before any imports at runtime.
+// badge-cache-manager.ts uses `import {promises as fs} from 'node:fs'`.
+vi.mock('node:fs', async importOriginal => {
+  const actual = await importOriginal<typeof import('node:fs')>()
+  return {
+    ...actual,
+    promises: {
+      ...actual.promises,
+      readFile: vi.fn(),
+    },
+  }
+})
 
 /**
  * Basic badge system tests to verify core functionality
@@ -114,6 +128,41 @@ describe('Badge System', () => {
     it('should create cache manager instance', () => {
       const cacheManager = new BadgeDataCacheManager()
       expect(cacheManager).toBeInstanceOf(BadgeDataCacheManager)
+    })
+  })
+
+  describe('cache fallback chain', () => {
+    let cacheManager: BadgeDataCacheManager
+
+    beforeEach(() => {
+      vi.clearAllMocks()
+      cacheManager = new BadgeDataCacheManager()
+    })
+
+    it('BadgeDataCacheManager.loadFromCache returns null when primary cache file is missing', async () => {
+      const enoentError = Object.assign(new Error('ENOENT: no such file or directory'), {code: 'ENOENT'})
+      vi.mocked(fsMock.readFile).mockRejectedValue(enoentError)
+
+      const result = await cacheManager.loadFromCache()
+
+      expect(result).toBeNull()
+    })
+
+    it('BadgeDataCacheManager.loadFromBackupCache returns null when backup cache file is missing', async () => {
+      const enoentError = Object.assign(new Error('ENOENT: no such file or directory'), {code: 'ENOENT'})
+      vi.mocked(fsMock.readFile).mockRejectedValue(enoentError)
+
+      const result = await cacheManager.loadFromBackupCache()
+
+      expect(result).toBeNull()
+    })
+
+    it('BadgeDataCacheManager.loadFromCache returns null when cache file has invalid JSON', async () => {
+      vi.mocked(fsMock.readFile).mockResolvedValue('{ not valid json !!!')
+
+      const result = await cacheManager.loadFromCache()
+
+      expect(result).toBeNull()
     })
   })
 
