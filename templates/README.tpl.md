@@ -125,5 +125,5 @@
 [website]: https://marcusrbrown.com "Visit Marcus's portfolio website"
 
 <div align="center">
-  <sub>Built with ❤️ using automated workflows • Updated every 6 hours</sub>
+  <sub>Built with ❤️ using automated workflows • Checked for updates every 6 hours</sub>
 </div>
