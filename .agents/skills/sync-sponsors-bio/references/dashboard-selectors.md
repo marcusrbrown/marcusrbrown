@@ -5,7 +5,7 @@ Reference for the DOM selectors used by `scripts/sync.ts`. Update this after any
 ## Current Selectors (last verified: 2026-05-24)
 
 - **`#sponsors_profile_full_description`** — the "Introduction" / `fullDescription` textarea. Rails form helper convention: `<model>_<attribute>`. Stable since ≥2024. This is the field the sync script writes to.
-- **"Update profile" submit button** — selector TBD on next run; script does NOT click this. Human reviews and clicks manually.
+- **"Update profile" submit input** — `<input type="submit" value="Update profile">` inside the same form as `#sponsors_profile_full_description`. The script locates it by `value` match (NOT by index) because the form contains at least 3 submitters: `Load more` (pagination), `Save` (different sub-section), and `Update profile` (the one we want). v0.2+ clicks this autonomously after exact-equality verification of the textarea content. Selector logic returns structured diagnostics on failure: `FORM_NOT_FOUND`, `SUBMIT_NOT_FOUND`, `SUBMIT_AMBIGUOUS:N`, `SUBMIT_DISABLED`, or `SUBMIT_CLICKED:<label>`.
 
 ## Accessibility Tree Names (for reference only — don't lookup by text)
 
@@ -34,5 +34,5 @@ When updating selectors after a UI change:
 
 ## History
 
-- **2026-05-24** — `#sponsors_profile_full_description` confirmed via @designer's RED-phase baseline test (the accessibility tree returned `@e61 "Introduction Introduction"` and DOM inspection confirmed the underlying `id`)
+- **2026-05-24** — `#sponsors_profile_full_description` confirmed via @designer's RED-phase baseline test (the accessibility tree returned `@e61 "Introduction Introduction"` and DOM inspection confirmed the underlying `id`). Also confirmed `<input type="submit" value="Update profile">` lives in the same form alongside `Load more` and `Save` submit buttons.
 - **2025-12-13** — Original 2025-12-13 sponsors API experiment did NOT inspect the DOM (only the GraphQL schema)
