@@ -114,6 +114,15 @@ function fetchLiveBio(): string {
     {encoding: 'utf-8'},
   )
   if (result.status !== 0) {
+    // Non-zero exit means auth or network failure. Return empty so the caller
+    // can distinguish "fetch failed" from "empty bio" — but log the stderr so
+    // the failure isn't completely silent.
+    const stderr = (result.stderr ?? '').trim()
+    if (stderr.length > 0) {
+      log.warn(`gh GraphQL exited ${result.status ?? '?'} while fetching live bio: ${stderr}`)
+    } else {
+      log.warn(`gh GraphQL exited ${result.status ?? '?'} while fetching live bio (no stderr)`)
+    }
     return ''
   }
   return (result.stdout ?? '').trim()
@@ -226,12 +235,12 @@ async function main() {
 
   if (looksLikeLogin || looksLike404) {
     log.err(`Session lost (page title: "${title}").`)
-    log.err('agent-browser sessions are tied to the Chrome For Testing process — if you quit that')
-    log.err('app, cookies are gone. Re-auth required:')
-    log.err('  agent-browser close')
-    log.err('  agent-browser --engine chrome --headed --session-name github open https://github.com/login')
-    log.err('  # Log in manually in the headed browser, then re-run this script.')
-    log.err('  # Do NOT quit the Chrome For Testing app after auth — cookies live in its process.')
+    log.err('Persisted auth state cookies have expired or been invalidated. Re-auth required:')
+    log.err('  agent-browser close --all')
+    log.err('  agent-browser --engine chrome --headed open https://github.com/login')
+    log.err('  # Log in manually in the headed browser, then:')
+    log.err(`  agent-browser state save ${STATE_PATH}`)
+    log.err('  # Then re-run this script. State survives Chrome process death.')
     process.exit(1)
   }
   if (wrongUrl) {
@@ -249,9 +258,11 @@ async function main() {
     log.err(`Textarea ${TEXTAREA_SELECTOR} not found on page (title: "${title}").`)
     log.err('Most likely: session is partially expired and GitHub is serving a degraded page.')
     log.err('Less likely: GitHub renamed the field. Re-auth first:')
-    log.err('  agent-browser close')
-    log.err('  agent-browser --engine chrome --headed --session-name github open https://github.com/login')
-    log.err('  # Log in manually, then re-run this script.')
+    log.err('  agent-browser close --all')
+    log.err('  agent-browser --engine chrome --headed open https://github.com/login')
+    log.err('  # Log in manually, then:')
+    log.err(`  agent-browser state save ${STATE_PATH}`)
+    log.err('  # Then re-run this script.')
     log.err(`If re-auth doesn't fix it, inspect the page and update TEXTAREA_SELECTOR in scripts/sync.ts.`)
     log.err(`Manual paste fallback: paste from ${CACHE_PATH} into the dashboard.`)
     process.exit(1)
