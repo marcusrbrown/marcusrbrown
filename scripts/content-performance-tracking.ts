@@ -14,6 +14,7 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 import process from 'node:process'
 import type {
+  ContentPerformance,
   ConversionEvent,
   ConversionMetrics,
   PerformanceReport,
@@ -312,15 +313,12 @@ export class ContentPerformanceTracker {
   /**
    * Analyze content performance based on events
    */
-  private analyzeContentPerformance(events: ConversionEvent[]): Record<string, any> {
-    // Group events by content type/source if available
-    const performance: Record<string, any> = {
+  private analyzeContentPerformance(events: ConversionEvent[]): ContentPerformance {
+    return {
       totalEngagement: events.length,
       conversionEvents: events.filter(e => e.type === 'sponsor_acquired').length,
       viewEvents: events.filter(e => e.type === 'profile_view').length,
     }
-
-    return performance
   }
 
   /**
