@@ -38,11 +38,11 @@ GitHub Sponsors lets you pick any amount. Three rough buckets if you want a refe
 
 <div align="center">
 
-| Tier               | Amount      | What you get                                                                                         |
-| :----------------- | :---------- | :--------------------------------------------------------------------------------------------------- |
-| **🥉 Bronze**      | $1 – $4/mo  | Listed below as a supporter. Helps cover hosting & domains.                                          |
-| **🥈 Silver**      | $5 – $24/mo | Same, with extra visibility. Funds focused tooling time.                                             |
-| **🥇 Gold**        | $25+/mo     | Same, plus async Q&A on GitHub Discussions for the projects above. No SLA — best-effort, honest.     |
+| Tier | Amount | What you get |
+| :-- | :-- | :-- |
+| **🥉 Bronze** | $1 – $4/mo | Listed below as a supporter. Helps cover hosting & domains. |
+| **🥈 Silver** | $5 – $24/mo | Same, with extra visibility. Funds focused tooling time. |
+| **🥇 Gold** | $25+/mo | Same, plus async Q&A on GitHub Discussions for the projects above. No SLA — best-effort, honest. |
 
 </div>
 
