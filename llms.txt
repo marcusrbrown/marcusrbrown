@@ -22,6 +22,7 @@ This repository serves as Marcus R. Brown's GitHub profile page, displaying his 
 - [A/B Testing Framework](scripts/ab-testing-framework.ts): Framework for testing different content variations
 - [Content Performance Tracking](scripts/content-performance-tracking.ts): Analytics and performance monitoring for profile content
 - [Mobile Responsiveness Tester](scripts/mobile-responsiveness-tester.ts): Testing tool for mobile device compatibility
+- [Profile Analytics](scripts/profile-analytics.ts): GitHub-native traffic and contribution analytics for the profile repository
 
 ## Development
 
@@ -52,6 +53,7 @@ This repository serves as Marcus R. Brown's GitHub profile page, displaying his 
 - [Shield.io Client](utils/shield-io-client.ts): Client for Shield.io badge service API
 - [Sponsor Type Definitions](types/sponsors.ts): TypeScript type definitions for sponsor data structures
 - [Badge Type Definitions](types/badges.ts): TypeScript type definitions for badge data structures
+- [Analytics Type Definitions](types/analytics.ts): TypeScript type definitions for GitHub traffic and contribution analytics
 
 ## Documentation
 
@@ -67,4 +69,6 @@ This repository serves as Marcus R. Brown's GitHub profile page, displaying his 
 - [GitHub API Tests](__tests__/github-api.test.ts): Unit tests for GitHub API utilities
 - [Logger Tests](__tests__/logger.test.ts): Unit tests for logging utilities
 - [Sponsor Tests](__tests__/sponsors.test.ts): Unit tests for sponsor data processing
+- [Profile Analytics Tests](__tests__/profile-analytics.test.ts): Unit tests for profile analytics CLI, retry/cache/trend logic
+- [Update Sponsors Resilience Tests](__tests__/update-sponsors-resilience.test.ts): Resilience tests for sponsor data loading fallback paths
 - [Prettier Configuration](.prettierignore): Code formatting exclusions and configuration references

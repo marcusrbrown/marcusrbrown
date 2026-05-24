@@ -114,7 +114,7 @@ export interface ConversionEvent {
     value?: number
     source?: string
     sponsors?: string[]
-    [key: string]: any
+    [key: string]: unknown
   }
 }
 
@@ -171,6 +171,15 @@ export interface SponsorAcquisitionData {
 }
 
 /**
+ * Content performance analysis shape returned by analyzeContentPerformance
+ */
+export interface ContentPerformance {
+  totalEngagement: number
+  conversionEvents: number
+  viewEvents: number
+}
+
+/**
  * Performance report for sponsor pitch optimization
  */
 export interface PerformanceReport {
@@ -189,7 +198,7 @@ export interface PerformanceReport {
     totalFunding: number
   }
   /** Content performance analysis */
-  contentPerformance: Record<string, any>
+  contentPerformance: ContentPerformance
   /** Optimization recommendations */
   recommendations: string[]
 }
