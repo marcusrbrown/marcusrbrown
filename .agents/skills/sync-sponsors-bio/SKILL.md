@@ -32,7 +32,7 @@ This skill works around that gap by driving the dashboard form in an **authentic
 
 ## Prerequisites
 
-- `agent-browser` ≥ 0.27.0 installed (`which agent-browser`)
+- `agent-browser` ≥ 0.27.0 installed (`which agent-browser`). The skill relies on `eval --stdin` for safe injection of the 30KB markdown payload; this flag is present in 0.27.0+. Verify with `agent-browser eval --help | grep -- --stdin`.
 - One-time GitHub session saved as `--session-name github` (skill prompts for setup on first run)
 - `SPONSORME.md` exists and is current (run `pnpm sponsors:update` first if unsure)
 - Terminal session with display access for the headed browser
@@ -73,9 +73,10 @@ The `github` session is now saved to `~/.agent-browser/sessions/` and reusable a
 
 ### Step 3: Run the sync script
 
+From the repo root:
+
 ```bash
-cd /Users/mrbrown/src/github.com/marcusrbrown/marcusrbrown
-pnpm tsx .agents/skills/sync-sponsors-bio/scripts/sync.ts
+pnpm sponsors:bio:sync
 ```
 
 The script does the following — see `scripts/sync.ts` for source:

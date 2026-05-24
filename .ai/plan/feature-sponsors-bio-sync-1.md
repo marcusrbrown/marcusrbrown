@@ -263,12 +263,14 @@ Given the API limitation discovered in research, the following alternative appro
 - ❌ Undocumented features are unreliable for automation
 
 ### Strategy D: Browser Automation (Not Recommended)
-**Status**: ❌ **REJECTED**
+**Status**: ❌ **REJECTED (unattended variant) — see Resolution banner at top for the human-in-the-loop reframe that was ultimately adopted**
 
-**Approach**:
+**Approach** (rejected, as originally written):
 1. Use Playwright/Puppeteer to automate browser interactions
 2. Navigate to GitHub Sponsors settings page
 3. Programmatically update bio field and submit form
+
+**Note (2026-05-24)**: The rejection below applies to **unattended** automation (cron/CI-triggered, no human in the loop, auto-save). The actually-adopted resolution at `.agents/skills/sync-sponsors-bio/` is a **human-initiated, supervised, manual-save** browser interaction — a fundamentally different threat model from what was rejected here.
 
 **Pros**:
 - ✅ Technically possible
