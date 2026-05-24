@@ -4,9 +4,7 @@ Reference for the DOM selectors used by `scripts/sync.ts`. Update this after any
 
 ## Current Selectors (last verified: 2026-05-24)
 
-- **`#sponsors_profile_full_description`** — the "Introduction" / `fullDescription` textarea
-    - Rails form helper convention: `<model>_<attribute>`. Stable since ≥2024.
-    - This is the field the sync script writes to.
+- **`#sponsors_profile_full_description`** — the "Introduction" / `fullDescription` textarea. Rails form helper convention: `<model>_<attribute>`. Stable since ≥2024. This is the field the sync script writes to.
 - **"Update profile" submit button** — selector TBD on next run; script does NOT click this. Human reviews and clicks manually.
 
 ## Accessibility Tree Names (for reference only — don't lookup by text)

@@ -11,6 +11,14 @@
     "noPropertyAccessFromIndexSignature": false,
     "noEmit": true
   },
-  "include": ["scripts/**/*", "utils/**/*", "types/**/*", "eslint.config.ts", "__tests__/**/*", "vitest.config.ts"],
+  "include": [
+    "scripts/**/*",
+    "utils/**/*",
+    "types/**/*",
+    "eslint.config.ts",
+    "__tests__/**/*",
+    "vitest.config.ts",
+    ".agents/skills/**/*"
+  ],
   "exclude": ["node_modules", "dist"]
 }

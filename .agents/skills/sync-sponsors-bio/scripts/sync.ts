@@ -60,8 +60,8 @@ async function main() {
   try {
     content = await fs.readFile(SPONSORME_PATH, 'utf-8')
     log.ok(`Read ${SPONSORME_PATH} (${content.length} bytes, ${content.split('\n').length} lines)`)
-  } catch (err) {
-    log.err(`Failed to read SPONSORME.md: ${(err as Error).message}`)
+  } catch (error) {
+    log.err(`Failed to read SPONSORME.md: ${(error as Error).message}`)
     log.err('Run `pnpm sponsors:update` first to regenerate it.')
     process.exit(1)
   }
@@ -116,10 +116,7 @@ async function main() {
 
   log.step(5, 'Capture existing textarea content (so changes are auditable)')
   // Get current value before overwrite (audit trail in case Marcus had unsaved edits)
-  const beforeContent = ab(
-    ['eval', `document.querySelector('${TEXTAREA_SELECTOR}').value`],
-    {capture: true},
-  )
+  const beforeContent = ab(['eval', `document.querySelector('${TEXTAREA_SELECTOR}').value`], {capture: true})
   const beforePath = path.resolve(process.cwd(), '.cache', 'sponsors-bio.before.md')
   await fs.writeFile(beforePath, beforeContent, 'utf-8')
   log.ok(`Saved pre-fill content to ${beforePath} (${beforeContent.length} bytes)`)
@@ -161,10 +158,7 @@ ta.dispatchEvent(new Event('change', { bubbles: true }));
   log.step(7, 'Verify content landed (with fresh snapshot to refresh tree)')
   // CRITICAL: must re-snapshot before any get/eval verification — accessibility tree is stale otherwise
   ab(['snapshot', '-i'], {capture: true, allowFailure: true})
-  const afterContent = ab(
-    ['eval', `document.querySelector('${TEXTAREA_SELECTOR}').value`],
-    {capture: true},
-  )
+  const afterContent = ab(['eval', `document.querySelector('${TEXTAREA_SELECTOR}').value`], {capture: true})
 
   // Note on the character-count check below:
   // Browsers normalize textarea content — \n in the source markdown gets converted to \r\n
@@ -174,14 +168,19 @@ ta.dispatchEvent(new Event('change', { bubbles: true }));
   // SHORTER than expected, which indicates truncation or fill failure.
   if (afterContent.length < content.length - 10) {
     // Allow tiny shell-escape rounding; >10 char diff is real failure
-    log.warn(`Verification mismatch: expected ≥${content.length} chars, got ${afterContent.length} — content may be truncated`)
+    log.warn(
+      `Verification mismatch: expected ≥${content.length} chars, got ${afterContent.length} — content may be truncated`,
+    )
     log.warn(`Inspect the browser visually and confirm the textarea contents.`)
     log.warn(`Fallback content is at ${CACHE_PATH} if you need to paste manually.`)
   } else {
     const inflation = afterContent.length - content.length
     log.ok(
-      `Verified: textarea now contains ${afterContent.length} chars` +
-        (inflation > 0 ? ` (${inflation} chars longer than source due to browser \\r\\n normalization — normal)` : ''),
+      `Verified: textarea now contains ${afterContent.length} chars${
+        inflation > 0
+          ? String.raw` (${inflation} chars longer than source due to browser \r\n normalization — normal)`
+          : ''
+      }`,
     )
   }
 
@@ -204,7 +203,7 @@ ta.dispatchEvent(new Event('change', { bubbles: true }));
   console.log(`  - Previous: ${beforePath}`)
 }
 
-main().catch(err => {
-  log.err(`Unexpected error: ${err instanceof Error ? err.stack : err}`)
+main().catch(error => {
+  log.err(`Unexpected error: ${error instanceof Error ? error.stack : error}`)
   process.exit(1)
 })
