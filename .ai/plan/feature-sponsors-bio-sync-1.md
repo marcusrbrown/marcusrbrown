@@ -1,18 +1,24 @@
 ---
 goal: Automate synchronization of SPONSORME.md content to GitHub Sponsors profile bio section
-version: 2.0
+version: 3.0
 date_created: 2025-08-12
-last_updated: 2025-12-13
+last_updated: 2026-05-24
 owner: Marcus R. Brown
-status: 'Blocked'
-tags: ['feature', 'automation', 'sponsors', 'github-api', 'bio-sync', 'blocked', 'api-limitation']
+status: 'Resolved (via project skill)'
+tags: ['feature', 'automation', 'sponsors', 'bio-sync', 'resolved', 'agent-native']
 ---
 
 # Automate GitHub Sponsors Profile Bio Synchronization
 
-![Status: Blocked](https://img.shields.io/badge/status-Blocked-red) ![Issue: API Limitation](https://img.shields.io/badge/blocker-API%20Limitation-critical)
+![Status: Resolved](https://img.shields.io/badge/status-Resolved-green) ![Resolution: Project Skill](https://img.shields.io/badge/resolution-Project%20Skill-blue)
 
-**⚠️ CRITICAL BLOCKER IDENTIFIED**: Research completed on 2025-08-22 revealed that GitHub's API does **NOT** support programmatic updates to existing sponsors profile bios. Only the `createSponsorsListing` mutation exists for creating NEW profiles. This fundamental limitation blocks the original implementation approach and requires alternative strategies.
+**✅ RESOLVED 2026-05-24**: Implemented as a project-level skill at `.agents/skills/sync-sponsors-bio/`. The skill drives an authenticated agent-browser session to paste `SPONSORME.md` into the dashboard's `fullDescription` textarea, then stops before save for human review. The `updateSponsorsListing` API gap (reconfirmed 2026-05-24) is unchanged; this resolution sidesteps the gap rather than waiting for GitHub to close it. The skill was developed using RED/GREEN TDD methodology — baseline 15min → with-skill 3min, all four documented failure modes prevented. See `.agents/skills/sync-sponsors-bio/SKILL.md` for the skill, including critical gotchas and the human-in-the-loop safety boundary that distinguishes this from TOS-violating unattended automation.
+
+---
+
+## Historical context (pre-resolution)
+
+**Research completed on 2025-08-22 revealed that GitHub's API does NOT support programmatic updates to existing sponsors profile bios.** Only the `createSponsorsListing` mutation exists for creating NEW profiles. This fundamental limitation blocked the original implementation approach until the agent-native skill workaround was developed.
 
 This plan originally aimed to implement automated synchronization of SPONSORME.md content to GitHub Sponsors profile bio section. The discovery that GitHub's public API lacks an `updateSponsorsListing` mutation means the core feature cannot be implemented as designed. Alternative approaches are being evaluated (see Section 9: Alternative Implementation Strategies).
 
@@ -257,12 +263,14 @@ Given the API limitation discovered in research, the following alternative appro
 - ❌ Undocumented features are unreliable for automation
 
 ### Strategy D: Browser Automation (Not Recommended)
-**Status**: ❌ **REJECTED**
+**Status**: ❌ **REJECTED (unattended variant) — see Resolution banner at top for the human-in-the-loop reframe that was ultimately adopted**
 
-**Approach**:
+**Approach** (rejected, as originally written):
 1. Use Playwright/Puppeteer to automate browser interactions
 2. Navigate to GitHub Sponsors settings page
 3. Programmatically update bio field and submit form
+
+**Note (2026-05-24)**: The rejection below applies to **unattended** automation (cron/CI-triggered, no human in the loop, auto-save). The actually-adopted resolution at `.agents/skills/sync-sponsors-bio/` is a **human-initiated, supervised, manual-save** browser interaction — a fundamentally different threat model from what was rejected here.
 
 **Pros**:
 - ✅ Technically possible

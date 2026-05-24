@@ -60,6 +60,10 @@ This repository serves as Marcus R. Brown's GitHub profile page, displaying his 
 - [Badge Automation Migration](docs/badge-automation-migration.md): Documentation for badge system migration
 - [Conversion Optimization](docs/conversion-optimization.md): Guide for optimizing profile conversion rates
 
+## Project Skills
+
+- [Sync Sponsors Bio](.agents/skills/sync-sponsors-bio/SKILL.md): Project-specific skill that drives an authenticated agent-browser session to paste SPONSORME.md into the GitHub Sponsors profile dashboard, stops before save for human review (workaround for missing GitHub API mutation)
+
 ## Optional
 
 - [Content Strategy Documentation](.ai/docs/content-strategy.md): AI-driven content strategy research and guidelines

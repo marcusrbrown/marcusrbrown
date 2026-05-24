@@ -22,6 +22,7 @@
     "lint": "markdownlint-cli2 && tsc --noEmit && eslint",
     "mobile:test": "tsx scripts/mobile-responsiveness-tester.ts",
     "prepare": "simple-git-hooks",
+    "sponsors:bio:sync": "tsx .agents/skills/sync-sponsors-bio/scripts/sync.ts",
     "sponsors:fetch": "tsx scripts/fetch-sponsors-data.ts",
     "sponsors:update": "tsx scripts/update-sponsors.ts",
     "test": "vitest run",

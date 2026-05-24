@@ -11,5 +11,6 @@ globs:
   - '**/*.md'
   - '!node_modules'
   - '!.ai/**'
+  - '!.cache/**'
   - '!.github/copilot-instructions.md'
   - '!templates/variants/**'
