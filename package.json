@@ -58,7 +58,7 @@
     "markdownlint-cli2": "0.20.0",
     "prettier": "3.8.3",
     "simple-git-hooks": "2.13.1",
-    "tsx": "4.22.3",
+    "tsx": "4.22.4",
     "vitest": "4.1.7"
   },
   "packageManager": "pnpm@10.34.1",
