@@ -10,7 +10,7 @@
 
 <p align="center">
 
-![TypeScript badge](https://img.shields.io/badge/TypeScript-24.12.4-007ACC?style=for-the-badge&labelColor=656d76&logo=typescript) ![JavaScript badge](https://img.shields.io/badge/JavaScript-primary-F7DF1E?style=flat-square&labelColor=2ea043&logo=javascript) ![Python badge](https://img.shields.io/badge/Python-primary-3776AB?style=flat-square&labelColor=2ea043&logo=python) ![Vitest badge](https://img.shields.io/badge/Vitest-4.1.8-6E9F18?style=flat-square&labelColor=2ea043&logo=vitest)
+![TypeScript badge](https://img.shields.io/badge/TypeScript-24.12.4-007ACC?style=for-the-badge&labelColor=656d76&logo=typescript) ![JavaScript badge](https://img.shields.io/badge/JavaScript-primary-F7DF1E?style=flat-square&labelColor=656d76&logo=javascript) ![Python badge](https://img.shields.io/badge/Python-primary-3776AB?style=flat-square&labelColor=2ea043&logo=python) ![Vitest badge](https://img.shields.io/badge/Vitest-4.1.8-6E9F18?style=flat-square&labelColor=2ea043&logo=vitest)
 
 </p>
 
