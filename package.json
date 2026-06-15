@@ -48,7 +48,7 @@
     "@bfra.me/eslint-config": "0.51.1",
     "@bfra.me/prettier-config": "0.16.9",
     "@bfra.me/tsconfig": "0.13.1",
-    "@types/node": "24.12.4",
+    "@types/node": "24.13.2",
     "@vitest/ui": "4.1.8",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "5.5.6",
