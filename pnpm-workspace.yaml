@@ -1,3 +1,7 @@
+allowBuilds:
+  esbuild: set this to true or false
+  simple-git-hooks: set this to true or false
+  unrs-resolver: set this to true or false
 onlyBuiltDependencies:
   - esbuild
   - simple-git-hooks
