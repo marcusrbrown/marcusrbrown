@@ -18,7 +18,7 @@
 
 <p align="center">
 
-![React badge](https://img.shields.io/badge/React-primary-61DAFB?style=flat-square&labelColor=2ea043&logo=react)
+![React badge](https://img.shields.io/badge/React-primary-61DAFB?style=flat-square&labelColor=0969da&logo=react)
 
 </p>
 
