@@ -86,7 +86,7 @@ Premium tools and cloud services for better development experience
 
 </div>
 
-<small><em>Last updated: July 3, 2026</em></small>
+<small><em>Last updated: July 4, 2026</em></small>
 
 ### Supporters
 
@@ -95,7 +95,7 @@ Premium tools and cloud services for better development experience
 <div align="center">
 
 <a href="https://github.com/thejustinwalsh" title="Justin Walsh">
-  <img src="https://avatars.githubusercontent.com/u/72912?u=f8701578b439d99673c3acbc30954c42d27146dd&v=4" width="60" height="60" alt="Justin Walsh" style="border-radius: 50%; margin: 5px;">
+  <img src="https://avatars.githubusercontent.com/u/72912?u=1ba031f8e5e3facbe615ead068881e6d39374af0&v=4" width="60" height="60" alt="Justin Walsh" style="border-radius: 50%; margin: 5px;">
 </a>
 
 </div>
