@@ -27,10 +27,7 @@
 
 📍 **Phoenix, Arizona** • 🌐 **Remote-friendly** • ✉️ **Available for consulting**
 
-[![GitHub Sponsors](https://img.shields.io/github/sponsors/marcusrbrown?style=for-the-badge&logo=github-sponsors&color=EA4AAA&label=Sponsor)][gh-sponsors]
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)][linkedin]
-[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)][email]
-[![Website](https://img.shields.io/badge/Portfolio-Visit-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)][website]
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/marcusrbrown?style=for-the-badge&logo=github-sponsors&color=EA4AAA&label=Sponsor)][gh-sponsors] [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)][linkedin] [![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)][email] [![Website](https://img.shields.io/badge/Portfolio-Visit-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)][website]
 
 </div>
 
@@ -49,11 +46,11 @@
 
 ### 🛠️ Technology Stack & Skills
 
-*View my comprehensive [technology stack, proficiency levels, and learning roadmap](BADGES.md)*
+_View my comprehensive [technology stack, proficiency levels, and learning roadmap](BADGES.md)_
 
 ### 🌟 Professional Portfolio & Highlights
 
-*Explore detailed [project showcase, open source contributions, and professional achievements](HIGHLIGHTS.md)*
+_Explore detailed [project showcase, open source contributions, and professional achievements](HIGHLIGHTS.md)_
 
 </div>
 
@@ -119,6 +116,7 @@
 ---
 
 <!-- Links Definition -->
+
 [gh-sponsors]: https://github.com/sponsors/marcusrbrown "Support Marcus's open source work"
 [linkedin]: https://www.linkedin.com/in/marcusrbrown "Connect with Marcus on LinkedIn"
 [email]: mailto:contact@marcusrbrown.com "Email Marcus directly"
