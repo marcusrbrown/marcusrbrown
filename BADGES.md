@@ -10,7 +10,7 @@
 
 <p align="center">
 
-![TypeScript badge](https://img.shields.io/badge/TypeScript-24.13.2-007ACC?style=for-the-badge&labelColor=656d76&logo=typescript) ![JavaScript badge](https://img.shields.io/badge/JavaScript-primary-F7DF1E?style=flat-square&labelColor=2ea043&logo=javascript) ![Python badge](https://img.shields.io/badge/Python-primary-3776AB?style=flat-square&labelColor=2ea043&logo=python) ![Go badge](https://img.shields.io/badge/Go-primary-00ADD8?style=flat-square&labelColor=2ea043&logo=go)
+![TypeScript badge](https://img.shields.io/badge/TypeScript-24.13.2-007ACC?style=for-the-badge&labelColor=656d76&logo=typescript) ![JavaScript badge](https://img.shields.io/badge/JavaScript-primary-F7DF1E?style=flat-square&labelColor=2ea043&logo=javascript) ![Python badge](https://img.shields.io/badge/Python-primary-3776AB?style=flat-square&labelColor=2ea043&logo=python)
 
 </p>
 
@@ -18,7 +18,7 @@
 
 <p align="center">
 
-<!-- No badges in this category -->
+![React badge](https://img.shields.io/badge/React-primary-61DAFB?style=flat-square&labelColor=2ea043&logo=react)
 
 </p>
 
@@ -26,7 +26,7 @@
 
 <p align="center">
 
-![Prettier badge](https://img.shields.io/badge/Prettier-3.9.5-F7B93E?style=flat-square&labelColor=656d76&logo=prettier) ![Docker badge](https://img.shields.io/badge/Docker-primary-2496ED?style=flat-square&labelColor=656d76&logo=docker) ![Svelte badge](https://img.shields.io/badge/Svelte-primary-31A8FF?style=for-the-badge&labelColor=656d76&logo=svelte)
+![Prettier badge](https://img.shields.io/badge/Prettier-3.9.5-F7B93E?style=flat-square&labelColor=656d76&logo=prettier) ![Vitest badge](https://img.shields.io/badge/Vitest-4.1.10-6E9F18?style=flat-square&labelColor=656d76&logo=vitest) ![Docker badge](https://img.shields.io/badge/Docker-primary-2496ED?style=flat-square&labelColor=656d76&logo=docker) ![Go badge](https://img.shields.io/badge/Go-used-00ADD8?style=flat-square&labelColor=656d76&logo=go)
 
 </p>
 
@@ -143,7 +143,7 @@ timeline
 
 <div align="center">
 
-![TypeScript badge](https://img.shields.io/badge/TypeScript-24.13.2-007ACC?style=for-the-badge&logo=typescript) ![JavaScript badge](https://img.shields.io/badge/JavaScript-primary-F7DF1E?style=flat-square&logo=javascript) ![Python badge](https://img.shields.io/badge/Python-primary-3776AB?style=flat-square&logo=python) ![ESLint badge](https://img.shields.io/badge/ESLint-5.5.6-4B32C3?style=flat-square&logo=eslint) ![Prettier badge](https://img.shields.io/badge/Prettier-3.9.5-F7B93E?style=flat-square&logo=prettier) ![Docker badge](https://img.shields.io/badge/Docker-primary-2496ED?style=flat-square&logo=docker) ![Go badge](https://img.shields.io/badge/Go-primary-00ADD8?style=flat-square&logo=go) ![Svelte badge](https://img.shields.io/badge/Svelte-primary-31A8FF?style=for-the-badge&logo=svelte)
+![TypeScript badge](https://img.shields.io/badge/TypeScript-24.13.2-007ACC?style=for-the-badge&logo=typescript) ![JavaScript badge](https://img.shields.io/badge/JavaScript-primary-F7DF1E?style=flat-square&logo=javascript) ![Python badge](https://img.shields.io/badge/Python-primary-3776AB?style=flat-square&logo=python) ![React badge](https://img.shields.io/badge/React-primary-61DAFB?style=flat-square&logo=react) ![ESLint badge](https://img.shields.io/badge/ESLint-5.5.6-4B32C3?style=flat-square&logo=eslint) ![Prettier badge](https://img.shields.io/badge/Prettier-3.9.5-F7B93E?style=flat-square&logo=prettier) ![Vitest badge](https://img.shields.io/badge/Vitest-4.1.10-6E9F18?style=flat-square&logo=vitest) ![Docker badge](https://img.shields.io/badge/Docker-primary-2496ED?style=flat-square&logo=docker) ![Go badge](https://img.shields.io/badge/Go-used-00ADD8?style=flat-square&logo=go)
 
 _Badge data automatically updated every 6 hours via GitHub Actions_
 
