@@ -21,6 +21,11 @@ overrides:
   picomatch: '>=4.0.4 || >=2.3.2 <3' # GHSA-3v7f-55p6-f55p (medium, both major lines)
   postcss: '>=8.5.10' # GHSA-qx2v-qp2m-jg93 (medium)
   vite: 7.3.6 # GHSA-v2wj-q39q-566r, GHSA-p9ff-h696-f583, GHSA-4w7w-66w2-5vf9, GHSA-fx2h-pf6j-xcff, GHSA-v6wh-96g9-6wx3 (high, high, medium, high, medium)
+  js-yaml: '>=4.3.0 <5' # GHSA-52cp-r559-cp3m (high), GHSA-h67p-54hq-rp68 (medium)
+  # brace-expansion is pulled in by two incompatible minimatch major lines;
+  # scope the override per-parent so each line gets its own patched floor.
+  minimatch@3>brace-expansion: '>=1.1.16 <2' # GHSA-3jxr-9vmj-r5cp (high)
+  minimatch@10>brace-expansion: '>=5.0.7' # GHSA-3jxr-9vmj-r5cp (high)
 
 savePrefix: ''
 shamefullyHoist: true
