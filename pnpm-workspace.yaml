@@ -17,10 +17,11 @@ overrides:
   # the overrides can be removed.
   #
   # See: github.com/marcusrbrown/marcusrbrown security tab
-  fast-uri: '>=3.1.2' # GHSA-q3j6-qgpj-74h6, GHSA-v39h-62p7-jpjc (high)
+  fast-uri: '>=3.1.3' # GHSA-q3j6-qgpj-74h6, GHSA-v39h-62p7-jpjc, GHSA-4c8g-83qw-93j6 (high)
   picomatch: '>=4.0.4 || >=2.3.2 <3' # GHSA-3v7f-55p6-f55p (medium, both major lines)
   postcss: '>=8.5.10' # GHSA-qx2v-qp2m-jg93 (medium)
   vite: 7.3.6 # GHSA-v2wj-q39q-566r, GHSA-p9ff-h696-f583, GHSA-4w7w-66w2-5vf9, GHSA-fx2h-pf6j-xcff, GHSA-v6wh-96g9-6wx3 (high, high, medium, high, medium)
+  linkify-it: '>=5.0.2' # GHSA-v245-v573-v5vm (high)
 
 savePrefix: ''
 shamefullyHoist: true
