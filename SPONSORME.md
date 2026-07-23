@@ -48,7 +48,7 @@ Support my daily coding fuel ☕
 
 **Target:** $50/month • **Progress:** 2.0%
 
-```text
+```
 ░░░░░░░░░░░░░░░░░░░░ 2.0%
 ```
 
@@ -60,7 +60,7 @@ Dedicated time for maintaining and improving open source projects
 
 **Target:** $200/month • **Progress:** 1.0%
 
-```text
+```
 ░░░░░░░░░░░░░░░░░░░░ 1.0%
 ```
 
@@ -72,7 +72,7 @@ Premium tools and cloud services for better development experience
 
 **Target:** $100/month • **Progress:** 1.0%
 
-```text
+```
 ░░░░░░░░░░░░░░░░░░░░ 1.0%
 ```
 
@@ -86,7 +86,7 @@ Premium tools and cloud services for better development experience
 
 </div>
 
-<small><em>Last updated: July 22, 2026</em></small>
+<small><em>Last updated: July 23, 2026</em></small>
 
 ### Supporters
 
