@@ -135,7 +135,7 @@ ${goal.description}
 
 **Target:** ${formatCurrency(goal.targetAmountDollars)}/month • **Progress:** ${goal.progressPercentage.toFixed(1)}%
 
-\`\`\`
+\`\`\`text
 ${progressBar}
 \`\`\`
 
