@@ -1,7 +1,6 @@
 {
   "extends": "@bfra.me/tsconfig",
   "compilerOptions": {
-    "moduleResolution": "node",
     "paths": {
       "@/*": ["./*"]
     },
