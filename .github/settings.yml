@@ -31,7 +31,7 @@ branches:
     protection:
       required_status_checks:
         strict: false
-        contexts: [CI, Renovate / Renovate, Prepare, Finalize]
+        contexts: [CI, Fro Bot, Renovate / Renovate, Prepare, Finalize]
       enforce_admins: true
       required_pull_request_reviews: null
       restrictions: null
