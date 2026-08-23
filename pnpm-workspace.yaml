@@ -4,7 +4,7 @@ allowBuilds:
   unrs-resolver: true
 minimumReleaseAgeExclude:
   - '@bfra.me/eslint-config@0.51.2'
-  - '@bfra.me/prettier-config@0.16.10'
+  - '@bfra.me/prettier-config@0.16.10 || 0.16.11'
 onlyBuiltDependencies:
   - esbuild
   - simple-git-hooks
