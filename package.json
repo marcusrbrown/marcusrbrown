@@ -45,11 +45,11 @@
     "@octokit/types": "^16.0.0"
   },
   "devDependencies": {
-    "@bfra.me/eslint-config": "0.51.1",
-    "@bfra.me/prettier-config": "0.16.9",
+    "@bfra.me/eslint-config": "0.51.2",
+    "@bfra.me/prettier-config": "0.16.11",
     "@bfra.me/tsconfig": "0.13.1",
     "@types/node": "24.13.3",
-    "@vitest/ui": "4.1.10",
+    "@vitest/ui": "4.1.11",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "5.5.6",
     "jiti": "2.7.0",
@@ -58,10 +58,10 @@
     "markdownlint-cli2": "0.20.0",
     "prettier": "3.9.6",
     "simple-git-hooks": "2.13.1",
-    "tsx": "4.23.8",
-    "vitest": "4.1.10"
+    "tsx": "4.23.12",
+    "vitest": "4.1.11"
   },
-  "packageManager": "pnpm@11.20.0",
+  "packageManager": "pnpm@11.22.0",
   "publishConfig": {
     "access": "public",
     "provenance": true
