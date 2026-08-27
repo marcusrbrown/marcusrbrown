@@ -3,8 +3,9 @@ allowBuilds:
   simple-git-hooks: true
   unrs-resolver: true
 minimumReleaseAgeExclude:
-  - '@bfra.me/eslint-config@0.51.2'
+  - '@bfra.me/eslint-config@0.51.2 || 0.52.1'
   - '@bfra.me/prettier-config@0.16.10 || 0.16.11'
+  - '@bfra.me/tsconfig@0.13.2'
 onlyBuiltDependencies:
   - esbuild
   - simple-git-hooks
