@@ -45,9 +45,9 @@
     "@octokit/types": "^16.0.0"
   },
   "devDependencies": {
-    "@bfra.me/eslint-config": "0.51.2",
+    "@bfra.me/eslint-config": "0.52.1",
     "@bfra.me/prettier-config": "0.16.11",
-    "@bfra.me/tsconfig": "0.13.1",
+    "@bfra.me/tsconfig": "0.13.2",
     "@types/node": "24.13.3",
     "@vitest/ui": "4.1.11",
     "eslint-config-prettier": "10.1.8",
@@ -61,7 +61,7 @@
     "tsx": "4.23.12",
     "vitest": "4.1.11"
   },
-  "packageManager": "pnpm@11.22.0",
+  "packageManager": "pnpm@11.24.0",
   "publishConfig": {
     "access": "public",
     "provenance": true
