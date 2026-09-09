@@ -6,10 +6,11 @@ settings:
 
 overrides:
   jiti: <2.8.0
-  fast-uri: '>=3.1.2'
+  fast-uri: '>=3.1.5'
   picomatch: '>=4.0.4 || >=2.3.2 <3'
   postcss: '>=8.5.10'
   vite: 7.3.6
+  linkify-it: '>=5.0.2'
 
 importers:
 
