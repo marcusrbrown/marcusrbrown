@@ -86,7 +86,7 @@ Premium tools and cloud services for better development experience
 
 </div>
 
-<small><em>Last updated: September 25, 2026</em></small>
+<small><em>Last updated: September 26, 2026</em></small>
 
 ### Supporters
 
