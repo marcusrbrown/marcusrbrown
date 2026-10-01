@@ -61,7 +61,7 @@
     "tsx": "4.23.15",
     "vitest": "4.1.11"
   },
-  "packageManager": "pnpm@11.28.1",
+  "packageManager": "pnpm@11.28.2",
   "publishConfig": {
     "access": "public",
     "provenance": true
