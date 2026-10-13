@@ -26,7 +26,7 @@
 
 <p align="center">
 
-![Docker badge](https://img.shields.io/badge/Docker-primary-2496ED?style=flat-square&labelColor=656d76&logo=docker) ![Svelte badge](https://img.shields.io/badge/Svelte-used-31A8FF?style=for-the-badge&labelColor=656d76&logo=svelte) ![ESLint badge](https://img.shields.io/badge/ESLint-5.5.6-4B32C3?style=flat-square&labelColor=656d76&logo=eslint)
+![ESLint badge](https://img.shields.io/badge/ESLint-5.5.6-4B32C3?style=flat-square&labelColor=656d76&logo=eslint) ![Docker badge](https://img.shields.io/badge/Docker-primary-2496ED?style=flat-square&labelColor=656d76&logo=docker) ![Svelte badge](https://img.shields.io/badge/Svelte-used-31A8FF?style=for-the-badge&labelColor=656d76&logo=svelte)
 
 </p>
 
